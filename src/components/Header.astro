@@ -1,0 +1,29 @@
+---
+import navData from "../data/navData";
+---
+
+<header>
+  Header
+  <nav>
+    <ul class="list-unstyled">
+      {
+        navData.map((navItem) => (
+          <li>
+            <a href={navItem.path} data-navLink>
+              {navItem.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<script>
+  import "../script/nav.js";
+</script>
+<style is:global>
+  .active {
+    color: red;
+  }
+</style>

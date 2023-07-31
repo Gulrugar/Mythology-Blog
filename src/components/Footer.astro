@@ -1,0 +1,20 @@
+---
+const thisYear = new Date().getFullYear().toString();
+---
+
+<footer>
+  <small>
+    Copyright &copy;
+    <span id="copyright"></span>
+    <noscript>
+      <span>{thisYear} no-js</span>
+    </noscript>
+    | All rights reserved
+  </small>
+</footer>
+
+<script>
+  document.querySelector("#copyright")!.textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>

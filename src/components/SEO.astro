@@ -1,0 +1,61 @@
+---
+import siteData from "../data/siteData.json";
+import jsonLDGenerator from "../script/jsonLD";
+import type { SEOProps } from "../types/seo";
+
+const { title, description, image, robots, data } = Astro.props as SEOProps;
+
+const url = Astro.url;
+
+const jsonLD = jsonLDGenerator({
+  data,
+  url,
+});
+// const twitterHandle = "@example_twitter"
+const twitterHandle = "";
+---
+
+<!-- SEO -->
+<link rel="canonical" href={url} />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="My Astro Blog" />
+<meta property="og:url" content={url} />
+<meta property="og:title" content={title} />
+<meta property="og:type" content={data ? "article" : "website"} />
+<meta property="og:description" content={description} />
+
+<meta
+  property="og:image"
+  content={import.meta.env.SITE + `${image?.src || siteData.image.src}`}
+/>
+<meta
+  property="og:image:url"
+  content={import.meta.env.SITE + `${image?.src || siteData.image.src}`}
+/>
+<meta
+  property="og:image:secure_url"
+  content={import.meta.env.SITE + `${image?.src || siteData.image.src}`}
+/>
+<!-- Set the image height and width here -->
+<!-- The ideal image size would be a JPEG image with a resolution of 1200x600 pixels and an aspect ratio of 2:1.  -->
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="300" />
+<meta property="og:image:alt" content={image?.alt || siteData.image.alt} />
+
+<!-- Twitter -->
+{twitterHandle && <meta name="twitter:site" content={twitterHandle} />}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta
+  name="twitter:image"
+  content={import.meta.env.SITE + `${image?.src || siteData.image.src}`}
+/>
+<meta name="twitter:image:alt" content={image?.alt || siteData.image.alt} />
+<meta name="twitter:domain" content={import.meta.env.SITE} />
+
+{robots && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- JSON LD -->
+<Fragment set:html={jsonLD} />

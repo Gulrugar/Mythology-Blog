@@ -1,0 +1,31 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { slugify } from "../../script/utils";
+import categoryData from "../../data/categoryData";
+
+const applyAccent = true;
+---
+
+<MainLayout
+  title="Category"
+  description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+>
+  <section>
+    <div class="page-width">
+      <h1>Categories</h1>
+      <ul class="list-unstyled" style="display: flex; gap: 10px;">
+        {
+          categoryData.map((category) => (
+            <li>
+              <a href={`/categories/${slugify(category)}`}>{category}</a>
+            </li>
+          ))
+        }
+      </ul>
+      <p class:list={["font-body-bold", { "color-accent": applyAccent }]}>
+        hello
+      </p>
+      <a href="" class="link link--text">Link</a>
+    </div>
+  </section>
+</MainLayout>

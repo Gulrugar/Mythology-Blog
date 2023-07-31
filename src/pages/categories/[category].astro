@@ -1,0 +1,57 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { formatBlogPosts, slugify } from "../../script/utils";
+import { getCollection, CollectionEntry } from "astro:content";
+import categoryData from "../../data/categoryData";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blog");
+  const formattedPosts = formatBlogPosts(allPosts, {
+    filterOutDrafts: false,
+  });
+  const allCategories = categoryData;
+
+  return allCategories.map((category) => {
+    const categoryPosts = formattedPosts.filter(
+      (post) => post.data.category === category
+    );
+
+    return {
+      params: {
+        category: slugify(category),
+      },
+      props: {
+        name: category,
+        posts: categoryPosts,
+      },
+    };
+  });
+}
+
+interface CategoryPageProps {
+  name: string;
+  posts: CollectionEntry<"blog">[];
+}
+
+const { category } = Astro.params;
+const { name, posts } = Astro.props as CategoryPageProps;
+---
+
+<MainLayout title={name} description={`This is the ${name} page`}>
+  <div class="page-width">
+    <a href="/categories">Back</a>
+    <h1>
+      {name}
+    </h1>
+    {
+      posts.map((post) => (
+        <div class="post">
+          <a href={`/blog/${post.slug}`}>
+            <h2>{post.data.title}</h2>
+          </a>
+          <p>{post.data.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</MainLayout>

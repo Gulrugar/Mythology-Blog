@@ -1,0 +1,57 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const applyAccent = true;
+const paragraph = "<p>hi, this text is in a fragment</p>";
+const paragraphInDiv = "<p>hi, this text is in a div</p>";
+---
+
+<MainLayout
+  title="Home"
+  description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+>
+  <section>
+    <div class="page-width">
+      <h1>Main</h1>
+      <Fragment set:html={paragraph} />
+      <div set:html={paragraphInDiv} />
+      <p class:list={["font-body-bold", { "color-accent": applyAccent }]}>
+        hello
+      </p>
+      <a href="" class="link link--text">Link</a>
+    </div>
+  </section>
+</MainLayout>
+
+<!-- Style Notes -->
+
+<!-- Define global styles in a component -->
+<!-- <style is:global>
+  p {
+    color: red;
+  }
+</style> -->
+
+<!-- Write scss -->
+<!-- npm i -D sass -->
+<!-- <style lang="scss">
+	p {
+		span {
+			color: blue;
+		}
+	}
+</style> -->
+
+<!-- Pass in variables -->
+<!-- variables defined in frontmatter -->
+<!-- <style define:vars={{foregroundColor, backgroundColor}}>
+	p {
+		color: var(--foregroundColor);
+		background-color: var(--backgroundColor);
+	}
+</style> -->
+
+<!-- Also works for script tags -->
+<!-- <script define:vars={{useBackgroundColor, backgroundColor}}>
+	document.body.style.color = useBackgroundColor ? backgroundColor : "#fff";
+</script> -->
