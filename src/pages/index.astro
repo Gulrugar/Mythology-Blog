@@ -1,27 +1,69 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import HeroBanner from "../components/HomePage/HeroBanner.astro";
+import Featured from "../components/HomePage/Featured.astro";
+import List from "../components/HomePage/List.astro";
+import ThreePost from "../components/HomePage/ThreePost.astro";
+import { getCollection } from "astro:content";
 
-const applyAccent = true;
-const paragraph = "<p>hi, this text is in a fragment</p>";
-const paragraphInDiv = "<p>hi, this text is in a div</p>";
+const posts = await getCollection("blog", ({ data }) => {
+  return !data.draft;
+});
 ---
 
 <MainLayout
   title="Home"
   description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
 >
-  <section>
-    <div class="page-width">
-      <h1>Main</h1>
-      <Fragment set:html={paragraph} />
-      <div set:html={paragraphInDiv} />
-      <p class:list={["font-body-bold", { "color-accent": applyAccent }]}>
-        hello
-      </p>
-      <a href="" class="link link--text">Link</a>
+  <article class="article--one-col-tax mntl-article">
+    <div class="loc article-content">
+      <HeroBanner />
+      <Featured />
+      <List />
+      <ThreePost />
     </div>
-  </section>
+  </article>
 </MainLayout>
+
+<style>
+  /* article class="comp article--one-col-tax mntl-article" */
+  .mntl-article {
+    padding: 0 calc(1rem * var(--convert-rem));
+    display: grid;
+    position: relative;
+    margin: 0 auto;
+    grid-template-columns: minmax(0, calc(76.25rem * var(--convert-rem)));
+    grid-template-areas: "header" "post-header" "left-rail" "pre-content" "content" "post-content" "footer";
+    font-size: calc(1rem * var(--convert-rem));
+  }
+
+  @media (min-width: 34em) {
+    .mntl-article {
+      padding: 0 calc(1.5rem * var(--convert-rem));
+    }
+
+    .article--one-col-tax {
+      max-width: calc(37.5rem * var(--convert-rem));
+    }
+  }
+
+  @media (min-width: 50em) {
+    .mntl-article {
+      padding: 0 calc(2rem * var(--convert-rem));
+    }
+
+    .article--one-col-tax {
+      max-width: none;
+      padding-top: calc(2rem * var(--convert-rem));
+    }
+  }
+
+  /* div class="loc article-content" */
+  .article-content {
+    grid-area: content;
+    /* overflow-x: hidden; */
+  }
+</style>
 
 <!-- Style Notes -->
 

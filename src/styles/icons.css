@@ -1,0 +1,25 @@
+/* ---------------------- */
+/* General                */
+/* ---------------------- */
+
+/* ---------------------- */
+/* AnnouncementBar        */
+/* ---------------------- */
+/* svg class=""icon icon-arrow" */
+.announcement-bar__link .icon-arrow {
+  display: inline-block;
+  pointer-events: none;
+  margin-left: 0.8rem;
+  vertical-align: middle;
+  margin-bottom: 0.2rem;
+}
+
+/* path */
+.animate-arrow .icon-arrow path {
+  transform: translate(-0.25rem);
+  transition: transform 0.1s ease;
+}
+
+.animate-arrow:hover .icon-arrow path {
+  transform: translate(-0.05rem);
+}

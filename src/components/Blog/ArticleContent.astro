@@ -1,0 +1,61 @@
+---
+import MainImage from "./MainImage.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props extends Pick<CollectionEntry<"blog">["data"], "image"> {}
+
+const { image } = Astro.props as Props;
+---
+
+<div class="loc article-content">
+  <div class="comp article__body right-rail mntl-block">
+    <MainImage {image} />
+    <div class="comp list-sc mntl-block">
+      <div class="comp article-intro mntl-block">
+        <slot name="intro" />
+      </div>
+      <div class="comp list-sc__content mntl-sc-page mntl-block">
+        <slot name="content" />
+      </div>
+      <div class="comp article-outro mntl-block">
+        <slot name="outro" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* div class="comp article-intro mntl-block" */
+
+  /* div class="loc article-content" */
+  .article-content {
+    grid-area: content;
+    position: relative;
+  }
+
+  /* div class="comp article__body right-rail mntl-block" */
+
+  /* div class="comp list-sc mntl-block" */
+
+  /* class="comp mntl-sc-block beauty-sc-block-html mntl-sc-block-html" */
+  .article-intro p.mntl-sc-block-html {
+    margin: 2rem 0;
+  }
+
+  .article-intro p.mntl-sc-block-html:first-of-type::first-letter {
+    letter-spacing: 0.5px;
+    float: left;
+    font-family: var(--font-heading-family);
+    font-size: 6.1875rem;
+    line-height: 3.625rem;
+    padding-top: 1px;
+    padding-right: 0.5rem;
+    padding-left: 0.1875rem;
+  }
+
+  /* div class="comp list-sc__content mntl-sc-page mntl-block" */
+
+  .mntl-sc-page {
+    margin-top: 4rem;
+  }
+</style>

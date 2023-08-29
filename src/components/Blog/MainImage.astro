@@ -1,0 +1,96 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { blurryImageUrl } from "../../data/constants";
+
+interface Props extends Pick<CollectionEntry<"blog">["data"], "image"> {}
+
+const { image } = Astro.props as Props;
+---
+
+<figure class="comp mntl-universal-primary-image primary-image">
+  <div class="primary-image__media">
+    <div class="img-placeholder" style="padding-bottom: 100%;">
+      <img
+        src={image.src}
+        alt={image.alt}
+        class="primary-image__image mntl-primary-image--blurry"
+        onload="(function(e){e.classList.add('loaded')})(this)"
+        style={`--blurry: url(${blurryImageUrl})`}
+      />
+      <noscript>
+        <img
+          src={image.src}
+          alt={image.alt}
+          class="primary-image__image mntl-primary-image--blurry loaded"
+        />
+      </noscript>
+    </div>
+  </div>
+  <figcaption
+    class="comp primary-image__figcap mntl-figure-caption figure-article-caption"
+  >
+    <span class="figure-article-caption-owner">
+      <p>
+        Photo by
+        <a href="#" target="_blank">Katie Edwards Photography</a>
+      </p>
+    </span>
+  </figcaption>
+</figure>
+
+<style>
+  /* figure class="comp mntl-universal-primary-image primary-image" */
+
+  .primary-image {
+    margin: 0 0 2rem;
+  }
+
+  /* div class="primary-image__media" */
+  .primary-image__media {
+    position: relative;
+    margin-bottom: 0.3rem;
+  }
+
+  /* class="img-placeholder" */
+
+  /* img  class="primary-image__image mntl-primary-image--blurry" */
+
+  .mntl-primary-image--blurry {
+    background-image: var(--blurry);
+    background-size: 100% 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .primary-image__image {
+    width: 100%;
+  }
+
+  .mntl-primary-image--blurry.loaded {
+    background-image: none;
+  }
+
+  /* figcaption class="comp primary-image__figcap mntl-figure-caption figure-article-caption" */
+  figcaption {
+    line-height: 1.1;
+    color: #666;
+  }
+
+  .primary-image__figcap {
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* span class="figure-article-caption-owner" */
+
+  /* p */
+  .primary-image__figcap p {
+    display: inline;
+    font-size: 1rem;
+  }
+
+  /* a */
+</style>

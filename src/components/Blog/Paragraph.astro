@@ -1,0 +1,12 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props as Props;
+---
+
+<p
+  class="comp mntl-sc-block beauty-sc-block-html mntl-sc-block-html"
+  set:html={text}
+/>

@@ -1,20 +1,357 @@
 ---
 const thisYear = new Date().getFullYear().toString();
+import navData from "../data/navData";
+
+import { Icon } from "astro-icon";
 ---
 
-<footer>
-  <small>
-    Copyright &copy;
-    <span id="copyright"></span>
-    <noscript>
-      <span>{thisYear} no-js</span>
-    </noscript>
-    | All rights reserved
-  </small>
+<footer class="footer color-accent">
+  <div class="footer__content-top page-width">
+    <div
+      class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet"
+    >
+      <div class="footer-block grid__item footer-block--menu">
+        <h2 class="footer-block__heading">Categories</h2>
+        <ul class="footer-block__details-content list-unstyled">
+          {
+            navData.map((navItem) => (
+              <li>
+                <a
+                  href={navItem.path}
+                  class="link link--text list-menu__item list-menu__item--link"
+                >
+                  {navItem.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="footer-block grid__item footer-block--menu">
+        <h2 class="footer-block__heading">Categories</h2>
+        <ul class="footer-block__details-content list-unstyled">
+          {
+            navData.map((navItem) => (
+              <li>
+                <a
+                  href={navItem.path}
+                  class="link link--text list-menu__item list-menu__item--link"
+                >
+                  {navItem.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="footer-block grid__item">
+        <div class="footer-block__brand-info">
+          <div
+            class="footer-block__image-wrapper"
+            style="max-width: min(100%, 100px)"
+          >
+            <a href="#"
+              ><img src="/images/sample.png" alt="sample" loading="lazy" /></a
+            >
+          </div>
+          <h2 class="footer-block__heading">Blog Title</h2>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+            dicta facilis consequatur molestias omnis vitae quisquam est sint
+            aperiam deserunt?
+          </div>
+          <ul class="footer__list-social list-unstyled list-social">
+            <li class="list-social__item">
+              <a href="#" class="link list-social__link">
+                <Icon name="mdi:facebook" width="25" height="25" />
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="list-social__item">
+              <a href="#" class="link list-social__link">
+                <Icon name="mdi:instagram" width="25" height="25" />
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+            <li class="list-social__item">
+              <a href="#" class="link list-social__link">
+                <Icon name="mdi:twitter" width="25" height="25" />
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__content-bottom">
+    <div class="footer__content-bottom-wrapper page-width">
+      <div class="footer__copyright caption">
+        <small class="copyright__content">
+          &copy; {thisYear} Copyright
+        </small>
+        <ul class="policies list-unstyled">
+          {
+            ["Privacy policy", "Terms of service", "Contact information"].map(
+              (item) => (
+                <li>
+                  <small class="copyright__content">
+                    <a href="#">{item}</a>
+                  </small>
+                </li>
+              )
+            )
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<script>
-  document.querySelector("#copyright")!.textContent = new Date()
-    .getFullYear()
-    .toString();
-</script>
+<style>
+  /* footer class="footer color-accent" */
+  .footer {
+    /* margin-top: 36px; */
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .footer {
+      /* margin-top: 48px; */
+      padding-top: 36px;
+      padding-bottom: 36px;
+    }
+  }
+
+  /* div class="footer__content-top page-width" */
+
+  div.footer__content-top {
+    display: block;
+  }
+  /* div class="footer__blocks-wrapper grid" */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding: 0;
+    list-style: none;
+    column-gap: 4px;
+    row-gap: 4px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .footer .grid {
+      display: block;
+    }
+  }
+
+  /* div class="footer-block grid__item footer-block--menu" */
+  .grid__item {
+    width: calc(25% - 3px);
+    max-width: calc(50% - 2px);
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  .grid--1-col .grid__item {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .grid--2-col .grid__item {
+    width: calc(50% - 2px);
+  }
+
+  @media screen and (max-width: 749px) {
+    .footer-block.grid__item {
+      padding: 0;
+      margin: 4rem 0;
+      width: 100%;
+    }
+
+    .footer-block.grid__item:first-child {
+      margin-top: 0;
+    }
+
+    .footer-block.grid__item:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .grid--2-col .grid__item {
+      width: calc(50% - 4px);
+    }
+
+    .grid--4-col-tablet .grid__item {
+      width: calc(25% - 12px);
+    }
+  }
+
+  /* h2 class="footer-block__heading" */
+  .footer-block__heading {
+    margin-bottom: 2rem;
+    margin-top: 0;
+    font-size: calc(var(--font-heading-scale) * 1.6rem);
+  }
+
+  /* ul class="footer-block__details-content list-unstyled" */
+  ul.footer-block__details-content {
+    margin-bottom: 4rem;
+  }
+
+  /* li */
+
+  /* a class="link link--text list-menu__item list-menu__item--link" */
+
+  /* div class="footer-block grid__item" */
+
+  /* div class="footer-block__brand-info" */
+
+  .footer-block__brand-info {
+    text-align: left;
+  }
+
+  /* div class="footer-block__image-wrapper" */
+  .footer-block__image-wrapper {
+    margin-bottom: 2rem;
+    overflow: hidden !important;
+
+    background-color: transparent;
+    border: none;
+    transition: transform 0.2s ease;
+  }
+
+  .footer-block__image-wrapper:hover {
+    transform: scale(1.1);
+  }
+
+  /* img */
+  .footer-block__image-wrapper img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* h2 class="footer-block__heading" */
+
+  /* div */
+
+  /* ul class="footer__list-social list-unstyled list-social" */
+  .list-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  @media screen and (max-width: 749px) {
+    .list-social {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .footer-block__brand-info .footer__list-social.list-social {
+    justify-content: flex-start;
+    margin-left: -1.3rem;
+    margin-right: -1.3rem;
+  }
+
+  /* li class="list-social__item" */
+
+  /* a  class="link list-social__link" */
+  a.list-social__link {
+    align-items: center;
+    display: flex;
+    padding: 1.3rem;
+    color: rgb(var(--color-foreground));
+  }
+
+  .list-social__link:hover svg {
+    transform: scale(1.07);
+  }
+
+  /* div class="footer__content-bottom" */
+
+  .footer__content-bottom {
+    border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
+    padding-top: 3rem;
+  }
+
+  @media screen and (max-width: 749px) {
+    .footer__content-bottom {
+      flex-wrap: wrap;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      row-gap: 1.5rem;
+    }
+  }
+
+  /* div  class="footer__content-bottom-wrapper page-width" */
+
+  .footer__content-bottom-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 749px) {
+    .footer__content-bottom-wrapper {
+      flex-wrap: wrap;
+      row-gap: 1.5rem;
+    }
+  }
+
+  /* div class="footer__copyright caption" */
+  div.footer__copyright {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  /* small class="copyright__content" */
+
+  .copyright__content {
+    font-size: 1.1rem;
+  }
+
+  /* a */
+  .copyright__content a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  .copyright__content a:hover {
+    color: rgb(var(--color-foreground));
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+
+  /* ul class="policies list-unstyled" */
+
+  .policies {
+    display: inline;
+  }
+
+  /* li */
+
+  .policies li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ::before */
+  .policies li::before {
+    content: "\b7";
+    padding: 0 0.8rem;
+  }
+
+  /* a */
+
+  .policies li a {
+    padding: 0.6rem 0;
+    display: block;
+  }
+</style>

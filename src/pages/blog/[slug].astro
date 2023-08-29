@@ -1,7 +1,6 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { CollectionEntry, getCollection } from "astro:content";
-import { formatDate } from "../../script/utils";
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection("blog", ({ data }) => {
@@ -21,36 +20,11 @@ interface Props {
 }
 
 const { post } = Astro.props as Props;
-const { title, description, date, author, image } = post.data;
+const { title, description, image } = post.data;
 
 const { Content } = await post.render();
 ---
 
 <MainLayout {title} {description} {image} data={post.data}>
-  <section>
-    <div class="page-width">
-      <h1>Blog page</h1>
-      <p class="color-accent">hello</p>
-      <a href="" class="link link--text">Link</a>
-    </div>
-  </section>
-  <section>
-    <div class="page-width">
-      <h2>{title}</h2>
-      <img src={image.src} alt={image.alt} />
-      <p>{formatDate(date)}</p>
-      <p>{author}</p>
-      <Content />
-    </div>
-  </section>
-  <section>
-    <div class="page-width">
-      <h2>Test Section</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-        consectetur? Ipsam voluptas rem nesciunt? Debitis nesciunt fuga minus
-        reprehenderit consequuntur?
-      </p>
-    </div>
-  </section>
+  <Content />
 </MainLayout>

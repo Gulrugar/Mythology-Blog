@@ -1,0 +1,98 @@
+---
+interface Props {
+  title: string;
+  text: string;
+}
+
+const { title, text } = Astro.props as Props;
+---
+
+<div
+  class="comp theme-meetourexpert mntl-sc-block beauty-sc-block-callout--meetourexpert beauty-sc-block-callout mntl-sc-block-callout mntl-block"
+>
+  <p class="comp mntl-sc-block-callout-heading mntl-text-block">
+    {title}
+  </p>
+  <div class="comp mntl-sc-block-callout-body mntl-text-block">
+    <p set:html={text} />
+  </div>
+</div>
+
+<style>
+  /* div class="comp theme-meetourexpert mntl-sc-block beauty-sc-block-callout--meetourexpert beauty-sc-block-callout mntl-sc-block-callout mntl-block" */
+  .theme-meetourexpert.mntl-sc-block-callout {
+    position: relative;
+    padding: 1.25rem 2.5rem;
+    margin: auto 0;
+    width: auto;
+  }
+
+  /* ::before */
+  /* ::after */
+  .theme-meetourexpert.mntl-sc-block-callout::before,
+  .theme-meetourexpert.mntl-sc-block-callout::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+  }
+
+  .theme-meetourexpert.mntl-sc-block-callout::before {
+    top: 0;
+    left: 0;
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-image: linear-gradient(to right, #da2525 97%, transparent 3%) 1;
+  }
+
+  .theme-meetourexpert.mntl-sc-block-callout::after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-image: linear-gradient(to left, #da2525 97%, transparent 3%) 1;
+  }
+
+  /* p class="comp mntl-sc-block-callout-heading mtnl-text-block" */
+  .theme-meetourexpert .mntl-sc-block-callout-heading {
+    width: auto;
+    text-align: left;
+    text-transform: uppercase;
+    color: #000;
+    background: 0 0;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.07rem;
+    font-weight: 700;
+
+    line-height: 1.5rem;
+  }
+
+  /* ::before */
+  /* ::after */
+  .theme-meetourexpert .mntl-sc-block-callout-heading::before,
+  .theme-meetourexpert .mntl-sc-block-callout-heading::after {
+    content: "";
+    width: 1px;
+    height: 32px;
+    border-left: 1px solid #da2525;
+    position: absolute;
+  }
+
+  .theme-meetourexpert .mntl-sc-block-callout-heading::before {
+    top: 0;
+    left: 0;
+  }
+
+  .theme-meetourexpert .mntl-sc-block-callout-heading::after {
+    bottom: 0;
+    right: 0;
+  }
+
+  /* div class="comp mntl-sc-block-callout-body mntl-text-block" */
+  .theme-meetourexpert .mntl-sc-block-callout-body {
+    line-height: 1.75rem;
+    padding: 0;
+    text-align: left;
+    margin: auto;
+  }
+</style>

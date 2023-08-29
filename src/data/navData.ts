@@ -1,6 +1,10 @@
 interface NavItem {
   name: string;
   path: string;
+  links?: {
+    name: string;
+    path: string;
+  }[];
 }
 
 const navData: NavItem[] = [
@@ -11,6 +15,16 @@ const navData: NavItem[] = [
   {
     name: "About",
     path: "/about/",
+    links: [
+      {
+        name: "AboutSubmenu1",
+        path: "/",
+      },
+      {
+        name: "AboutSubmenu2",
+        path: "/",
+      },
+    ],
   },
   {
     name: "Blog",

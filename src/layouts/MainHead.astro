@@ -13,4 +13,72 @@ const { title, description, image, data, robots } = Astro.props as SEOProps;
   <title>{title}</title>
   <meta name="description" content={description} />
   <SEO {title} {description} {image} {data} {robots} />
+  <style is:global>
+    :root {
+      --font-body-family: "Poppins", sans-serif;
+      --font-body-style: normal;
+      --font-body-weight: 400;
+      --font-body-weight-bold: 700;
+
+      --font-heading-family: "Poppins", sans-serif;
+      --font-heading-style: normal;
+      --font-heading-weight: 700;
+
+      --font-body-scale: calc(115 / 100);
+      --font-heading-scale: calc(115 / 100);
+
+      --page-width: calc(1200 / 10 * 1rem);
+
+      --color-base-text: 30, 30, 30;
+      --color-base-background: 255, 255, 255;
+      --color-base-solid-button-labels: 255, 255, 255;
+      --color-base-accent: 90, 165, 156;
+      --color-link: 30, 30, 30;
+
+      --spacing-sections-mobile: 24px;
+      --spacing-sections-desktop: 24px;
+    }
+
+    :root {
+      --color-foreground: var(--color-base-text);
+      --color-background: var(--color-base-background);
+
+      --convert-rem: calc(16 / 11.5);
+      --article-box-shadow: 0 calc(0.0625rem * var(--convert-rem))
+        calc(0.1875rem * var(--convert-rem)) rgba(0, 0, 0, 0.15);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: calc(var(--font-body-scale) * 62.5%);
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: 100%;
+      min-height: 100%;
+      margin: 0;
+      font-size: 1.5rem;
+      letter-spacing: 0.06rem;
+      line-height: calc(1 + 0.8 / var(--font-body-scale));
+      font-family: var(--font-body-family);
+      font-style: var(--font-body-style);
+      font-weight: var(--font-body-weight);
+    }
+
+    @media screen and (min-width: 750px) {
+      body {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>

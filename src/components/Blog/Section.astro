@@ -1,0 +1,101 @@
+---
+interface Props {
+  page: number;
+  pageTotal: number;
+  title: string;
+}
+
+const { page, pageTotal, title } = Astro.props as Props;
+---
+
+<div class="comp list-sc-item mntl-block">
+  <div class="comp list-marker">
+    <span class="list-marker__index">{page}</span>
+    <span class="list-marker__total">of {pageTotal}</span>
+  </div>
+  <div class="comp list-sc-item__content mntl-block">
+    <h2
+      class="comp mntl-sc-list-item-title mntl-sc-block beauty-sc-block-heading mntl-sc-block-heading"
+    >
+      <span class="mntl-sc-block-heading__text">
+        {title}
+      </span>
+    </h2>
+    <slot />
+  </div>
+</div>
+
+<style>
+  /* div class="comp list-sc-item mntl-block" */
+
+  @media screen and (min-width: 990px) {
+    .list-sc-item {
+      display: flex;
+    }
+  }
+
+  /* div class="comp list-marker" */
+  .list-sc-item .list-marker {
+    float: left;
+    margin: 0.3rem 0.625rem 0.625rem 0;
+  }
+
+  .list-marker {
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 990px) {
+    .list-sc-item .list-marker {
+      float: none;
+      flex: 0 0 auto;
+    }
+  }
+
+  /* span class="list-marker__index" */
+
+  .list-marker__index {
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 2.675rem;
+    line-height: 2rem;
+    color: #707070;
+    font-weight: 400;
+  }
+
+  /* span class="list-marker__total" */
+  .list-marker__total {
+    display: block;
+    font-size: 1.125rem;
+    white-space: nowrap;
+  }
+
+  /* div class="comp list-sc-item__content mntl-block" */
+  .list-sc-item__content {
+    margin-left: 1rem;
+    clear: none;
+  }
+
+  /* h2 class="comp mntl-sc-list-item-title mntl-sc-block beauty-sc-block-heading mntl-sc-block-heading" */
+  .mntl-sc-block-heading {
+    margin: 0;
+    font-weight: 400;
+
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+  }
+
+  .mntl-sc-list-item-title.mntl-sc-block-heading {
+    line-height: 0.9;
+    margin-left: 2.5rem;
+  }
+
+  @media screen and (min-width: 990px) {
+    .mntl-sc-list-item-title.mntl-sc-block-heading {
+      margin-left: 0.25rem;
+    }
+  }
+
+  /* span class="mntl-sc-block-heading__text" */
+</style>

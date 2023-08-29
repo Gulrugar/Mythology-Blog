@@ -1,4 +1,77 @@
 ---
+import Icon from "astro-icon";
+
+type Props = {
+  text: string;
+  link?: string;
+};
+
+const { text, link } = Astro.props as Props;
 ---
 
-<div>Announcement Bar</div>
+<div class="announcement-bar color-accent">
+  {
+    link ? (
+      <a
+        href={link}
+        class="announcement-bar__link link link--text focus-inset animate-arrow"
+      >
+        <div class="page-width">
+          <p class="announcement-bar__message center h5">
+            <span>{text}</span>
+            <Icon name="icon-arrow" class="icon icon-arrow" width="1.5rem" />
+          </p>
+        </div>
+      </a>
+    ) : (
+      <div class="page-width">
+        <p class="announcement-bar__message center h5">
+          <span>{text}</span>
+        </p>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  /* div class="announcement-bar color-accent" */
+  .announcement-bar {
+    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    color: rgb(var(--color-foreground));
+  }
+
+  /* a class="announcement-bar__link link link--text focus-inset animate-arrow" */
+  .announcement-bar__link {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    text-decoration: none;
+  }
+
+  .announcement-bar__link:hover {
+    background-color: rgba(var(--color-foreground), 0.06);
+  }
+
+  /* div class="page-width" */
+
+  /* p class="announcement-bar__message center h5" */
+  .center {
+    text-align: center;
+  }
+
+  .announcement-bar__message {
+    padding: 1rem 0;
+    margin: 0;
+    letter-spacing: 0.1rem;
+  }
+
+  p.announcement-bar__message {
+    font-weight: 400;
+  }
+
+  .announcement-bar__link .announcement-bar__message {
+    padding: 0;
+  }
+
+  /* span */
+</style>

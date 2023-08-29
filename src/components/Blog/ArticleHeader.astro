@@ -1,0 +1,347 @@
+---
+import { formatDate } from "../../script/utils";
+import { slugify } from "../../script/utils";
+import type { CollectionEntry } from "astro:content";
+
+interface Props
+  extends Omit<CollectionEntry<"blog">["data"], "draft" | "image"> {}
+
+const { title, description, category, date, author } = Astro.props as Props;
+---
+
+<div class="loc article-header">
+  <div class="comp article-top mntl-block">
+    <div class="comp article-header__breadcrumb mntl-block">
+      <ul class="comp breadcrumb mntl-block">
+        <li class="comp breadcrumb__list-item mntl-block">
+          <a
+            href={`/categories/${slugify(category)}`}
+            class="link link--text mntl-text-link breadcrumb__link"
+          >
+            <span class="link__wrapper">{category}</span>
+          </a>
+        </li>
+        <li class="comp breadcrumb__list-item mntl-block">
+          <a
+            href={`/categories/${slugify(category)}`}
+            class="link link--text mntl-text-link breadcrumb__link"
+          >
+            <span class="link__wrapper">{category}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <h1 class="comp article-heading mntl-text-block">{title}</h1>
+    <p class="comp article-subheading mntl-text-block">
+      {description}
+    </p>
+    <div class="comp article-meta mntl-block">
+      <div class="comp beauty-bylines mntl-bylines">
+        <div
+          class="comp mntl-bylines__group--author mntl-bylines__group mntl-block"
+        >
+          <div
+            class="comp mntl-bylines__item mntl-attribution__item mntl-attribution__item--has-date"
+          >
+            <span class="mntl-attribution__item-descriptor"> By</span>
+            <div class="mntl-dynamic-tooltip--trigger" data-tooltip="">
+              <a href="#" class="mntl-attribution__item-name" tabindex="-1"
+                >{author}</a
+              >
+            </div>
+          </div>
+          <div class="mntl-attribution__item-date">
+            Updated on {formatDate(date)}
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="list-unstyled comp social-share mntl-social-share share">
+      <li class="share-item share-item-facebook">
+        <span
+          class="share-link share-link-facebook"
+          tabindex="0"
+          title="Facebook"
+          aria-label="Facebook"
+          role="link"
+        >
+          <svg class="icon icon-facebook">
+            <use href="#icon-facebook"> </use>
+          </svg>
+        </span>
+        <li class="share-item share-item-pinterest">
+          <span
+            class="share-link share-link-pinterest"
+            tabindex="0"
+            title="Pinterest"
+            aria-label="Pinterest"
+            role="link"
+          >
+            <svg class="icon icon-pinterest">
+              <use href="#icon-pinterest"> </use>
+            </svg>
+          </span>
+        </li>
+        <li class="share-item share-item-emailshare">
+          <span
+            class="share-link share-link-emailshare"
+            tabindex="0"
+            title="Emailshare"
+            aria-label="Emailshare"
+            role="link"
+          >
+            <svg class="icon icon-emailshare">
+              <use href="#icon-emailshare"></use>
+            </svg>
+          </span>
+        </li>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  /* div class="loc article-header" */
+  .article-header {
+    grid-area: header;
+  }
+  /* General */
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  /* div class="comp article-top article-header mntl-block" */
+  .article-top {
+    color: #707070;
+  }
+
+  /* div class="comp article-header__breadcrumb mntl-block" */
+  .article-header__breadcrumb {
+    display: flex;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* ul class="comp breadcrumb mntl-block" */
+
+  .breadcrumb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    z-index: 1;
+  }
+
+  .breadcrumb {
+    color: #222;
+  }
+
+  /* li class="comp breadcrumb__list-item mntl-block" */
+  .breadcrumb__list-item {
+    white-space: nowrap;
+  }
+
+  .breadcrumb__list-item + .breadcrumb__list-item::before {
+    content: "•";
+    display: inline-block;
+    margin: 0.125rem 0.5125rem 0;
+    width: 0.625rem;
+    height: 0.625rem;
+    vertical-align: middle;
+    color: #efa8a8;
+    font-size: 2rem;
+    background-color: transparent;
+    transform: translateY(-1.35rem);
+  }
+
+  /* a class="link link--text mntl-text-link breadcrumb__link" */
+  .breadcrumb__link {
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 0.07rem;
+    transition: color ease 0.15s;
+  }
+
+  .breadcrumb__link:hover {
+    color: #da2525;
+  }
+
+  /* h1 class="comp article-heading mntl-text-block" */
+
+  .article-heading {
+    margin-bottom: 0.5rem;
+  }
+
+  /* p class="comp article-subheading mntl-text-block" */
+
+  .article-subheading {
+    margin: 0 0 0.5rem;
+  }
+
+  /* div class="comp article-meta mntl-block" */
+  .article-meta {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0.625rem;
+  }
+
+  /* div class="comp beauty-bylines mntl-bylines" */
+  .beauty-bylines {
+    display: inline-block;
+    font-size: 1.2rem;
+    letter-spacing: 0.75px;
+    line-height: 1.6;
+  }
+
+  /* div class="comp mntl-bylines__group--author mntl-bylines__group mntl-block" */
+  .mntl-bylines__group {
+    line-height: 1;
+  }
+
+  /* div class="comp mntl-bylines__item mntl-attribution__item mntl-attribution__item--has-date" */
+
+  .mntl-bylines__item {
+    line-height: 1.6;
+    color: #666;
+    letter-spacing: normal;
+    margin-bottom: 0;
+    margin-right: 0.1rem;
+  }
+
+  .mntl-attribution__item {
+    display: inline;
+  }
+
+  .mntl-bylines__item.mntl-attribution__item--has-date {
+    white-space: nowrap;
+  }
+
+  .mntl-bylines__item.mntl-attribution__item--has-date:after {
+    content: "|";
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  /* span class="mntl-attribution__item-descriptor" */
+
+  /* div class="mntl-dynamic-tooltip--trigger" data-tooltip="" */
+
+  [data-tooltip] {
+    display: inline-block;
+  }
+
+  .mntl-bylines__item .mntl-dynamic-tooltip--trigger {
+    position: static;
+  }
+
+  /* a class="mntl-attribution__item-name" */
+  .mntl-attribution__item-name {
+    display: inline;
+    position: relative;
+  }
+
+  /* div class="mntl-attribution__item-date" */
+
+  .mntl-attribution__item-date.mntl-attribution__item-date {
+    display: inline-block;
+    color: #757575;
+  }
+
+  /* ul class="comp social-share mntl-social-share share" */
+
+  .share {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .social-share {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-bottom: 1.25rem;
+    list-style: none;
+    z-index: 0;
+  }
+
+  /* li class="share-item share-item-facebook" */
+  .share-item {
+    flex: 0 0 auto;
+  }
+  .share-item:first-child {
+    margin-left: 0;
+  }
+
+  /* span class="share-link share-link-facebook" tabindex="0" title="Facebook" aria-label="Facebook" role="link" */
+
+  .share-link {
+    --icon-dimension: 3rem;
+
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .share-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+    margin-right: 0.25rem;
+  }
+
+  .share-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+    width: var(--icon-dimension);
+    height: var(--icon-dimension);
+    transition: background-color 0.15s ease;
+  }
+
+  .share-link-facebook::before {
+    background-color: #3f5a94;
+  }
+  .share-link-facebook:hover:before {
+    background: #374f82;
+  }
+
+  /* svg class="icon icon-facebook" */
+
+  .social-share .icon {
+    flex: 0 0 auto;
+    position: relative;
+    width: var(--icon-dimension);
+    height: var(--icon-dimension);
+    pointer-events: none;
+    fill: #fff;
+    transform: scale(0.5);
+    margin-right: 0.5rem;
+  }
+  /* span class="share-link share-link-pinterest" tabindex="0" title="Pinterest" aria-label="Pinterest" role="link" */
+  .share-link-pinterest:before {
+    background: #cb2027;
+  }
+
+  .share-link-pinterest:hover:before {
+    background: #b51d23;
+  }
+  /* span class="share-link share-link-emailshare" tabindex="0" title="Emailshare" aria-label="Emailshare" role="link" */
+  .share-link-emailshare:before {
+    background: #666;
+  }
+  .share-link-emailshare:hover:before {
+    background: #222;
+  }
+</style>

@@ -1,15 +1,40 @@
 ---
 import navData from "../data/navData";
+import { Icon } from "astro-icon";
+import HeaderDrawer from "./HeaderDrawer.astro";
 ---
 
-<header>
-  Header
-  <nav>
-    <ul class="list-unstyled">
+<header class="section-header">
+  <div class="header-container">
+    <HeaderDrawer />
+    <div class="logo h0">Logo</div>
+    <div class="header-container__signature">
+      <p>88 years of expert advice and inspiration, for everyone</p>
+      <ul class="social-list list-unstyled">
+        <li>
+          <a href="" class="link">
+            <Icon name="mdi:instagram" width="25" height="25" />
+          </a>
+        </li>
+        <li>
+          <a href="" class="link">
+            <Icon name="mdi:facebook" width="25" height="25" />
+          </a>
+        </li>
+        <li>
+          <a href="" class="link">
+            <Icon name="mdi:twitter" width="25" height="25" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <nav id="main-header-nav">
+    <ul class="nav-list list-unstyled">
       {
         navData.map((navItem) => (
-          <li>
-            <a href={navItem.path} data-navLink>
+          <li class="nav-list__item">
+            <a href={navItem.path} class="link link--text" data-navLink>
               {navItem.name}
             </a>
           </li>
@@ -19,11 +44,86 @@ import navData from "../data/navData";
   </nav>
 </header>
 
+<style>
+  header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 6.5rem;
+    z-index: 4;
+  }
+
+  .header-container {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+  }
+
+  .header-container .logo {
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: 750px) {
+    header {
+      min-height: 8.5rem;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .header-container .logo {
+      position: unset;
+      transform: translate(0, 0);
+    }
+
+    .header-container {
+      justify-content: space-between;
+    }
+  }
+
+  .header-container__signature {
+    font-size: 1.25rem;
+    text-align: right;
+    display: none;
+  }
+
+  .social-list {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-list {
+    display: none;
+    gap: 1.5rem;
+  }
+
+  @media screen and (min-width: 990px) {
+    .nav-list {
+      display: flex;
+    }
+  }
+
+  .social-list svg:hover {
+    color: #efa8a8;
+  }
+
+  @media screen and (min-width: 990px) {
+    header {
+      padding: 1rem 5rem;
+    }
+
+    .header-container__signature {
+      display: block;
+    }
+  }
+</style>
+
 <script>
   import "../script/nav.js";
 </script>
-<style is:global>
-  .active {
-    color: red;
-  }
-</style>

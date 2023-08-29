@@ -1,8 +1,12 @@
 ---
+import "../styles/global.css";
+import "../styles/icons.css";
+
 import MainHead from "./MainHead.astro";
 import Footer from "../components/Footer.astro";
 import HeaderGroup from "../components/HeaderGroup.astro";
-import "../styles/global.css";
+import SVGs from "../components/SVGs.astro";
+
 import type { SEOProps } from "../types/seo";
 
 const { title, description, image, data, robots } = Astro.props as SEOProps;
@@ -11,10 +15,19 @@ const { title, description, image, data, robots } = Astro.props as SEOProps;
 <html lang="en">
   <MainHead {title} {description} {image} {data} {robots} />
   <body>
+    <SVGs />
     <HeaderGroup />
-    <main>
+    <main role="main">
       <slot />
     </main>
     <Footer />
+    <style>
+      [role="main"] {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        align-content: start;
+      }
+    </style>
   </body>
 </html>

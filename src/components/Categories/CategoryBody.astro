@@ -1,0 +1,314 @@
+---
+import { formatDate } from "../../script/utils";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  posts: CollectionEntry<"blog">[];
+}
+
+const { posts } = Astro.props as Props;
+---
+
+<div class="loc fixedContent">
+  <div class="comp mntl-taxonomysc-article-list-group mntl-block">
+    <div
+      class="comp l-container mntl-taxonomysc-article-list mntl-document-card-list mntl-card-list mntl-block page-width"
+    >
+      {
+        [...posts, ...posts].map((post) => (
+          <a
+            href={`/blog/${post.slug}`}
+            class="comp mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+          >
+            <div class="loc card__top">
+              <div class="card__media mntl-universal-image universal-image__container">
+                <div class="img-placeholder" style="padding-bottom:100.0%;">
+                  <img
+                    src={post.data.image.src}
+                    alt={post.data.image.alt}
+                    class="card__img universal-image__image lazyloaded"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__header" />
+              <span class="card__title">
+                <span class="card__title-text ">{post.data.title}</span>
+              </span>
+              <div
+                class="comp card__meta mntl-block"
+                data-category={post.data.category}
+                data-updated={formatDate(post.data.date)}
+              >
+                <span class="comp card__square-divider mntl-block" />
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  /* --------------- */
+  /* General         */
+  /* --------------- */
+
+  a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+
+  /* --------------- */
+  /* Component       */
+  /* --------------- */
+
+  /* div class="loc fixedContent" */
+
+  /* div class="comp mntl-taxonomysc-article-list-group mntl-block" */
+  .mntl-taxonomysc-article-list-group {
+    position: relative;
+  }
+
+  /* div class="comp l-container mntl-taxonomysc-article-list mntl-document-card-list mntl-card-list mntl-block" */
+  .l-container {
+    width: 100%;
+  }
+
+  .mntl-card-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @supports (display: grid) {
+    .mntl-card-list {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .mntl-taxonomysc-article-list.mntl-card-list {
+    gap: 1.25rem 1.25rem;
+    padding-top: 2.5rem;
+  }
+
+  .mntl-taxonomysc-article-list.mntl-card-list:first-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 560px) {
+    .mntl-card-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 860px) {
+    .mntl-card-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1040px) {
+    .mntl-card-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  /* a class="comp mntl-card-list-items mntl-document-card mntl-card card card--no-image" */
+  .card {
+    position: relative;
+    display: flex;
+    flex: 1 0 100%;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 0.7rem 1rem;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .mntl-card-list .card {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  @supports (display: grid) {
+    .mntl-card-list .card {
+      margin-bottom: 0;
+    }
+  }
+
+  /* div class="loc card__top" */
+
+  /* div class="card__media mntl-universal-image universal-image__container" */
+  .card__media {
+    overflow: hidden;
+    position: relative;
+    order: 1;
+    height: 100%;
+    margin-bottom: 1rem;
+  }
+  .mntl-card .card__media {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  /* div class="img-placeholder" */
+  .img-placeholder {
+    background-color: #eee;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  /* img class="card__img universal-image__image lazyloaded" */
+  .card__img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    display: block;
+  }
+
+  .card .card__img {
+    transition: transform 0.15s ease;
+    transition-property: transform;
+  }
+
+  .card__media .img-placeholder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center top;
+    object-position: center top;
+  }
+
+  .card:hover .img-placeholder img {
+    transform: scale(1.05);
+  }
+
+  /* div class="card__content" */
+  .card__content {
+    flex-grow: 1;
+    order: 2;
+    width: 100%;
+    padding: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .mntl-card .card__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mntl-taxonomysc-article-list-group .card__content {
+    background-color: #fbf9f6;
+  }
+
+  /* div class="card__header" */
+
+  /* span class="card__title" */
+  .card__title {
+    letter-spacing: 0.5px;
+    color: #222;
+    display: inline;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+
+    box-sizing: border-box;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 1.2em;
+  }
+
+  .mntl-card .card__title {
+    order: 2;
+  }
+
+  .mntl-taxonomysc-article-list-group .card__title {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 800px) {
+    .mntl-taxonomysc-article-list-group .card__title {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      line-height: 24px;
+    }
+  }
+
+  /* span class="card__title-text " */
+  .mntl-card:hover .card__title-text {
+    background-size: 2px 2px;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-image: linear-gradient(
+      rgb(var(--color-base-accent)),
+      rgb(var(--color-base-accent))
+    );
+  }
+
+  /* div class="comp card__meta mntl-block" */
+  .card__meta {
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.6875rem;
+    line-height: 1.5;
+  }
+
+  /* ::before */
+  .card__meta::before {
+    content: attr(data-category);
+  }
+  .card__meta::after,
+  .card__meta::before {
+    font-size: 1rem;
+    letter-spacing: 0.04rem;
+    color: #444;
+    font-weight: 400;
+  }
+
+  /* ::after */
+  .card__meta::after {
+    content: attr(data-updated);
+  }
+
+  /* span class="comp card__square-divider mntl-block" */
+  .card__square-divider {
+    background-color: transparent;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-left: 0;
+    margin-right: 5px;
+    vertical-align: middle;
+    transform: translateY(-0.1rem);
+  }
+
+  /* ::before */
+  .card__square-divider:before {
+    content: "•";
+    transform: translateY(-1rem);
+    display: block;
+    font-size: 1.675rem;
+    color: rgb(var(--color-base-accent));
+  }
+</style>

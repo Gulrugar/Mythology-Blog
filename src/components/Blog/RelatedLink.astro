@@ -1,0 +1,26 @@
+---
+interface Props {
+  text: string;
+}
+const { text } = Astro.props as Props;
+---
+
+<div
+  class="comp related-link mntl-sc-block beauty-sc-block-featuredlink mntl-sc-block-featuredlink mntl-block"
+>
+  <a href="#"><span class="link__wrapper">{text}</span></a>
+</div>
+
+<style>
+  /* div class="comp related-link mntl-sc-block beauty-sc-block-featuredlink mntl-sc-block-featuredlink mntl-block" */
+
+  /* ::before */
+  .mntl-sc-block-featuredlink.related-link::before,
+  .mntl-sc-block-featuredlink.upnext-link::before {
+    content: "Related: ";
+    font-weight: 700;
+    line-height: 1.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+</style>
