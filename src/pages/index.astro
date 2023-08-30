@@ -28,33 +28,33 @@ const posts = await getCollection("blog", ({ data }) => {
 <style>
   /* article class="comp article--one-col-tax mntl-article" */
   .mntl-article {
-    padding: 0 calc(1rem * var(--convert-rem));
+    padding: 0 1rem;
     display: grid;
     position: relative;
     margin: 0 auto;
-    grid-template-columns: minmax(0, calc(76.25rem * var(--convert-rem)));
+    grid-template-columns: minmax(0, 76.25rem);
     grid-template-areas: "header" "post-header" "left-rail" "pre-content" "content" "post-content" "footer";
-    font-size: calc(1rem * var(--convert-rem));
+    font-size: 1rem;
   }
 
   @media (min-width: 34em) {
     .mntl-article {
-      padding: 0 calc(1.5rem * var(--convert-rem));
+      padding: 0 1.5rem;
     }
 
     .article--one-col-tax {
-      max-width: calc(37.5rem * var(--convert-rem));
+      max-width: 37.5rem;
     }
   }
 
   @media (min-width: 50em) {
     .mntl-article {
-      padding: 0 calc(2rem * var(--convert-rem));
+      padding: 0 2rem;
     }
 
     .article--one-col-tax {
       max-width: none;
-      padding-top: calc(2rem * var(--convert-rem));
+      padding-top: 2rem;
     }
   }
 

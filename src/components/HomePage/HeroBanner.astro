@@ -75,7 +75,7 @@
     margin-right: -50vw;
     display: block;
 
-    margin-bottom: calc(4rem * var(--convert-rem));
+    margin-bottom: 4rem;
   }
 
   /* a class="comp one-post-hero__card mntl-document-card mntl-card card card--no-image" */
@@ -83,7 +83,7 @@
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    padding: calc(0.7rem * var(--convert-rem)) calc(1rem * var(--convert-rem));
+    padding: 0.7rem 1rem;
     overflow: hidden;
     width: 100%;
     background: #fff;
@@ -94,7 +94,7 @@
     overflow: visible;
     padding: 0;
     font-weight: 400;
-    box-shadow: var(--article-box-shadow);
+    box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.15);
   }
 
   @media (min-width: 50em) {
@@ -123,7 +123,7 @@
   /* div class="card__media mntl-universal-image card__media universal-image__container" */
   .card__media {
     height: 100%;
-    margin-bottom: calc(1rem * var(--convert-rem));
+    margin-bottom: 1rem;
     order: 1;
     position: relative;
   }
@@ -161,34 +161,31 @@
   .one-post-hero .card__content {
     display: flex;
     flex-direction: column;
-    padding: calc(1.5rem * var(--convert-rem));
+    padding: 1.5rem;
     background: #fff;
-    box-shadow: var(--article-box-shadow);
+    box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.15);
   }
 
   @media (min-width: 50em) {
     .one-post-hero .card__content {
       grid-area: card-content;
       z-index: 1;
-      margin-top: calc(2rem * var(--convert-rem));
+      margin-top: 2rem;
       width: 45%;
-      margin-left: max(
-        calc(2rem * var(--convert-rem)),
-        calc(50% - calc(38.125rem * var(--convert-rem)))
-      );
+      margin-left: max(2rem, calc(50% - 38.125rem));
     }
   }
 
   @media (min-width: 64em) {
     .one-post-hero .card__content {
       margin-top: 0;
-      width: calc(29.25rem * var(--convert-rem));
+      width: 29.25rem;
     }
   }
 
   @media (min-width: 70em) {
     .one-post-hero .card__content {
-      width: calc(22.75rem * var(--convert-rem));
+      width: 22.75rem;
     }
   }
 
@@ -207,12 +204,12 @@
   }
 
   .one-post-hero .card__header[data-kicker]::before {
-    font-size: calc(0.875rem * var(--convert-rem));
-    line-height: calc(1.25rem * var(--convert-rem));
-    letter-spacing: calc(0.0625rem * var(--convert-rem));
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.0625rem;
     font-weight: 700;
     text-transform: uppercase;
-    text-underline-offset: calc(0.25rem * var(--convert-rem));
+    text-underline-offset: 0.25rem;
   }
 
   .one-post-hero .card__header[data-kicker]::before {
@@ -223,22 +220,22 @@
   .card__title {
     box-sizing: border-box;
     margin-bottom: 0;
-    font-size: calc(1.125rem * var(--convert-rem));
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.2em;
   }
 
   .one-post-hero .card__title {
     order: 1;
-    margin: calc(0.5rem * var(--convert-rem)) 0;
+    margin: 0.5rem 0;
   }
 
   /* span class="card__title-text " */
   .one-post-hero .card__title-text {
     font-weight: 700;
-    font-size: calc(1.75rem * var(--convert-rem));
-    line-height: calc(2rem * var(--convert-rem));
-    text-underline-offset: calc(0.5rem * var(--convert-rem));
+    font-size: 1.75rem;
+    line-height: 2rem;
+    text-underline-offset: 0.5rem;
   }
 
   .one-post-hero .card:hover .card__title-text {
@@ -252,17 +249,17 @@
 
   @media (min-width: 50em) {
     .one-post-hero .card__title-text {
-      font-size: calc(2.25rem * var(--convert-rem));
-      line-height: calc(2.75rem * var(--convert-rem));
-      text-underline-offset: calc(0.6875rem * var(--convert-rem));
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      text-underline-offset: 0.6875rem;
     }
   }
 
   /* div class="card__byline mntl-card__byline " */
   .one-post-hero .card__byline {
-    font-size: calc(0.875rem * var(--convert-rem));
-    line-height: calc(1.25rem * var(--convert-rem));
-    text-underline-offset: calc(0.1875rem * var(--convert-rem));
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-underline-offset: 0.1875rem;
   }
 
   .one-post-hero .card__byline {
@@ -277,12 +274,12 @@
 
   /* div class="comp card__description mntl-block" */
   .one-post-hero .card__description {
-    font-size: calc(1rem * var(--convert-rem));
-    line-height: calc(1.5rem * var(--convert-rem));
-    text-underline-offset: calc(0.1875rem * var(--convert-rem));
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-underline-offset: 0.1875rem;
 
     order: 2;
-    margin-bottom: calc(0.5rem * var(--convert-rem));
+    margin-bottom: 0.5rem;
   }
 
   /* ::after */
