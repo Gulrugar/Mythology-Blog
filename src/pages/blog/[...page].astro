@@ -13,7 +13,7 @@ export async function getStaticPaths({ paginate }: any) {
   const posts = await getCollection("blog");
 
   const formattedPosts = formatBlogPosts(posts, {
-    filterOutDrafts: false,
+    filterOutDrafts: true,
     filterOutFuturePosts: true,
     sortByDate: false,
     limit: undefined,

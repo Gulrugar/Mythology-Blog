@@ -1,6 +1,16 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { CollectionEntry, getCollection } from "astro:content";
+import ArticleHeader from "../../components/Article/ArticleHeader.astro";
+import ArticleContent from "../../components/Article/ArticleContent.astro";
+import ArticleRightRail from "../../components/Article/ArticleRightRail.astro";
+
+import Paragraph from "../../components/Article/Paragraph.astro";
+import Callout from "../../components/Article/Callout.astro";
+import RelatedLink from "../../components/Article/RelatedLink.astro";
+import Section from "../../components/Article/Section.astro";
+import Image from "../../components/Article/Image.astro";
+import UpNextLink from "../../components/Article/UpNextLink.astro";
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection("blog", ({ data }) => {
@@ -20,11 +30,98 @@ interface Props {
 }
 
 const { post } = Astro.props as Props;
-const { title, description, image } = post.data;
-
-const { Content } = await post.render();
+const { title, description, category, date, author, image, article } =
+  post.data;
 ---
 
 <MainLayout {title} {description} {image} data={post.data}>
-  <Content />
+  <section>
+    <article
+      class="page-width comp mntl-article--two-column-right-rail sc-ad-container beauty-article mntl-article"
+    >
+      <ArticleHeader {title} {description} {category} {date} {author} />
+      <ArticleContent {image}>
+        {/* MainImage */}
+        <Fragment slot="intro">
+          {
+            article.intro.map((item) => {
+              switch (item.tag) {
+                case "Callout":
+                  return <Callout {...item.params} />;
+                case "RelatedLink":
+                  return <RelatedLink {...item.params} />;
+                default:
+                  return <Paragraph {...item.params} />;
+              }
+            })
+          }
+        </Fragment>
+        <Fragment slot="content">
+          {
+            article.content.map((section, index: number) => {
+              return (
+                <Section
+                  page={index + 1}
+                  pageTotal={article.content.length}
+                  title={section.title}
+                >
+                  {section.data.map((item) => {
+                    switch (item.tag) {
+                      case "Callout":
+                        return <Callout {...item.params} />;
+                      case "Image":
+                        return <Image {...item.params} />;
+                      case "RelatedLink":
+                        return <RelatedLink {...item.params} />;
+                      default:
+                        return <Paragraph {...item.params} />;
+                    }
+                  })}
+                </Section>
+              );
+            })
+          }
+        </Fragment>
+        <Fragment slot="outro">
+          <UpNextLink text={article.outro.params.text} />
+        </Fragment>
+      </ArticleContent>
+      <ArticleRightRail />
+    </article>
+  </section>
 </MainLayout>
+
+<style>
+  /* article class="page-width comp mntl-article--two-column-right-rail sc-ad-container beauty-article mntl-article" */
+  article {
+    --page-width: 88rem;
+  }
+
+  .mntl-article {
+    --article-width: 68rem;
+
+    display: grid;
+    position: relative;
+    grid-template-columns: minmax(0, var(--article-width));
+    grid-template-areas:
+      "header"
+      "content";
+  }
+
+  .mntl-article {
+    margin-top: 1.5rem;
+    column-gap: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .mntl-article--two-column-right-rail {
+      grid-template-columns: minmax(0, var(--article-width)) calc(
+          var(--page-width) - var(--article-width)
+        );
+      grid-template-areas:
+        "header header"
+        "content right-rail";
+      column-gap: 5rem;
+    }
+  }
+</style>

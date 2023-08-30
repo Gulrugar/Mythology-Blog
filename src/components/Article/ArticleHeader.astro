@@ -4,7 +4,10 @@ import { slugify } from "../../script/utils";
 import type { CollectionEntry } from "astro:content";
 
 interface Props
-  extends Omit<CollectionEntry<"blog">["data"], "draft" | "image"> {}
+  extends Omit<
+    CollectionEntry<"blog">["data"],
+    "draft" | "image" | "article"
+  > {}
 
 const { title, description, category, date, author } = Astro.props as Props;
 ---
