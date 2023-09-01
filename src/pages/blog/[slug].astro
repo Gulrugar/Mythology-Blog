@@ -1,9 +1,9 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { CollectionEntry, getCollection } from "astro:content";
+
 import ArticleHeader from "../../components/Article/ArticleHeader.astro";
-import ArticleContent from "../../components/Article/ArticleContent.astro";
-import ArticleRightRail from "../../components/Article/ArticleRightRail.astro";
+import { blurryImageUrl } from "../../data/constants";
 
 import Paragraph from "../../components/Article/Paragraph.astro";
 import Callout from "../../components/Article/Callout.astro";
@@ -35,63 +35,100 @@ const { title, description, category, date, author, image, article } =
 ---
 
 <MainLayout {title} {description} {image} data={post.data}>
-  <section>
-    <article
-      class="page-width comp mntl-article--two-column-right-rail sc-ad-container beauty-article mntl-article"
-    >
-      <ArticleHeader {title} {description} {category} {date} {author} />
-      <ArticleContent {image}>
-        {/* MainImage */}
-        <Fragment slot="intro">
-          {
-            article.intro.map((item) => {
-              switch (item.tag) {
-                case "Callout":
-                  return <Callout {...item.params} />;
-                case "RelatedLink":
-                  return <RelatedLink {...item.params} />;
-                default:
-                  return <Paragraph {...item.params} />;
-              }
-            })
-          }
-        </Fragment>
-        <Fragment slot="content">
-          {
-            article.content.map((section, index: number) => {
-              return (
-                <Section
-                  page={index + 1}
-                  pageTotal={article.content.length}
-                  title={section.title}
-                >
-                  {section.data.map((item) => {
-                    switch (item.tag) {
-                      case "Callout":
-                        return <Callout {...item.params} />;
-                      case "Image":
-                        return <Image {...item.params} />;
-                      case "RelatedLink":
-                        return <RelatedLink {...item.params} />;
-                      default:
-                        return <Paragraph {...item.params} />;
-                    }
-                  })}
-                </Section>
-              );
-            })
-          }
-        </Fragment>
-        <Fragment slot="outro">
-          <UpNextLink text={article.outro.params.text} />
-        </Fragment>
-      </ArticleContent>
-      <ArticleRightRail />
-    </article>
-  </section>
+  <article
+    class="page-width comp mntl-article--two-column-right-rail sc-ad-container beauty-article mntl-article"
+  >
+    <ArticleHeader {title} {description} {category} {date} {author} />
+
+    <!-- Article Content -->
+    <div class="loc article-content">
+      <div class="comp article__body right-rail mntl-block">
+        <figure class="comp mntl-universal-primary-image primary-image">
+          <div class="primary-image__media">
+            <div class="img-placeholder" style="padding-bottom: 100%;">
+              <img
+                src={image.src}
+                alt={image.alt}
+                class="primary-image__image mntl-primary-image--blurry"
+                onload="(function(e){e.classList.add('loaded')})(this)"
+                style={`--blurry: url(${blurryImageUrl})`}
+              />
+              <noscript>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  class="primary-image__image mntl-primary-image--blurry loaded"
+                />
+              </noscript>
+            </div>
+          </div>
+          <figcaption
+            class="comp primary-image__figcap mntl-figure-caption figure-article-caption"
+          >
+            <span class="figure-article-caption-owner">
+              <p>
+                Photo by
+                <a href="#" target="_blank">Katie Edwards Photography</a>
+              </p>
+            </span>
+          </figcaption>
+        </figure>
+        <div class="comp list-sc mntl-block">
+          <div class="comp article-intro mntl-block">
+            {
+              article.intro.map((item) => {
+                switch (item.tag) {
+                  case "Callout":
+                    return <Callout {...item.params} />;
+                  case "RelatedLink":
+                    return <RelatedLink {...item.params} />;
+                  default:
+                    return <Paragraph {...item.params} />;
+                }
+              })
+            }
+          </div>
+          <div class="comp list-sc__content mntl-sc-page mntl-block">
+            {
+              article.content.map((section, index: number) => {
+                return (
+                  <Section
+                    page={index + 1}
+                    pageTotal={article.content.length}
+                    title={section.title}
+                  >
+                    {section.data.map((item) => {
+                      switch (item.tag) {
+                        case "Callout":
+                          return <Callout {...item.params} />;
+                        case "Image":
+                          return <Image {...item.params} />;
+                        case "RelatedLink":
+                          return <RelatedLink {...item.params} />;
+                        default:
+                          return <Paragraph {...item.params} />;
+                      }
+                    })}
+                  </Section>
+                );
+              })
+            }
+          </div>
+          <div class="comp article-outro mntl-block">
+            <UpNextLink text={article.outro.params.text} />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Article Right Rail -->
+    <div class="loc article-right-rail">Right Rail</div>
+  </article>
 </MainLayout>
 
 <style>
+  /* ------------------ */
+  /* Component          */
+  /* ------------------ */
   /* article class="page-width comp mntl-article--two-column-right-rail sc-ad-container beauty-article mntl-article" */
   article {
     --page-width: 88rem;
@@ -122,6 +159,121 @@ const { title, description, category, date, author, image, article } =
         "header header"
         "content right-rail";
       column-gap: 5rem;
+    }
+  }
+
+  /* ------------------ */
+  /* Article Content    */
+  /* ------------------ */
+
+  /* div class="comp article-intro mntl-block" */
+
+  /* div class="loc article-content" */
+  .article-content {
+    grid-area: content;
+    position: relative;
+  }
+
+  /* div class="comp article__body right-rail mntl-block" */
+
+  /* figure class="comp mntl-universal-primary-image primary-image" */
+
+  .primary-image {
+    margin: 0 0 2rem;
+  }
+
+  /* div class="primary-image__media" */
+  .primary-image__media {
+    position: relative;
+    margin-bottom: 0.3rem;
+  }
+
+  /* class="img-placeholder" */
+
+  /* img  class="primary-image__image mntl-primary-image--blurry" */
+
+  .mntl-primary-image--blurry {
+    background-image: var(--blurry);
+    background-size: 100% 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .primary-image__image {
+    width: 100%;
+  }
+
+  .mntl-primary-image--blurry.loaded {
+    background-image: none;
+  }
+
+  /* figcaption class="comp primary-image__figcap mntl-figure-caption figure-article-caption" */
+  figcaption {
+    line-height: 1.1;
+    color: #666;
+  }
+
+  .primary-image__figcap {
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* span class="figure-article-caption-owner" */
+
+  /* p */
+  .primary-image__figcap p {
+    display: inline;
+    font-size: 1rem;
+  }
+
+  /* a */
+
+  /* div class="comp list-sc mntl-block" */
+
+  /* class="comp mntl-sc-block beauty-sc-block-html mntl-sc-block-html" */
+  .article-intro p.mntl-sc-block-html {
+    margin: 2rem 0;
+  }
+
+  .article-intro p.mntl-sc-block-html:first-of-type::first-letter {
+    letter-spacing: 0.5px;
+    float: left;
+    font-family: var(--font-heading-family);
+    font-size: 6.1875rem;
+    line-height: 3.625rem;
+    padding-top: 1px;
+    padding-right: 0.5rem;
+    padding-left: 0.1875rem;
+  }
+
+  /* div class="comp list-sc__content mntl-sc-page mntl-block" */
+
+  .mntl-sc-page {
+    margin-top: 4rem;
+  }
+
+  /* ------------------ */
+  /* Article Right Rail    */
+  /* ------------------ */
+
+  /* div class="loc article-right-rail" */
+
+  .article-right-rail {
+    grid-area: right-rail;
+    position: absolute;
+    top: -10000in;
+    visibility: hidden;
+    max-height: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .article-right-rail {
+      position: static;
+      visibility: visible;
+      max-height: initial;
     }
   }
 </style>
