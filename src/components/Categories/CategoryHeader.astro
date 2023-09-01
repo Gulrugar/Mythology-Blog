@@ -20,7 +20,7 @@ import { blurryImageUrl } from "../../data/constants";
       </div>
     </figure>
     <div class="comp mntl-taxonomysc-header-group mntl-block">
-      <ul class="comp mntl-breadcrumbs mntl-block page-width">
+      <ul class="comp mntl-breadcrumbs mntl-block">
         <li class="comp mntl-breadcrumbs__item mntl-block">
           <a href="#" class="mntl-text-link mntl-breadcrumbs__link">
             <span class="link__wrapper">Wedding Ideas & Advice</span>
@@ -32,12 +32,10 @@ import { blurryImageUrl } from "../../data/constants";
           </a>
         </li>
       </ul>
-      <h1 class="comp mntl-taxonomysc-heading mntl-text-block page-width">
-        Wedding Planning
-      </h1>
+      <h1 class="comp mntl-taxonomysc-heading mntl-text-block">Category</h1>
     </div>
   </div>
-  <div class="comp mntl-taxonomysc-header__bottom mntl-block page-width">
+  <div class="comp mntl-taxonomysc-header__bottom mntl-block">
     <div class="comp mntl-taxonomysc-intro mntl-sc-page mntl-block">
       <p class="comp mntl-sc-block beauty-sc-block-html mntl-sc-block-html">
         Once you've selected your wedding venue, it's time to focus on décor.
@@ -54,13 +52,20 @@ import { blurryImageUrl } from "../../data/constants";
   /* --------------- */
   /* General         */
   /* --------------- */
-  figure {
+  figure,
+  p,
+  div {
     margin: 0;
     padding: 0;
     font-size: 100%;
     font-weight: 400;
     vertical-align: baseline;
     background: 0 0;
+  }
+
+  p {
+    margin-bottom: 1.75rem;
+    margin-top: 0;
   }
 
   img {
@@ -74,11 +79,26 @@ import { blurryImageUrl } from "../../data/constants";
     font-size: 100%;
     vertical-align: baseline;
     background: 0 0;
+  }
+
+  a {
+    color: #222;
     text-decoration: none;
   }
 
   h1 {
+    margin: 0 0 0.5em;
+    letter-spacing: 0.5px;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #222;
     font-weight: 400;
+  }
+
+  h1 {
+    letter-spacing: 0.5px;
+    color: #222;
   }
   /* --------------- */
   /* Component       */
@@ -87,28 +107,66 @@ import { blurryImageUrl } from "../../data/constants";
   .mntl-taxonomysc-header {
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
+  }
+  .mntl-taxonomysc-header {
     margin-top: 0;
     margin-bottom: 2.75rem;
+    background-color: #fff;
+  }
+  .mntl-taxonomysc-header {
     background-color: #fbf9f6;
   }
 
   /* div class="comp mntl-taxonomysc-header__top mntl-block" */
   .mntl-taxonomysc-header__top {
     display: flex;
-    position: relative;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
 
+  @media (min-width: 35em) {
+    .mntl-taxonomysc-header__top {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  .mntl-taxonomysc-header__top {
+    position: relative;
+    flex-direction: row;
+  }
+
   /* figure class="comp mntl-taxonomysc-image-wrapper primary-image--full-bleed mntl-universal-primary-image primary-image" */
+
+  .mntl-taxonomysc-image-wrapper {
+    max-width: 300px;
+  }
+
+  @media (min-width: 35em) {
+    .mntl-taxonomysc-image-wrapper {
+      order: 1;
+    }
+  }
+
+  .primary-image {
+    width: 100vw;
+    margin: 0 0 2rem -0.625rem;
+  }
+
+  @media (min-width: 34em) {
+    .primary-image {
+      width: auto;
+      margin: 0 0 2rem;
+    }
+  }
   .primary-image--full-bleed {
-    width: 100%;
+    width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: -50%;
-    margin-right: -50%;
-    margin-top: 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
     margin-bottom: 0;
   }
 
@@ -119,6 +177,7 @@ import { blurryImageUrl } from "../../data/constants";
   /* div class="primary-image__media" */
   .primary-image__media {
     position: relative;
+    margin-bottom: 0.3rem;
   }
 
   .primary-image--full-bleed .primary-image__media {
@@ -147,14 +206,18 @@ import { blurryImageUrl } from "../../data/constants";
   /* div class="img-placeholder" */
   .img-placeholder {
     background-color: #c7c7c7;
-    position: relative;
-    width: 100%;
     height: 0;
     overflow: hidden;
   }
 
-  .primary-image--full-bleed .img-placeholder {
-    background: #da2525 !important;
+  .img-placeholder {
+    background-color: #c7c7c7;
+    position: relative;
+    width: 100%;
+  }
+
+  .img-placeholder.img-placeholder {
+    background: #eee;
   }
 
   /* img class="primary-image__image mntl-primary-image--blurry loaded" */
@@ -177,11 +240,20 @@ import { blurryImageUrl } from "../../data/constants";
   }
 
   /* div class="comp mntl-taxonomysc-header-group mntl-block" */
+  @media (min-width: 35em) {
+    .mntl-taxonomysc-header-group {
+      padding-right: 2rem;
+    }
+  }
+
   .mntl-taxonomysc-header-group {
     position: absolute;
     z-index: 3;
     width: 100%;
     height: 100%;
+  }
+
+  .mntl-taxonomysc-header-group {
     padding: 0;
   }
 
@@ -189,24 +261,50 @@ import { blurryImageUrl } from "../../data/constants";
   .mntl-breadcrumbs {
     position: relative;
     top: 1rem;
+    padding: 0 1.5rem;
     text-align: center;
   }
 
-  @media screen and (min-width: 750px) {
+  @media (min-width: 34em) {
+    .mntl-breadcrumbs {
+      top: 1.6875rem;
+      text-align: unset;
+    }
+  }
+
+  .mntl-breadcrumbs {
+    padding: 0 1.5rem;
+    margin: auto;
+    max-width: 75rem;
+  }
+
+  @media (min-width: 34em) {
     .mntl-breadcrumbs {
       position: absolute;
       left: 0;
       right: 0;
       top: unset;
       bottom: 6.25rem;
-      text-align: left;
     }
   }
 
   /* li class="comp mntl-breadcrumbs__item mntl-block" */
   .mntl-breadcrumbs__item {
-    font-size: 1.275rem;
+    font-size: 0.75rem;
     color: #fff;
+  }
+
+  .mntl-breadcrumbs__item {
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: 34em) {
+    .mntl-breadcrumbs__item {
+      font-size: 0.9375rem;
+    }
+  }
+
+  .mntl-breadcrumbs__item {
     display: inline-block;
   }
 
@@ -223,12 +321,20 @@ import { blurryImageUrl } from "../../data/constants";
     text-underline-position: under;
   }
 
+  @media (min-width: 34em) {
+    .mntl-breadcrumbs__link {
+      font-size: 0.75rem;
+    }
+  }
+
   /* ::before */
-  .mntl-breadcrumbs__item + .mntl-breadcrumbs__item:before {
+  .mntl-breadcrumbs__item + .mntl-breadcrumbs__item::before {
     content: ">";
     display: inline-block;
     margin: 0 0.5rem;
   }
+
+  /* span class="link__wrapper" */
 
   /* h2 class="comp mntl-taxonomysc-heading mntl-text-block" */
   .mntl-taxonomysc-heading {
@@ -237,49 +343,98 @@ import { blurryImageUrl } from "../../data/constants";
     right: 0;
     bottom: 0;
     margin: auto auto 1.875rem;
+    padding: 0 1.5rem;
+    max-width: 75rem;
     font-size: 3rem;
     line-height: 40px;
-    letter-spacing: 0.5px;
+    letter-spacing: 5px;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: #fff;
   }
 
-  @media screen and (min-width: 750px) {
+  @media (min-width: 34em) {
+    .mntl-taxonomysc-heading {
+      font-size: 3.75rem;
+      text-align: left;
+    }
+  }
+
+  .mntl-taxonomysc-heading {
+    transform: none;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+  }
+
+  @media (min-width: 34em) {
     .mntl-taxonomysc-heading {
       left: 0;
       width: auto;
-      font-size: 4.5rem;
-      text-align: left;
+      font-size: 3.75rem;
     }
   }
 
   /* div class="comp mntl-taxonomysc-header__bottom mntl-block" */
   .mntl-taxonomysc-header__bottom {
+    padding: 0.5rem;
+    background-color: #efefef;
+  }
+
+  .mntl-taxonomysc-header__bottom {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding-top: 1.25rem;
+    padding: 1.25rem 1.5rem 1.875rem;
     width: 100%;
     text-align: center;
     background-color: unset;
+  }
+  @media (min-width: 34em) {
+    .mntl-taxonomysc-header__bottom {
+      padding-top: 2.125rem;
+      padding-bottom: 2.125rem;
+      text-align: left;
+    }
+  }
+
+  .mntl-taxonomysc-header__bottom {
+    padding: 1.25rem 0 0;
   }
 
   /* div class="comp mntl-taxonomysc-intro mntl-sc-page mntl-block" */
   .mntl-taxonomysc-intro {
     order: 1;
-    padding-top: 0.75rem;
-    padding-bottom: 0;
-    text-align: left;
+    max-width: 50rem;
+  }
+
+  .mntl-taxonomysc-intro {
+    padding: 0.75rem 1.5rem 0;
     width: auto;
+    max-width: none;
+    text-align: left;
+  }
+
+  @media (min-width: 64em) {
+    .mntl-taxonomysc-intro {
+      margin: auto;
+      width: 75rem;
+    }
   }
 
   /* p class="comp mntl-sc-block beauty-sc-block-html mntl-sc-block-html" */
   .mntl-taxonomysc-intro .mntl-sc-block {
-    max-width: 80rem;
-    font-size: 1.35rem;
+    max-width: 52.5rem;
+    font-size: 1rem;
     letter-spacing: 0;
     line-height: 28px;
     color: #777;
+  }
+
+  @media (min-width: 34em) {
+    .mntl-taxonomysc-intro .mntl-sc-block {
+      font-size: 1rem;
+      line-height: 28px;
+    }
   }
 </style>

@@ -19,6 +19,7 @@ const { posts } = Astro.props as Props;
           <a
             href={`/blog/${post.slug}`}
             class="comp mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+            data-cta="Read Now ▸"
           >
             <div class="loc card__top">
               <div class="card__media mntl-universal-image universal-image__container">
@@ -56,18 +57,32 @@ const { posts } = Astro.props as Props;
   /* General         */
   /* --------------- */
 
+  div,
+  span {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+    background: 0 0;
+  }
+
+  img {
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+
   a {
     margin: 0;
     padding: 0;
     font-size: 100%;
     vertical-align: baseline;
     background: 0 0;
-    text-decoration: none;
   }
 
-  img {
-    max-width: 100%;
-    vertical-align: bottom;
+  a {
+    color: #222;
+    text-decoration: none;
   }
 
   /* --------------- */
@@ -84,6 +99,16 @@ const { posts } = Astro.props as Props;
   /* div class="comp l-container mntl-taxonomysc-article-list mntl-document-card-list mntl-card-list mntl-block" */
   .l-container {
     width: 100%;
+    margin: 0 auto;
+  }
+
+  .l-container {
+    max-width: 75rem;
+    padding: 0 1.5rem;
+  }
+
+  .mntl-taxonomysc-article-list {
+    grid-gap: 1.375rem;
   }
 
   .mntl-card-list {
@@ -96,7 +121,43 @@ const { posts } = Astro.props as Props;
     .mntl-card-list {
       display: grid;
       grid-template-columns: 1fr;
+      grid-gap: 1rem;
     }
+  }
+
+  @media (min-width: 35em) {
+    .mntl-card-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: 35em) {
+    @supports (display: grid) {
+      .mntl-card-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @media (min-width: 54em) {
+    @supports (display: grid) {
+      .mntl-card-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  @media (min-width: 65em) {
+    @supports (display: grid) {
+      .mntl-card-list {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+
+  .mntl-taxonomysc-article-list.mntl-card-list {
+    gap: 1.5rem;
   }
 
   .mntl-taxonomysc-article-list.mntl-card-list {
@@ -108,28 +169,14 @@ const { posts } = Astro.props as Props;
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: 560px) {
-    .mntl-card-list {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media screen and (min-width: 860px) {
-    .mntl-card-list {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  @media screen and (min-width: 1040px) {
-    .mntl-card-list {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
   /* a class="comp mntl-card-list-items mntl-document-card mntl-card card card--no-image" */
   .card {
-    position: relative;
-    display: flex;
     flex: 1 0 100%;
+    position: relative;
+  }
+
+  .card {
+    display: flex;
     flex-grow: 1;
     flex-direction: column;
     padding: 0.7rem 1rem;
@@ -150,28 +197,60 @@ const { posts } = Astro.props as Props;
     }
   }
 
+  @media (min-width: 35em) {
+    .mntl-card-list .card {
+      flex: 0 1 48%;
+    }
+  }
+
+  @media (min-width: 54em) {
+    .mntl-card-list .card {
+      flex: 0 1 32%;
+    }
+  }
+
   /* div class="loc card__top" */
 
   /* div class="card__media mntl-universal-image universal-image__container" */
   .card__media {
     overflow: hidden;
     position: relative;
-    order: 1;
+  }
+
+  .card__media {
     height: 100%;
     margin-bottom: 1rem;
+    order: 1;
+    position: relative;
   }
   .mntl-card .card__media {
-    height: auto;
     margin-bottom: 0;
+    height: auto;
   }
 
   /* div class="img-placeholder" */
   .img-placeholder {
-    background-color: #eee;
+    background-color: #c7c7c7;
     height: 0;
     overflow: hidden;
+  }
+
+  .img-placeholder {
+    background-color: #c7c7c7;
     position: relative;
     width: 100%;
+  }
+
+  .img-placeholder.img-placeholder {
+    background: #eee;
+  }
+
+  .card .img-placeholder {
+    position: relative;
+  }
+
+  .card__media .img-placeholder {
+    position: relative;
   }
   /* img class="card__img universal-image__image lazyloaded" */
   .card__img {
@@ -192,7 +271,14 @@ const { posts } = Astro.props as Props;
     left: 0;
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
 
+  .card__media .img-placeholder img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center top;
@@ -205,11 +291,14 @@ const { posts } = Astro.props as Props;
 
   /* div class="card__content" */
   .card__content {
+    padding: 1rem;
+    line-height: 1.3;
+  }
+
+  .card__content {
     flex-grow: 1;
     order: 2;
     width: 100%;
-    padding: 1.5rem;
-    line-height: 1.3;
   }
 
   .mntl-card .card__content {
@@ -221,18 +310,45 @@ const { posts } = Astro.props as Props;
     background-color: #fbf9f6;
   }
 
+  @media (min-width: 34em) {
+    .mntl-taxonomysc-article-list-group .card__content {
+      background-color: #fff;
+    }
+  }
+
+  /* ::after */
+  .card::after {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    width: 7.5rem;
+    height: 1px;
+    transform: translateX(-50%);
+    background: #ede6e6;
+  }
+
+  .card[data-cta]:not([data-cta=""])::after {
+    display: block;
+    order: 99;
+    margin-top: 1rem;
+    content: attr(data-cta);
+  }
   /* div class="card__header" */
 
   /* span class="card__title" */
   .card__title {
     letter-spacing: 0.5px;
+    font-size: 1.25rem;
     color: #222;
     display: inline;
     word-break: break-word;
     overflow-wrap: anywhere;
+  }
 
+  .card__title {
     box-sizing: border-box;
     margin-bottom: 0;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.2em;
   }
@@ -242,18 +358,25 @@ const { posts } = Astro.props as Props;
   }
 
   .mntl-taxonomysc-article-list-group .card__title {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
-  @media screen and (min-width: 800px) {
+  @media (min-width: 34em) {
     .mntl-taxonomysc-article-list-group .card__title {
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.0625rem;
       line-height: 24px;
     }
   }
 
   /* span class="card__title-text " */
+  @media (min-width: 50em) {
+    .mntl-taxonomysc-article-list-group .card__title-text {
+      font-size: 1.5rem;
+      line-height: 26px;
+    }
+  }
+
   .mntl-card:hover .card__title-text {
     background-size: 2px 2px;
     background-repeat: repeat-x;
@@ -266,7 +389,7 @@ const { posts } = Astro.props as Props;
 
   /* div class="comp card__meta mntl-block" */
   .card__meta {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -275,20 +398,31 @@ const { posts } = Astro.props as Props;
   }
 
   /* ::before */
+  /* ::after */
   .card__meta::before {
     content: attr(data-category);
   }
-  .card__meta::after,
-  .card__meta::before {
-    font-size: 1rem;
-    letter-spacing: 0.04rem;
-    color: #444;
-    font-weight: 400;
-  }
 
-  /* ::after */
   .card__meta::after {
     content: attr(data-updated);
+    display: inline-block;
+  }
+  .card__meta::after,
+  .card__meta::before {
+    letter-spacing: 0.04rem;
+  }
+
+  .mntl-taxonomysc-article-list-group .card__meta::after,
+  .mntl-taxonomysc-article-list-group .card__meta::before {
+    color: #444;
+    font-size: 0.625rem;
+  }
+
+  @media (min-width: 34em) {
+    .mntl-taxonomysc-article-list-group .card__meta::after,
+    .mntl-taxonomysc-article-list-group .card__meta::before {
+      font-size: 0.6875rem;
+    }
   }
 
   /* span class="comp card__square-divider mntl-block" */
@@ -304,11 +438,11 @@ const { posts } = Astro.props as Props;
   }
 
   /* ::before */
-  .card__square-divider:before {
+  .card__square-divider::before {
     content: "•";
-    transform: translateY(-1rem);
+    transform: translateY(-1.15rem);
     display: block;
-    font-size: 1.675rem;
+    font-size: 1.775rem;
     color: rgb(var(--color-base-accent));
   }
 </style>
