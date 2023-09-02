@@ -1,15 +1,17 @@
 ---
+import "../../styles/blog-styles.css";
 import MainLayout from "../../layouts/MainLayout.astro";
 import { CollectionEntry, getCollection } from "astro:content";
 
-import ArticleHeader from "../../components/Article/ArticleHeader.astro";
+import { formatDate } from "../../script/utils";
+import { slugify } from "../../script/utils";
 import { blurryImageUrl } from "../../data/constants";
 
 import Paragraph from "../../components/Article/Paragraph.astro";
 import Callout from "../../components/Article/Callout.astro";
 import RelatedLink from "../../components/Article/RelatedLink.astro";
 import Section from "../../components/Article/Section.astro";
-import Image from "../../components/Article/Image.astro";
+import ImageBlock from "../../components/Article/ImageBlock.astro";
 import UpNextLink from "../../components/Article/UpNextLink.astro";
 
 export async function getStaticPaths() {
@@ -38,42 +40,136 @@ const { title, description, category, date, author, image, article } =
   <article
     class="page-width comp mntl-article--two-column-right-rail sc-ad-container beauty-article mntl-article"
   >
-    <ArticleHeader {title} {description} {category} {date} {author} />
+    <!-- ============== -->
+    <!-- Article Header -->
+    <!-- ============== -->
+    <div class="loc article-header">
+      <div class="comp article-top mntl-block">
+        <div class="comp article-header__breadcrumb mntl-block">
+          <ul class="comp breadcrumb mntl-block">
+            <li class="comp breadcrumb__list-item mntl-block">
+              <a
+                href={`/categories/${slugify(category)}`}
+                class="link link--text mntl-text-link breadcrumb__link"
+              >
+                <span class="link__wrapper">{category}</span>
+              </a>
+            </li>
+            <li class="comp breadcrumb__list-item mntl-block">
+              <a
+                href={`/categories/${slugify(category)}`}
+                class="link link--text mntl-text-link breadcrumb__link"
+              >
+                <span class="link__wrapper">{category}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h1 class="comp article-heading mntl-text-block">{title}-{title}</h1>
+        <p class="comp article-subheading mntl-text-block">
+          {description}
+        </p>
+        <div class="comp article-meta mntl-block">
+          <div class="comp beauty-bylines mntl-bylines">
+            <div
+              class="comp mntl-bylines__group--author mntl-bylines__group mntl-block"
+            >
+              <div
+                class="comp mntl-bylines__item mntl-attribution__item mntl-attribution__item--has-date"
+              >
+                <span class="mntl-attribution__item-descriptor"> By</span>
+                <div class="mntl-dynamic-tooltip--trigger" data-tooltip="">
+                  <a href="#" class="mntl-attribution__item-name" tabindex="-1"
+                    >{author}</a
+                  >
+                </div>
+              </div>
+              <div class="mntl-attribution__item-date">
+                Updated on {formatDate(date)}
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="list-unstyled comp social-share mntl-social-share share">
+          <li class="share-item share-item-facebook">
+            <span
+              class="share-link share-link-facebook"
+              tabindex="0"
+              title="Facebook"
+              aria-label="Facebook"
+              role="link"
+            >
+              <svg class="icon icon-facebook">
+                <use href="#icon-facebook"> </use>
+              </svg>
+            </span>
+            <li class="share-item share-item-pinterest">
+              <span
+                class="share-link share-link-pinterest"
+                tabindex="0"
+                title="Pinterest"
+                aria-label="Pinterest"
+                role="link"
+              >
+                <svg class="icon icon-pinterest">
+                  <use href="#icon-pinterest"> </use>
+                </svg>
+              </span>
+            </li>
+            <li class="share-item share-item-emailshare">
+              <span
+                class="share-link share-link-emailshare"
+                tabindex="0"
+                title="Emailshare"
+                aria-label="Emailshare"
+                role="link"
+              >
+                <svg class="icon icon-emailshare">
+                  <use href="#icon-emailshare"></use>
+                </svg>
+              </span>
+            </li>
+          </li>
+        </ul>
+      </div>
+    </div>
 
+    <!-- =============== -->
     <!-- Article Content -->
+    <!-- =============== -->
     <div class="loc article-content">
       <div class="comp article__body right-rail mntl-block">
-        <figure class="comp mntl-universal-primary-image primary-image">
-          <div class="primary-image__media">
-            <div class="img-placeholder" style="padding-bottom: 100%;">
-              <img
-                src={image.src}
-                alt={image.alt}
-                class="primary-image__image mntl-primary-image--blurry"
-                onload="(function(e){e.classList.add('loaded')})(this)"
-                style={`--blurry: url(${blurryImageUrl})`}
-              />
-              <noscript>
+        <div class="comp list-sc mntl-block">
+          <figure class="comp mntl-universal-primary-image primary-image">
+            <div class="primary-image__media">
+              <div class="img-placeholder" style="padding-bottom: 100%;">
                 <img
                   src={image.src}
                   alt={image.alt}
-                  class="primary-image__image mntl-primary-image--blurry loaded"
+                  class="primary-image__image mntl-primary-image--blurry"
+                  onload="(function(e){e.classList.add('loaded')})(this)"
+                  style={`--blurry: url(${blurryImageUrl})`}
                 />
-              </noscript>
+                <noscript>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    class="primary-image__image mntl-primary-image--blurry loaded"
+                  />
+                </noscript>
+              </div>
             </div>
-          </div>
-          <figcaption
-            class="comp primary-image__figcap mntl-figure-caption figure-article-caption"
-          >
-            <span class="figure-article-caption-owner">
-              <p>
-                Photo by
-                <a href="#" target="_blank">Katie Edwards Photography</a>
-              </p>
-            </span>
-          </figcaption>
-        </figure>
-        <div class="comp list-sc mntl-block">
+            <figcaption
+              class="comp primary-image__figcap mntl-figure-caption figure-article-caption"
+            >
+              <span class="figure-article-caption-owner">
+                <p>
+                  Photo by
+                  <a href="#" target="_blank">Katie Edwards Photography</a>
+                </p>
+              </span>
+            </figcaption>
+          </figure>
           <div class="comp article-intro mntl-block">
             {
               article.intro.map((item) => {
@@ -93,7 +189,7 @@ const { title, description, category, date, author, image, article } =
               article.content.map((section, index: number) => {
                 return (
                   <Section
-                    page={index + 1}
+                    page={index + 1 < 11 ? `0${index + 1}` : index + 1}
                     pageTotal={article.content.length}
                     title={section.title}
                   >
@@ -101,8 +197,8 @@ const { title, description, category, date, author, image, article } =
                       switch (item.tag) {
                         case "Callout":
                           return <Callout {...item.params} />;
-                        case "Image":
-                          return <Image {...item.params} />;
+                        case "ImageBlock":
+                          return <ImageBlock {...item.params} />;
                         case "RelatedLink":
                           return <RelatedLink {...item.params} />;
                         default:
@@ -120,7 +216,9 @@ const { title, description, category, date, author, image, article } =
         </div>
       </div>
     </div>
+    <!-- ================== -->
     <!-- Article Right Rail -->
+    <!-- ================== -->
     <div class="loc article-right-rail">Right Rail</div>
   </article>
 </MainLayout>
@@ -130,58 +228,381 @@ const { title, description, category, date, author, image, article } =
   /* Component          */
   /* ------------------ */
   /* article class="page-width comp mntl-article--two-column-right-rail sc-ad-container beauty-article mntl-article" */
-  article {
-    --page-width: 88rem;
-  }
-
   .mntl-article {
-    --article-width: 68rem;
-
+    padding: 0 1rem;
     display: grid;
     position: relative;
-    grid-template-columns: minmax(0, var(--article-width));
+    margin: 0 auto;
+    grid-template-columns: minmax(0, 37.5rem);
     grid-template-areas:
       "header"
       "content";
   }
 
-  .mntl-article {
+  .mntl-article:not(.mntl-article--three-column) {
     margin-top: 1.5rem;
-    column-gap: 0;
+    -moz-column-gap: 4.75rem;
+    column-gap: 4.75rem;
   }
 
-  @media screen and (min-width: 750px) {
+  @media (min-width: 34em) {
+    .mntl-article {
+      padding: 0 1.5rem;
+    }
+  }
+
+  @media (min-width: 50em) {
+    .mntl-article {
+      padding: 0 2rem;
+    }
+  }
+
+  @media (min-width: 50em) {
     .mntl-article--two-column-right-rail {
-      grid-template-columns: minmax(0, var(--article-width)) calc(
-          var(--page-width) - var(--article-width)
-        );
+      grid-template-columns: minmax(0, 37.5rem) 18.75rem;
+      -moz-column-gap: 2.5rem;
+      column-gap: 2.5rem;
       grid-template-areas:
         "header header"
         "content right-rail";
-      column-gap: 5rem;
     }
+  }
+
+  @media (min-width: 64em) {
+    .mntl-article--two-column-right-rail {
+      -moz-column-gap: 3rem;
+      column-gap: 3rem;
+    }
+  }
+
+  @media (min-width: 70em) {
+    .mntl-article--two-column-right-rail {
+      -moz-column-gap: 6rem;
+      column-gap: 6rem;
+    }
+  }
+
+  /* ------------------ */
+  /* Article Header     */
+  /* ------------------ */
+
+  /* div class="loc article-header" */
+  .article-header {
+    grid-area: header;
+  }
+
+  /* div class="comp article-top article-header mntl-block" */
+  .article-top {
+    color: #707070;
+  }
+
+  /* div class="comp article-header__breadcrumb mntl-block" */
+  .article-header__breadcrumb {
+    display: flex;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* ul class="comp breadcrumb mntl-block" */
+
+  .breadcrumb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.6875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.5px;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    z-index: 1;
+  }
+
+  .breadcrumb {
+    color: #222;
+  }
+
+  /* li class="comp breadcrumb__list-item mntl-block" */
+  .breadcrumb__list-item {
+    white-space: nowrap;
+  }
+
+  /* ::before */
+
+  .breadcrumb__list-item + .breadcrumb__list-item::before {
+    content: "•";
+    display: inline-block;
+    margin: 0.125rem 0.4125rem 0 0.3125rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    vertical-align: middle;
+    color: rgb(var(--color-base-accent));
+    background-color: transparent;
+    transform: translateY(-1.3rem);
+
+    font-size: 1.775rem;
+  }
+
+  /* a class="link link--text mntl-text-link breadcrumb__link" */
+  .breadcrumb__link {
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 0.07rem;
+    transition: color ease 0.15s;
+    font-size: 0.8125rem;
+  }
+
+  .breadcrumb__link:hover {
+    color: #da2525;
+  }
+
+  /* span */
+
+  /* h1 class="comp article-heading mntl-text-block" */
+
+  .article-heading {
+    margin-bottom: 0.25rem;
+    font-size: 2.625rem;
+  }
+
+  /* p class="comp article-subheading mntl-text-block" */
+
+  .article-subheading {
+    color: #707070;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+
+  .article-subheading {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    letter-spacing: normal;
+  }
+
+  /* div class="comp article-meta mntl-block" */
+  .article-meta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-bottom: 0.625rem;
+  }
+
+  /* div class="comp beauty-bylines mntl-bylines" */
+  .beauty-bylines {
+    display: inline-block;
+    font-size: 0.6875rem;
+    letter-spacing: 0.5px;
+    letter-spacing: 0.75px;
+    line-height: 1.6;
+  }
+
+  /* div class="comp mntl-bylines__group--author mntl-bylines__group mntl-block" */
+  .mntl-bylines__group {
+    line-height: 1;
+  }
+
+  /* div class="comp mntl-bylines__item mntl-attribution__item mntl-attribution__item--has-date" */
+
+  .mntl-bylines__item {
+    line-height: 1.6;
+    color: #666;
+    font-size: 0.8125rem;
+    letter-spacing: normal;
+    margin-bottom: 0;
+    margin-right: 0.1rem;
+  }
+
+  .mntl-attribution__item,
+  .mntl-attribution__item--has-date {
+    display: inline;
+  }
+
+  .mntl-bylines__item.mntl-attribution__item--has-date {
+    white-space: nowrap;
+  }
+
+  /* ::after */
+
+  .mntl-bylines__item.mntl-attribution__item--has-date:after {
+    content: "|";
+    margin: 0 0.25rem;
+    font-size: 1rem;
+  }
+
+  /* span class="mntl-attribution__item-descriptor" */
+
+  /* div class="mntl-dynamic-tooltip--trigger" data-tooltip="" */
+
+  [data-tooltip] {
+    display: inline-block;
+  }
+
+  .mntl-bylines__item .mntl-dynamic-tooltip--trigger {
+    position: static;
+  }
+
+  /* a class="mntl-attribution__item-name" */
+  .mntl-attribution__item-name {
+    display: inline;
+    position: relative;
+
+    margin-left: 0.25rem;
+  }
+
+  /* div class="mntl-attribution__item-date" */
+  .mntl-attribution__item-date {
+    font-size: 0.8125rem;
+    letter-spacing: normal;
+    text-transform: none;
+    line-height: 1.5rem;
+  }
+
+  .mntl-attribution__item-date.mntl-attribution__item-date {
+    display: inline-block;
+    color: #757575;
+  }
+
+  /* ul class="comp social-share mntl-social-share share" */
+
+  .share {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    order: 3;
+  }
+
+  .social-share {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-bottom: 1.25rem;
+    list-style-type: none;
+    z-index: 0;
+  }
+
+  /* li class="share-item share-item-facebook" */
+  .share-item {
+    flex: 0 0 auto;
+  }
+  .share-item:first-child {
+    margin-left: 0;
+  }
+
+  /* span class="share-link share-link-facebook" tabindex="0" title="Facebook" aria-label="Facebook" role="link" */
+
+  .share-link {
+    display: block;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .share-link {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+    transition: background 0.15s ease, color 0.15s ease;
+    border-radius: 50%;
+    font-size: 0;
+    background: 0 0;
+    margin-right: 0.25rem;
+  }
+  /* ::before */
+
+  .share-link:before {
+    content: "";
+    background: #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    transition: background 0.15s ease;
+  }
+
+  .share-link-facebook::before {
+    background-color: #3f5a94;
+  }
+  .share-link-facebook:hover:before {
+    background: #374f82;
+  }
+
+  /* svg class="icon icon-facebook" */
+
+  .social-share .icon {
+    flex: 0 0 auto;
+    position: relative;
+    width: 2.25rem;
+    height: 2.25rem;
+    pointer-events: none;
+    fill: #fff;
+    transform: scale(0.5);
+    margin-right: 0.5rem;
+  }
+  /* span class="share-link share-link-pinterest" tabindex="0" title="Pinterest" aria-label="Pinterest" role="link" */
+  .share-link-pinterest::before {
+    background: #cb2027;
+  }
+
+  .share-link-pinterest:hover::before {
+    background: #b51d23;
+  }
+  /* span class="share-link share-link-emailshare" tabindex="0" title="Emailshare" aria-label="Emailshare" role="link" */
+  .share-link-emailshare::before {
+    background: #666;
+  }
+  .share-link-emailshare:hover::before {
+    background: #222;
   }
 
   /* ------------------ */
   /* Article Content    */
   /* ------------------ */
 
-  /* div class="comp article-intro mntl-block" */
-
   /* div class="loc article-content" */
   .article-content {
     grid-area: content;
-    position: relative;
   }
 
   /* div class="comp article__body right-rail mntl-block" */
 
+  /* div class="comp list-sc mntl-block" */
+
   /* figure class="comp mntl-universal-primary-image primary-image" */
 
   .primary-image {
-    margin: 0 0 2rem;
+    width: 100vw;
+    margin: 0 0 2rem -0.625rem;
   }
 
+  @media (min-width: 34em) {
+    .primary-image {
+      width: auto;
+      margin: 0 0 2rem;
+    }
+  }
+  .primary-image {
+    margin-left: -1rem;
+  }
+
+  @media (min-width: 34em) {
+    .primary-image {
+      margin-left: 0;
+    }
+  }
   /* div class="primary-image__media" */
   .primary-image__media {
     position: relative;
@@ -189,12 +610,27 @@ const { title, description, category, date, author, image, article } =
   }
 
   /* class="img-placeholder" */
+  .img-placeholder {
+    background-color: #c7c7c7;
+    height: 0;
+    overflow: hidden;
+  }
+  .img-placeholder {
+    background-color: #c7c7c7;
+    position: relative;
+    width: 100%;
+  }
+
+  .img-placeholder.img-placeholder {
+    background: #eee;
+  }
 
   /* img  class="primary-image__image mntl-primary-image--blurry" */
 
   .mntl-primary-image--blurry {
     background-image: var(--blurry);
     background-size: 100% 100%;
+    transition: 0.15s filter linear;
     position: absolute;
     height: 100%;
     top: 0;
@@ -216,47 +652,66 @@ const { title, description, category, date, author, image, article } =
   }
 
   .primary-image__figcap {
+    font-size: 0.625rem;
     text-align: right;
+    margin: 0 0.3rem 0 0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+  }
+
+  @media (min-width: 34em) {
+    .primary-image__figcap {
+      margin-right: 0;
+    }
   }
 
   /* span class="figure-article-caption-owner" */
 
   /* p */
+
+  .mntl-figure-caption p {
+    color: #666;
+  }
   .primary-image__figcap p {
     display: inline;
-    font-size: 1rem;
+    font-size: 0.625rem;
   }
 
   /* a */
-
-  /* div class="comp list-sc mntl-block" */
-
-  /* class="comp mntl-sc-block beauty-sc-block-html mntl-sc-block-html" */
-  .article-intro p.mntl-sc-block-html {
-    margin: 2rem 0;
+  .mntl-figure-caption.figure-article-caption a {
+    color: #666;
+    background-size: 2px 1px;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    color: #145d76;
+    background-image: linear-gradient(#145d76, #145d76);
+  }
+  .mntl-figure-caption.figure-article-caption a:hover {
+    background-image: none;
+  }
+  /* ------------------ */
+  /* Article Content    */
+  /* ------------------ */
+  /* Intro              */
+  /* div class="comp article-intro mntl-block" */
+  .article-intro,
+  .list-sc__content,
+  .article-outro {
+    clear: both;
   }
 
-  .article-intro p.mntl-sc-block-html:first-of-type::first-letter {
-    letter-spacing: 0.5px;
-    float: left;
-    font-family: var(--font-heading-family);
-    font-size: 6.1875rem;
-    line-height: 3.625rem;
-    padding-top: 1px;
-    padding-right: 0.5rem;
-    padding-left: 0.1875rem;
-  }
-
+  /* Content            */
   /* div class="comp list-sc__content mntl-sc-page mntl-block" */
 
   .mntl-sc-page {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 
+  /* Outro              */
+  /* div class="comp article-outro mntl-block" */
+
   /* ------------------ */
-  /* Article Right Rail    */
+  /* Article Right Rail */
   /* ------------------ */
 
   /* div class="loc article-right-rail" */
@@ -269,9 +724,11 @@ const { title, description, category, date, author, image, article } =
     max-height: 0;
   }
 
-  @media screen and (min-width: 750px) {
+  @media (min-width: 50em) {
     .article-right-rail {
+      /* display: block; */
       position: static;
+      top: initial;
       visibility: visible;
       max-height: initial;
     }

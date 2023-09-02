@@ -23,7 +23,7 @@ export const callout = z.object({
 });
 
 export const image = z.object({
-  tag: z.literal("Image"),
+  tag: z.literal("ImageBlock"),
   params: z.object({
     image: z.object({
       src: z.string(),

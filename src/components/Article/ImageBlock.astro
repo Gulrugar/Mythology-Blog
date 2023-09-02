@@ -39,29 +39,32 @@ const { image, aspectRatio } = Astro.props as Props;
 
   .mntl-sc-block-image {
     overflow: hidden;
-  }
-
-  .mntl-sc-block-universal-image {
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    clear: both;
     text-align: center;
+    display: flex;
+    float: none;
     margin: 0 auto 1rem;
     max-width: 85%;
-    clear: both;
   }
 
-  @media screen and (min-width: 990px) {
-    .mntl-sc-block-universal-image {
+  @media (min-width: 34em) {
+    .mntl-sc-block-image {
       max-width: 70%;
     }
   }
 
   /* div class="figure-media" */
   .mntl-sc-block-universal-image .figure-media {
-    order: 1;
     position: relative;
 
+    order: 1;
     max-width: 100%;
     display: block;
-    margin: 0.5rem 0 0.3rem;
+    margin: 0.5rem 0 0;
+    max-height: none;
   }
 
   /* div class="img-placeholder" */
@@ -72,6 +75,8 @@ const { image, aspectRatio } = Astro.props as Props;
 
     position: relative;
     width: 100%;
+
+    background: 0 0;
   }
 
   /* img class="universal-image__image lazyloaded" */
@@ -79,19 +84,35 @@ const { image, aspectRatio } = Astro.props as Props;
   .mntl-sc-block-universal-image img {
     width: 100%;
     margin: 0;
+
+    max-height: none;
   }
 
   /* figcaption class="comp mntl-figure-caption figure-article-caption" */
 
   .mntl-sc-block-universal-image .mntl-figure-caption.figure-article-caption {
-    order: 2;
+    color: #666;
+
     margin: 0;
+    order: 2;
     text-align: right;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.625rem;
     letter-spacing: 0.5px;
 
     margin-top: 0.3rem;
     line-height: 1.7;
+  }
+
+  /* span class="figure-article-caption-owner" */
+
+  /* p */
+  .mntl-figure-caption p {
+    color: #666;
+  }
+  .mntl-sc-block-universal-image .mntl-figure-caption.figure-article-caption p {
+    margin: 0;
+    font-size: 0.625rem;
+    display: inline;
   }
 </style>

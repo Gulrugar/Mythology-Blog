@@ -23,10 +23,27 @@ const { text } = Astro.props as Props;
 
   .mntl-sc-block-featuredlink.upnext-link {
     margin-bottom: 1.75rem;
+    line-height: 1.75rem;
   }
 
-  /* before */
+  /* ::before */
+  .mntl-sc-block-featuredlink.upnext-link:before {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: 0.25rem;
+  }
+
   .mntl-sc-block-featuredlink.upnext-link::before {
     content: "Up Next:";
+  }
+  .mntl-sc-block-featuredlink.upnext-link:before {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+  }
+  /* a class="mntl-sc-block-featuredlink__link mntl-text-link" */
+  .mntl-sc-block-featuredlink__link {
+    font-size: 1.25rem;
   }
 </style>

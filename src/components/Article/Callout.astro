@@ -19,11 +19,33 @@ const { title, text } = Astro.props as Props;
 </div>
 
 <style>
+  /* ---------------- */
+  /* Component        */
+  /* ---------------- */
   /* div class="comp theme-meetourexpert mntl-sc-block beauty-sc-block-callout--meetourexpert beauty-sc-block-callout mntl-sc-block-callout mntl-block" */
+  .mntl-sc-block-callout {
+    clear: both;
+  }
+
   .theme-meetourexpert.mntl-sc-block-callout {
     position: relative;
-    padding: 1.25rem 2.5rem;
-    margin: auto 0;
+    width: 100%;
+    margin: 3rem 0;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    background: repeating-linear-gradient(
+      to bottom,
+      #f3ddcd,
+      #f3ddcd 1px,
+      #fff 1px,
+      #fff 0.5rem
+    );
+    padding: 0 1.5rem 1.5rem;
+  }
+  .theme-meetourexpert.mntl-sc-block-callout {
+    background: 0 0;
+    padding: 1.25rem;
+    margin: 2rem 0;
     width: auto;
   }
 
@@ -42,6 +64,7 @@ const { title, text } = Astro.props as Props;
     left: 0;
     border-width: 1px 0 0;
     border-style: solid;
+    -o-border-image: linear-gradient(to right, #da2525 97%, transparent 3%) 1;
     border-image: linear-gradient(to right, #da2525 97%, transparent 3%) 1;
   }
 
@@ -50,10 +73,16 @@ const { title, text } = Astro.props as Props;
     right: 0;
     border-width: 0 0 1px;
     border-style: solid;
+    -o-border-image: linear-gradient(to left, #da2525 97%, transparent 3%) 1;
     border-image: linear-gradient(to left, #da2525 97%, transparent 3%) 1;
   }
 
   /* p class="comp mntl-sc-block-callout-heading mtnl-text-block" */
+  .theme-meetourexpert .mntl-sc-block-callout-body,
+  .theme-meetourexpert .mntl-sc-block-callout-heading {
+    background-color: #fff;
+    margin: auto;
+  }
   .theme-meetourexpert .mntl-sc-block-callout-heading {
     width: auto;
     text-align: left;
@@ -62,9 +91,8 @@ const { title, text } = Astro.props as Props;
     background: 0 0;
     margin-bottom: 0.7rem;
     letter-spacing: 0.07rem;
+    font-size: 1rem;
     font-weight: 700;
-
-    line-height: 1.5rem;
   }
 
   /* ::before */
@@ -94,5 +122,32 @@ const { title, text } = Astro.props as Props;
     padding: 0;
     text-align: left;
     margin: auto;
+    background: 0 0;
+  }
+
+  /* p */
+  .mntl-sc-block-callout-body li:last-child,
+  .mntl-sc-block-callout-body ol:last-child,
+  .mntl-sc-block-callout-body p:last-child,
+  .mntl-sc-block-callout-body ul:last-child {
+    margin-bottom: 0;
+  }
+  .theme-meetourexpert.mntl-sc-block-callout .mntl-sc-block-callout-body p {
+    margin-bottom: 0.25rem;
+  }
+
+  .theme-meetourexpert.mntl-sc-block-callout
+    .mntl-sc-block-callout-body
+    li:last-child,
+  .theme-meetourexpert.mntl-sc-block-callout
+    .mntl-sc-block-callout-body
+    ol:last-child,
+  .theme-meetourexpert.mntl-sc-block-callout
+    .mntl-sc-block-callout-body
+    p:last-child,
+  .theme-meetourexpert.mntl-sc-block-callout
+    .mntl-sc-block-callout-body
+    ul:last-child {
+    margin-bottom: 0;
   }
 </style>

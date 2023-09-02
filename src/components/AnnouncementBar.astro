@@ -1,6 +1,4 @@
 ---
-import Icon from "astro-icon";
-
 type Props = {
   text: string;
   link?: string;
@@ -19,7 +17,21 @@ const { text, link } = Astro.props as Props;
         <div class="page-width">
           <p class="announcement-bar__message center h5">
             <span>{text}</span>
-            <Icon name="icon-arrow" class="icon icon-arrow" width="1.5rem" />
+            <svg
+              viewBox="0 0 14 10"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+              class="icon icon-arrow"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z"
+                fill="currentColor"
+              />
+            </svg>
           </p>
         </div>
       </a>
@@ -74,4 +86,27 @@ const { text, link } = Astro.props as Props;
   }
 
   /* span */
+
+  .icon-arrow {
+    width: 0.9375rem;
+  }
+
+  /* svg class=""icon icon-arrow" */
+  .announcement-bar__link .icon-arrow {
+    display: inline-block;
+    pointer-events: none;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    margin-bottom: 0.125rem;
+  }
+
+  /* path */
+  .animate-arrow .icon-arrow path {
+    transform: translate(-0.15625rem);
+    transition: transform 0.1s ease;
+  }
+
+  .animate-arrow:hover .icon-arrow path {
+    transform: translate(-0rem);
+  }
 </style>

@@ -12,15 +12,37 @@ const { text } = Astro.props as Props;
 </div>
 
 <style>
+  /* ------------------ */
+  /* Component          */
+  /* ------------------ */
   /* div class="comp related-link mntl-sc-block beauty-sc-block-featuredlink mntl-sc-block-featuredlink mntl-block" */
 
-  /* ::before */
-  .mntl-sc-block-featuredlink.related-link::before,
-  .mntl-sc-block-featuredlink.upnext-link::before {
-    content: "Related: ";
-    font-weight: 700;
+  .mntl-sc-block-featuredlink {
+    margin-bottom: 1.75rem;
+  }
+
+  .mntl-sc-block-featuredlink.related-link {
     line-height: 1.75rem;
+  }
+
+  /* ::before */
+  .mntl-sc-block-featuredlink.related-link:before {
+    font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-right: 0.25rem;
+  }
+  .mntl-sc-block-featuredlink.related-link:before {
+    content: "Related:";
+  }
+  .mntl-sc-block-featuredlink.related-link:before {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+  }
+
+  /* a class="mntl-sc-block-featuredlink__link mntl-text-link" */
+  .mntl-sc-block-featuredlink__link {
+    font-size: 1.25rem;
   }
 </style>

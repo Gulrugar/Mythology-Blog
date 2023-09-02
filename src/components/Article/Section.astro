@@ -1,6 +1,6 @@
 ---
 interface Props {
-  page: number;
+  page: number | string;
   pageTotal: number;
   title: string;
 }
@@ -28,27 +28,37 @@ const { page, pageTotal, title } = Astro.props as Props;
 <style>
   /* div class="comp list-sc-item mntl-block" */
 
-  @media screen and (min-width: 990px) {
+  @media (min-width: 64em) {
     .list-sc-item {
       display: flex;
     }
   }
 
   /* div class="comp list-marker" */
-  .list-sc-item .list-marker {
-    float: left;
-    margin: 0.3rem 0.625rem 0.625rem 0;
-  }
-
   .list-marker {
     letter-spacing: 0.5px;
+  }
+  .list-marker {
     text-align: center;
   }
+  .list-sc-item .list-marker {
+    float: left;
+    margin: 0 0.625rem 0.625rem;
+  }
 
-  @media screen and (min-width: 990px) {
+  @media (min-width: 64em) {
     .list-sc-item .list-marker {
       float: none;
       flex: 0 0 auto;
+    }
+  }
+
+  .list-sc-item .list-marker {
+    margin: 0 0.625rem 0.625rem;
+  }
+  @media (min-width: 64em) {
+    .list-sc-item .list-marker {
+      margin-right: 1.25rem;
     }
   }
 
@@ -56,9 +66,15 @@ const { page, pageTotal, title } = Astro.props as Props;
 
   .list-marker__index {
     display: block;
+    font-size: 1.25rem;
+    color: #222;
+    line-height: 1.875rem;
+    font-weight: 700;
     text-align: center;
     letter-spacing: 1px;
-    font-size: 2.675rem;
+  }
+  .list-marker__index {
+    font-size: 1.875rem;
     line-height: 2rem;
     color: #707070;
     font-weight: 400;
@@ -67,35 +83,81 @@ const { page, pageTotal, title } = Astro.props as Props;
   /* span class="list-marker__total" */
   .list-marker__total {
     display: block;
-    font-size: 1.125rem;
+    font-size: 0.6875rem;
+    color: #707070;
     white-space: nowrap;
   }
 
   /* div class="comp list-sc-item__content mntl-block" */
   .list-sc-item__content {
-    margin-left: 1rem;
+    flex-basis: 54rem;
+    max-width: 54rem;
     clear: none;
+    overflow: visible;
+  }
+  .list-sc-item__content {
+    margin-left: 0;
   }
 
   /* h2 class="comp mntl-sc-list-item-title mntl-sc-block beauty-sc-block-heading mntl-sc-block-heading" */
+  .mntl-sc-list-item-title {
+    margin-bottom: 0.5em;
+  }
+  .mntl-sc-list-item-title {
+    display: flex;
+    word-wrap: break-word;
+  }
   .mntl-sc-block-heading {
-    margin: 0;
-    font-weight: 400;
-
+    margin: 0 0 0.75em;
     letter-spacing: 0.5px;
-    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 1.75rem;
+    letter-spacing: 0.5px;
+    color: #222;
+  }
+  .mntl-sc-block-heading {
+    letter-spacing: 0.5px;
+    color: #222;
+    font-size: 1.875rem;
+    margin-bottom: 0.5em;
   }
 
-  .mntl-sc-list-item-title.mntl-sc-block-heading {
-    line-height: 0.9;
-    margin-left: 2.5rem;
-  }
-
-  @media screen and (min-width: 990px) {
-    .mntl-sc-list-item-title.mntl-sc-block-heading {
-      margin-left: 0.25rem;
+  @media (max-width: 34em) {
+    .mntl-sc-block-heading {
+      font-size: 1.5rem;
     }
   }
 
+  .list-sc-item__content .mntl-sc-block {
+    clear: both;
+  }
+  .mntl-sc-list-item-title.mntl-sc-block-heading {
+    display: block;
+    margin-left: 3rem;
+    line-height: 1.75rem;
+  }
+  .mntl-sc-list-item-title.mntl-sc-block-heading {
+    margin-left: 0;
+  }
+
+  @media (max-width: 64em) {
+    .mntl-sc-list-item-title.mntl-sc-block-heading {
+      margin-left: 2.9rem;
+    }
+  }
+
+  .list-sc-item__content .mntl-sc-block.mntl-sc-block-heading {
+    clear: none;
+  }
+
   /* span class="mntl-sc-block-heading__text" */
+  .mntl-sc-block-heading > span {
+    line-height: 2rem;
+  }
+
+  @media (max-width: 34em) {
+    .mntl-sc-block-heading > span {
+      line-height: 1.75rem;
+    }
+  }
 </style>

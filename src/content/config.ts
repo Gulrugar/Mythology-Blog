@@ -1,6 +1,6 @@
 import { z, defineCollection } from "astro:content";
 import categoryData from "../data/categoryData";
-import { paragraph, relatedLink, callout, image } from "./types.d";
+import { paragraph, relatedLink, callout, image } from "./_types.d";
 
 const blog = defineCollection({
   schema: z.object({
