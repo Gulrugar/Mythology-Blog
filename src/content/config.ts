@@ -5,6 +5,7 @@ import { paragraph, relatedLink, callout, image } from "./_types.d";
 const blog = defineCollection({
   schema: z.object({
     title: z.string(),
+    subtitle: z.string(),
     description: z.string(),
     date: z.date(),
     draft: z.boolean(),

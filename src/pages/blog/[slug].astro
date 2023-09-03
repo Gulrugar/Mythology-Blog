@@ -32,7 +32,7 @@ interface Props {
 }
 
 const { post } = Astro.props as Props;
-const { title, description, category, date, author, image, article } =
+const { title, subtitle, description, category, date, author, image, article } =
   post.data;
 ---
 
@@ -65,9 +65,9 @@ const { title, description, category, date, author, image, article } =
             </li>
           </ul>
         </div>
-        <h1 class="comp article-heading mntl-text-block">{title}-{title}</h1>
+        <h1 class="comp article-heading mntl-text-block">{title}</h1>
         <p class="comp article-subheading mntl-text-block">
-          {description}
+          {subtitle}
         </p>
         <div class="comp article-meta mntl-block">
           <div class="comp beauty-bylines mntl-bylines">
@@ -77,7 +77,7 @@ const { title, description, category, date, author, image, article } =
               <div
                 class="comp mntl-bylines__item mntl-attribution__item mntl-attribution__item--has-date"
               >
-                <span class="mntl-attribution__item-descriptor"> By</span>
+                <span class="mntl-attribution__item-descriptor"> Art by</span>
                 <div class="mntl-dynamic-tooltip--trigger" data-tooltip="">
                   <a href="#" class="mntl-attribution__item-name" tabindex="-1"
                     >{author}</a
@@ -85,7 +85,7 @@ const { title, description, category, date, author, image, article } =
                 </div>
               </div>
               <div class="mntl-attribution__item-date">
-                Updated on {formatDate(date)}
+                Posted on {formatDate(date)}
               </div>
             </div>
           </div>
@@ -164,8 +164,7 @@ const { title, description, category, date, author, image, article } =
             >
               <span class="figure-article-caption-owner">
                 <p>
-                  Photo by
-                  <a href="#" target="_blank">Katie Edwards Photography</a>
+                  {image.alt}
                 </p>
               </span>
             </figcaption>
@@ -219,7 +218,30 @@ const { title, description, category, date, author, image, article } =
     <!-- ================== -->
     <!-- Article Right Rail -->
     <!-- ================== -->
-    <div class="loc article-right-rail">Right Rail</div>
+    <div class="loc article-right-rail">
+      <div class="comp mntl-right-rail mntl-block">
+        <div
+          class="comp js-scads-inline-content listsc-billboard-group mntl-block"
+        >
+          {
+            [1, 2, 3, 4, 5, 6].map((item) => (
+              <div class="comp mntl-block">
+                <div class="comp scads-to-load right-rail__item billboard1-sticky-dynamic billboard-sticky mntl-sc-sticky-billboard rightrail-ad-placed">
+                  <div
+                    class="comp mntl-billboard mntl-sc-sticky-billboard-ad billboard1-dynamic mntl-dynamic-billboard mntl-gpt-dynamic-adunit mntl-gpt-adunit gpt billboard dynamic js-immediate-ad js-immediate-ad-loaded"
+                    style="position: sticky; top: 125px;"
+                  >
+                    <div class="wrapper">
+                      <img src="/images/adslot.png" alt="ad slot" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
   </article>
 </MainLayout>
 
@@ -726,11 +748,76 @@ const { title, description, category, date, author, image, article } =
 
   @media (min-width: 50em) {
     .article-right-rail {
-      /* display: block; */
+      display: block;
       position: static;
       top: initial;
       visibility: visible;
       max-height: initial;
     }
+  }
+
+  /* div class="comp mntl-right-rail mntl-block" */
+
+  /* div class="comp js-scads-inline-content listsc-billboard-group mntl-block" */
+  .mntl-right-rail .js-scads-inline-content {
+    position: static;
+    top: initial;
+  }
+
+  /* div class="comp mntl-block" */
+
+  /* div class="comp scads-to-load right-rail__item billboard1-sticky-dynamic billboard-sticky mntl-sc-sticky-billboard rightrail-ad-placed" */
+  .mntl-sc-sticky-billboard {
+    height: auto;
+    position: static;
+    width: auto;
+  }
+  @media (min-width: 50em) {
+    .mntl-right-rail .mntl-sc-sticky-billboard {
+      position: static;
+      height: 600px;
+      right: 0;
+      width: 300px;
+    }
+  }
+
+  .mntl-right-rail .billboard-sticky:first-child {
+    margin-top: -16px;
+  }
+
+  /* div class="comp mntl-billboard mntl-sc-sticky-billboard-ad billboard1-dynamic mntl-dynamic-billboard mntl-gpt-dynamic-adunit mntl-gpt-adunit gpt billboard dynamic js-immediate-ad js-immediate-ad-loaded" */
+  .mntl-billboard {
+    margin: 0;
+    padding: 0;
+    min-width: 300px;
+    min-height: calc(250px + (30px * 2));
+  }
+
+  /* div class="wrapper" */
+  .billboard.billboard .wrapper {
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 282px;
+    width: 300px;
+  }
+
+  /* ::before & ::after */
+  .billboard .wrapper:after,
+  .billboard .wrapper:before {
+    color: #666;
+    text-transform: uppercase;
+  }
+
+  .billboard.billboard .wrapper:after,
+  .billboard.billboard .wrapper:before {
+    letter-spacing: 0.5px;
+    content: "Advertisement";
+    height: 16px;
+    font-size: 0.625rem;
+    color: #707070;
+    letter-spacing: 0.5px;
+    text-align: center;
   }
 </style>

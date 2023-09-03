@@ -1,9 +1,9 @@
-div,
-li,
-span,
-figure,
-p,
-article {
+main div,
+main li,
+main span,
+main figure,
+main p,
+main article {
   margin: 0;
   padding: 0;
   border: 0;
@@ -13,7 +13,7 @@ article {
   background: 0 0;
 }
 
-h1 {
+main h1 {
   margin: 0 0 0.5em;
   letter-spacing: 0.5px;
   font-size: 1.875rem;
@@ -23,12 +23,12 @@ h1 {
   font-weight: 400;
 }
 
-h1 {
+main h1 {
   letter-spacing: 0.5px;
   color: #222;
 }
 
-h2 {
+main h2 {
   margin: 0 0 0.75em;
   letter-spacing: 0.5px;
   font-size: 1.25rem;
@@ -36,60 +36,65 @@ h2 {
   font-weight: 400;
 }
 
-h2 {
+main h2 {
   letter-spacing: 1px;
 }
 
-h2 {
+main h2 {
   letter-spacing: normal;
   color: #666;
 }
 
-a {
+main a {
   margin: 0;
   padding: 0;
   font-size: 100%;
   vertical-align: baseline;
   background: 0 0;
 }
-a {
+main a {
   color: #222;
   text-decoration: none;
 }
 
-ul {
+main ul {
   list-style: none;
 }
 
-p,
-ul {
+main p,
+main ul {
   margin-bottom: 1.75rem;
   margin-top: 0;
 }
 
-p {
+main p {
   color: #222;
 }
 
-li,
-p {
+main li,
+main p {
   font-size: 1.125rem;
   line-height: 1.7;
 }
-img {
+main img {
   max-width: 100%;
   vertical-align: bottom;
 }
 
-.article__body a {
+main .article__body a {
   display: inline;
   background-size: 2px 1px;
   background-repeat: repeat-x;
   background-position: 0 100%;
-  color: #145d76;
-  background-image: linear-gradient(#145d76, #145d76);
+  /* color: #145d76;
+  background-image: linear-gradient(#145d76, #145d76); */
+  color: rgb(var(--color-base-accent));
+  background-image: linear-gradient(
+    rgb(var(--color-base-accent)),
+    rgb(var(--color-base-accent))
+  );
 }
 
-.article__body a:hover {
+main .article__body a:hover {
   background-image: none;
 }

@@ -12,7 +12,7 @@
       >
         <div class="img-placeholder" style="padding-bottom: 66.6%;">
           <img
-            src="/images/featured-section-image.webp"
+            src="/images/sample.png"
             alt="some alt text"
             class="card__img universal-image__image lazyloaded"
           />
@@ -191,6 +191,8 @@
   /* div class="img-placeholder" */
   .img-placeholder {
     background-color: #c7c7c7;
+    /* This plus width and margin in .card__img below is the centered version */
+    /* background-color: rgba(var(--color-base-accent), 0.3); */
     height: 0;
     overflow: hidden;
   }
@@ -204,8 +206,14 @@
   .card__img {
     width: 100%;
     height: auto;
-    max-width: none;
     display: block;
+
+    /* This plus background-color in .img-placeholder above is the centered version */
+    /* width: 66.6666%;
+    margin: 0 auto; */
+
+    /* my property to center images in 3:2 containers */
+    transform: translateY(-16.666%);
   }
 
   /* div class="card__content" */
