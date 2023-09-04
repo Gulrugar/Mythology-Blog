@@ -1,5 +1,6 @@
 ---
 const thisYear = new Date().getFullYear().toString();
+import settings from "../data/settings.json";
 import navData from "../data/navData";
 
 import { Icon } from "astro-icon";
@@ -92,15 +93,22 @@ import { Icon } from "astro-icon";
         </small>
         <ul class="policies list-unstyled">
           {
-            ["Privacy policy", "Terms of service", "Contact information"].map(
-              (item) => (
-                <li>
-                  <small class="copyright__content">
-                    <a href="#">{item}</a>
-                  </small>
-                </li>
-              )
-            )
+            settings["footer-bottom-links"].map((link) => (
+              <li>
+                <small class="copyright__content">
+                  <a href={link.url}>{link.title}</a>
+                </small>
+              </li>
+            ))
+          }
+          {
+            ["Terms of service", "Contact information"].map((item) => (
+              <li>
+                <small class="copyright__content">
+                  <a href="#">{item}</a>
+                </small>
+              </li>
+            ))
           }
         </ul>
       </div>
