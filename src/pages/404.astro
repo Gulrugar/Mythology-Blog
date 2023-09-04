@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 import MainLayout from "../layouts/MainLayout.astro";
 
 const isActive = true;
@@ -8,10 +9,25 @@ const isActive = true;
   title="404 Not Found"
   description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
 >
-  <section>
-    <div class="page-width">
-      <h1>404</h1>
-      <p class="color-accent">Not found</p>
-    </div>
-  </section>
+  <div class="template-404">
+    <h1>404</h1>
+    <p>Page not found!</p>
+    <a href="/" class="btn"
+      >Back to Homepage <Icon name="icon-arrow" width="20" height="20" /></a
+    >
+  </div>
 </MainLayout>
+
+<style>
+  .template-404 {
+    text-align: center;
+    margin: 7rem auto;
+    max-width: 1188px;
+    padding: 0 1.5rem;
+  }
+
+  .btn svg {
+    vertical-align: middle;
+    transform: translateY(-1px);
+  }
+</style>

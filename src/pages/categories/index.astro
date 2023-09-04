@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { slugify } from "../../script/utils";
 import categoryData from "../../data/categoryData";
+import { Icon } from "astro-icon";
 
 const applyAccent = true;
 ---
@@ -12,20 +13,172 @@ const applyAccent = true;
 >
   <section>
     <div class="page-width">
-      <h1>Categories</h1>
-      <ul class="list-unstyled" style="display: flex; gap: 10px;">
-        {
-          categoryData.map((category) => (
-            <li>
-              <a href={`/categories/${slugify(category)}`}>{category}</a>
-            </li>
-          ))
-        }
-      </ul>
-      <p class:list={["font-body-bold", { "color-accent": applyAccent }]}>
-        hello
-      </p>
-      <a href="" class="link link--text">Link</a>
+      <div class="hero-grid">
+        <div class="hero-grid__heading">
+          <h1 class="hero-heading heading--jumbo">Categories</h1>
+          <p class="hero-subheading">
+            a description providing an introduction to the categories featured
+            below
+          </p>
+        </div>
+        <div class="hero-grid__cta">
+          {
+            categoryData.map((category) => (
+              <a
+                class="hero-grid__cta-anchor"
+                href={`/categories/${slugify(category)}`}
+              >
+                <div class="docs-card">
+                  <div class="docs-card__body">
+                    <Icon
+                      name="ic:baseline-category"
+                      width="32"
+                      height="32"
+                      class="docs-icon"
+                    />
+                    <div class="docs-card__content">
+                      <div class="docs-card__heading docs-card__heading--secondary docs-card__heading--width-content">
+                        <p>
+                          {category}
+                          <Icon
+                            name="icon-arrow"
+                            width="1rem"
+                            style="margin-left: 0.3125rem;"
+                          />
+                        </p>
+                      </div>
+                      <p class="docs-card__text">
+                        some filler text describing the category
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
     </div>
   </section>
 </MainLayout>
+
+<style>
+  /* ------------- */
+  /* General       */
+  /* ------------- */
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(var(--color-base-text));
+  }
+
+  a:visited {
+    color: ;
+  }
+  /* ------------- */
+  /* Component     */
+  /* ------------- */
+
+  /* section */
+  section {
+    margin-bottom: 4rem;
+  }
+
+  /* div class="hero-grid" */
+  .hero-grid {
+    display: grid;
+    grid-template-areas: "heading" "cta";
+  }
+
+  /* div class="hero-grid__heading" */
+  .hero-grid__heading {
+    grid-area: heading;
+    padding: 1rem;
+  }
+
+  /* h1 class="hero-heading heading-jumbo" */
+
+  .hero-heading {
+    margin-bottom: 1rem;
+  }
+
+  /* p class="hero-subheading" */
+
+  /* div class="hero-grid__cta" */
+  .hero-grid__cta {
+    grid-area: cta;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 40em) {
+    .hero-grid__cta {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 64em) {
+    .hero-grid__cta {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* a class="hero-grid__cta-anchor" */
+
+  .hero-grid__cta-anchor {
+    display: inline-block;
+    width: 100%;
+  }
+  /* div class="docs-card" */
+  .docs-card {
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #24393d;
+    box-shadow: 0 2px 0 #000;
+    overflow: hidden;
+    transition: background-color 200ms linear, transform 200ms ease,
+      box-shadow 200ms ease;
+    height: 100%;
+  }
+
+  a .docs-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 0 #000;
+  }
+  /* div class="docs-card__body" */
+  .docs-card__body {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.75rem;
+  }
+
+  /* Icon class="docs-icon" */
+  .docs-icon {
+    margin-right: 0.75rem;
+  }
+
+  /* div class="docs-card__content" */
+  .docs-card__content {
+    width: 100%;
+  }
+
+  /* div class="docs-card__heading docs-card__heading--secondary docs-card__heading--with-content" */
+  .docs-card__heading {
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  /* p */
+  .docs-card__heading--secondary p {
+    font-weight: 600;
+    position: relative;
+  }
+
+  /* p class="docs-card__text" */
+  .docs-card__text {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+</style>

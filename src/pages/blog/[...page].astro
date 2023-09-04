@@ -19,7 +19,7 @@ export async function getStaticPaths({ paginate }: any) {
     limit: undefined,
   });
 
-  return paginate(formattedPosts, { pageSize: 2 });
+  return paginate(formattedPosts, { pageSize: 10 });
 }
 
 interface Props {

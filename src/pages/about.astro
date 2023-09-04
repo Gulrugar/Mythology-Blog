@@ -6,10 +6,121 @@ import MainLayout from "../layouts/MainLayout.astro";
   title="About"
   description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
 >
-  <section>
-    <div class="page-width">
-      <h1>About Page</h1>
-      <img src="/images/sample.png" alt="Sample" />
+  <article class="comp article--corporate article--about article">
+    <h1 class="comp article-heading--left article-heading mntl-text-block">
+      About Us
+    </h1>
+    <div class="article__body">
+      <div class="comp mntl-sc-page mntl-block">
+        <h2
+          class="comp mntl-sc-block beauty-sc-block-heading mntl-sc-block-heading"
+        >
+          <span class="mntl-sc-block-heading__text"> Who We Are</span>
+        </h2>
+        <p class="comp mntl-sc-block beauty-sc-block-html mntl-sc-block-html">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget est
+          lorem ipsum dolor. Eget felis eget nunc lobortis. Sed cras ornare arcu
+          dui vivamus arcu felis bibendum ut. Nibh praesent tristique magna sit
+          amet purus gravida quis blandit. Pulvinar neque laoreet suspendisse
+          interdum consectetur libero id. At volutpat diam ut venenatis tellus
+          in metus vulputate eu.
+        </p>
+        <p class="comp mntl-sc-block beauty-sc-block-html mntl-sc-block-html">
+          Sit amet facilisis magna etiam tempor orci eu. Aliquet porttitor lacus
+          luctus accumsan tortor posuere ac ut. Auctor urna nunc id cursus metus
+          aliquam eleifend mi. Amet porttitor eget dolor morbi non. Vitae auctor
+          eu augue ut lectus. Etiam non quam lacus suspendisse faucibus.
+          Habitant morbi tristique senectus et netus et malesuada fames ac. Sed
+          velit dignissim sodales ut. Urna nunc id cursus metus aliquam.
+        </p>
+      </div>
     </div>
-  </section>
+  </article>
 </MainLayout>
+
+<style>
+  /* ----------- */
+  /* General     */
+  /* ----------- */
+  article,
+  div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+    background: 0 0;
+  }
+
+  /* ----------- */
+  /* Component   */
+  /* ----------- */
+  /* article class="comp article--corporate article--about article" */
+  .article {
+    position: relative;
+    margin-top: 1.5rem;
+
+    margin-bottom: 3rem;
+    padding: 0 0.625rem;
+
+    max-width: 43.75rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 34em) {
+    .article {
+      padding: 0 1.25rem;
+    }
+  }
+
+  /* h1 class="comp article-heading--left article-heading mntl-text-block" */
+  .article-heading {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.625rem;
+    text-align: center;
+  }
+
+  /* div class="article__body" */
+
+  /* div class="comp mntl-sc-page mntl-block" */
+  .mntl-sc-page {
+    margin-top: 2rem;
+  }
+
+  /* h2 class="comp mntl-sc-block beauty-sc-block-heading mntl-sc-block-heading" */
+  .mntl-sc-block-heading {
+    margin: 0 0 0.75em;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-size: 1.875rem;
+    letter-spacing: 0.5px;
+    color: #222;
+
+    margin-top: 3rem;
+  }
+
+  /* span class="mntl-sc-block-heading__text" */
+  .mntl-sc-block-heading > span {
+    line-height: 2rem;
+  }
+
+  @media (max-width: 34em) {
+    .mntl-sc-block-heading > span {
+      line-height: 1.75rem;
+    }
+  }
+
+  /* p class="comp mntl-sc-block beauty-sc-block-html mntl-sc-block-html" */
+  p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+    margin-top: 0;
+    color: #222;
+  }
+</style>

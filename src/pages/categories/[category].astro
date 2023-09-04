@@ -14,8 +14,8 @@ export async function getStaticPaths() {
   const allCategories = categoryData;
 
   return allCategories.map((category) => {
-    const categoryPosts = formattedPosts.filter(
-      (post) => post.data.category === category
+    const categoryPosts = formattedPosts.filter((post) =>
+      post.data.category.some((cat) => cat === category)
     );
 
     return {

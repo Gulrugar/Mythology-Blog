@@ -27,12 +27,12 @@ export async function getStaticPaths() {
   }));
 }
 
-interface Props {
+type Props = {
   post: CollectionEntry<"blog">;
-}
+};
 
 const { post } = Astro.props as Props;
-const { title, subtitle, description, category, date, author, image, article } =
+const { title, subtitle, description, category, date, image, article } =
   post.data;
 ---
 
@@ -47,22 +47,18 @@ const { title, subtitle, description, category, date, author, image, article } =
       <div class="comp article-top mntl-block">
         <div class="comp article-header__breadcrumb mntl-block">
           <ul class="comp breadcrumb mntl-block">
-            <li class="comp breadcrumb__list-item mntl-block">
-              <a
-                href={`/categories/${slugify(category)}`}
-                class="link link--text mntl-text-link breadcrumb__link"
-              >
-                <span class="link__wrapper">{category}</span>
-              </a>
-            </li>
-            <li class="comp breadcrumb__list-item mntl-block">
-              <a
-                href={`/categories/${slugify(category)}`}
-                class="link link--text mntl-text-link breadcrumb__link"
-              >
-                <span class="link__wrapper">{category}</span>
-              </a>
-            </li>
+            {
+              category.map((categoryTitle) => (
+                <li class="comp breadcrumb__list-item mntl-block">
+                  <a
+                    href={`/categories/${slugify(categoryTitle)}`}
+                    class="link link--text mntl-text-link breadcrumb__link"
+                  >
+                    <span class="link__wrapper">{categoryTitle}</span>
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </div>
         <h1 class="comp article-heading mntl-text-block">{title}</h1>
@@ -77,10 +73,12 @@ const { title, subtitle, description, category, date, author, image, article } =
               <div
                 class="comp mntl-bylines__item mntl-attribution__item mntl-attribution__item--has-date"
               >
-                <span class="mntl-attribution__item-descriptor"> Art by</span>
+                <span class="mntl-attribution__item-descriptor"> By</span>
                 <div class="mntl-dynamic-tooltip--trigger" data-tooltip="">
-                  <a href="#" class="mntl-attribution__item-name" tabindex="-1"
-                    >{author}</a
+                  <a
+                    href="/author"
+                    class="mntl-attribution__item-name"
+                    tabindex="-1">Andrew Aguirre</a
                   >
                 </div>
               </div>
@@ -210,7 +208,12 @@ const { title, subtitle, description, category, date, author, image, article } =
             }
           </div>
           <div class="comp article-outro mntl-block">
-            <UpNextLink text={article.outro.params.text} />
+            {
+              article.outro.text.length > 0 && (
+                <Paragraph text={article.outro.text} />
+              )
+            }
+            <UpNextLink next_link={article.outro.next_link} />
           </div>
         </div>
       </div>

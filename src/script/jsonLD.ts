@@ -22,7 +22,7 @@ export default function jsonLDGenerator({
       "image": "${data.image.src}",
       "author": {
         "@type": "Person",
-        "name": "${data.author.replace(/"/g, '\\"')}",
+        "name": "Andrew Aguirre",
       },
       "datePublished": "${data.date}"
     }

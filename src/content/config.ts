@@ -9,8 +9,7 @@ const blog = defineCollection({
     description: z.string(),
     date: z.date(),
     draft: z.boolean(),
-    author: z.enum(["Jane Doe", "John Doe"]),
-    category: z.enum(categoryData),
+    category: z.array(z.enum(categoryData)),
     image: z.object({
       src: z.string(),
       alt: z.string(),
@@ -24,8 +23,10 @@ const blog = defineCollection({
         })
       ),
       outro: z.object({
-        params: z.object({
+        text: z.string(),
+        next_link: z.object({
           text: z.string(),
+          url: z.string(),
         }),
       }),
     }),

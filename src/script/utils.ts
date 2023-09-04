@@ -53,10 +53,12 @@ export function formatBlogPosts(
       (a, b) =>
         new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
     );
-  } else {
-    // else random
-    filteredPosts.sort(() => Math.random() - 0.5);
   }
+
+  // Randomize the order of the posts
+  // else {
+  //   filteredPosts.sort(() => Math.random() - 0.5);
+  // }
 
   return limit ? filteredPosts.slice(0, limit) : filteredPosts;
 }
