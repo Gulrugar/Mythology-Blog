@@ -6,6 +6,6 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.VERCEL_URL || "http://localhost:4321",
+  site: "https://mythology-blog.vercel.app",
   integrations: [sitemap(), partytown(), mdx()],
 });
