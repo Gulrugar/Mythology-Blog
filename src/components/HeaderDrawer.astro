@@ -96,17 +96,10 @@ import "../styles/header-drawer-global.css";
           <div class="menu-drawer__utility-links">
             <ul class="list list-social list-unstyled" role="list">
               <li class="list-social__item">
-                <a href="#" class="list-social__link link">
-                  <Icon
-                    name="mdi:twitter"
-                    width="1.25rem"
-                    class="icon icon-twitter"
-                  />
-                  <span class="visually-hidden">Twitter</span>
-                </a>
-              </li>
-              <li class="list-social__item">
-                <a href="#" class="list-social__link link">
+                <a
+                  href={settings["social-media-accounts"].facebook}
+                  class="list-social__link link"
+                >
                   <Icon
                     name="mdi:facebook"
                     width="1.25rem"
@@ -116,11 +109,27 @@ import "../styles/header-drawer-global.css";
                 </a>
               </li>
               <li class="list-social__item">
-                <a href="#" class="list-social__link link">
+                <a
+                  href={settings["social-media-accounts"].instagram}
+                  class="list-social__link link"
+                >
                   <Icon
                     name="mdi:instagram"
                     width="1.25rem"
                     class="icon icon-instagram"
+                  />
+                  <span class="visually-hidden">Twitter</span>
+                </a>
+              </li>
+              <li class="list-social__item">
+                <a
+                  href={settings["social-media-accounts"].twitter}
+                  class="list-social__link link"
+                >
+                  <Icon
+                    name="mdi:twitter"
+                    width="1.25rem"
+                    class="icon icon-twitter"
                   />
                   <span class="visually-hidden">Twitter</span>
                 </a>

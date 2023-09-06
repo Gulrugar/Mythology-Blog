@@ -1,12 +1,14 @@
 ---
-title: The Flight and Fall of Icarus
-subtitle: A Tale of Hubris and Consequence
+title: Article 1 Title
+subtitle: subtitle
 description: this is the description
+author: Andrew Aguirre
 slug: custom-slug-post-1
 date: 2023-07-28
 draft: false
 category: ["Myths"]
-image: { src: "/images/sample.png", alt: "Icarus & Daedalus" }
+image: { src: "/images/sample.png", alt: "sample" }
+thumbnail: { src: "/images/thumbnail.png", alt: "thumbnail" }
 article:
   {
     intro:
@@ -15,30 +17,29 @@ article:
           tag: "Paragraph",
           params:
             {
-              text: "In the rich tapestry of Greek mythology, among the countless tales of gods, heroes, and epic adventures, one story stands as a timeless cautionary tale, both poignant and profound.",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             },
         },
         {
           tag: "Paragraph",
           params:
             {
-              text: "It is the story of Icarus, a young man who dared to defy the boundaries of human capability and reach for the heavens. This myth, passed down through generations, not only captivates the imagination but also imparts a profound lesson about the perils of unchecked ambition and the price of disobedience.",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             },
         },
-        { tag: "RelatedLink", params: { text: "More Greek Mythology" } },
+        { tag: "RelatedLink", params: { text: "More" } },
       ],
     content:
       [
         {
-          title: "Imprisonment in the Labyrinth",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      { src: "/images/sample.png", alt: "Icarus & Daedalus" },
+                    image: { src: "/images/sample.png", alt: "sample" },
                     aspectRatio: "square",
                   },
               },
@@ -46,31 +47,27 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Daedalus was a highly skilled craftsman and inventor who found himself imprisoned on the island of Crete along with his young son, Icarus.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Their captor was King Minos, who had commissioned Daedalus to build the intricate Labyrinth—a maze designed to contain the Minotaur, a fearsome creature that was half-man and half-bull.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],
         },
         {
-          title: "Escape Plan",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      {
-                        src: "/images/adslot2-3.png",
-                        alt: "Icarus & Daedalus",
-                      },
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
                     aspectRatio: "portrait",
                   },
               },
@@ -78,31 +75,27 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Desiring freedom, Daedalus hatched a daring plan. He meticulously crafted two pairs of wings, fashioning them from feathers and adhering them together with wax.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "These wings were designed for flight, and Daedalus intended to use them to escape the labyrinthine prison and the island itself. He shared his ingenious plan with Icarus.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],
         },
         {
-          title: "Warning from Daedalus",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      {
-                        src: "/images/adslot2-3.png",
-                        alt: "Icarus & Daedalus",
-                      },
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
                     aspectRatio: "portrait",
                   },
               },
@@ -110,31 +103,27 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Before embarking on their flight, Daedalus gave his son a solemn warning. He cautioned Icarus about the dangers of their newfound wings.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Daedalus explained that flying too close to the sun would cause the wax to melt, while flying too close to the sea would wet the feathers, making the wings heavy and difficult to control. He urged Icarus to follow his guidance closely to ensure their safe escape.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],
         },
         {
-          title: "Flight to Freedom",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      {
-                        src: "/images/adslot2-3.png",
-                        alt: "Icarus & Daedalus",
-                      },
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
                     aspectRatio: "portrait",
                   },
               },
@@ -142,31 +131,27 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "With the wings securely fastened to their bodies, father and son took flight from the Labyrinth.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "The sensation of soaring through the open sky was exhilarating, and Icarus felt a profound sense of freedom. The world below them stretched out in all directions as they ventured away from the confines of Crete.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],
         },
         {
-          title: "Tragic Outcome",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      {
-                        src: "/images/adslot2-3.png",
-                        alt: "Icarus & Daedalus",
-                      },
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
                     aspectRatio: "portrait",
                   },
               },
@@ -174,31 +159,27 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "However, as they flew, Icarus became consumed by the thrill of the experience. Ignoring his father's warnings, he allowed his enthusiasm to carry him higher and higher into the sky.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "The closer he ventured toward the sun, the more intense the heat became. Tragically, the wax that held his wings together began to melt, and the feathers started to loosen.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],
         },
         {
-          title: "Daedalus' Grief",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      {
-                        src: "/images/adslot2-3.png",
-                        alt: "Icarus & Daedalus",
-                      },
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
                     aspectRatio: "portrait",
                   },
               },
@@ -206,31 +187,27 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "With his wings disintegrating, Icarus fell from the sky and into the sea below. Despite Daedalus's desperate cries and efforts to reach his son, Icarus drowned in the waters of the Aegean Sea.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "His body was never recovered. Daedalus, grief-stricken and heartbroken over the loss of his beloved son, continued his flight alone, eventually reaching the safety of another island.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],
         },
         {
-          title: "Legacy",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      {
-                        src: "/images/adslot2-3.png",
-                        alt: "Icarus & Daedalus",
-                      },
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
                     aspectRatio: "portrait",
                   },
               },
@@ -238,14 +215,14 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "The story of Icarus has endured through the ages as a cautionary tale. It serves as a poignant reminder of the consequences of hubris, disobedience, and recklessness. It emphasizes the importance of heeding wise advice and exercising caution, especially when venturing into uncharted territory.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "The tragic fate of Icarus warns us of the dangers of allowing unchecked enthusiasm to lead us astray and the need to strike a balance between ambition and prudent decision-making.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],

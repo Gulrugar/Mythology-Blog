@@ -1,11 +1,13 @@
 ---
-title: "Marduk"
-subtitle: "The Rise of Babylon's Chief Deity"
+title: Article 2 Title
+subtitle: subtitle
 description: this is the description
+author: Andrew Aguirre
 date: 2023-07-28
 draft: false
 category: ["Myths"]
 image: { src: "/images/sample.png", alt: "Sample" }
+thumbnail: { src: "/images/thumbnail.png", alt: "thumbnail" }
 article:
   {
     intro:
@@ -14,32 +16,29 @@ article:
           tag: "Paragraph",
           params:
             {
-              text: "In the pantheon of Mesopotamian gods, Marduk stands as a symbol of power, authority, and the rise of Babylon as a dominant city-state in ancient times.",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             },
         },
         {
           tag: "Paragraph",
           params:
             {
-              text: "The story of Marduk's ascendancy is a tale of divine warfare, leadership, and the establishment of a new cosmic order.",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             },
         },
+        { tag: "RelatedLink", params: { text: "More" } },
       ],
     content:
       [
         {
-          title: "Birth and Early Years",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      {
-                        src: "/images/sample.png",
-                        alt: "Marduk, the god of Babylon",
-                      },
+                    image: { src: "/images/sample.png", alt: "sample" },
                     aspectRatio: "square",
                   },
               },
@@ -47,107 +46,182 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Marduk's story begins in the primordial chaos of Mesopotamian mythology, where the gods Apsu (freshwater) and Tiamat (saltwater) gave birth to the first generation of deities.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Among these gods, Marduk, the god of Babylon, emerged as a prominent figure due to his wisdom and courage.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],
         },
         {
-          title: "The Battle Against Tiamat",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      {
-                        src: "/images/sample.png",
-                        alt: "Tiamat, the goddess of chaos",
-                      },
-                    aspectRatio: "square",
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
+                    aspectRatio: "portrait",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "As chaos and conflict escalated in the divine realm, Tiamat, representing chaos and disorder, sought vengeance against the younger gods who had thwarted her mate, Apsu.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Marduk, chosen by the gods as their champion, faced Tiamat in a fierce battle. With divine weapons and cunning strategy, Marduk defeated Tiamat, cleaving her body in two to create the heavens and the earth.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],
         },
         {
-          title: "Establishment of Cosmic Order",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      {
-                        src: "/images/sample.png",
-                        alt: "Establishment of Cosmic Order",
-                      },
-                    aspectRatio: "square",
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
+                    aspectRatio: "portrait",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Having emerged victorious, Marduk established a new cosmic order. He organized the cosmos, set the paths of the celestial bodies, and assigned divine roles to the gods.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "In this new order, Marduk, the god of Babylon, ascended as the chief deity, symbolizing the rise of Babylon as a dominant power in Mesopotamia.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],
         },
         {
-          title: "Legacy and Worship",
+          title: "Section Title",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image:
-                      { src: "/images/sample.png", alt: "Worship of Marduk" },
-                    aspectRatio: "square",
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
+                    aspectRatio: "portrait",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Marduk's story and his role as the chief god of Babylon left an indelible mark on the culture and religion of ancient Mesopotamia.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "He was revered as a symbol of leadership and divine authority, and the city of Babylon became a center of worship for Marduk and his grand temple, Esagila.",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+            ],
+        },
+        {
+          title: "Section Title",
+          data:
+            [
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
+                    aspectRatio: "portrait",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+            ],
+        },
+        {
+          title: "Section Title",
+          data:
+            [
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
+                    aspectRatio: "portrait",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+            ],
+        },
+        {
+          title: "Section Title",
+          data:
+            [
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample-2-3.png", alt: "sample" },
+                    aspectRatio: "portrait",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
             ],

@@ -30,11 +30,23 @@ import HeaderDrawer from "./HeaderDrawer.astro";
       </ul>
     </nav>
     <div class="header__icons">
-      <a href="#" class="header__icon icon-instagram">
+      <a
+        href={settings["social-media-accounts"].facebook}
+        class="header__icon icon-facebook"
+      >
+        <Icon name="mdi:facebook" width="25" height="25" />
+      </a>
+      <a
+        href={settings["social-media-accounts"].instagram}
+        class="header__icon icon-instagram"
+      >
         <Icon name="mdi:instagram" width="25" height="25" />
       </a>
-      <a href="#" class="header__icon icon-facebook">
-        <Icon name="mdi:facebook" width="25" height="25" />
+      <a
+        href={settings["social-media-accounts"].twitter}
+        class="header__icon icon-facebook"
+      >
+        <Icon name="mdi:twitter" width="25" height="25" />
       </a>
     </div>
   </header>
@@ -124,6 +136,7 @@ import HeaderDrawer from "./HeaderDrawer.astro";
     text-decoration: none;
     word-break: break-word;
   }
+
   @media screen and (min-width: 990px) {
     .header__heading-link {
       margin-left: -0.46875rem;
@@ -171,6 +184,10 @@ import HeaderDrawer from "./HeaderDrawer.astro";
     line-height: 1.3;
   }
 
+  .list-menu__item:hover {
+    text-decoration: underline;
+  }
+
   /* span */
 
   /* div class="header__icons" */
@@ -191,7 +208,7 @@ import HeaderDrawer from "./HeaderDrawer.astro";
     align-items: center;
     justify-content: center;
   }
-  .icon-facebook {
+  .header__icon:last-child {
     margin-right: -0.75rem;
   }
 </style>

@@ -62,19 +62,28 @@ import { Icon } from "astro-icon";
           </div>
           <ul class="footer__list-social list-unstyled list-social">
             <li class="list-social__item">
-              <a href="#" class="link list-social__link">
+              <a
+                href={settings["social-media-accounts"].facebook}
+                class="link list-social__link"
+              >
                 <Icon name="mdi:facebook" width="25" height="25" />
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>
             <li class="list-social__item">
-              <a href="#" class="link list-social__link">
+              <a
+                href={settings["social-media-accounts"].instagram}
+                class="link list-social__link"
+              >
                 <Icon name="mdi:instagram" width="25" height="25" />
                 <span class="visually-hidden">Instagram</span>
               </a>
             </li>
             <li class="list-social__item">
-              <a href="#" class="link list-social__link">
+              <a
+                href={settings["social-media-accounts"].twitter}
+                class="link list-social__link"
+              >
                 <Icon name="mdi:twitter" width="25" height="25" />
                 <span class="visually-hidden">Twitter</span>
               </a>

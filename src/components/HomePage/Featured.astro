@@ -1,9 +1,38 @@
 ---
+import { CollectionEntry } from "astro:content";
+
+type Props = {
+  posts?: [
+    CollectionEntry<"blog">,
+    CollectionEntry<"blog">,
+    CollectionEntry<"blog">,
+    CollectionEntry<"blog">,
+    CollectionEntry<"blog">
+  ];
+};
+
+const { posts } = Astro.props as Props;
+
+const placeholderArticle = {
+  title: "Placeholder Article Title",
+  description:
+    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  author: "author",
+  image: {
+    url: "/images/sample.png",
+    alt: "some alt text",
+  },
+  thumbnail: {
+    url: "/images/thumbnail.png",
+    alt: "some alt text",
+  },
+  slug: "custom-slug-post-1",
+};
 ---
 
 <section class="comp top-of-page mntl-block">
   <a
-    href="#"
+    href={`/posts/${placeholderArticle.slug}`}
     class="comp card--featured mntl-document-card mntl-card card card--no-image"
   >
     <div class="loc card__top">
@@ -12,8 +41,8 @@
       >
         <div class="img-placeholder" style="padding-bottom: 66.6%;">
           <img
-            src="/images/sample.png"
-            alt="some alt text"
+            src={placeholderArticle.image.url}
+            alt={placeholderArticle.image.alt}
             class="card__img universal-image__image lazyloaded"
           />
         </div>
@@ -23,15 +52,17 @@
       <div class="card__header"></div>
       <span class="card__title">
         <span class="card__title-text">
-          22 Best Family Vacations in the U.S. That Are Perfect for Everyone —
-          From Toddlers to Teens
+          {placeholderArticle.title}
         </span>
       </span>
-      <div class="card__byline mntl-card__byline" data-byline="By Lindsay Cohn">
+      <div
+        class="card__byline mntl-card__byline"
+        data-byline={placeholderArticle.author}
+      >
       </div>
       <div
         class="comp type--cat card__description mntl-block"
-        data-card-description="From big cities to small towns to national parks, these family vacations in the U.S. will delight both kids and adults."
+        data-card-description={placeholderArticle.description}
       >
       </div>
     </div>
@@ -43,15 +74,15 @@
       {
         [1, 2, 3, 4].map((item) => (
           <a
-            href="#"
+            href={`/posts/${placeholderArticle.slug}`}
             class="comp card--square-image-left mntl-card-list-items mntl-document-card mntl-card card card--no-image"
           >
             <div class="loc card__top">
               <div class="card__media mntl-universal-image card__media universal-image__container">
                 <div class="img-placeholder" style="padding-bottom:65.9%;">
                   <img
-                    src="/images/featured-section-rightsidebar-image.webp"
-                    alt="some alt text"
+                    src={placeholderArticle.thumbnail.url}
+                    alt={placeholderArticle.thumbnail.alt}
                     class="card__img universal-image__image lazyloaded"
                   />
                 </div>
@@ -60,14 +91,11 @@
             <div class="card__content" data-tag="News">
               <div class="card__header" />
               <span class="card__title">
-                <span class="card__title-text">
-                  22 Best Family Vacations in the U.S. That Are Perfect for
-                  Everyone — From Toddlers to Teens
-                </span>
+                <span class="card__title-text">{placeholderArticle.title}</span>
               </span>
               <div
                 class="card__byline mntl-card__byline"
-                data-byline="By Lindsay Cohn"
+                data-byline={placeholderArticle.author}
               />
             </div>
           </a>
@@ -473,7 +501,7 @@
   /* img class="card__img universal-image__image lazyloaded" */
   .card-list .card--square-image-left .card__img {
     width: 9.9375rem;
-    height: 6.625rem;
+    /* height: 6.625rem; */
     filter: contrast(93%);
     -o-object-fit: cover;
     object-fit: cover;
@@ -481,20 +509,20 @@
 
   .top-of-page .sidebar .card-list .card--square-image-left .card__img {
     width: 8rem;
-    height: 5.33rem;
+    /* height: 5.33rem; */
   }
 
   @media (min-width: 50em) {
     .top-of-page .sidebar .card-list .card--square-image-left .card__img {
       width: 7rem;
-      height: 4.66rem;
+      /* height: 4.66rem; */
     }
   }
 
   @media (min-width: 64em) {
     .top-of-page .sidebar .card-list .card--square-image-left .card__img {
       width: 7.5rem;
-      height: 5rem;
+      /* height: 5rem; */
     }
   }
 

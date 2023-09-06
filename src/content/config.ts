@@ -7,10 +7,15 @@ const blog = defineCollection({
     title: z.string(),
     subtitle: z.string(),
     description: z.string(),
+    author: z.string(),
     date: z.date(),
     draft: z.boolean(),
     category: z.array(z.enum(categories)),
     image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    thumbnail: z.object({
       src: z.string(),
       alt: z.string(),
     }),

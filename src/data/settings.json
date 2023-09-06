@@ -18,6 +18,11 @@
       "links": []
     },
     {
+      "name": "Author",
+      "path": "/author/",
+      "links": []
+    },
+    {
       "name": "Myths",
       "path": "/categories/myths",
       "links": []
@@ -35,6 +40,11 @@
       "url": "/privacy-policy"
     }
   ],
+  "social-media-accounts": {
+    "facebook": "https://facebook.com",
+    "twitter": "https://twitter.com",
+    "instagram": "https://instagram.com"
+  },
   "twitter-handle": "",
   "privacy-policy-link": "https://www.privacypolicygenerator.info/live.php?token=sogi5PLonPu69VseVlMhyBRqwB8IJAnY"
 }

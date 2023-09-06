@@ -1,9 +1,14 @@
 ---
+type Props = {
+  link?: string;
+};
+
+const { link = "/posts/custom-slug-post-1" } = Astro.props as Props;
 ---
 
 <section class="comp top-onepost one-post-hero mntl-block">
   <a
-    href="#"
+    href={link}
     class="comp one-post-hero__card mntl-document-card mntl-card card card--no-image"
   >
     <div class="card__top">

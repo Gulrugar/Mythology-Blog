@@ -40,7 +40,7 @@ const { posts } = Astro.props as Props;
                 </span>
                 <div
                   class="comp card__meta mntl-block"
-                  data-category={post.data.category}
+                  data-category={post.data.category[0]}
                   data-updated={formatDate(post.data.date)}
                 >
                   <span class="comp card__square-divider mntl-block" />
