@@ -6,6 +6,6 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-blog.vercel.app",
-  integrations: [sitemap(), partytown(), mdx()]
+  site: process.env.VERCEL_URL || "",
+  integrations: [sitemap(), partytown(), mdx()],
 });

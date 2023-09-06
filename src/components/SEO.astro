@@ -1,5 +1,5 @@
 ---
-import siteData from "../data/siteData.json";
+import settings from "../data/settings.json";
 import jsonLDGenerator from "../script/jsonLD";
 import type { SEOProps } from "../types/seo";
 
@@ -11,8 +11,8 @@ const jsonLD = jsonLDGenerator({
   data,
   url,
 });
-// const twitterHandle = "@example_twitter"
-const twitterHandle = "";
+
+const siteData = settings["site-data"];
 ---
 
 <!-- SEO -->
@@ -44,7 +44,11 @@ const twitterHandle = "";
 <meta property="og:image:alt" content={image?.alt || siteData.image.alt} />
 
 <!-- Twitter -->
-{twitterHandle && <meta name="twitter:site" content={twitterHandle} />}
+{
+  settings["twitter-handle"] && (
+    <meta name="twitter:site" content={settings["twitter-handle"]} />
+  )
+}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />

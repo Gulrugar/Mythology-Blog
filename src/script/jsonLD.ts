@@ -1,4 +1,4 @@
-import siteData from "../data/siteData.json";
+import settings from "../data/settings.json";
 import type { CollectionEntry } from "astro:content";
 
 export default function jsonLDGenerator({
@@ -33,7 +33,7 @@ export default function jsonLDGenerator({
       {
       "@context": "https://schema.org/",
       "@type": "WebSite",
-      "name": "${siteData.title}",
+      "name": "${settings["site-data"].title}",
       "url": "${import.meta.env.SITE}"
       }
     </script>`;

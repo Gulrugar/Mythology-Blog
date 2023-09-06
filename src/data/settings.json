@@ -1,4 +1,11 @@
 {
+  "site-data": {
+    "title": "Website Title",
+    "image": {
+      "src": "/images/sample.png",
+      "alt": "sample"
+    }
+  },
   "nav-data": [
     {
       "name": "Home",
@@ -28,5 +35,6 @@
       "url": "/privacy-policy"
     }
   ],
+  "twitter-handle": "",
   "privacy-policy-link": "https://www.privacypolicygenerator.info/live.php?token=sogi5PLonPu69VseVlMhyBRqwB8IJAnY"
 }
