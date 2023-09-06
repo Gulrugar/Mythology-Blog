@@ -36,8 +36,8 @@
 
   "footer-bottom-links": [
     {
-      "title": "Privacy Policy",
-      "url": "/privacy-policy"
+      "name": "Privacy Policy",
+      "path": "/privacy-policy"
     }
   ],
   "social-media-accounts": {

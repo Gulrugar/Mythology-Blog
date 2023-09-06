@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import { type CollectionEntry } from "astro:content";
 
 interface Props extends Pick<CollectionEntry<"blog">["data"], "image"> {
   aspectRatio: "square" | "portrait";

@@ -1,7 +1,10 @@
 ---
 import Icon from "astro-icon";
-import settings from "../data/settings.json";
+import settingsData from "../data/settings.json";
+import type { Settings } from "../types/settings.d.ts";
 import "../styles/header-drawer-global.css";
+
+const settings: Settings = settingsData;
 ---
 
 <header-drawer data-breakpoint="tablet">
