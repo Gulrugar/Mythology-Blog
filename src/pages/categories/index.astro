@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { slugify } from "../../script/utils";
-import categoryData from "../../data/categoryData";
+import { categories } from "../../data/constants";
 import { Icon } from "astro-icon";
 
 const applyAccent = true;
@@ -23,7 +23,7 @@ const applyAccent = true;
         </div>
         <div class="hero-grid__cta">
           {
-            categoryData.map((category) => (
+            categories.map((category) => (
               <a
                 class="hero-grid__cta-anchor"
                 href={`/categories/${slugify(category)}`}

@@ -98,3 +98,14 @@ main .article__body a {
 main .article__body a:hover {
   background-image: none;
 }
+
+.article-intro p.mntl-sc-block-html:first-of-type:first-letter {
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 0.5px;
+  float: left;
+  font-size: 4.1875rem;
+  line-height: 3.625rem;
+  padding-top: 1px;
+  padding-right: 0.5rem;
+  padding-left: 0.1875rem;
+}

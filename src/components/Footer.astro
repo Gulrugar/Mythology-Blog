@@ -1,7 +1,6 @@
 ---
 const thisYear = new Date().getFullYear().toString();
 import settings from "../data/settings.json";
-import navData from "../data/navData";
 
 import { Icon } from "astro-icon";
 ---
@@ -15,7 +14,7 @@ import { Icon } from "astro-icon";
         <h2 class="footer-block__heading">Categories</h2>
         <ul class="footer-block__details-content list-unstyled">
           {
-            navData.map((navItem) => (
+            settings["nav-data"].map((navItem) => (
               <li>
                 <a
                   href={navItem.path}
@@ -32,7 +31,7 @@ import { Icon } from "astro-icon";
         <h2 class="footer-block__heading">Categories</h2>
         <ul class="footer-block__details-content list-unstyled">
           {
-            navData.map((navItem) => (
+            settings["nav-data"].map((navItem) => (
               <li>
                 <a
                   href={navItem.path}

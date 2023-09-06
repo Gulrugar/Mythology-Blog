@@ -8,11 +8,20 @@ import SVGs from "../components/SVGs.astro";
 
 import type { SEOProps } from "../types/seo";
 
-const { title, description, image, data, robots } = Astro.props as SEOProps;
+const {
+  title,
+  description,
+  image,
+  data,
+  robots,
+  redirect = false,
+} = Astro.props as SEOProps & {
+  redirect?: boolean;
+};
 ---
 
 <html lang="en">
-  <MainHead {title} {description} {image} {data} {robots} />
+  <MainHead {title} {description} {image} {data} {robots} {redirect} />
   <body>
     <SVGs />
     <HeaderGroup />

@@ -1,0 +1,55 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import CategoryHeader from "../../../components/Categories/CategoryHeader.astro";
+import CategoryBody from "../../../components/Categories/CategoryBody.astro";
+import { formatBlogPosts } from "../../../script/utils";
+import { getCollection, CollectionEntry } from "astro:content";
+import Pagination from "../../../components/Pagination.astro";
+
+export async function getStaticPaths({ paginate }: any) {
+  const blogPosts = await getCollection("blog", ({ data }) => {
+    return data.category.some((cat) => cat === "Symbols");
+  });
+  const formattedPosts = formatBlogPosts(blogPosts, {
+    filterOutDrafts: false,
+  });
+
+  return paginate(formattedPosts, { pageSize: 3 });
+}
+
+interface Props {
+  data: CollectionEntry<"blog">[];
+  start: number;
+  end: number;
+  size: number;
+  total: number;
+  currentPage: number;
+  lastPage: number;
+  url: {
+    current: string | undefined;
+    next: string | undefined;
+    prev: string | undefined;
+  };
+}
+
+const { page } = Astro.props as { page?: Props };
+const { prev, next } = page?.url || {};
+---
+
+<MainLayout
+  title="Myths"
+  description="This is the description for the myths page"
+>
+  <section class="comp taxonomysc mntl-taxonomysc">
+    <CategoryHeader title="Symbols" />
+    <CategoryBody posts={page?.data} />
+    <Pagination {prev} {next} />
+  </section>
+</MainLayout>
+
+<style>
+  /* section class="comp taxonomysc mntl-taxonomysc" */
+  .taxonomysc {
+    padding: 0;
+  }
+</style>

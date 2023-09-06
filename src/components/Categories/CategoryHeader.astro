@@ -1,5 +1,15 @@
 ---
 import { blurryImageUrl } from "../../data/constants";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const {
+  title = "Category",
+  description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea quasi aperiam asperiores voluptas officia repellat placeat earum, dicta a debitis eum et doloremque reprehenderit aspernatur voluptatibus ut eaque id illum nemo repudiandae laudantium inventore? Animi maxime quae repellat dolores.",
+} = Astro.props as Props;
 ---
 
 <div class="comp mntl-taxonomysc-header taxonomysc-header mntl-block">
@@ -20,29 +30,13 @@ import { blurryImageUrl } from "../../data/constants";
       </div>
     </figure>
     <div class="comp mntl-taxonomysc-header-group mntl-block">
-      <ul class="comp mntl-breadcrumbs mntl-block">
-        <li class="comp mntl-breadcrumbs__item mntl-block">
-          <a href="#" class="mntl-text-link mntl-breadcrumbs__link">
-            <span class="link__wrapper">Wedding Ideas & Advice</span>
-          </a>
-        </li>
-        <li class="comp mntl-breadcrumbs__item mntl-block">
-          <a href="#" class="mntl-text-link mntl-breadcrumbs__link">
-            <span class="link__wrapper">Wedding Planning</span>
-          </a>
-        </li>
-      </ul>
-      <h1 class="comp mntl-taxonomysc-heading mntl-text-block">Category</h1>
+      <h1 class="comp mntl-taxonomysc-heading mntl-text-block">{title}</h1>
     </div>
   </div>
   <div class="comp mntl-taxonomysc-header__bottom mntl-block">
     <div class="comp mntl-taxonomysc-intro mntl-sc-page mntl-block">
       <p class="comp mntl-sc-block beauty-sc-block-html mntl-sc-block-html">
-        Once you've selected your wedding venue, it's time to focus on décor.
-        Whether you're searching for beautiful ceremony backdrops, tablescape
-        inspiration, unique dance floor ideas, or anything in between, we have
-        all the wedding décor ideas you need to plan a picture-perfect
-        celebration.
+        {description}
       </p>
     </div>
   </div>
@@ -71,19 +65,6 @@ import { blurryImageUrl } from "../../data/constants";
   img {
     max-width: 100%;
     vertical-align: bottom;
-  }
-
-  a {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: 0 0;
-  }
-
-  a {
-    color: #222;
-    text-decoration: none;
   }
 
   h1 {
@@ -256,85 +237,6 @@ import { blurryImageUrl } from "../../data/constants";
   .mntl-taxonomysc-header-group {
     padding: 0;
   }
-
-  /* ul class="comp mntl-breadcrumbs mntl-block" */
-  .mntl-breadcrumbs {
-    position: relative;
-    top: 1rem;
-    padding: 0 1.5rem;
-    text-align: center;
-  }
-
-  @media (min-width: 34em) {
-    .mntl-breadcrumbs {
-      top: 1.6875rem;
-      text-align: unset;
-    }
-  }
-
-  .mntl-breadcrumbs {
-    padding: 0 1.5rem;
-    margin: auto;
-    max-width: 75rem;
-  }
-
-  @media (min-width: 34em) {
-    .mntl-breadcrumbs {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: unset;
-      bottom: 6.25rem;
-    }
-  }
-
-  /* li class="comp mntl-breadcrumbs__item mntl-block" */
-  .mntl-breadcrumbs__item {
-    font-size: 0.75rem;
-    color: #fff;
-  }
-
-  .mntl-breadcrumbs__item {
-    font-size: 0.875rem;
-  }
-
-  @media (min-width: 34em) {
-    .mntl-breadcrumbs__item {
-      font-size: 0.9375rem;
-    }
-  }
-
-  .mntl-breadcrumbs__item {
-    display: inline-block;
-  }
-
-  /* a class="mntl-text-link mntl-breadcrumbs__link" */
-  .mntl-breadcrumbs__link {
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #fff;
-  }
-
-  .mntl-breadcrumbs__link:focus,
-  .mntl-breadcrumbs__link:hover {
-    text-decoration: underline;
-    text-underline-position: under;
-  }
-
-  @media (min-width: 34em) {
-    .mntl-breadcrumbs__link {
-      font-size: 0.75rem;
-    }
-  }
-
-  /* ::before */
-  .mntl-breadcrumbs__item + .mntl-breadcrumbs__item::before {
-    content: ">";
-    display: inline-block;
-    margin: 0 0.5rem;
-  }
-
-  /* span class="link__wrapper" */
 
   /* h2 class="comp mntl-taxonomysc-heading mntl-text-block" */
   .mntl-taxonomysc-heading {

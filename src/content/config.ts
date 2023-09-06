@@ -1,5 +1,5 @@
 import { z, defineCollection } from "astro:content";
-import categoryData from "../data/categoryData";
+import { categories } from "../data/constants";
 import { paragraph, relatedLink, callout, image } from "./_types.d";
 
 const blog = defineCollection({
@@ -9,7 +9,7 @@ const blog = defineCollection({
     description: z.string(),
     date: z.date(),
     draft: z.boolean(),
-    category: z.array(z.enum(categoryData)),
+    category: z.array(z.enum(categories)),
     image: z.object({
       src: z.string(),
       alt: z.string(),

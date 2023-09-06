@@ -1,9 +1,32 @@
 {
-  "privacy-policy-link": "https://www.privacypolicygenerator.info/live.php?token=sogi5PLonPu69VseVlMhyBRqwB8IJAnY",
+  "nav-data": [
+    {
+      "name": "Home",
+      "path": "/",
+      "links": []
+    },
+    {
+      "name": "About",
+      "path": "/about/",
+      "links": []
+    },
+    {
+      "name": "Myths",
+      "path": "/categories/myths",
+      "links": []
+    },
+    {
+      "name": "Symbols",
+      "path": "/categories/symbols",
+      "links": []
+    }
+  ],
+
   "footer-bottom-links": [
     {
       "title": "Privacy Policy",
       "url": "/privacy-policy"
     }
-  ]
+  ],
+  "privacy-policy-link": "https://www.privacypolicygenerator.info/live.php?token=sogi5PLonPu69VseVlMhyBRqwB8IJAnY"
 }

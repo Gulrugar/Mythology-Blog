@@ -3,7 +3,7 @@ import { formatDate } from "../../script/utils";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  posts: CollectionEntry<"blog">[];
+  posts: CollectionEntry<"blog">[] | undefined;
 }
 
 const { posts } = Astro.props as Props;
@@ -15,38 +15,39 @@ const { posts } = Astro.props as Props;
       class="comp l-container mntl-taxonomysc-article-list mntl-document-card-list mntl-card-list mntl-block page-width"
     >
       {
-        [...posts, ...posts].map((post) => (
-          <a
-            href={`/blog/${post.slug}`}
-            class="comp mntl-card-list-items mntl-document-card mntl-card card card--no-image"
-            data-cta="Read Now ▸"
-          >
-            <div class="loc card__top">
-              <div class="card__media mntl-universal-image universal-image__container">
-                <div class="img-placeholder" style="padding-bottom:100.0%;">
-                  <img
-                    src={post.data.image.src}
-                    alt={post.data.image.alt}
-                    class="card__img universal-image__image lazyloaded"
-                  />
+        posts &&
+          [...posts, ...posts].map((post) => (
+            <a
+              href={`/posts/${post.slug}`}
+              class="comp mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+              data-cta="Read Now ▸"
+            >
+              <div class="loc card__top">
+                <div class="card__media mntl-universal-image universal-image__container">
+                  <div class="img-placeholder" style="padding-bottom:100.0%;">
+                    <img
+                      src={post.data.image.src}
+                      alt={post.data.image.alt}
+                      class="card__img universal-image__image lazyloaded"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card__content">
-              <div class="card__header" />
-              <span class="card__title">
-                <span class="card__title-text ">{post.data.title}</span>
-              </span>
-              <div
-                class="comp card__meta mntl-block"
-                data-category={post.data.category}
-                data-updated={formatDate(post.data.date)}
-              >
-                <span class="comp card__square-divider mntl-block" />
+              <div class="card__content">
+                <div class="card__header" />
+                <span class="card__title">
+                  <span class="card__title-text ">{post.data.title}</span>
+                </span>
+                <div
+                  class="comp card__meta mntl-block"
+                  data-category={post.data.category}
+                  data-updated={formatDate(post.data.date)}
+                >
+                  <span class="comp card__square-divider mntl-block" />
+                </div>
               </div>
-            </div>
-          </a>
-        ))
+            </a>
+          ))
       }
     </div>
   </div>

@@ -1,0 +1,19 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Posts" description="Posts page" redirect={true}>
+  <div
+    class="page-width"
+    style="min-height: 400px; display: flex; flex-direction: column; justify-content: center; text-align:center;"
+  >
+    <h1>Hello!</h1>
+    <div>
+      If you weren't redirected <a
+        href="/"
+        class="link link--text"
+        style="font-weight: bold;">click here</a
+      >
+    </div>
+  </div>
+</MainLayout>

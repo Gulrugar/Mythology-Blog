@@ -1,6 +1,6 @@
 ---
 import Icon from "astro-icon";
-import navData from "../data/navData";
+import settings from "../data/settings.json";
 import "../styles/header-drawer-global.css";
 ---
 
@@ -28,7 +28,7 @@ import "../styles/header-drawer-global.css";
           <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {
-                navData.map((navItem, index) => (
+                settings["nav-data"].map((navItem, index) => (
                   <li>
                     {navItem.links && navItem.links.length > 0 ? (
                       <details
@@ -166,6 +166,7 @@ import "../styles/header-drawer-global.css";
 
   header-drawer {
     justify-self: start;
+    margin-left: -0.75rem;
   }
 
   /* header-drawer */
