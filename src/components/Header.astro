@@ -32,19 +32,19 @@ import HeaderDrawer from "./HeaderDrawer.astro";
     <div class="header__icons">
       <a
         href={settings["social-media-accounts"].facebook}
-        class="header__icon icon-facebook"
+        class="header__icon icon-facebook link"
       >
         <Icon name="mdi:facebook" width="25" height="25" />
       </a>
       <a
         href={settings["social-media-accounts"].instagram}
-        class="header__icon icon-instagram"
+        class="header__icon icon-instagram link"
       >
         <Icon name="mdi:instagram" width="25" height="25" />
       </a>
       <a
         href={settings["social-media-accounts"].twitter}
-        class="header__icon icon-facebook"
+        class="header__icon icon-twitter link"
       >
         <Icon name="mdi:twitter" width="25" height="25" />
       </a>
@@ -184,18 +184,27 @@ import HeaderDrawer from "./HeaderDrawer.astro";
     line-height: 1.3;
   }
 
-  .list-menu__item:hover {
+  .list-menu__item:hover span {
     text-decoration: underline;
+    text-decoration-color: rgb(var(--color-base-accent));
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 0.1875rem;
   }
 
   /* span */
 
   /* div class="header__icons" */
   .header__icons {
-    display: flex;
     grid-area: icons;
     justify-self: end;
     padding-right: 0.5rem;
+    display: none;
+  }
+
+  @media screen and (min-width: 990px) {
+    .header__icons {
+      display: flex;
+    }
   }
 
   /* a class="header__icon icon-***" */
@@ -203,12 +212,18 @@ import HeaderDrawer from "./HeaderDrawer.astro";
     height: 2.75rem;
     width: 2.75rem;
     padding: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .header__icon:last-child {
     margin-right: -0.75rem;
+  }
+
+  .header__icon:hover svg {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+    color: rgb(var(--color-base-accent));
   }
 </style>

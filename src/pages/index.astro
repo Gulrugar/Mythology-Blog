@@ -53,7 +53,6 @@ const posts = await getCollection("blog", ({ data }) => {
 
     .article--one-col-tax {
       max-width: none;
-      padding-top: 2rem;
     }
   }
 
@@ -63,36 +62,3 @@ const posts = await getCollection("blog", ({ data }) => {
     /* overflow-x: hidden; */
   }
 </style>
-
-<!-- Style Notes -->
-
-<!-- Define global styles in a component -->
-<!-- <style is:global>
-  p {
-    color: red;
-  }
-</style> -->
-
-<!-- Write scss -->
-<!-- npm i -D sass -->
-<!-- <style lang="scss">
-	p {
-		span {
-			color: blue;
-		}
-	}
-</style> -->
-
-<!-- Pass in variables -->
-<!-- variables defined in frontmatter -->
-<!-- <style define:vars={{foregroundColor, backgroundColor}}>
-	p {
-		color: var(--foregroundColor);
-		background-color: var(--backgroundColor);
-	}
-</style> -->
-
-<!-- Also works for script tags -->
-<!-- <script define:vars={{useBackgroundColor, backgroundColor}}>
-	document.body.style.color = useBackgroundColor ? backgroundColor : "#fff";
-</script> -->

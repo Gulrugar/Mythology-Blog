@@ -105,7 +105,7 @@ const settings: Settings = settingsData;
                 >
                   <Icon
                     name="mdi:facebook"
-                    width="1.25rem"
+                    width="25"
                     class="icon icon-facebook"
                   />
                   <span class="visually-hidden">Facebook</span>
@@ -118,7 +118,7 @@ const settings: Settings = settingsData;
                 >
                   <Icon
                     name="mdi:instagram"
-                    width="1.25rem"
+                    width="25"
                     class="icon icon-instagram"
                   />
                   <span class="visually-hidden">Twitter</span>
@@ -131,7 +131,7 @@ const settings: Settings = settingsData;
                 >
                   <Icon
                     name="mdi:twitter"
-                    width="1.25rem"
+                    width="25"
                     class="icon icon-twitter"
                   />
                   <span class="visually-hidden">Twitter</span>
@@ -454,7 +454,9 @@ const settings: Settings = settingsData;
   }
 
   a.list-social__link:hover {
-    transform: scale(1.07);
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+    color: rgb(var(--color-base-accent));
   }
 </style>
 
