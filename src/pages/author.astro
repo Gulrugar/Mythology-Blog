@@ -1,56 +1,75 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { blurryImageUrl } from "../data/constants";
+import settings from "../data/settings.json";
+
+const accounts = settings.author["social-media-accounts"];
 ---
 
 <MainLayout
-  title="About"
-  description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+  title={`${settings.author.name} - Author`}
+  description={`Author page for ${settings.author.name}`}
 >
   <article class="comp mntl-article--one-column-full-width mntl-article">
     <div class="loc article-header">
       <div class="comp bio-header">
         <div class="bio-header__top">
-          <h1 class="bio-header__title type--camel">Andrew Aguirre</h1>
+          <h1 class="bio-header__title type--camel">{settings.author.name}</h1>
           <div class="loc social-follow">
             <div class="comp travelandleisure-social-nav mntl-social-nav">
               <ul class="social-nav__list">
-                <li class="social-nav__item social-nav__item--facebook">
-                  <a
-                    href="#"
-                    class="social-nav__link social-nav__link--facebook"
-                  >
-                    <svg class="icon icon-facebook social-nav__icon">
-                      <use
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-nav__item social-nav__item--instagram">
-                  <a
-                    href="#"
-                    class="social-nav__link social-nav__link--instagram"
-                  >
-                    <svg class="icon icon-instagram social-nav__icon">
-                      <use
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-nav__item social-nav__item--website">
-                  <a
-                    href="#"
-                    class="social-nav__link social-nav__link--website"
-                  >
-                    <svg class="icon icon-website social-nav__icon">
-                      <use
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="#icon-website"></use>
-                    </svg>
-                  </a>
-                </li>
+                {
+                  accounts.facebook && (
+                    <li class="social-nav__item social-nav__item--facebook">
+                      <a
+                        href={accounts.facebook}
+                        class="social-nav__link social-nav__link--facebook"
+                      >
+                        <svg class="icon icon-facebook social-nav__icon">
+                          <use
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="#icon-facebook"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  )
+                }
+
+                {
+                  accounts.instagram && (
+                    <li class="social-nav__item social-nav__item--instagram">
+                      <a
+                        href={accounts.instagram}
+                        class="social-nav__link social-nav__link--instagram"
+                      >
+                        <svg class="icon icon-instagram social-nav__icon">
+                          <use
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="#icon-instagram"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  )
+                }
+                {
+                  accounts.website && (
+                    <li class="social-nav__item social-nav__item--website">
+                      <a
+                        href={accounts.website}
+                        class="social-nav__link social-nav__link--website"
+                      >
+                        <svg class="icon icon-website social-nav__icon">
+                          <use
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="#icon-website"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  )
+                }
               </ul>
             </div>
           </div>
@@ -61,8 +80,8 @@ import { blurryImageUrl } from "../data/constants";
           <div class="primary-image__media">
             <div class="img-placeholder" style="padding-bottom: 100%;">
               <img
-                src="/images/sample.png"
-                alt="Andrew Aguirre headshot"
+                src={settings.author.image.src}
+                alt={settings.author.image.alt}
                 class="primary-image__image mntl-primary-image--blurry loaded"
                 onload="(function(e){e.classList.add('loaded')})(this)"
                 style={`--blurry: url(${blurryImageUrl})`}
@@ -74,22 +93,7 @@ import { blurryImageUrl } from "../data/constants";
     </div>
     <div class="loc article-content">
       <div class="comp type--dog bio-intro">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-          eaque, vel sequi at quas asperiores ea iste. Adipisci molestias ab
-          corporis, cum doloribus rem accusantium repudiandae dolore
-          voluptatibus aperiam harum ullam? Animi architecto neque fugiat nulla!
-          Laudantium excepturi sit pariatur? Illo ipsa quibusdam vero
-          reprehenderit saepe tempora, ab accusantium quam.
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-          eaque, vel sequi at quas asperiores ea iste. Adipisci molestias ab
-          corporis, cum doloribus rem accusantium repudiandae dolore
-          voluptatibus aperiam harum ullam? Animi architecto neque fugiat nulla!
-          Laudantium excepturi sit pariatur? Illo ipsa quibusdam vero
-          reprehenderit saepe tempora, ab accusantium quam.
-        </p>
+        <Fragment set:html={settings.author.bio} />
       </div>
     </div>
   </article>

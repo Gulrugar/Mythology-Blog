@@ -4,11 +4,13 @@ import { blurryImageUrl } from "../../data/constants";
 type Props = {
   title?: string;
   description?: string;
+  image: string;
 };
 
 const {
   title = "Category",
   description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ea quasi aperiam asperiores voluptas officia repellat placeat earum, dicta a debitis eum et doloremque reprehenderit aspernatur voluptatibus ut eaque id illum nemo repudiandae laudantium inventore? Animi maxime quae repellat dolores.",
+  image,
 } = Astro.props as Props;
 ---
 
@@ -20,7 +22,7 @@ const {
       <div class="primary-image__media">
         <div class="img-placeholder" style="padding-bottom: 27.8%">
           <img
-            src="/images/category-banner.webp"
+            src={image}
             alt="category"
             class="primary-image__image mntl-primary-image--blurry"
             onload="(function(e){e.classList.add('loaded')})(this)"
@@ -238,7 +240,7 @@ const {
     padding: 0;
   }
 
-  /* h2 class="comp mntl-taxonomysc-heading mntl-text-block" */
+  /* h1 class="comp mntl-taxonomysc-heading mntl-text-block" */
   .mntl-taxonomysc-heading {
     position: absolute;
     left: 0;
@@ -253,6 +255,7 @@ const {
     text-align: center;
     text-transform: uppercase;
     color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   @media (min-width: 34em) {

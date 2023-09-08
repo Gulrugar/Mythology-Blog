@@ -9,8 +9,15 @@ import HeaderDrawer from "./HeaderDrawer.astro";
     <HeaderDrawer />
     <h1 class="header__heading">
       <a href="/" class="header__heading-link link link link--text">
-        <span class="h2">Site Title</span></a
-      >
+        <img
+          src={settings.logo.src}
+          alt={settings.logo.alt}
+          class="header__heading-logo motion-reduce"
+          width="100px"
+          height="100px"
+        />
+        <span class="h2">{settings["site-data"].title}</span>
+      </a>
     </h1>
     <nav class="header__inline-menu">
       <ul class="list-menu list-menu--inline" role="list">
@@ -60,7 +67,7 @@ import HeaderDrawer from "./HeaderDrawer.astro";
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
   }
   .section-header {
-    z-index: 3;
+    z-index: 10;
   }
 
   /* header class="header" */
@@ -135,6 +142,14 @@ import HeaderDrawer from "./HeaderDrawer.astro";
     padding: 0.46875rem;
     text-decoration: none;
     word-break: break-word;
+    display: flex;
+    align-items: center;
+
+    transition: transform 0.2s ease;
+  }
+
+  .header__heading-link:hover {
+    transform: scale(1.07);
   }
 
   @media screen and (min-width: 990px) {
@@ -144,6 +159,16 @@ import HeaderDrawer from "./HeaderDrawer.astro";
   }
 
   /* span class="h2" */
+  .header__heading-link > span {
+    margin-left: 1rem;
+    text-wrap: nowrap;
+  }
+
+  /* img class="header__heading-logo motion-reduce" */
+  .header__heading-logo {
+    height: auto;
+    max-width: 100%;
+  }
 
   /* nav class="header__inline-menu" */
   .header__inline-menu {

@@ -215,7 +215,17 @@ h5,
 }
 
 /* Additional */
+/* For webkit-based browsers like Chrome and Safari */
+details::-webkit-details-marker {
+  display: none;
+}
 
-.link.active {
-  color: red;
+/* For Firefox */
+details > summary::-moz-list-bullet {
+  display: none;
+}
+
+/* For all other browsers that support the <details> element */
+details > summary {
+  list-style-type: none;
 }

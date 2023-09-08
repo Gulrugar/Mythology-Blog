@@ -1,0 +1,47 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import settings from "../data/settings.json";
+---
+
+<MainLayout
+  title="Terms of Service"
+  description={`Terms of Service for ${settings["site-data"].title}`}
+>
+  <section>
+    <div class="container page-width">
+      <div class="content">
+        <div class="main">
+          <h1>Terms of service</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ab
+            fugit omnis reprehenderit labore maxime laboriosam veritatis
+            sapiente aut ducimus, nobis facere. Saepe minus alias illum
+            veritatis soluta? Fuga natus alias commodi aperiam, in placeat saepe
+            itaque labore. Nulla, debitis laudantium quia eligendi nostrum minus
+            ipsa est consectetur exercitationem iusto.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .content {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    padding: 35px 35px 35px 25px;
+    -webkit-border-radius: 2px 6px 6px;
+    border-radius: 2px 6px 6px;
+    background: #fff;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.25);
+  }
+</style>

@@ -51,14 +51,16 @@ import { Icon } from "astro-icon";
             style="max-width: min(100%, 100px)"
           >
             <a href="#"
-              ><img src="/images/sample.png" alt="sample" loading="lazy" /></a
+              ><img
+                src={settings.logo.src}
+                alt={settings.logo.alt}
+                loading="lazy"
+              /></a
             >
           </div>
-          <h2 class="footer-block__heading">Blog Title</h2>
+          <h2 class="footer-block__heading">{settings["site-data"].title}</h2>
           <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            dicta facilis consequatur molestias omnis vitae quisquam est sint
-            aperiam deserunt?
+            {settings["site-data"].description}
           </div>
           <ul class="footer__list-social list-unstyled list-social">
             <li class="list-social__item">
@@ -109,15 +111,6 @@ import { Icon } from "astro-icon";
               </li>
             ))
           }
-          {
-            ["Terms of service", "Contact information"].map((item) => (
-              <li>
-                <small class="copyright__content">
-                  <a href="#">{item}</a>
-                </small>
-              </li>
-            ))
-          }
         </ul>
       </div>
     </div>
@@ -144,6 +137,14 @@ import { Icon } from "astro-icon";
 
   div.footer__content-top {
     display: block;
+  }
+
+  @media screen and (max-width: 749px) {
+    .footer__content-top {
+      padding-bottom: 1.875rem;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
   }
   /* div class="footer__blocks-wrapper grid" */
   .grid {
@@ -209,7 +210,13 @@ import { Icon } from "astro-icon";
   .footer-block__heading {
     margin-bottom: 1.25rem;
     margin-top: 0;
-    font-size: 1rem;
+    font-size: 1.125rem;
+  }
+
+  @media screen and (min-width: 990px) {
+    .footer-block__heading {
+      font-size: 1.125rem;
+    }
   }
 
   /* ul class="footer-block__details-content list-unstyled" */
@@ -217,10 +224,55 @@ import { Icon } from "astro-icon";
     margin-bottom: 2.5rem;
   }
 
+  @media screen and (min-width: 750px) {
+    .footer-block__details-content {
+      margin-bottom: 0;
+    }
+  }
+
   /* li */
 
   /* a class="link link--text list-menu__item list-menu__item--link" */
+  .list-menu__item {
+    display: flex;
+    align-items: center;
+    line-height: 1.3;
+  }
 
+  .list-menu__item--link {
+    text-decoration: none;
+    padding-bottom: 0.625rem;
+    padding-top: 0.625rem;
+    line-height: 1.8;
+  }
+
+  @media screen and (min-width: 750px) {
+    .list-menu__item--link {
+      padding-bottom: 0.3125rem;
+      padding-top: 0.3125rem;
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    .footer-block__details-content .list-menu__item--link {
+      padding-bottom: 0.625rem;
+      padding-top: 0.625rem;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .footer-block__details-content .list-menu__item--link {
+      display: inline-block;
+      font-size: 0.875rem;
+    }
+  }
+
+  .footer-block__details-content .list-menu__item--link:hover,
+  .copyright__content a:hover {
+    color: rgb(var(--color-foreground));
+    text-decoration: underline;
+    text-underline-offset: 0.1875rem;
+  }
   /* div class="footer-block grid__item" */
 
   /* div class="footer-block__brand-info" */
@@ -329,19 +381,14 @@ import { Icon } from "astro-icon";
   /* small class="copyright__content" */
 
   .copyright__content {
+    color: rgb(var(--color-foreground));
     font-size: 0.6875rem;
   }
 
   /* a */
   .copyright__content a {
-    color: currentColor;
-    text-decoration: none;
-  }
-
-  .copyright__content a:hover {
     color: rgb(var(--color-foreground));
-    text-decoration: underline;
-    text-underline-offset: 0.1875rem;
+    text-decoration: none;
   }
 
   /* ul class="policies list-unstyled" */

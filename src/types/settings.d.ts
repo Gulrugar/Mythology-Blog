@@ -1,10 +1,28 @@
 export type Settings = {
   "site-data": {
     title: string;
+    description: string;
     image: {
       src: string;
       alt: string;
     };
+  };
+  author: {
+    name: string;
+    image: {
+      src: string;
+      alt: string;
+    };
+    bio: string;
+    "social-media-accounts": {
+      facebook: string;
+      instagram: string;
+      website: string;
+    };
+  };
+  logo: {
+    src: string;
+    alt: string;
   };
   "nav-data": {
     name: string;

@@ -1,14 +1,18 @@
 ---
-type Props = {
-  link?: string;
+const heroBannerData = {
+  title: "The Twelve Trials of Hercules",
+  author: "Andrew Aguirre",
+  description:
+    "Hercules' transformation from a flawed mortal into a revered demigod,  a timeless tale of heroism and resilience.",
+  category: ["Myths", "Greek", "Hercules"],
+  banner: "/images/banner.webp",
+  link: "/posts/custom-slug-post-1",
 };
-
-const { link = "/posts/custom-slug-post-1" } = Astro.props as Props;
 ---
 
 <section class="comp top-onepost one-post-hero mntl-block">
   <a
-    href={link}
+    href={heroBannerData.link}
     class="comp one-post-hero__card mntl-document-card mntl-card card card--no-image"
   >
     <div class="card__top">
@@ -17,7 +21,7 @@ const { link = "/posts/custom-slug-post-1" } = Astro.props as Props;
       >
         <div class="img-placeholder" style="padding-bottom:33%">
           <img
-            src="/images/hero-banner.webp"
+            src={heroBannerData.banner}
             alt="some alt text"
             class="card__img universal-image__image lazyloaded"
           />
@@ -25,20 +29,24 @@ const { link = "/posts/custom-slug-post-1" } = Astro.props as Props;
       </div>
     </div>
     <div class="card__content">
-      <div class="card__header" data-kicker="Destinations"></div>
+      <div
+        class="card__header"
+        data-kicker={heroBannerData.category.join(" > ")}
+      >
+      </div>
       <span class="card__title">
         <span class="card__title-text">
-          America’s Best Small Towns of 2023
+          {heroBannerData.title}
         </span>
       </span>
       <div
         class="card__byline mntl-card__byline"
-        data-byline="By Travel + Leisure Editors"
+        data-byline={`By ${heroBannerData.author}`}
       >
       </div>
       <div
         class="comp card__description mntl-block"
-        data-card-description="These are the best small towns in the U.S. for outdoor adventure, food, culture, wine, wellness, and more, for 2023, according to Travel + Leisure."
+        data-card-description={heroBannerData.description}
       >
       </div>
     </div>

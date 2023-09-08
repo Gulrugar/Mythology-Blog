@@ -4,16 +4,12 @@ import HeroBanner from "../components/HomePage/HeroBanner.astro";
 import Featured from "../components/HomePage/Featured.astro";
 import List from "../components/HomePage/List.astro";
 import ThreePost from "../components/HomePage/ThreePost.astro";
-import { getCollection } from "astro:content";
-
-const posts = await getCollection("blog", ({ data }) => {
-  return !data.draft;
-});
+import settings from "../data/settings.json";
 ---
 
 <MainLayout
-  title="Home"
-  description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+  title={`${settings["site-data"].title}`}
+  description={settings["site-data"].description}
 >
   <article class="article--one-col-tax mntl-article">
     <div class="loc article-content">

@@ -11,7 +11,7 @@ export async function getStaticPaths({ paginate }: any) {
     return data.category.some((cat) => cat === "Myths");
   });
   const formattedPosts = formatBlogPosts(blogPosts, {
-    filterOutDrafts: false,
+    filterOutDrafts: true,
   });
 
   return paginate(formattedPosts, { pageSize: 20 });
@@ -34,14 +34,18 @@ interface Props {
 
 const { page } = Astro.props as { page?: Props };
 const { prev, next } = page?.url || {};
+
+const description =
+  "A gateway into the fascinating world of ancient legends and tales. Here, we unearth the timeless myths that have been passed down through generations, providing readers with explorations of their origins, characters, and enduring significance. From the heroic exploits of Hercules in Greek mythology to the mystical tales of gods and goddesses in Hindu mythology, we delve deep into the narratives that have shaped cultures and ignited the imagination of humanity.";
 ---
 
-<MainLayout
-  title="Myths"
-  description="This is the description for the myths page"
->
+<MainLayout title="Myths - Category" {description}>
   <section class="comp taxonomysc mntl-taxonomysc">
-    <CategoryHeader title="Myths" />
+    <CategoryHeader
+      title="Myths"
+      image="/images/myths-banner.webp"
+      {description}
+    />
     <CategoryBody posts={page?.data} />
     <Pagination {prev} {next} />
   </section>

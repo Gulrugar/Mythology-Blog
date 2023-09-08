@@ -11,7 +11,7 @@ export async function getStaticPaths({ paginate }: any) {
     return data.category.some((cat) => cat === "Symbols");
   });
   const formattedPosts = formatBlogPosts(blogPosts, {
-    filterOutDrafts: false,
+    filterOutDrafts: true,
   });
 
   return paginate(formattedPosts, { pageSize: 3 });
@@ -34,14 +34,18 @@ interface Props {
 
 const { page } = Astro.props as { page?: Props };
 const { prev, next } = page?.url || {};
+
+const description =
+  "A treasure trove of ancient and mystical emblems that have played a significant role in mythological narratives throughout history. Here, we delve into the profound meanings and cultural significance behind these symbols, unlocking the hidden stories and wisdom they carry. From the iconic trident of Poseidon to the enigmatic Eye of Horus, we explore symbols that have shaped cultures, beliefs, and legends across the ages.";
 ---
 
-<MainLayout
-  title="Myths"
-  description="This is the description for the myths page"
->
+<MainLayout title="Symbols - Category" {description}>
   <section class="comp taxonomysc mntl-taxonomysc">
-    <CategoryHeader title="Symbols" />
+    <CategoryHeader
+      title="Symbols"
+      image="/images/symbols-banner.webp"
+      {description}
+    />
     <CategoryBody posts={page?.data} />
     <Pagination {prev} {next} />
   </section>

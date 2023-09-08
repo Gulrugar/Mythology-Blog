@@ -1,8 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import settings from "../data/settings.json";
 ---
 
-<MainLayout title="Privacy Policy" description="a description">
+<MainLayout
+  title="Privacy Policy"
+  description={`Privacy Policy for ${settings["site-data"].title}`}
+>
   <section>
     <div class="container page-width">
       <div class="content">

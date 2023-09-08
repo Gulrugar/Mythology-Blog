@@ -1,25 +1,33 @@
 {
   "site-data": {
-    "title": "Website Title",
+    "title": "Mythology",
+    "description": "Dive into the captivating world of mythology! Explore the rich tapestry of ancient legends, gods, and heroes that have shaped cultures throughout history. From the mighty Greek gods of Olympus to the enigmatic creatures of Norse mythology, our articles uncover the hidden gems of these timeless stories.",
     "image": {
       "src": "/images/sample.png",
       "alt": "sample"
     }
   },
+  "author": {
+    "name": "Andrew Aguirre",
+    "image": {
+      "src": "/images/author.webp",
+      "alt": "author"
+    },
+    "bio": "<p>Andrew is a writer and editor for Mythology.net. He has been a lifelong fan of mythology, ever since he first read about the exploits of Zeus, Hercules, and the Olympians in grade school. He spends much of his free time scouring the Internet for new fascinating tidbits about these captivating stories.</p>",
+    "social-media-accounts": {
+      "facebook": "",
+      "instagram": "https://instagram.com",
+      "website": "https://drewsportfolio.com"
+    }
+  },
+  "logo": {
+    "src": "/images/logo.png",
+    "alt": "logo"
+  },
   "nav-data": [
     {
       "name": "Home",
       "path": "/",
-      "links": []
-    },
-    {
-      "name": "About",
-      "path": "/about/",
-      "links": []
-    },
-    {
-      "name": "Author",
-      "path": "/author/",
       "links": []
     },
     {
@@ -31,13 +39,30 @@
       "name": "Symbols",
       "path": "/categories/symbols",
       "links": []
+    },
+    {
+      "name": "About",
+      "path": "/about/",
+      "links": []
+    },
+    {
+      "name": "Author",
+      "path": "/author/",
+      "links": []
     }
   ],
-
   "footer-bottom-links": [
     {
       "name": "Privacy Policy",
       "path": "/privacy-policy"
+    },
+    {
+      "name": "Terms of Service",
+      "path": "/terms-of-service"
+    },
+    {
+      "name": "Contact Information",
+      "path": "/contact-information"
     }
   ],
   "social-media-accounts": {
