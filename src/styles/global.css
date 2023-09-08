@@ -216,16 +216,16 @@ h5,
 
 /* Additional */
 /* For webkit-based browsers like Chrome and Safari */
-details::-webkit-details-marker {
+summary::-webkit-details-marker {
   display: none;
 }
 
 /* For Firefox */
-details > summary::-moz-list-bullet {
+summary::-moz-list-bullet {
   display: none;
 }
 
 /* For all other browsers that support the <details> element */
-details > summary {
-  list-style-type: none;
+summary {
+  list-style: none;
 }
