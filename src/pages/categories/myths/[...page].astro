@@ -5,6 +5,7 @@ import CategoryBody from "../../../components/Categories/CategoryBody.astro";
 import { formatBlogPosts } from "../../../script/utils";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Pagination from "../../../components/Pagination.astro";
+import settings from "../../../data/settings.json";
 
 export async function getStaticPaths({ paginate }: any) {
   const blogPosts = await getCollection("blog", ({ data }) => {
@@ -17,34 +18,35 @@ export async function getStaticPaths({ paginate }: any) {
   return paginate(formattedPosts, { pageSize: 20 });
 }
 
-interface Props {
-  data: CollectionEntry<"blog">[];
-  start: number;
-  end: number;
-  size: number;
-  total: number;
-  currentPage: number;
-  lastPage: number;
-  url: {
-    current: string | undefined;
-    next: string | undefined;
-    prev: string | undefined;
+type Props = {
+  page?: {
+    data: CollectionEntry<"blog">[];
+    start: number;
+    end: number;
+    size: number;
+    total: number;
+    currentPage: number;
+    lastPage: number;
+    url: {
+      current: string | undefined;
+      next: string | undefined;
+      prev: string | undefined;
+    };
   };
-}
+};
 
-const { page } = Astro.props as { page?: Props };
+const { page } = Astro.props as Props;
 const { prev, next } = page?.url || {};
 
-const description =
-  "A gateway into the fascinating world of ancient legends and tales. Here, we unearth the timeless myths that have been passed down through generations, providing readers with explorations of their origins, characters, and enduring significance. From the heroic exploits of Hercules in Greek mythology to the mystical tales of gods and goddesses in Hindu mythology, we delve deep into the narratives that have shaped cultures and ignited the imagination of humanity.";
+const metaData = settings.meta.myths;
 ---
 
-<MainLayout title="Myths - Category" {description}>
+<MainLayout title={metaData.title} description={metaData.description}>
   <section class="comp taxonomysc mntl-taxonomysc">
     <CategoryHeader
       title="Myths"
       image="/images/myths-banner.webp"
-      {description}
+      description={metaData.description}
     />
     <CategoryBody posts={page?.data} />
     <Pagination {prev} {next} />

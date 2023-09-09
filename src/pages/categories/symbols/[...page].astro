@@ -5,6 +5,7 @@ import CategoryBody from "../../../components/Categories/CategoryBody.astro";
 import { formatBlogPosts } from "../../../script/utils";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Pagination from "../../../components/Pagination.astro";
+import settings from "../../../data/settings.json";
 
 export async function getStaticPaths({ paginate }: any) {
   const blogPosts = await getCollection("blog", ({ data }) => {
@@ -35,16 +36,15 @@ interface Props {
 const { page } = Astro.props as { page?: Props };
 const { prev, next } = page?.url || {};
 
-const description =
-  "A treasure trove of ancient and mystical emblems that have played a significant role in mythological narratives throughout history. Here, we delve into the profound meanings and cultural significance behind these symbols, unlocking the hidden stories and wisdom they carry. From the iconic trident of Poseidon to the enigmatic Eye of Horus, we explore symbols that have shaped cultures, beliefs, and legends across the ages.";
+const metaData = settings.meta.symbols;
 ---
 
-<MainLayout title="Symbols - Category" {description}>
+<MainLayout title={metaData.title} description={metaData.description}>
   <section class="comp taxonomysc mntl-taxonomysc">
     <CategoryHeader
       title="Symbols"
       image="/images/symbols-banner.webp"
-      {description}
+      description={metaData.description}
     />
     <CategoryBody posts={page?.data} />
     <Pagination {prev} {next} />

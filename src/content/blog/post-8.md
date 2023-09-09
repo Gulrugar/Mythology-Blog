@@ -1,10 +1,10 @@
 ---
-title: "The Fourth Labor: The Erymanthian Boar"
-subtitle: "Hercules' Hunt in the Mountains"
+title: "The Eighth Labor: Diomedes' Man-Eating Mares"
+subtitle: "Hercules' Daring Theft"
 description: this is the description
 author: Andrew Aguirre
-slug: twelve-labors-of-hercules-4
-date: 2023-09-08T12:00:09
+slug: twelve-labors-of-hercules-8
+date: 2023-09-08T12:00:05
 draft: false
 category: ["Myths"]
 image: { src: "/images/sample.png", alt: "sample" }
@@ -232,7 +232,7 @@ article:
       {
         text: "Outro text",
         next_link:
-          { text: "Next Link", link: "/posts/twelve-labors-of-hercules-5" },
+          { text: "Next Link", link: "/posts/twelve-labors-of-hercules-9" },
       },
   }
 ---

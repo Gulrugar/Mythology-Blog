@@ -1,13 +1,13 @@
 ---
-title: "The Fourth Labor: The Erymanthian Boar"
-subtitle: "Hercules' Hunt in the Mountains"
+title: Article Title
+subtitle: subtitle
 description: this is the description
 author: Andrew Aguirre
-slug: twelve-labors-of-hercules-4
-date: 2023-09-08T12:00:09
+slug: placeholder-article
+date: 2023-07-28
 draft: false
 category: ["Myths"]
-image: { src: "/images/sample.png", alt: "sample" }
+image: { src: "/images/sample.png", alt: "Sample" }
 thumbnail: { src: "/images/thumbnail.png", alt: "thumbnail" }
 article:
   {
@@ -17,17 +17,17 @@ article:
           tag: "Paragraph",
           params:
             {
-              text: "Hercules, the renowned hero of Greek mythology, embarked on a remarkable journey to complete the Twelve Labors as an act of penance for a grave and tragic crime he had committed. Driven by remorse and seeking redemption, Hercules was tasked with these seemingly insurmountable challenges by King Eurystheus.",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             },
         },
         {
           tag: "Paragraph",
           params:
             {
-              text: "These labors were intended to humble and test the hero's strength, courage, and resolve, as well as to atone for his past actions. Each labor presented a formidable adversary or task, ranging from ferocious beasts to treacherous quests, and together they forged the legend of Hercules, a symbol of resilience and heroism in the face of adversity.",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             },
         },
-        { tag: "RelatedLink", params: { text: "Related Article", link: "/" } },
+        { tag: "RelatedLink", params: { text: "More", link: "/" } },
       ],
     content:
       [
@@ -228,11 +228,6 @@ article:
             ],
         },
       ],
-    outro:
-      {
-        text: "Outro text",
-        next_link:
-          { text: "Next Link", link: "/posts/twelve-labors-of-hercules-5" },
-      },
+    outro: { text: "Outro text", next_link: { text: "Next Link", link: "/" } },
   }
 ---

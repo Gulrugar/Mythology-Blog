@@ -11,6 +11,7 @@ export const relatedLink = z.object({
   tag: z.literal("RelatedLink"),
   params: z.object({
     text: z.string(),
+    link: z.string(),
   }),
 });
 

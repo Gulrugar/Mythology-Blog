@@ -1,11 +1,11 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import settings from "../data/settings.json";
+
+const metaData = settings.meta.about;
 ---
 
-<MainLayout
-  title="About"
-  description="Lorem ipsum dolor sit amet consectetur adipisicing elit"
->
+<MainLayout title={metaData.title} description={metaData.description}>
   <article class="comp article--corporate article--about article">
     <h1 class="comp article-heading--left article-heading mntl-text-block">
       About Us

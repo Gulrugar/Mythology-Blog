@@ -5,12 +5,11 @@ import Featured from "../components/HomePage/Featured.astro";
 import List from "../components/HomePage/List.astro";
 import ThreePost from "../components/HomePage/ThreePost.astro";
 import settings from "../data/settings.json";
+
+const metaData = settings.meta.index;
 ---
 
-<MainLayout
-  title={`${settings["site-data"].title}`}
-  description={settings["site-data"].description}
->
+<MainLayout title={metaData.title} description={metaData.description}>
   <article class="article--one-col-tax mntl-article">
     <div class="loc article-content">
       <HeroBanner />

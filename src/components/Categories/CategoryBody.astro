@@ -16,7 +16,7 @@ const { posts } = Astro.props as Props;
     >
       {
         posts &&
-          [...posts, ...posts].map((post) => (
+          posts.map((post) => (
             <a
               href={`/posts/${post.slug}`}
               class="comp mntl-card-list-items mntl-document-card mntl-card card card--no-image"

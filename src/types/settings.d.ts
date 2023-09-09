@@ -1,7 +1,12 @@
+type Meta = {
+  title: string;
+  description: string;
+};
+
 export type Settings = {
   "site-data": {
     title: string;
-    description: string;
+    // Note: the recommended image size is 1200x630 for both open graph and twitter cards
     image: {
       src: string;
       alt: string;
@@ -43,4 +48,9 @@ export type Settings = {
   };
   "twitter-handle": string;
   "privacy-policy-link": string;
+  meta: {
+    index: Meta;
+    myths: Meta;
+    symbols: Meta;
+  };
 };

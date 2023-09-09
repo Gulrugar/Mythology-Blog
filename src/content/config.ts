@@ -31,7 +31,7 @@ const blog = defineCollection({
         text: z.string(),
         next_link: z.object({
           text: z.string(),
-          url: z.string(),
+          link: z.string(),
         }),
       }),
     }),

@@ -1,14 +1,15 @@
 ---
 interface Props {
   text: string;
+  link: string;
 }
-const { text } = Astro.props as Props;
+const { text, link } = Astro.props as Props;
 ---
 
 <div
   class="comp related-link mntl-sc-block beauty-sc-block-featuredlink mntl-sc-block-featuredlink mntl-block"
 >
-  <a href="#"><span class="link__wrapper">{text}</span></a>
+  <a href={link}><span class="link__wrapper">{text}</span></a>
 </div>
 
 <style>

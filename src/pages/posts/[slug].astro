@@ -73,7 +73,7 @@ const { title, subtitle, description, author, category, date, image, article } =
               <div
                 class="comp mntl-bylines__item mntl-attribution__item mntl-attribution__item--has-date"
               >
-                <span class="mntl-attribution__item-descriptor"> By</span>
+                <span class="mntl-attribution__item-descriptor">Art by</span>
                 <div class="mntl-dynamic-tooltip--trigger" data-tooltip="">
                   <a
                     href="/author"
@@ -213,7 +213,7 @@ const { title, subtitle, description, author, category, date, image, article } =
                 <Paragraph text={article.outro.text} />
               )
             }
-            <UpNextLink next_link={article.outro.next_link} />
+            <UpNextLink {...article.outro.next_link} />
           </div>
         </div>
       </div>
