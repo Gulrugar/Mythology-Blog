@@ -13,9 +13,31 @@ const metaData = settings.meta.index;
   <article class="article--one-col-tax mntl-article">
     <div class="loc article-content">
       <HeroBanner />
-      <Featured />
-      <List />
-      <ThreePost />
+      <Featured
+        postTitles={[
+          "The First Labor: The Nemean Lion",
+          "The Second Labor: The Hydra's Heads",
+          "The Third Labor: Artemis' Golden Hind",
+          "The Fourth Labor: The Erymanthian Boar",
+          "The Fifth Labor: Cleaning the Augean Stables",
+        ]}
+      />
+      <List
+        postTitles={[
+          "The First Labor: The Nemean Lion",
+          "The Second Labor: The Hydra's Heads",
+          "The Third Labor: Artemis' Golden Hind",
+          "The Fourth Labor: The Erymanthian Boar",
+        ]}
+      />
+      <ThreePost
+        category="Myths"
+        postTitles={[
+          "The First Labor: The Nemean Lion",
+          "The Second Labor: The Hydra's Heads",
+          "The Third Labor: Artemis' Golden Hind",
+        ]}
+      />
     </div>
   </article>
 </MainLayout>

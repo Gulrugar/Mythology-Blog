@@ -1,38 +1,34 @@
 ---
-import { type CollectionEntry } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
+import { formatBlogPosts } from "../../script/utils";
 
 type Props = {
-  posts?: [
-    CollectionEntry<"blog">,
-    CollectionEntry<"blog">,
-    CollectionEntry<"blog">,
-    CollectionEntry<"blog">,
-    CollectionEntry<"blog">
-  ];
+  postTitles: [string, string, string, string, string];
 };
 
-const { posts } = Astro.props as Props;
+const { postTitles } = Astro.props as Props;
 
-const placeholderArticle = {
-  title: "Placeholder Article Title",
-  description:
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  author: "author",
-  image: {
-    url: "/images/sample.png",
-    alt: "some alt text",
-  },
-  thumbnail: {
-    url: "/images/thumbnail.png",
-    alt: "some alt text",
-  },
-  slug: "placeholder-article",
-};
+const placeHolderArticle = await getEntry("blog", "placeholder-article")!;
+
+const blogPosts = await getCollection("blog", ({ data }) => {
+  return postTitles.includes(data.title);
+});
+
+const formattedBlogPosts = formatBlogPosts(blogPosts, {
+  filterOutDrafts: true,
+});
+
+while (formattedBlogPosts.length < 5) {
+  formattedBlogPosts.push(placeHolderArticle);
+}
+
+const featuredArticle = formattedBlogPosts[0];
+const sidebarArticles = formattedBlogPosts.slice(1, 5);
 ---
 
 <section class="comp top-of-page mntl-block">
   <a
-    href={`/posts/${placeholderArticle.slug}`}
+    href={`/posts/${featuredArticle.slug}`}
     class="comp card--featured mntl-document-card mntl-card card card--no-image"
   >
     <div class="loc card__top">
@@ -41,28 +37,31 @@ const placeholderArticle = {
       >
         <div class="img-placeholder" style="padding-bottom: 66.6%;">
           <img
-            src={placeholderArticle.image.url}
-            alt={placeholderArticle.image.alt}
+            src={featuredArticle.data.image.src}
+            alt={featuredArticle.data.image.alt}
             class="card__img universal-image__image lazyloaded"
           />
         </div>
       </div>
     </div>
-    <div class="card__content" data-tag="Family Vacation">
+    <div
+      class="card__content"
+      data-tag={featuredArticle.data.category.join(" > ")}
+    >
       <div class="card__header"></div>
       <span class="card__title">
         <span class="card__title-text">
-          {placeholderArticle.title}
+          {featuredArticle.data.title}
         </span>
       </span>
       <div
         class="card__byline mntl-card__byline"
-        data-byline={placeholderArticle.author}
+        data-byline={featuredArticle.data.author}
       >
       </div>
       <div
         class="comp type--cat card__description mntl-block"
-        data-card-description={placeholderArticle.description}
+        data-card-description={featuredArticle.data.description}
       >
       </div>
     </div>
@@ -72,17 +71,17 @@ const placeholderArticle = {
       class="comp card-list mntl-document-card-list mntl-card-list mntl-block"
     >
       {
-        [1, 2, 3, 4].map((item) => (
+        sidebarArticles.map((article) => (
           <a
-            href={`/posts/${placeholderArticle.slug}`}
+            href={`/posts/${article.slug}`}
             class="comp card--square-image-left mntl-card-list-items mntl-document-card mntl-card card card--no-image"
           >
             <div class="loc card__top">
               <div class="card__media mntl-universal-image card__media universal-image__container">
                 <div class="img-placeholder" style="padding-bottom:65.9%;">
                   <img
-                    src={placeholderArticle.thumbnail.url}
-                    alt={placeholderArticle.thumbnail.alt}
+                    src={article.data.thumbnail.src}
+                    alt={article.data.thumbnail.alt}
                     class="card__img universal-image__image lazyloaded"
                   />
                 </div>
@@ -91,11 +90,11 @@ const placeholderArticle = {
             <div class="card__content" data-tag="News">
               <div class="card__header" />
               <span class="card__title">
-                <span class="card__title-text">{placeholderArticle.title}</span>
+                <span class="card__title-text">{article.data.title}</span>
               </span>
               <div
                 class="card__byline mntl-card__byline"
-                data-byline={placeholderArticle.author}
+                data-byline={article.data.author}
               />
             </div>
           </a>
