@@ -8,7 +8,6 @@ date: 2023-07-28
 draft: false
 category: ["Myths"]
 image: { src: "/images/sample.png", alt: "Sample" }
-thumbnail: { src: "/images/thumbnail.png", alt: "thumbnail" }
 article:
   {
     intro:

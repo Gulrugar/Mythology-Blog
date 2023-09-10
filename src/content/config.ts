@@ -15,10 +15,6 @@ const blog = defineCollection({
       src: z.string(),
       alt: z.string(),
     }),
-    thumbnail: z.object({
-      src: z.string(),
-      alt: z.string(),
-    }),
     article: z.object({
       intro: z.array(z.union([paragraph, relatedLink, callout])),
       content: z.array(

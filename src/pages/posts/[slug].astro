@@ -4,7 +4,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 
 import { formatDate } from "../../script/utils";
-import { slugify } from "../../script/utils";
+import {
+  slugify,
+  facebookShare,
+  pinterestShare,
+  emailShare,
+} from "../../script/utils";
 import { blurryImageUrl } from "../../data/constants";
 
 import Paragraph from "../../components/Article/Paragraph.astro";
@@ -96,6 +101,7 @@ const { title, subtitle, description, author, category, date, image, article } =
               title="Facebook"
               aria-label="Facebook"
               role="link"
+              onclick={facebookShare(Astro.url.toString())}
             >
               <svg class="icon icon-facebook">
                 <use href="#icon-facebook"> </use>
@@ -108,6 +114,7 @@ const { title, subtitle, description, author, category, date, image, article } =
                 title="Pinterest"
                 aria-label="Pinterest"
                 role="link"
+                onclick={pinterestShare(Astro.url.toString(), image.src, title)}
               >
                 <svg class="icon icon-pinterest">
                   <use href="#icon-pinterest"> </use>
@@ -121,6 +128,7 @@ const { title, subtitle, description, author, category, date, image, article } =
                 title="Emailshare"
                 aria-label="Emailshare"
                 role="link"
+                onclick={emailShare(Astro.url.toString(), title, description)}
               >
                 <svg class="icon icon-emailshare">
                   <use href="#icon-emailshare"></use>
@@ -257,7 +265,7 @@ const { title, subtitle, description, author, category, date, image, article } =
     padding: 0 1rem;
     display: grid;
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
     grid-template-columns: minmax(0, 37.5rem);
     grid-template-areas:
       "header"

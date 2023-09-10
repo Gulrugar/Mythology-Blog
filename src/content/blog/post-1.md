@@ -1,14 +1,17 @@
 ---
-title: "The First Labor: The Nemean Lion"
-subtitle: "Hercules' Fierce Battle with Invincibility"
-description: this is the description
+title: "The Twelve Labors of Hercules I: The Nemean Lion"
+subtitle: "A Fierce Battle with Invincibility"
+description: "Hercules, the son of Zeus and Alcmena, sought redemption for acts committed during a bout of madness inflicted by the jealous goddess Hera. To atone, he sought guidance from the Oracle of Delphi, who commanded him to serve King Eurystheus of Mycenae for twelve years and complete twelve labors."
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-1
 date: 2023-09-08T12:00:12
 draft: false
 category: ["Myths"]
-image: { src: "/images/sample.png", alt: "sample" }
-thumbnail: { src: "/images/thumbnail.png", alt: "thumbnail" }
+image:
+  {
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694373817/001_rvaewf.webp",
+    alt: "Hercules & Lion of Nemea",
+  }
 article:
   {
     intro:
@@ -27,12 +30,11 @@ article:
               text: "These labors were intended to humble and test the hero's strength, courage, and resolve, as well as to atone for his past actions. Each labor presented a formidable adversary or task, ranging from ferocious beasts to treacherous quests, and together they forged the legend of Hercules, a symbol of resilience and heroism in the face of adversity.",
             },
         },
-        { tag: "RelatedLink", params: { text: "Related Article", link: "/" } },
       ],
     content:
       [
         {
-          title: "Section Title",
+          title: "Twelve years and Twelve Insurmountable Labors",
           data:
             [
               {
@@ -47,20 +49,20 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Hercules, the mighty son of Zeus and Alcmena, found himself on a journey of redemption. Having fallen into madness under the influence of the vengeful goddess Hera, Hercules sought a way to cleanse his soul and atone for his past actions. His journey led him to the sacred Oracle of Delphi, where he inquired about how he could find redemption",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "The Oracle, a vessel through which the gods spoke, revealed Hercules' destiny. To atone for his sins, he must serve King Eurystheus of Mycenae for twelve years and complete twelve seemingly insurmountable labors. Hercules accepted his fate with determination, knowing that this path was his only means of redemption.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "Slay the Nemean Lion!",
           data:
             [
               {
@@ -75,20 +77,20 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "In the ancient land of Nemea, a terrible and monstrous creature known as the Nemean Lion was causing havoc and striking fear into the hearts of its people. This lion was unlike any other. Its golden fur was not only magnificent but also impenetrable, rendering it invulnerable to the weapons of man. As the lion roamed the region, it left a trail of destruction, terrorizing the countryside and its inhabitants.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Eurystheus, driven by both envy and fear of Hercules' growing legend, eagerly accepted the opportunity to set the first of the Twelve Labors. He commanded Hercules to confront the Nemean Lion, hoping that this formidable adversary would be the end of the mighty hero.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "A Journey of Resolve",
           data:
             [
               {
@@ -103,20 +105,20 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Hercules journeyed to Nemea and soon found himself standing before the dark and menacing cave that was the lion's lair. Inside, the air was thick with tension as he ventured deeper into the cave, his senses heightened, and his heart pounding. There, in the dim light, he finally encountered the fearsome Nemean Lion, its majestic golden fur shimmering ominously.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Hercules wasted no time. He drew his bow and loosed a volley of arrows at the lion, but they simply bounced off its impenetrable hide. Realizing that conventional weaponry was futile, Hercules resorted to his unparalleled strength and resolve. With a mighty roar, he charged at the lion and engaged it in a brutal battle.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "Both Man and Beast",
           data:
             [
               {
@@ -131,20 +133,20 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "The fight was fierce and unrelenting, with both man and beast locked in a life-and-death struggle. Hercules grappled with the lion, attempting to find a weakness in its seemingly invulnerable skin. The earth shook as the two adversaries clashed, and the heavens themselves seemed to hold their breath.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Hercules understood that defeating the lion meant finding a way past its impenetrable defenses. With a remarkable combination of strength and cunning, he grappled with the lion until he gained the upper hand. In a critical moment, as the lion lunged at him with its powerful jaws, Hercules seized the opportunity and, using his bare hands, choked the mighty beast into submission.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "Resolve Unending",
           data:
             [
               {
@@ -159,70 +161,7 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-            ],
-        },
-        {
-          title: "Section Title",
-          data:
-            [
-              {
-                tag: "ImageBlock",
-                params:
-                  {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-            ],
-        },
-        {
-          title: "Section Title",
-          data:
-            [
-              {
-                tag: "ImageBlock",
-                params:
-                  {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "The Nemean Lion, a symbol of terror and destruction, was vanquished at last. Hercules, victorious and covered in the lion's golden fur, had accomplished the first of his Twelve Labors. His strength, determination, and heroism shone brightly in the wake of this epic battle, and he had taken the first step on his path to redemption.",
                   },
               },
             ],
@@ -230,9 +169,18 @@ article:
       ],
     outro:
       {
-        text: "Outro text",
+        text: "Hercules would go on to face many more extraordinary challenges in his quest for redemption, but the tale of the Nemean Lion's defeat would forever be etched into the annals of Greek mythology, a testament to the indomitable spirit and valor of the great hero.",
         next_link:
-          { text: "Next Link", link: "/posts/twelve-labors-of-hercules-2" },
+          {
+            text: "The Twelve Labors of Hercules II: The Hydra's Heads",
+            link: "/posts/twelve-labors-of-hercules-2",
+          },
       },
   }
 ---
+
+image:
+{
+src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694307892/001_epma96.webp",
+alt: "Hercules and King Eurystheus",
+}

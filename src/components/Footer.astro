@@ -60,7 +60,7 @@ import { Icon } from "astro-icon";
           </div>
           <h2 class="footer-block__heading">{settings["site-data"].title}</h2>
           <div>
-            {settings["site-data"].description}
+            {settings.meta.index.description}
           </div>
           <ul class="footer__list-social list-unstyled list-social">
             <li class="list-social__item">
@@ -237,6 +237,7 @@ import { Icon } from "astro-icon";
     display: flex;
     align-items: center;
     line-height: 1.3;
+    display: inline-block;
   }
 
   .list-menu__item--link {

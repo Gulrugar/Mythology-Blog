@@ -1,5 +1,6 @@
 // use this to slugify something like a tag or category
 import { type CollectionEntry } from "astro:content";
+import settings from "../data/settings.json";
 
 export function slugify(text: string): string {
   return text
@@ -61,4 +62,35 @@ export function formatBlogPosts(
   // }
 
   return limit ? filteredPosts.slice(0, limit) : filteredPosts;
+}
+
+export function facebookShare(url: string) {
+  return `window.open(
+    'https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}',
+    'facebook-share-dialog',
+    'width=626,height=436'
+  );`;
+}
+
+export function pinterestShare(
+  url: string,
+  mediaUrl: string,
+  description: string
+) {
+  return `
+    window.open(
+    'https://pinterest.com/pin/create/button/?url=${encodeURIComponent(
+      url
+    )}&media=${encodeURIComponent(mediaUrl)}&description=${encodeURIComponent(
+    description
+  )}',
+    'pinterest-share-dialog',
+    'width=626,height=436'
+  );`;
+}
+
+export function emailShare(url: string, title: string, description: string) {
+  return `window.location.href='mailto:?subject=${
+    "Shared from " + settings["site-data"].title + ".com: " + title
+  }&body=${description + " Read More: " + url}'`;
 }

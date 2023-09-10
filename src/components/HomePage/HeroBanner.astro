@@ -4,7 +4,7 @@ const heroBannerData = {
   author: "Andrew Aguirre",
   description:
     "Hercules' transformation from a flawed mortal into a revered demigod,  a timeless tale of heroism and resilience.",
-  category: ["Myths", "Greek", "Hercules"],
+  category: ["Myths"],
   banner: "/images/banner.webp",
   link: "/posts/placeholder-article",
 };
@@ -29,11 +29,7 @@ const heroBannerData = {
       </div>
     </div>
     <div class="card__content">
-      <div
-        class="card__header"
-        data-kicker={heroBannerData.category.join(" > ")}
-      >
-      </div>
+      <div class="card__header" data-kicker={heroBannerData.category[0]}></div>
       <span class="card__title">
         <span class="card__title-text">
           {heroBannerData.title}

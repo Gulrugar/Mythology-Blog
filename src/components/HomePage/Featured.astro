@@ -44,10 +44,7 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
         </div>
       </div>
     </div>
-    <div
-      class="card__content"
-      data-tag={featuredArticle.data.category.join(" > ")}
-    >
+    <div class="card__content" data-tag={featuredArticle.data.category[0]}>
       <div class="card__header"></div>
       <span class="card__title">
         <span class="card__title-text">
@@ -80,8 +77,8 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
               <div class="card__media mntl-universal-image card__media universal-image__container">
                 <div class="img-placeholder" style="padding-bottom:65.9%;">
                   <img
-                    src={article.data.thumbnail.src}
-                    alt={article.data.thumbnail.alt}
+                    src={article.data.image.src}
+                    alt={article.data.image.alt}
                     class="card__img universal-image__image lazyloaded"
                   />
                 </div>

@@ -45,10 +45,7 @@ while (formattedBlogPosts.length < 4) {
                 </div>
               </div>
             </div>
-            <div
-              class="card__content"
-              data-tag={article.data.category.join(" > ")}
-            >
+            <div class="card__content" data-tag={article.data.category[0]}>
               <div class="card__header" />
               <span class="card__title">
                 <span class="card__title-text ">{article.data.title}</span>

@@ -1,6 +1,6 @@
 ---
-title: "The Second Labor: The Hydra's Heads"
-subtitle: "Hercules' Struggle Against Regeneration"
+title: "The Twelve Labors of Hercules II: The Hydra's Heads"
+subtitle: "The Regenerating Serpent"
 description: this is the description
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-2
@@ -8,7 +8,6 @@ date: 2023-09-08T12:00:11
 draft: false
 category: ["Myths"]
 image: { src: "/images/sample.png", alt: "sample" }
-thumbnail: { src: "/images/thumbnail.png", alt: "thumbnail" }
 article:
   {
     intro:
