@@ -81,9 +81,9 @@ export function pinterestShare(
     window.open(
     'https://pinterest.com/pin/create/button/?url=${encodeURIComponent(
       url
-    )}&media=${encodeURIComponent(mediaUrl)}&description=${encodeURIComponent(
+    )}&description=${encodeURIComponent(
     description
-  )}',
+  )}&media=${encodeURIComponent(mediaUrl)}',
     'pinterest-share-dialog',
     'width=626,height=436'
   );`;
