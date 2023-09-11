@@ -91,6 +91,9 @@ export function pinterestShare(
 
 export function emailShare(url: string, title: string, description: string) {
   return `window.location.href='mailto:?subject=${
-    "Shared from " + settings["site-data"].title + ".com: " + title
+    "Shared from " +
+    import.meta.env.SITE.replace(/^https:\/\//, "") +
+    ": " +
+    title
   }&body=${description + " Read More: " + url}'`;
 }

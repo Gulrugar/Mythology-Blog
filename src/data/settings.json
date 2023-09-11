@@ -1,6 +1,7 @@
 {
   "site-data": {
     "title": "Mythology",
+    "contact-email": "email@email.com",
     "image": {
       "src": "/images/og-twittercard.webp",
       "alt": "Mythological artwork depicting a captivating scene from ancient tales."

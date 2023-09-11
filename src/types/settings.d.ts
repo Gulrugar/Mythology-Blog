@@ -6,6 +6,7 @@ type Meta = {
 export type Settings = {
   "site-data": {
     title: string;
+    "contact-email": string;
     // Note: the recommended image size is 1200x630 for both open graph and twitter cards
     image: {
       src: string;

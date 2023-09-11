@@ -10,7 +10,7 @@ category: ["Myths"]
 image:
   {
     src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694373817/001_rvaewf.webp",
-    alt: "Hercules & Lion of Nemea",
+    alt: "Hercules & The Nemean Lion",
   }
 article:
   {

@@ -13,14 +13,15 @@ import settings from "../data/settings.json";
         <div class="main">
           <h1>Contact Information</h1>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ab
-            fugit omnis reprehenderit labore maxime laboriosam veritatis
-            sapiente aut ducimus, nobis facere. Saepe minus alias illum
-            veritatis soluta? Fuga natus alias commodi aperiam, in placeat saepe
-            itaque labore. Nulla, debitis laudantium quia eligendi nostrum minus
-            ipsa est consectetur exercitationem iusto.
-          </p>
+          <ul>
+            <li>
+              Email: <a
+                href={`mailto:${settings["site-data"]["contact-email"]}`}
+                >{settings["site-data"]["contact-email"]}</a
+              >
+            </li>
+            <li>Hours of Operation: [Monday-Friday: 9:00 AM - 5:00 PM PST]</li>
+          </ul>
         </div>
       </div>
     </div>

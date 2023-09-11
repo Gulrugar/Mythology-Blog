@@ -215,8 +215,6 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
   /* div class="img-placeholder" */
   .img-placeholder {
     background-color: #c7c7c7;
-    /* This plus width and margin in .card__img below is the centered version */
-    /* background-color: rgba(var(--color-base-accent), 0.3); */
     height: 0;
     overflow: hidden;
   }
@@ -231,11 +229,9 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
     width: 100%;
     height: auto;
     display: block;
+  }
 
-    /* This plus background-color in .img-placeholder above is the centered version */
-    /* width: 66.6666%;
-    margin: 0 auto; */
-
+  .card--featured .card__img {
     /* my property to center images in 3:2 containers */
     transform: translateY(-16.666%);
   }
@@ -497,7 +493,7 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
   /* img class="card__img universal-image__image lazyloaded" */
   .card-list .card--square-image-left .card__img {
     width: 9.9375rem;
-    /* height: 6.625rem; */
+    height: 6.625rem;
     filter: contrast(93%);
     -o-object-fit: cover;
     object-fit: cover;
@@ -505,20 +501,20 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
 
   .top-of-page .sidebar .card-list .card--square-image-left .card__img {
     width: 8rem;
-    /* height: 5.33rem; */
+    height: 5.33rem;
   }
 
   @media (min-width: 50em) {
     .top-of-page .sidebar .card-list .card--square-image-left .card__img {
       width: 7rem;
-      /* height: 4.66rem; */
+      height: 4.66rem;
     }
   }
 
   @media (min-width: 64em) {
     .top-of-page .sidebar .card-list .card--square-image-left .card__img {
       width: 7.5rem;
-      /* height: 5rem; */
+      height: 5rem;
     }
   }
 
