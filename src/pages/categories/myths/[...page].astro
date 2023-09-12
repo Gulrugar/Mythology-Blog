@@ -6,6 +6,7 @@ import { formatBlogPosts } from "../../../script/utils";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Pagination from "../../../components/Pagination.astro";
 import settings from "../../../data/settings.json";
+import CategoryFeatured from "../../../components/Categories/CategoryFeatured.astro";
 
 export async function getStaticPaths({ paginate }: any) {
   const blogPosts = await getCollection("blog", ({ data }) => {
@@ -48,14 +49,40 @@ const metaData = settings.meta.myths;
       image="/images/myths-banner.webp"
       description={metaData.description}
     />
+    <CategoryFeatured
+      postTitles={[
+        "The Twelve Labors of Hercules I: The Nemean Lion",
+        "The Twelve Labors of Hercules II: The Hydra's Heads",
+        "The Third Labor: Artemis' Golden Hind",
+        "The Fourth Labor: The Erymanthian Boar",
+      ]}
+    />
     <CategoryBody posts={page?.data} />
     <Pagination {prev} {next} />
   </section>
 </MainLayout>
 
 <style>
+  /* ------------- */
+  /* General       */
+  /* ------------- */
+  section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+    background: 0 0;
+  }
+
+  /* ------------- */
+  /* component     */
+  /* ------------- */
   /* section class="comp taxonomysc mntl-taxonomysc" */
   .taxonomysc {
     padding: 0;
+
+    background-color: #fbf9f6;
   }
 </style>

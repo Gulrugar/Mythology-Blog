@@ -1,0 +1,586 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import { formatBlogPosts, formatDate } from "../../script/utils";
+
+type Props = {
+  postTitles: [string, string, string, string];
+};
+
+const { postTitles } = Astro.props as Props;
+
+const placeHolderArticle = await getEntry("blog", "placeholder-article")!;
+
+const blogPosts = await getCollection("blog", ({ data }) => {
+  return postTitles.includes(data.title);
+});
+
+const formattedBlogPosts = formatBlogPosts(blogPosts, {
+  filterOutDrafts: true,
+});
+
+while (formattedBlogPosts.length < 4) {
+  formattedBlogPosts.push(placeHolderArticle);
+}
+
+const featuredArticle = formattedBlogPosts[0];
+const bottomArticles = formattedBlogPosts.slice(1, 4);
+---
+
+<div class="comp l-container mntl-taxonomysc-content mntl-sc-page mntl-block">
+  <div
+    class="comp theme-fourfeaturedcard mntl-sc-block beauty-sc-block-spotlight mntl-sc-block-spotlight mntl-block"
+  >
+    <div
+      class="comp mntl-sc-block-spotlight__articles--4-items mntl-sc-block-spotlight__articles mntl-document-spotlight mntl-document-card-list mntl-card-list mntl-block"
+    >
+      <a
+        href={`/posts/${featuredArticle.slug}`}
+        class="comp mntl-sc-block-spotlight__card mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+      >
+        <div class="loc card__top">
+          <div
+            class="card__media mntl-universal-image universal-image__container"
+          >
+            <div class="img-placeholder" style="padding-bottom: 100%;">
+              <img
+                src={featuredArticle.data.image.src}
+                alt={featuredArticle.data.image.alt}
+                class="card__img universal-image__image lazyloaded"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card__content" data-tag={featuredArticle.data.category[0]}>
+          <div class="card__header"></div>
+          <span class="card__title">
+            <span class="card__title-text">
+              {featuredArticle.data.title}
+            </span>
+          </span>
+          <p
+            class="comp card__description mntl-block"
+            data-description={featuredArticle.data.description}
+          >
+          </p>
+          <p
+            class="comp card__author mntl-block"
+            data-name={featuredArticle.data.author}
+            data-prefix="By"
+          >
+          </p>
+        </div>
+      </a>
+      {
+        bottomArticles.map((article) => (
+          <a
+            href={`/posts/${article.slug}`}
+            class="comp mntl-sc-block-spotlight__card mntl-card-list-items mntl-document-card mntl-card card card--no-image"
+          >
+            <div class="loc card__top">
+              <div class="card__media mntl-universal-image universal-image__container">
+                <div class="img-placeholder" style="padding-bottom: 100%">
+                  <img
+                    src={article.data.image.src}
+                    alt={article.data.image.alt}
+                    class="card__img universal-image__image lazyloaded"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="card__content" data-tag={article.data.category[0]}>
+              <div class="card__header" />
+              <span class="card__title">
+                <span class="card__title-text">{article.data.title}</span>
+              </span>
+              <p
+                class="comp card__description mntl-block"
+                data-description={article.data.description}
+              />
+              <p
+                class="comp card__author mntl-block"
+                data-name={article.data.author}
+                data-prefix="By"
+              />
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ----------------- */
+  /* General           */
+  /* ----------------- */
+  img {
+    height: auto;
+  }
+
+  div,
+  img,
+  span,
+  p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+    background: 0 0;
+  }
+
+  p {
+    margin-bottom: 1.75rem;
+    margin-top: 0;
+
+    color: #222;
+
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+
+  img {
+    max-width: 100%;
+    vertical-align: bottom;
+  }
+
+  a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+  }
+
+  a {
+    color: #222;
+    text-decoration: none;
+  }
+
+  /* ----------------- */
+  /* Component         */
+  /* ----------------- */
+  /* div class="comp l-container mntl-taxonomysc-content mntl-sc-page mntl-block" */
+  .l-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .l-container {
+    max-width: 75rem;
+    padding: 0 1.5rem;
+  }
+  .mntl-taxonomysc-content {
+    margin-top: 2.125rem;
+  }
+
+  /* div class="comp theme-fourfeaturedcard mntl-sc-block beauty-sc-block-spotlight mntl-sc-block-spotlight mntl-block" */
+  .beauty-sc-block-spotlight {
+    margin-bottom: 2rem;
+  }
+
+  /* div class="comp mntl-sc-block-spotlight__articles--4-items mntl-sc-block-spotlight__articles mntl-document-spotlight mntl-document-card-list mntl-card-list mntl-block" */
+  .mntl-sc-block-spotlight__articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .mntl-card-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @supports (display: grid) {
+    .mntl-card-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 35em) {
+    .mntl-card-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: 35em) {
+    @supports (display: grid) {
+      .mntl-card-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  .mntl-sc-block-spotlight__articles.mntl-sc-block-spotlight__articles {
+    display: block;
+  }
+
+  @media (min-width: 34em) {
+    .mntl-sc-block-spotlight__articles.mntl-sc-block-spotlight__articles {
+      display: grid;
+    }
+  }
+
+  @media (min-width: 34em) {
+    .mntl-sc-block-spotlight__articles.mntl-sc-block-spotlight__articles.mntl-sc-block-spotlight__articles--4-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 34em) {
+    .theme-fourfeaturedcard
+      .mntl-sc-block-spotlight__articles.mntl-sc-block-spotlight__articles {
+      display: flex;
+      grid-gap: normal;
+    }
+  }
+
+  /* a class="comp mntl-sc-block-spotlight__card mntl-card-list-items mntl-document-card mntl-card card card--no-image" */
+  .card {
+    flex: 1 0 100%;
+    position: relative;
+  }
+  .card {
+    position: relative;
+  }
+  .card {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 0.7rem 1rem;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .beauty-sc-block-spotlight .card {
+    position: relative;
+  }
+
+  .mntl-card-list .card {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+
+  @supports (display: grid) {
+    .mntl-card-list .card {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 35em) {
+    .mntl-card-list .card {
+      flex: 0 1 48%;
+    }
+  }
+
+  @media (min-width: 35em) {
+    .beauty-sc-block-spotlight.theme-fourfeaturedcard
+      .mntl-sc-block-spotlight__card.mntl-sc-block-spotlight__card {
+      flex: 1 0 auto;
+    }
+  }
+
+  @media (min-width: 34em) {
+    .beauty-sc-block-spotlight.theme-fourfeaturedcard
+      .mntl-sc-block-spotlight__card.mntl-sc-block-spotlight__card:nth-child(
+        1
+      ) {
+      flex-direction: row;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  /* div class="loc card__top" */
+  .mntl-sc-block-spotlight__card .card__top {
+    flex-basis: 50%;
+  }
+
+  /* div class="card__media mntl-universal-image universal-image__container" */
+  .card__media {
+    overflow: hidden;
+    position: relative;
+  }
+  .card__media {
+    height: 100%;
+    margin-bottom: 1rem;
+    order: 1;
+    position: relative;
+  }
+  .mntl-card .card__media {
+    margin-bottom: 0;
+    height: auto;
+  }
+
+  /* div class="img-placeholder" */
+  .img-placeholder {
+    background-color: #c7c7c7;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .img-placeholder {
+    background-color: #c7c7c7;
+    position: relative;
+    width: 100%;
+  }
+
+  .img-placeholder.img-placeholder {
+    background: #eee;
+  }
+
+  .card .img-placeholder {
+    position: relative;
+  }
+
+  .card__media .img-placeholder {
+    position: relative;
+  }
+
+  .beauty-sc-block-spotlight .card .img-placeholder {
+    position: relative;
+  }
+
+  /* img class="card__img universal-image__image lazyloaded" */
+  .card__img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    display: block;
+  }
+  .card .card__img {
+    transition: transform 0.15s ease;
+    transition-property: transform;
+  }
+
+  .card .img-placeholder img {
+    transition: all 0.15s ease;
+    transition-property: transform;
+  }
+
+  .card__media .img-placeholder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .card__media .img-placeholder img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center top;
+    object-position: center top;
+  }
+
+  .card:focus .card__img,
+  .card:hover .card__img {
+    transform: scale(1.05);
+  }
+
+  .beauty-sc-block-spotlight .card .img-placeholder img {
+    transition: all 0.15s ease;
+    transition-property: transform;
+  }
+
+  /* div class="card__content" */
+  .card__content {
+    padding: 1rem;
+    line-height: 1.3;
+  }
+  .card__content {
+    flex-grow: 1;
+    order: 2;
+    width: 100%;
+  }
+  .mntl-card .card__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 34em) {
+    .beauty-sc-block-spotlight.theme-fourfeaturedcard
+      .mntl-card-list-items:first-child:first-child
+      .card__content {
+      flex-basis: 50%;
+      padding: 5%;
+    }
+  }
+
+  /* div class="card__header" */
+
+  /* span class="card__title" */
+  .card__title {
+    letter-spacing: 0.5px;
+    font-size: 1.25rem;
+    color: #222;
+    display: inline;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  .card__title {
+    box-sizing: border-box;
+    margin-bottom: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.2em;
+  }
+  .mntl-card .card__title {
+    order: 2;
+  }
+  .beauty-sc-block-spotlight .mntl-card-list-items .card__title {
+    margin-bottom: 1rem;
+    font-size: 1.375rem;
+    line-height: 30px;
+  }
+
+  @media (min-width: 34em) {
+    .beauty-sc-block-spotlight.theme-fourfeaturedcard
+      .mntl-card-list-items:first-child
+      .card__title {
+      font-size: 1.5rem;
+      line-height: 32px;
+    }
+  }
+
+  .mntl-card.card:hover .card__title {
+    background-image: none;
+  }
+
+  /* span class="card__title-text" */
+  .mntl-card:hover .card__title-text {
+    background-size: 2px 2px;
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-image: linear-gradient(
+      rgb(var(--color-base-accent)),
+      rgb(var(--color-base-accent))
+    );
+  }
+
+  /* p class="comp card__description mntl-block" */
+  .card__description[data-description] {
+    display: block;
+  }
+  .mntl-card .card__description {
+    order: 3;
+    margin-bottom: 0;
+  }
+
+  /* ::before */
+  .card__description:before {
+    display: block;
+    content: attr(data-description);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+  .card__description:before {
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+    line-height: 1.25;
+    font-size: 0.875rem;
+  }
+  .mntl-card .card__description:before {
+    margin-bottom: 0.75rem;
+  }
+
+  /* p class="comp card__author mntl-block" */
+  .card__author[data-name] {
+    display: block;
+  }
+  .card__author {
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+    font-size: 0.6875rem;
+  }
+
+  .mntl-card .card__author {
+    order: 4;
+  }
+
+  /* ::before */
+  .card__author:before {
+    display: inline-block;
+    content: attr(data-prefix);
+    text-transform: capitalize;
+  }
+
+  /* ::after */
+  .card__author::after {
+    display: inline-block;
+    content: attr(data-name);
+  }
+  .mntl-card .card__author::after {
+    margin-left: 0.25rem;
+  }
+  .card .card__author::after {
+    text-transform: capitalize;
+  }
+
+  .mntl-card .card__author::after {
+    display: inline;
+    margin-left: 0.1875rem;
+    font-size: 0.75rem;
+  }
+
+  /* a class="comp mntl-sc-block-spotlight__card mntl-card-list-items mntl-document-card mntl-card card card--no-image" */
+
+  @media (min-width: 34em) {
+    .beauty-sc-block-spotlight.theme-fourfeaturedcard
+      .mntl-sc-block-spotlight__card.mntl-sc-block-spotlight__card:nth-child(
+        n + 2
+      ) {
+      width: calc((100% - 2rem) / 3);
+      margin: 0 1rem 0 0;
+    }
+  }
+
+  /* div class="loc card__top" */
+
+  /* div class="card__media mntl-universal-image universal-image__container" */
+
+  /* div class="img-placeholder" */
+
+  /* img class="card__img universal-image__image lazyloaded" */
+
+  /* div class="card__content" */
+
+  /* div class="card__header" */
+
+  /* span class="card__title" */
+  @media (min-width: 34em) {
+    .beauty-sc-block-spotlight .mntl-card-list-items .card__title {
+      font-size: 1.0625rem;
+      line-height: 24px;
+    }
+
+    .beauty-sc-block-spotlight.theme-fourfeaturedcard
+      .mntl-sc-block-spotlight__card.mntl-sc-block-spotlight__card:last-child {
+      margin-right: 0;
+    }
+  }
+
+  /* span class="card__title-text" */
+
+  /* p class="comp card__description mntl-block" */
+
+  /* ::before */
+
+  /* p class="comp card__author mntl-block" */
+
+  /* ::before */
+
+  /* ::after */
+</style>
