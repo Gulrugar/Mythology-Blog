@@ -48,7 +48,7 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
       {
         sidebarArticles.map((article) => (
           <a
-            href={`/post/${article.slug}`}
+            href={`/posts/${article.slug}`}
             class="comp card--square-image-left mntl-card-list-items mntl-document-card mntl-card card card--no-image"
           >
             <div class="loc card__top">
@@ -312,8 +312,7 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
     display: block;
   }
   .card--featured .card__img {
-    width: 100%;
-    height: auto;
+    transform: translateY(-16.666%);
   }
 
   /* div class="card__content" */

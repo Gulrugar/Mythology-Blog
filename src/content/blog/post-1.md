@@ -9,7 +9,7 @@ draft: false
 category: ["Myths"]
 image:
   {
-    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694373817/001_rvaewf.webp",
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694715298/001_u0jn1b.webp",
     alt: "Hercules & The Nemean Lion",
   }
 article:
@@ -41,7 +41,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694723282/002a_tvrxzl.webp",
+                        alt: "Hercules and Hera",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -50,6 +54,18 @@ article:
                 params:
                   {
                     text: "Hercules, the mighty son of Zeus and Alcmena, found himself on a journey of redemption. Having fallen into madness under the influence of the vengeful goddess Hera, Hercules sought a way to cleanse his soul and atone for his past actions. His journey led him to the sacred Oracle of Delphi, where he inquired about how he could find redemption",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694716751/002_uc0pbi.webp",
+                        alt: "Hercules stands before the Oracle of Delphi",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -69,8 +85,12 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694718591/003_t7rrdu.webp",
+                        alt: "Hercules and King Eurystheus",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -78,6 +98,18 @@ article:
                 params:
                   {
                     text: "In the ancient land of Nemea, a terrible and monstrous creature known as the Nemean Lion was causing havoc and striking fear into the hearts of its people. This lion was unlike any other. Its golden fur was not only magnificent but also impenetrable, rendering it invulnerable to the weapons of man. As the lion roamed the region, it left a trail of destruction, terrorizing the countryside and its inhabitants.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694723288/003a_oq5nq8.webp",
+                        alt: "King Eurystheus commands Hercules",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -97,8 +129,12 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694721164/004_ff9mqe.webp",
+                        alt: "Inside the Nemean Lion's Lair",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -125,8 +161,12 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694723296/005a_mvwb37.webp",
+                        alt: "Hercules discards his weapons",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -134,6 +174,18 @@ article:
                 params:
                   {
                     text: "The fight was fierce and unrelenting, with both man and beast locked in a life-and-death struggle. Hercules grappled with the lion, attempting to find a weakness in its seemingly invulnerable skin. The earth shook as the two adversaries clashed, and the heavens themselves seemed to hold their breath.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694721916/005_tpbep3.webp",
+                        alt: "A hand to hand battle ensues",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -153,8 +205,12 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694722821/06_d1hidd.webp",
+                        alt: "Emerging from the cave victorious",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {

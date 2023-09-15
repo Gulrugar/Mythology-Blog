@@ -308,11 +308,14 @@ class HeaderDrawer extends MenuDrawer {
       (document.querySelector(".section-header") as HTMLElement) ||
       null;
 
-    this.header &&
+    if (this.header) {
       document.documentElement.style.setProperty(
         "--header-bottom-position",
         `${this.header.getBoundingClientRect().bottom}px`
       );
+
+      this.header.classList.add("menu-open");
+    }
 
     setTimeout(() => {
       this.mainDetailsToggle.classList.add("menu-opening");
@@ -330,6 +333,9 @@ class HeaderDrawer extends MenuDrawer {
   ) {
     if (!elementToFocus) return;
     super.closeMenuDrawer(event, elementToFocus);
+    if (this.header) {
+      this.header.classList.remove("menu-open");
+    }
     window.removeEventListener("resize", this.onResize);
   }
 
