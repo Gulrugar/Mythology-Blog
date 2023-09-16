@@ -1,13 +1,12 @@
-class StickyHeader extends HTMLElement {
+export class StickyHeader extends HTMLElement {
   header!: HTMLElement;
   headerBounds!:
     | Record<string, number>
     | IntersectionObserverEntry["intersectionRect"];
   currentScrollTop!: number;
-  preventReveal!: boolean;
   onScrollHandler!: () => void;
-  hideHeaderOnScrollUp!: () => void;
   isScrolling!: ReturnType<typeof setTimeout>;
+  preventHide?: boolean;
   constructor() {
     super();
   }
@@ -22,19 +21,15 @@ class StickyHeader extends HTMLElement {
       .addEventListener("change", this.setHeaderHeight.bind(this));
 
     this.currentScrollTop = 0;
-    this.preventReveal = false;
 
     this.onScrollHandler = this.onScroll.bind(this);
-    this.hideHeaderOnScrollUp = () => (this.preventReveal = true);
 
-    this.addEventListener("preventHeaderReveal", this.hideHeaderOnScrollUp);
     window.addEventListener("scroll", this.onScrollHandler, false);
 
     this.createObserver();
   }
 
   disconnectedCallback() {
-    this.removeEventListener("preventHeaderReveal", this.hideHeaderOnScrollUp);
     window.removeEventListener("scroll", this.onScrollHandler);
   }
 
@@ -61,22 +56,18 @@ class StickyHeader extends HTMLElement {
       scrollTop > this.currentScrollTop &&
       scrollTop > this.headerBounds.bottom
     ) {
+      // stickyHeader START
+      if (this.preventHide) {
+        this.currentScrollTop = scrollTop;
+        return;
+      }
+      // stickyHeader END
       requestAnimationFrame(this.hide.bind(this));
     } else if (
       scrollTop < this.currentScrollTop &&
       scrollTop > this.headerBounds.bottom
     ) {
-      if (!this.preventReveal) {
-        requestAnimationFrame(this.reveal.bind(this));
-      } else {
-        window.clearTimeout(this.isScrolling);
-
-        this.isScrolling = setTimeout(() => {
-          this.preventReveal = false;
-        }, 66);
-
-        requestAnimationFrame(this.hide.bind(this));
-      }
+      requestAnimationFrame(this.reveal.bind(this));
     } else if (scrollTop <= this.headerBounds.top) {
       requestAnimationFrame(this.reset.bind(this));
     }
@@ -85,21 +76,18 @@ class StickyHeader extends HTMLElement {
   }
 
   hide() {
-    this.header.classList.add(
-      "shopify-section-header-hidden",
-      "shopify-section-header-sticky"
-    );
+    this.header.classList.add("section-header-hidden", "section-header-sticky");
   }
 
   reveal() {
-    this.header.classList.add("shopify-section-header-sticky", "animate");
-    this.header.classList.remove("shopify-section-header-hidden");
+    this.header.classList.add("section-header-sticky", "animate");
+    this.header.classList.remove("section-header-hidden");
   }
 
   reset() {
     this.header.classList.remove(
-      "shopify-section-header-hidden",
-      "shopify-section-header-sticky",
+      "section-header-hidden",
+      "section-header-sticky",
       "animate"
     );
   }

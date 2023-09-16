@@ -1,3 +1,5 @@
+import { StickyHeader } from "./sticky-header";
+
 function getFocusableElements(container: HTMLElement): HTMLElement[] {
   return Array.from(
     container.querySelectorAll(
@@ -298,7 +300,7 @@ class MenuDrawer extends HTMLElement {
 customElements.define("menu-drawer", MenuDrawer);
 
 class HeaderDrawer extends MenuDrawer {
-  header: HTMLElement | undefined | null;
+  header!: HTMLElement;
 
   constructor() {
     super();
@@ -338,6 +340,17 @@ class HeaderDrawer extends MenuDrawer {
     if (this.header) {
       this.header.classList.remove("menu-open");
     }
+    // stickyHeader START
+    const stickyHeader = this.header.querySelector(
+      "sticky-header"
+    ) as StickyHeader;
+    if (stickyHeader) {
+      stickyHeader.preventHide = true;
+      setTimeout(() => {
+        stickyHeader.preventHide = false;
+      });
+    }
+    // stickyHeader END
     window.removeEventListener("resize", this.onResize);
   }
 
