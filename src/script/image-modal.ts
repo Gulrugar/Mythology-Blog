@@ -35,11 +35,12 @@ class ModalDialog extends HTMLElement {
   hide() {
     document.body.classList.remove("overflow-hidden");
     this.removeAttribute("open");
-    removeTrapFocus(this.openedBy.closest("img"));
+    // removeTrapFocus(this.openedBy);
+    removeTrapFocus();
   }
 }
 
-class ImageModal extends ModalDialog {
+export class ImageModal extends ModalDialog {
   constructor() {
     super();
   }

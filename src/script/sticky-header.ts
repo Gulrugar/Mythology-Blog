@@ -7,6 +7,9 @@ export class StickyHeader extends HTMLElement {
   onScrollHandler!: () => void;
   isScrolling!: ReturnType<typeof setTimeout>;
   preventHide?: boolean;
+  onResizeHandler!: () => void;
+  isResizing!: ReturnType<typeof setTimeout>;
+  preventScrollBehavior?: boolean;
   constructor() {
     super();
   }
@@ -23,14 +26,23 @@ export class StickyHeader extends HTMLElement {
     this.currentScrollTop = 0;
 
     this.onScrollHandler = this.onScroll.bind(this);
+    this.onResizeHandler = () => {
+      this.preventScrollBehavior = true;
+      clearTimeout(this.isResizing);
+      this.isResizing = setTimeout(() => {
+        this.preventScrollBehavior = false;
+      }, 66);
+    };
 
     window.addEventListener("scroll", this.onScrollHandler, false);
+    window.addEventListener("resize", this.onResizeHandler, false);
 
     this.createObserver();
   }
 
   disconnectedCallback() {
     window.removeEventListener("scroll", this.onScrollHandler);
+    window.removeEventListener("resize", this.onResizeHandler);
   }
 
   createObserver() {
@@ -51,6 +63,11 @@ export class StickyHeader extends HTMLElement {
 
   onScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (this.preventScrollBehavior) {
+      this.currentScrollTop = scrollTop;
+      return;
+    }
 
     if (
       scrollTop > this.currentScrollTop &&
