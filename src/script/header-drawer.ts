@@ -40,7 +40,7 @@ const trapFocusHandlers: {
   keydown?: (event: KeyboardEvent) => void;
 } = {};
 
-function trapFocus(
+export function trapFocus(
   container: HTMLElement,
   elementToFocus: HTMLElement | null | undefined
 ) {
@@ -103,7 +103,9 @@ function trapFocus(
   }
 }
 
-function removeTrapFocus(elementToFocus: HTMLElement | false | null = null) {
+export function removeTrapFocus(
+  elementToFocus: HTMLElement | false | null = null
+) {
   document.removeEventListener("focusin", trapFocusHandlers.focusin!);
   document.removeEventListener("focusout", trapFocusHandlers.focusout!);
   document.removeEventListener("keydown", trapFocusHandlers.keydown!);

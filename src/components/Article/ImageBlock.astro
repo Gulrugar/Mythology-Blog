@@ -1,11 +1,10 @@
 ---
-import { type CollectionEntry } from "astro:content";
+import { type ImageParamsType } from "../../content/_types";
+import ModalOpener from "../Modal/ModalOpener.astro";
 
-interface Props extends Pick<CollectionEntry<"blog">["data"], "image"> {
-  aspectRatio: "square" | "portrait";
-}
-
-const { image, aspectRatio } = Astro.props as Props;
+const { image, aspectRatio, mediaId } = Astro.props as ImageParamsType & {
+  mediaId: number;
+};
 ---
 
 <figure
@@ -24,6 +23,7 @@ const { image, aspectRatio } = Astro.props as Props;
         class="universal-image__image lazyloaded"
         loading="lazy"
       />
+      <ModalOpener {mediaId} />
     </div>
   </div>
   <figcaption class="comp mntl-figure-caption figure-article-caption">

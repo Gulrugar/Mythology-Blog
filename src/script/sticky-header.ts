@@ -13,7 +13,6 @@ class StickyHeader extends HTMLElement {
   }
   connectedCallback() {
     this.header = document.querySelector(".section-header")!;
-    console.log(`offsetHeight: ${this.header.offsetHeight}`);
     this.headerBounds = {};
 
     this.setHeaderHeight();

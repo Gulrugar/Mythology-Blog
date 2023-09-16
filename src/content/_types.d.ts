@@ -1,4 +1,4 @@
-import { z, defineCollection } from "astro:content";
+import { z, parse, defineCollection } from "astro:content";
 
 export const paragraph = z.object({
   tag: z.literal("Paragraph"),
@@ -33,3 +33,5 @@ export const image = z.object({
     aspectRatio: z.enum(["square", "portrait"]),
   }),
 });
+
+export type ImageParamsType = z.infer<typeof image>["params"];

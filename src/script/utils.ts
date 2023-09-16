@@ -97,3 +97,40 @@ export function emailShare(url: string, title: string, description: string) {
     title
   }&body=${description + " Read More: " + url}'`;
 }
+
+type PostData = CollectionEntry<"blog">["data"];
+
+type Prettify<T> = {
+  [K in keyof T]: T[K];
+} & {};
+
+type idk = Prettify<PostData>;
+
+export function getImages(post: PostData) {
+  let images: {
+    src: string;
+    alt: string;
+  }[] = [];
+
+  images.push(post.image);
+
+  post.article.content.forEach((section) => {
+    section.data.forEach((block) => {
+      if (block.tag === "ImageBlock") {
+        images.push(block.params.image);
+      }
+    });
+  });
+
+  return images;
+}
+
+let idCounter = 2;
+
+export function getNextId() {
+  return idCounter++;
+}
+
+export function resetIdCounter() {
+  idCounter = 2;
+}

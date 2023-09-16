@@ -1,0 +1,37 @@
+---
+type Props = {
+  mediaId: number;
+};
+
+const { mediaId } = Astro.props as Props;
+const onclick = `document.querySelector('image-modal').show(this);`;
+---
+
+<button
+  class="image__media-toggle"
+  type="button"
+  data-media-id={mediaId}
+  {onclick}
+  tabindex="-1"
+>
+</button>
+
+<style>
+  /* button class="product__media-toggle" */
+  .image__media-toggle {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    color: currentColor;
+    padding: 0;
+  }
+  /* ::after */
+  .image__media-toggle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+</style>
