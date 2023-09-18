@@ -6,8 +6,8 @@ type Props = {
 const { mediaId } = Astro.props as Props;
 ---
 
-<modal-opener class="product__modal-opener" data-modal="#ImageModal-Article">
-  <span class="product__media-icon">
+<modal-opener class="image__modal-opener" data-modal="#ImageModal-Article">
+  <span class="image__media-icon">
     <svg
       aria-hidden="true"
       focusable="false"
@@ -45,11 +45,10 @@ const { mediaId } = Astro.props as Props;
 </modal-opener>
 
 <style>
-  /* modal-opener */
+  /* modal-opener class="image__modal-opener" */
 
-  /* span class="product__media-icon" */
-  .product__media-icon,
-  .thumbnail__badge {
+  /* span class="image__media-icon" */
+  .image__media-icon {
     background-color: rgb(var(--color-background));
     border-radius: 50%;
     border: 1px solid rgba(var(--color-foreground), 0.1);
@@ -67,17 +66,17 @@ const { mediaId } = Astro.props as Props;
   }
 
   @media screen and (min-width: 990px) {
-    .product__modal-opener .product__media-icon {
+    .image__modal-opener .image__media-icon {
       opacity: 0;
     }
-    .product__modal-opener:hover .product__media-icon,
-    .product__modal-opener:focus .product__media-icon {
+    .image__modal-opener:hover .image__media-icon,
+    .image__modal-opener:focus .image__media-icon {
       opacity: 1;
     }
   }
 
   /* svg class="icon icon-plus" */
-  .product__media-icon .icon {
+  .image__media-icon .icon {
     width: 0.75rem;
     height: 0.875rem;
   }

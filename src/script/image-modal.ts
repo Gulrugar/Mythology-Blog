@@ -14,9 +14,9 @@ class ModalDialog extends HTMLElement {
       if (event.code.toUpperCase() === "ESCAPE") this.hide();
     });
 
-    this.addEventListener("pointerup", (event) => {
-      if (event.pointerType === "mouse") this.hide();
-    });
+    // this.addEventListener("pointerup", (event) => {
+    //   if (event.pointerType === "mouse") this.hide();
+    // });
   }
 
   connectedCallback() {
@@ -29,7 +29,7 @@ class ModalDialog extends HTMLElement {
     this.openedBy = opener;
     document.body.classList.add("overflow-hidden");
     this.setAttribute("open", "");
-    trapFocus(this, this.querySelector('[role="dialog"]') as HTMLElement);
+    trapFocus(this, this.querySelector('[role="document"]') as HTMLElement);
   }
 
   hide() {

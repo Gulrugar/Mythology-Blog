@@ -1,5 +1,5 @@
 ---
-title: "The Fourth Labor: The Erymanthian Boar"
+title: "The Twelve Labors of Hercules IV: The Erymanthian Boar"
 subtitle: "Hercules' Hunt in the Mountains"
 description: this is the description
 author: Andrew Aguirre
