@@ -21,8 +21,14 @@
   --color-background: var(--color-base-accent);
 }
 
+.color-inverse {
+  --color-foreground: var(--color-base-accent);
+  --color-background: var(--color-base-solid-button-labels);
+}
+
 body,
-.color-accent {
+.color-accent,
+.color-inverse {
   color: rgba(var(--color-foreground), 0.75);
   background-color: rgb(var(--color-background));
 }

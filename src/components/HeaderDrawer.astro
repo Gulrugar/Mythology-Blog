@@ -31,7 +31,7 @@ const settings: Settings = settingsData;
           <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {
-                settings["nav-data"].map((navItem, index) => (
+                settings["navigation-menu"].links.map((navItem, index) => (
                   <li>
                     {navItem.links && navItem.links.length > 0 ? (
                       <details

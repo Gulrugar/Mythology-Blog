@@ -64,49 +64,11 @@ export function formatBlogPosts(
   return limit ? filteredPosts.slice(0, limit) : filteredPosts;
 }
 
-export function facebookShare(url: string) {
-  return `window.open(
-    'https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}',
-    'facebook-share-dialog',
-    'width=626,height=436'
-  );`;
-}
-
-export function pinterestShare(
-  url: string,
-  mediaUrl: string,
-  description: string
-) {
-  return `
-    window.open(
-    'https://pinterest.com/pin/create/button/?url=${encodeURIComponent(
-      url
-    )}&description=${encodeURIComponent(
-    description
-  )}&media=${encodeURIComponent(mediaUrl)}',
-    'pinterest-share-dialog',
-    'width=626,height=436'
-  );`;
-}
-
-export function emailShare(url: string, title: string, description: string) {
-  return `window.location.href='mailto:?subject=${
-    "Shared from " +
-    import.meta.env.SITE.replace(/^https:\/\//, "") +
-    ": " +
-    title
-  }&body=${description + " Read More: " + url}'`;
-}
-
-type PostData = CollectionEntry<"blog">["data"];
-
-type Prettify<T> = {
+export type Prettify<T> = {
   [K in keyof T]: T[K];
 } & {};
 
-type idk = Prettify<PostData>;
-
-export function getImages(post: PostData) {
+export function getImages(post: CollectionEntry<"blog">["data"]) {
   let images: {
     src: string;
     alt: string;

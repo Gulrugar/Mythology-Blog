@@ -5,16 +5,12 @@ import { type CollectionEntry, getCollection } from "astro:content";
 
 import {
   formatDate,
+  slugify,
   getImages,
   getNextId,
   resetIdCounter,
 } from "../../script/utils";
-import {
-  slugify,
-  facebookShare,
-  pinterestShare,
-  emailShare,
-} from "../../script/utils";
+import socialShare from "../../script/socialShare";
 import { blurryImageUrl } from "../../data/constants";
 
 import Paragraph from "../../components/Article/Paragraph.astro";
@@ -109,43 +105,79 @@ const allImages = getImages(post.data);
             <span
               class="share-link share-link-facebook"
               tabindex="0"
-              title="Facebook"
-              aria-label="Facebook"
+              title="Share on Facebook"
+              aria-label="Share on Facebook"
               role="link"
-              onclick={facebookShare(Astro.url.toString())}
+              onclick={socialShare.facebook(Astro.url.toString())}
             >
               <svg class="icon icon-facebook">
                 <use href="#icon-facebook"> </use>
               </svg>
             </span>
-            <li class="share-item share-item-pinterest">
-              <span
-                class="share-link share-link-pinterest"
-                tabindex="0"
-                title="Pinterest"
-                aria-label="Pinterest"
-                role="link"
-                onclick={pinterestShare(Astro.url.toString(), image.src, title)}
-              >
-                <svg class="icon icon-pinterest">
-                  <use href="#icon-pinterest"> </use>
-                </svg>
-              </span>
-            </li>
-            <li class="share-item share-item-emailshare">
-              <span
-                class="share-link share-link-emailshare"
-                tabindex="0"
-                title="Emailshare"
-                aria-label="Emailshare"
-                role="link"
-                onclick={emailShare(Astro.url.toString(), title, description)}
-              >
-                <svg class="icon icon-emailshare">
-                  <use href="#icon-emailshare"></use>
-                </svg>
-              </span>
-            </li>
+          </li>
+          <li class="share-item share-item-pinterest">
+            <span
+              class="share-link share-link-pinterest"
+              tabindex="0"
+              title="Share on Pinterest"
+              aria-label="Share on Pinterest"
+              role="link"
+              onclick={socialShare.pinterest(
+                Astro.url.toString(),
+                image.src,
+                title
+              )}
+            >
+              <svg class="icon icon-pinterest">
+                <use href="#icon-pinterest"> </use>
+              </svg>
+            </span>
+          </li>
+          <li class="share-item share-item-twitter">
+            <span
+              class="share-link share-link-twitter"
+              tabindex="0"
+              title="Share on Twitter"
+              aria-label="Share on Twitter"
+              role="link"
+              onclick={socialShare.twitter(Astro.url.toString(), title)}
+            >
+              <svg class="icon icon-twitter">
+                <use href="#icon-twitter"></use>
+              </svg>
+            </span>
+          </li>
+          <li class="share-item share-item-reddit">
+            <span
+              class="share-link share-link-reddit"
+              tabindex="0"
+              title="Share on Reddit"
+              aria-label="Share on Reddit"
+              role="link"
+              onclick={socialShare.reddit(Astro.url.toString(), title)}
+            >
+              <svg class="icon icon-reddit">
+                <use href="#icon-reddit"></use>
+              </svg>
+            </span>
+          </li>
+          <li class="share-item share-item-emailshare">
+            <span
+              class="share-link share-link-emailshare"
+              tabindex="0"
+              title="Share with Email"
+              aria-label="Share with Email"
+              role="link"
+              onclick={socialShare.email(
+                Astro.url.toString(),
+                title,
+                description
+              )}
+            >
+              <svg class="icon icon-emailshare">
+                <use href="#icon-emailshare"></use>
+              </svg>
+            </span>
           </li>
         </ul>
       </div>

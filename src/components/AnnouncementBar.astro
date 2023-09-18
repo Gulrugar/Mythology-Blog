@@ -1,15 +1,16 @@
 ---
 type Props = {
   text: string;
-  link?: string;
+  link: string;
+  colorScheme?: "color-accent" | "color-inverse";
 };
 
-const { text, link = "/posts/placeholder-article" } = Astro.props as Props;
+const { text, link, colorScheme = "color-accent" } = Astro.props as Props;
 ---
 
-<div class="announcement-bar color-accent">
+<div class={`announcement-bar ${colorScheme}`}>
   {
-    link ? (
+    link.length > 0 ? (
       <a
         href={link}
         class="announcement-bar__link link link--text focus-inset animate-arrow"

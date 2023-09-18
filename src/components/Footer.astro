@@ -11,10 +11,12 @@ import { Icon } from "astro-icon";
       class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet"
     >
       <div class="footer-block grid__item footer-block--menu">
-        <h2 class="footer-block__heading">Categories</h2>
+        <h2 class="footer-block__heading">
+          {settings["navigation-menu"].title}
+        </h2>
         <ul class="footer-block__details-content list-unstyled">
           {
-            settings["nav-data"].map((navItem) => (
+            settings["navigation-menu"].links.map((navItem) => (
               <li>
                 <a
                   href={navItem.path}
@@ -28,10 +30,10 @@ import { Icon } from "astro-icon";
         </ul>
       </div>
       <div class="footer-block grid__item footer-block--menu">
-        <h2 class="footer-block__heading">Categories</h2>
+        <h2 class="footer-block__heading">{settings["footer-menu"].title}</h2>
         <ul class="footer-block__details-content list-unstyled">
           {
-            settings["nav-data"].map((navItem) => (
+            settings["footer-menu"].links.map((navItem) => (
               <li>
                 <a
                   href={navItem.path}

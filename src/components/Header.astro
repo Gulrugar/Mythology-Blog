@@ -23,7 +23,7 @@ import HeaderDrawer from "./HeaderDrawer.astro";
       <nav class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
           {
-            settings["nav-data"].map((navItem) => (
+            settings["navigation-menu"].links.map((navItem) => (
               <li>
                 <a
                   href={navItem.path}

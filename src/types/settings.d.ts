@@ -26,18 +26,37 @@ export type Settings = {
       website: string;
     };
   };
+  announcements: {
+    text: string;
+    link: string;
+    colorScheme?: "color-accent" | "color-inverse";
+  }[];
   logo: {
     src: string;
     alt: string;
   };
-  "nav-data": {
-    name: string;
-    path: string;
+  "navigation-menu": {
+    title: string;
     links: {
       name: string;
       path: string;
+      links: {
+        name: string;
+        path: string;
+      }[];
     }[];
-  }[];
+  };
+  "footer-menu": {
+    title: string;
+    links: {
+      name: string;
+      path: string;
+      links: {
+        name: string;
+        path: string;
+      }[];
+    }[];
+  };
   "footer-bottom-links": {
     name: string;
     path: string;

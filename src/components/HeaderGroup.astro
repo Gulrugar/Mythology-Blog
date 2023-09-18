@@ -1,7 +1,16 @@
 ---
 import AnnouncementBar from "./AnnouncementBar.astro";
 import Header from "./Header.astro";
+import settings from "../data/settings.json";
 ---
 
-<AnnouncementBar text="Announcement" />
+{
+  settings.announcements.map((announcement) => (
+    <AnnouncementBar
+      text={announcement.text}
+      link={announcement.link}
+      colorScheme={announcement.colorScheme}
+    />
+  ))
+}
 <Header />

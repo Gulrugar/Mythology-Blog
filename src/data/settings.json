@@ -20,37 +20,57 @@
       "website": "https://drewsportfolio.com"
     }
   },
+  "announcements": [
+    {
+      "text": "Welcome to Mythical Art",
+      "link": "",
+      "colorScheme": "color-inverse"
+    },
+    {
+      "text": "View the latest article!",
+      "link": "/posts/twelve-labors-of-hercules-2",
+      "colorScheme": "color-accent"
+    }
+  ],
   "logo": {
     "src": "/images/logo.png",
     "alt": "logo"
   },
-  "nav-data": [
-    {
-      "name": "Home",
-      "path": "/",
-      "links": []
-    },
-    {
-      "name": "Myths",
-      "path": "/categories/myths",
-      "links": []
-    },
-    {
-      "name": "Symbols",
-      "path": "/categories/symbols",
-      "links": []
-    },
-    {
-      "name": "About",
-      "path": "/about/",
-      "links": []
-    },
-    {
-      "name": "Author",
-      "path": "/author/",
-      "links": []
-    }
-  ],
+  "navigation-menu": {
+    "title": "Navigation",
+    "links": [
+      {
+        "name": "Home",
+        "path": "/",
+        "links": []
+      },
+      {
+        "name": "Myths",
+        "path": "/categories/myths",
+        "links": []
+      },
+      {
+        "name": "Symbols",
+        "path": "/categories/symbols",
+        "links": []
+      }
+    ]
+  },
+  "footer-menu": {
+    "title": "Other",
+    "links": [
+      {
+        "name": "About",
+        "path": "/about",
+        "links": []
+      },
+      {
+        "name": "Author",
+        "path": "/author",
+        "links": []
+      }
+    ]
+  },
   "footer-bottom-links": [
     {
       "name": "Privacy Policy",
@@ -66,9 +86,9 @@
     }
   ],
   "social-media-accounts": {
-    "facebook": "https://facebook.com",
+    "facebook": "https://www.facebook.com/MythicalArtBlog/",
     "twitter": "https://twitter.com",
-    "instagram": "https://instagram.com"
+    "instagram": "https://www.instagram.com/mythicalart5/"
   },
   "twitter-handle": "",
   "privacy-policy-link": "https://www.privacypolicygenerator.info/live.php?token=sogi5PLonPu69VseVlMhyBRqwB8IJAnY",
