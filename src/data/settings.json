@@ -1,7 +1,7 @@
 {
   "site-data": {
-    "title": "Mythology",
-    "contact-email": "email@email.com",
+    "title": "Mythical Art",
+    "contact-email": "contact@mythical-art.com",
     "image": {
       "src": "/images/og-twittercard.webp",
       "alt": "Mythological artwork depicting a captivating scene from ancient tales."
@@ -13,7 +13,7 @@
       "src": "/images/author.webp",
       "alt": "author"
     },
-    "bio": "<p>Andrew is a writer and editor for Mythology.net. He has been a lifelong fan of mythology, ever since he first read about the exploits of Zeus, Hercules, and the Olympians in grade school. He spends much of his free time scouring the Internet for new fascinating tidbits about these captivating stories.</p>",
+    "bio": "<p>Andrew is a writer and editor for Mythical-Art.com. He has been a lifelong fan of mythology, ever since he first read about the exploits of Zeus, Hercules, and the Olympians in grade school. He spends much of his free time scouring the Internet for new fascinating tidbits about these captivating stories.</p>",
     "social-media-accounts": {
       "facebook": "",
       "instagram": "https://www.instagram.com/gulrugar/",
