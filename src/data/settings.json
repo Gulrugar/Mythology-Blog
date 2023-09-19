@@ -4,7 +4,9 @@
     "contact-email": "contact@mythical-art.com",
     "image": {
       "src": "/images/og-twittercard.webp",
-      "alt": "Mythological artwork depicting a captivating scene from ancient tales."
+      "alt": "Mythological artwork depicting a captivating scene from ancient tales.",
+      "width": 1024,
+      "height": 537
     }
   },
   "author": {
@@ -92,7 +94,7 @@
   ],
   "social-media-accounts": {
     "facebook": "https://www.facebook.com/MythicalArtBlog/",
-    "twitter": "https://twitter.com",
+    "twitter": "https://twitter.com/ArtMythical",
     "instagram": "https://www.instagram.com/mythicalart5/"
   },
   "twitter-handle": "",

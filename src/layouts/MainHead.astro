@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import SEO from "../components/SEO.astro";
 import type { SEOProps } from "../types/seo";
 
@@ -22,6 +23,7 @@ const {
   <meta name="generator" content={Astro.generator} />
   {redirect && <meta http-equiv="refresh" content="0;url=/" />}
   <title>{title}</title>
+  <ViewTransitions />
   <meta name="description" content={description} />
   <SEO {title} {description} {image} {data} {robots} />
   <style is:global>
