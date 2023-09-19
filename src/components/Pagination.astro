@@ -1,13 +1,186 @@
 ---
 interface Props {
-  prev: string | undefined;
-  next: string | undefined;
+  prev?: string;
+  next?: string;
+  currentPage?: number;
+  lastPage?: number;
+  path: string;
 }
 
-const { prev, next } = Astro.props as Props;
+const {
+  prev: prevUrl,
+  next: nextUrl,
+  currentPage,
+  lastPage,
+  path,
+} = Astro.props;
+
+const morePages = lastPage && lastPage > 1;
 ---
 
-<div>
-  {prev && <a href={prev}>Prev</a>}
-  {next && <a href={next}>Next</a>}
-</div>
+<ol class="comp pagination">
+  {
+    prevUrl && (
+      <li class="pagination__item">
+        <a
+          href={prevUrl}
+          class="pagination__item-link pagination__item-link--prev btn"
+          aria-label="Previous Page"
+        >
+          <svg class="icon pagination-icon pagination-icon--prev">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="#arrow-double"
+            />
+          </svg>
+        </a>
+      </li>
+    )
+  }
+  {
+    morePages &&
+      Array.from({ length: lastPage }, (_, i) => i + 1).map((pageNumber) => {
+        const selected = currentPage === pageNumber;
+
+        return (
+          <li class={`pagination__item ${selected && "selected"}`}>
+            <a
+              class="pagination__item-link"
+              href={
+                selected ? "" : `${path}/${pageNumber === 1 ? "" : pageNumber}`
+              }
+            >
+              {pageNumber}
+            </a>
+          </li>
+        );
+      })
+  }
+  {
+    nextUrl && (
+      <li class="pagination__item">
+        <a
+          href={nextUrl}
+          class="pagination__item-link pagination__item-link--next btn"
+          aria-label="Next Page"
+        >
+          <svg class="icon pagination-icon pagination-icon--next">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="#arrow-double"
+            />
+          </svg>
+        </a>
+      </li>
+    )
+  }
+</ol>
+
+<style>
+  /* ---------------- */
+  /* General          */
+  /* ---------------- */
+  ol {
+    margin-bottom: 1.75rem;
+    margin-top: 0;
+    color: #222;
+  }
+
+  /* ol:empty {
+    display: none;
+  } */
+
+  li {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+
+  a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+
+    color: #222;
+  }
+
+  a[href=""] {
+    pointer-events: none;
+  }
+  /* ---------------- */
+  /* Component        */
+  /* ---------------- */
+
+  /* ol class="comp pagination" */
+  .pagination {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .pagination {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* li class="pagination__item" */
+  .pagination__item {
+    position: relative;
+    font-size: 1.5rem;
+    margin: 0 0.05rem;
+    letter-spacing: 0.5px;
+    padding-left: 0 !important;
+    text-indent: 0 !important;
+  }
+
+  /* a class="pagination__item-link pagination__item-link--prev btn" */
+  .pagination__item-link,
+  .pagination__item-link.btn {
+    display: block;
+    position: relative;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+  }
+
+  .pagination__item-link.btn:hover,
+  .pagination__item-link:hover {
+    color: rgb(var(--color-base-accent));
+  }
+
+  /* svg class="icon pagination-icon pagination-icon--prev" */
+  .pagination-icon {
+    width: 14px;
+    height: 12px;
+    fill: #222;
+  }
+  .pagination-icon--prev {
+    transform: rotate(180deg);
+  }
+
+  .pagination-icon:hover {
+    fill: rgb(var(--color-base-accent));
+  }
+
+  /* li class="pagination__item selected" */
+
+  /* ::after */
+  .pagination__item.selected::after {
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    content: "";
+  }
+
+  .pagination__item.selected::after {
+    bottom: 12px;
+    width: 0.85rem;
+    height: 3px;
+    background: rgb(var(--color-base-accent));
+  }
+</style>

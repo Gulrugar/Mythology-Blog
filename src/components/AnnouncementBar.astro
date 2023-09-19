@@ -2,7 +2,7 @@
 type Props = {
   text: string;
   link: string;
-  colorScheme?: "color-accent" | "color-inverse";
+  colorScheme: "color-accent" | "color-inverse";
 };
 
 const { text, link, colorScheme = "color-accent" } = Astro.props as Props;
@@ -79,7 +79,7 @@ const { text, link, colorScheme = "color-accent" } = Astro.props as Props;
   }
 
   p.announcement-bar__message {
-    font-weight: 400;
+    font-weight: 800;
   }
 
   .announcement-bar__link .announcement-bar__message {

@@ -22,6 +22,7 @@ import UpNextLink from "../../components/Article/UpNextLink.astro";
 
 import ModalOpener from "../../components/Modal/ModalOpener.astro";
 import ImageModal from "../../components/Modal/ImageModal.astro";
+import RelatedStories from "../../components/Article/RelatedStories.astro";
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection("blog", ({ data }) => {
@@ -144,20 +145,6 @@ const allImages = getImages(post.data);
             >
               <svg class="icon icon-twitter">
                 <use href="#icon-twitter"></use>
-              </svg>
-            </span>
-          </li>
-          <li class="share-item share-item-reddit">
-            <span
-              class="share-link share-link-reddit"
-              tabindex="0"
-              title="Share on Reddit"
-              aria-label="Share on Reddit"
-              role="link"
-              onclick={socialShare.reddit(Astro.url.toString(), title)}
-            >
-              <svg class="icon icon-reddit">
-                <use href="#icon-reddit"></use>
               </svg>
             </span>
           </li>
@@ -303,6 +290,7 @@ const allImages = getImages(post.data);
       </div>
     </div>
   </article>
+  <RelatedStories />
   <ImageModal images={allImages} />
 </MainLayout>
 
@@ -643,6 +631,14 @@ const allImages = getImages(post.data);
   .share-link-pinterest:hover::before {
     background: #b51d23;
   }
+  /* span class="share-link share-link-twitter" tabindex="0" title="twitter" aria-label="twitter" role="link" */
+  .share-link-twitter::before {
+    background: #55adee;
+  }
+  .share-link-twitter:hover::before {
+    background: #1799ef;
+  }
+
   /* span class="share-link share-link-emailshare" tabindex="0" title="Emailshare" aria-label="Emailshare" role="link" */
   .share-link-emailshare::before {
     background: #666;

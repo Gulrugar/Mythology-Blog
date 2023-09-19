@@ -1,6 +1,5 @@
 // use this to slugify something like a tag or category
 import { type CollectionEntry } from "astro:content";
-import settings from "../data/settings.json";
 
 export function slugify(text: string): string {
   return text

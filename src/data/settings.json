@@ -53,6 +53,11 @@
         "name": "Symbols",
         "path": "/categories/symbols",
         "links": []
+      },
+      {
+        "name": "Categories",
+        "path": "/categories",
+        "links": []
       }
     ]
   },
