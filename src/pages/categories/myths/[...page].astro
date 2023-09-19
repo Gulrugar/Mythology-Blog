@@ -2,7 +2,7 @@
 import MainLayout from "../../../layouts/MainLayout.astro";
 import CategoryHeader from "../../../components/Categories/CategoryHeader.astro";
 import CategoryBody from "../../../components/Categories/CategoryBody.astro";
-import { formatBlogPosts, slugify } from "../../../script/utils";
+import { formatBlogPosts } from "../../../script/utils";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Pagination from "../../../components/Pagination.astro";
 import settings from "../../../data/settings.json";
@@ -16,25 +16,27 @@ export async function getStaticPaths({ paginate }: any) {
     filterOutDrafts: true,
   });
 
-  return paginate(formattedPosts, { pageSize: 24 });
+  return paginate(formattedPosts, { pageSize: 5 });
 }
 
-interface Props {
-  data: CollectionEntry<"blog">[];
-  start: number;
-  end: number;
-  size: number;
-  total: number;
-  currentPage: number;
-  lastPage: number;
-  url: {
-    current: string | undefined;
-    next: string | undefined;
-    prev: string | undefined;
+type Props = {
+  page?: {
+    data: CollectionEntry<"blog">[];
+    start: number;
+    end: number;
+    size: number;
+    total: number;
+    currentPage: number;
+    lastPage: number;
+    url: {
+      current: string;
+      next: string | undefined;
+      prev: string | undefined;
+    };
   };
-}
+};
 
-const { page } = Astro.props as { page?: Props };
+const { page } = Astro.props as Props;
 const {
   url: { prev, next },
   currentPage,
