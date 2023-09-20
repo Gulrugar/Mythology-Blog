@@ -28,10 +28,6 @@ export type Settings = {
       website: string;
     };
   };
-  announcements: {
-    text: string;
-    link: string;
-  }[];
   logo: {
     src: string;
     alt: string;

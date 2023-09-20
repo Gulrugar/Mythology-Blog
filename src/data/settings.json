@@ -22,12 +22,6 @@
       "website": "https://drewsportfolio.com"
     }
   },
-  "announcements": [
-    {
-      "text": "Welcome to <strong>Mythical Art!</strong> View the <strong>latest article!</strong>",
-      "link": "/posts/twelve-labors-of-hercules-2"
-    }
-  ],
   "logo": {
     "src": "/images/logo.png",
     "alt": "logo"

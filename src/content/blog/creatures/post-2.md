@@ -3,8 +3,8 @@ title: Article Title
 subtitle: subtitle
 description: this is the description
 author: Andrew Aguirre
-slug: placeholder-article
-date: 2023-07-28
+slug: placeholder-article-0
+date: 2023-09-21
 draft: true
 category: ["Myths"]
 image: { src: "/images/sample.png", alt: "Sample" }

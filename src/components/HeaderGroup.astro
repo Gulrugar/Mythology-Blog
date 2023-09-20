@@ -1,16 +1,15 @@
 ---
 import AnnouncementBar from "./AnnouncementBar.astro";
 import Header from "./Header.astro";
-import settings from "../data/settings.json";
+import { getCollection } from "astro:content";
+import { formatBlogPosts } from "../script/utils";
+
+const posts = await getCollection("blog");
+const post = formatBlogPosts(posts)[0];
+
+const latestText = `Welcome to <strong>Mythical Art!</strong> View the latest article <strong><i>&quot;${post.data.title}&quot;</i></strong>`;
+const latestLink = `/posts/${post.slug}`;
 ---
 
-{
-  settings.announcements.map((announcement) => (
-    <AnnouncementBar
-      text={announcement.text}
-      link={announcement.link}
-      colorScheme={announcement.colorScheme}
-    />
-  ))
-}
+<AnnouncementBar text={latestText} link={latestLink} />
 <Header />
