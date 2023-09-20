@@ -2,21 +2,21 @@
 import MainLayout from "../../../layouts/MainLayout.astro";
 import CategoryHeader from "../../../components/Categories/CategoryHeader.astro";
 import CategoryBody from "../../../components/Categories/CategoryBody.astro";
+import CategoryFeatured from "../../../components/Categories/CategoryFeatured.astro";
 import { formatBlogPosts } from "../../../script/utils";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Pagination from "../../../components/Pagination.astro";
 import settings from "../../../data/settings.json";
-import CategoryFeatured from "../../../components/Categories/CategoryFeatured.astro";
 
 export async function getStaticPaths({ paginate }: any) {
   const blogPosts = await getCollection("blog", ({ data }) => {
-    return data.category.some((cat) => cat === "Myths");
+    return data.category.some((category: string) => category === "Myths");
   });
   const formattedPosts = formatBlogPosts(blogPosts, {
     filterOutDrafts: true,
   });
 
-  return paginate(formattedPosts, { pageSize: 5 });
+  return paginate(formattedPosts, { pageSize: 24 });
 }
 
 type Props = {

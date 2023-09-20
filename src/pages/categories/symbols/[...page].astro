@@ -9,7 +9,7 @@ import settings from "../../../data/settings.json";
 
 export async function getStaticPaths({ paginate }: any) {
   const blogPosts = await getCollection("blog", ({ data }) => {
-    return data.category.some((cat) => cat === "Symbols");
+    return data.category.some((category: string) => category === "Symbols");
   });
   const formattedPosts = formatBlogPosts(blogPosts, {
     filterOutDrafts: true,

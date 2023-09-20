@@ -1,18 +1,23 @@
 ---
-const heroBannerData = {
-  title: "The Twelve Labors of Hercules",
-  author: "Andrew Aguirre",
-  description:
-    "Hercules' transformation from a flawed mortal into a revered demigod,  a timeless tale of heroism and resilience.",
-  category: ["Myths"],
-  banner: "/images/banner.webp",
-  link: "/posts/placeholder-article",
+type Props = {
+  title: string;
+  author: string;
+  description: string;
+  category: string;
+  link: string;
+  banner: {
+    src: string;
+    alt: string;
+  };
 };
+
+const { title, author, description, category, link, banner } =
+  Astro.props as Props;
 ---
 
 <section class="comp top-onepost one-post-hero mntl-block">
   <a
-    href={heroBannerData.link}
+    href={link}
     class="comp one-post-hero__card mntl-document-card mntl-card card card--no-image"
   >
     <div class="card__top">
@@ -21,28 +26,25 @@ const heroBannerData = {
       >
         <div class="img-placeholder" style="padding-bottom:33%">
           <img
-            src={heroBannerData.banner}
-            alt="some alt text"
+            src={banner.src}
+            alt={banner.alt}
             class="card__img universal-image__image lazyloaded"
           />
         </div>
       </div>
     </div>
     <div class="card__content">
-      <div class="card__header" data-kicker={heroBannerData.category[0]}></div>
+      <div class="card__header" data-kicker={category}></div>
       <span class="card__title">
         <span class="card__title-text">
-          {heroBannerData.title}
+          {title}
         </span>
       </span>
-      <div
-        class="card__byline mntl-card__byline"
-        data-byline={`By ${heroBannerData.author}`}
-      >
+      <div class="card__byline mntl-card__byline" data-byline={`By ${author}`}>
       </div>
       <div
         class="comp card__description mntl-block"
-        data-card-description={heroBannerData.description}
+        data-card-description={description}
       >
       </div>
     </div>

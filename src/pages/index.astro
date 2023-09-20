@@ -6,14 +6,27 @@ import FivePost from "../components/HomePage/FivePost.astro";
 import List from "../components/HomePage/List.astro";
 import ThreePost from "../components/HomePage/ThreePost.astro";
 import settings from "../data/settings.json";
+import { getEntryBySlug } from "astro:content";
 
 const metaData = settings.meta.index;
+
+const post = await getEntryBySlug("blog", "twelve-labors-of-hercules-1");
 ---
 
 <MainLayout title={metaData.title} description={metaData.description}>
   <article class="article--one-col-tax mntl-article">
     <div class="loc article-content">
-      <HeroBanner />
+      <HeroBanner
+        title="The Twelve Labors of Hercules"
+        author={post.data.author}
+        description="Hercules' transformation from a flawed mortal into a revered demigod, a timeless tale of heroism and resilience."
+        category={post.data.category[0]}
+        link={`/posts/${post.slug}`}
+        banner={{
+          src: "/images/banner.webp",
+          alt: "The Twelve Labors of Hercules",
+        }}
+      />
       <TopOfPage
         postTitles={[
           "The Twelve Labors of Hercules I: The Nemean Lion",

@@ -9,8 +9,8 @@ draft: false
 category: ["Myths"]
 image:
   {
-    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694715298/001_u0jn1b.webp",
-    alt: "Hercules & The Nemean Lion",
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695170516/007_qs69ll.webp",
+    alt: "The Nemean Lion",
   }
 article:
   {
