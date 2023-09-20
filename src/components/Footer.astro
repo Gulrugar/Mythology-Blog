@@ -48,16 +48,9 @@ import { Icon } from "astro-icon";
       </div>
       <div class="footer-block grid__item">
         <div class="footer-block__brand-info">
-          <div
-            class="footer-block__image-wrapper"
-            style="max-width: min(100%, 175px)"
-          >
-            <a href="#"
-              ><img
-                src={settings.logo.src}
-                alt={settings.logo.alt}
-                loading="lazy"
-              /></a
+          <div class="footer-block__image-wrapper">
+            <a href="/" class="logo"
+              ><img src={settings.logo.src} alt={settings.logo.alt} /></a
             >
           </div>
           <div>
@@ -291,6 +284,10 @@ import { Icon } from "astro-icon";
     background-color: transparent;
     border: none;
     transition: transform 0.2s ease;
+
+    max-width: min(100%, 200px);
+    background-color: rgb(var(--color-base-background));
+    padding: 2px 5px;
   }
 
   .footer-block__image-wrapper:hover {
