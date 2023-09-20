@@ -31,7 +31,6 @@ export type Settings = {
   announcements: {
     text: string;
     link: string;
-    colorScheme: "color-accent" | "color-inverse";
   }[];
   logo: {
     src: string;

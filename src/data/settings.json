@@ -24,14 +24,8 @@
   },
   "announcements": [
     {
-      "text": "Welcome to Mythical Art",
-      "link": "",
-      "colorScheme": "color-inverse"
-    },
-    {
-      "text": "View the latest article!",
-      "link": "/posts/twelve-labors-of-hercules-2",
-      "colorScheme": "color-accent"
+      "text": "Welcome to <strong>Mythical Art!</strong> View the <strong>latest article!</strong>",
+      "link": "/posts/twelve-labors-of-hercules-2"
     }
   ],
   "logo": {

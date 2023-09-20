@@ -2,13 +2,12 @@
 type Props = {
   text: string;
   link: string;
-  colorScheme: "color-accent" | "color-inverse";
 };
 
-const { text, link, colorScheme = "color-accent" } = Astro.props as Props;
+const { text, link } = Astro.props as Props;
 ---
 
-<div class={`announcement-bar ${colorScheme}`}>
+<div class="announcement-bar">
   {
     link.length > 0 ? (
       <a
@@ -16,8 +15,10 @@ const { text, link, colorScheme = "color-accent" } = Astro.props as Props;
         class="announcement-bar__link link link--text focus-inset animate-arrow"
       >
         <div class="page-width">
-          <p class="announcement-bar__message center h5">
-            <span>{text}</span>
+          <p class="announcement-bar__message center h4">
+            <span>
+              <Fragment set:html={text} />
+            </span>
             <svg
               viewBox="0 0 14 10"
               fill="none"
@@ -49,16 +50,16 @@ const { text, link, colorScheme = "color-accent" } = Astro.props as Props;
 <style>
   /* div class="announcement-bar color-accent" */
   .announcement-bar {
-    border-bottom: 0.0625rem solid rgba(var(--color-foreground), 0.08);
-    color: rgb(var(--color-foreground));
+    background: rgb(var(--color-base-accent));
   }
 
   /* a class="announcement-bar__link link link--text focus-inset animate-arrow" */
   .announcement-bar__link {
     display: block;
     width: 100%;
-    padding: 0.625rem 0;
+    padding: 1rem 0;
     text-decoration: none;
+    color: rgb(var(--color-base-background));
   }
 
   .announcement-bar__link:hover {
@@ -76,10 +77,8 @@ const { text, link, colorScheme = "color-accent" } = Astro.props as Props;
     padding: 0.625rem 0;
     margin: 0;
     letter-spacing: 0.0625rem;
-  }
-
-  p.announcement-bar__message {
-    font-weight: 800;
+    color: rgb(var(--color-base-background));
+    font-weight: normal;
   }
 
   .announcement-bar__link .announcement-bar__message {
@@ -89,7 +88,7 @@ const { text, link, colorScheme = "color-accent" } = Astro.props as Props;
   /* span */
 
   .icon-arrow {
-    width: 0.9375rem;
+    width: 1.125rem;
   }
 
   /* svg class=""icon icon-arrow" */
