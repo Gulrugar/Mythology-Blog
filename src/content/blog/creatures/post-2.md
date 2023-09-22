@@ -4,9 +4,9 @@ subtitle: subtitle
 description: this is the description
 author: Andrew Aguirre
 slug: placeholder-article-0
-date: 2023-09-21
+date: 2023-12-22
 draft: true
-category: ["Myths"]
+category: ["Stories"]
 image: { src: "/images/sample.png", alt: "Sample" }
 article:
   {

@@ -40,8 +40,8 @@
         "links": []
       },
       {
-        "name": "Symbols",
-        "path": "/categories/symbols",
+        "name": "Stories",
+        "path": "/categories/stories",
         "links": []
       },
       {
@@ -99,6 +99,10 @@
     "symbols": {
       "title": "Symbols - Category",
       "description": "A treasure trove of ancient and mystical emblems that have played a significant role in mythological narratives throughout history. Here, we delve into the profound meanings and cultural significance behind these symbols, unlocking the hidden stories and wisdom they carry. From the iconic trident of Poseidon to the enigmatic Eye of Horus, we explore symbols that have shaped cultures, beliefs, and legends across the ages."
+    },
+    "stories": {
+      "title": "Stories - Category",
+      "description": "Welcome to Stories, where the power of storytelling takes center stage. Here, we delve into a rich tapestry of narratives that inspire, enlighten, and touch the depths of the human spirit. These meaningful stories range from personal anecdotes of triumph and resilience to timeless tales from cultures around the world. In this collection, you'll discover the enduring impact of storytelling as a vehicle for wisdom, empathy, and connection, reminding us of the universal threads that bind us all."
     },
     "404": {
       "title": "Oops! Page Not Found - 404 Error",
