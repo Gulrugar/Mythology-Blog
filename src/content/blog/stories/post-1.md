@@ -9,8 +9,8 @@ draft: false
 category: ["Stories"]
 image:
   {
-    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/001_hpofcf.webp",
-    alt: "Walking on a beam of light",
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/002_bgixtw.webp",
+    alt: "Drawn to the light",
   }
 article:
   {
@@ -43,8 +43,8 @@ article:
                   {
                     image:
                       {
-                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/002_bgixtw.webp",
-                        alt: "Drawn to the light",
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/001_hpofcf.webp",
+                        alt: "Walking on a beam of light",
                       },
                     aspectRatio: "square",
                   },
