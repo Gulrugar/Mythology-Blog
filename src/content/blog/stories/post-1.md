@@ -1,5 +1,5 @@
 ---
-title: On Solid Ground
+title: The Golden Path
 subtitle: Walking a Tight Rope
 description: "Tightrope walking, also known as high-wire walking, is an art form that blends daring danger with graceful balance. Discover the exhilaration of this extraordinary practice, from the heights and dangers to the intense focus required."
 author: Andrew Aguirre
@@ -7,7 +7,11 @@ slug: walking-a-tight-rope
 date: 2023-09-21
 draft: false
 category: ["Stories"]
-image: { src: "/images/sample.png", alt: "Sample" }
+image:
+  {
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/001_hpofcf.webp",
+    alt: "Walking on a beam of light",
+  }
 article:
   {
     intro:
@@ -37,7 +41,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/002_bgixtw.webp",
+                        alt: "Drawn to the light",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -58,7 +66,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/003_jnaequ.webp",
+                        alt: "A bridge is formed from lightning strikes",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -79,7 +91,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/004_auaxfs.webp",
+                        alt: "Tightrope walking over a body of water",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -100,7 +116,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/007_yi1xm3.webp",
+                        alt: "A bridge of light rippling",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -121,7 +141,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/005_es39cn.webp",
+                        alt: "A couple getting married",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -142,7 +166,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/006_rdgki3.webp",
+                        alt: "Intertwining strands of DNA",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -163,7 +191,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/008_eoefxm.webp",
+                        alt: "A dangerous walk",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -184,7 +216,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695430692/009_ohsozz.webp",
+                        alt: "Orbs of light forming a path",
+                      },
                     aspectRatio: "square",
                   },
               },
