@@ -5,7 +5,7 @@ description: this is the description
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-12
 date: 2023-09-08T12:00:01
-draft: false
+draft: true
 category: ["Myths"]
 image: { src: "/images/sample.png", alt: "sample" }
 article:

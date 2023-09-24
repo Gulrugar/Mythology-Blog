@@ -4,7 +4,7 @@ subtitle: "A Fierce Battle with Invincibility"
 description: "Hercules, the son of Zeus and Alcmena, sought redemption for acts committed during a bout of madness inflicted by the jealous goddess Hera. To atone, he sought guidance from the Oracle of Delphi, who commanded him to serve King Eurystheus of Mycenae for twelve years and complete twelve labors."
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-1
-date: 2023-09-08T12:00:12
+date: 2023-09-08T12:00:01
 draft: false
 category: ["Myths"]
 image:

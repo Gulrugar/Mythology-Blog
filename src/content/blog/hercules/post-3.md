@@ -4,10 +4,14 @@ subtitle: "The Sacred Deer's Capture"
 description: "Tasked by King Eurystheus to capture the Ceryneian Hind, a sacred and elusive deer under the protection of the goddess Artemis, Hercules embarked on a quest that tested not only his legendary strength but also his reverence for the divine. The Ceryneian Hind, with its golden antlers and remarkable speed, presented a formidable quarry, making this labor a true test of Hercules' abilities and character."
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-3
-date: 2023-09-08T12:00:10
+date: 2023-09-23
 draft: false
 category: ["Myths"]
-image: { src: "/images/sample.png", alt: "sample" }
+image:
+  {
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695517525/001_qjp1ff.webp",
+    alt: "The golden hind",
+  }
 article:
   {
     intro:
@@ -37,7 +41,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695518384/002_fxwpjl.webp",
+                        alt: "Drinking in the forest",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -46,6 +54,18 @@ article:
                 params:
                   {
                     text: "The Ceryneian Hind was no ordinary deer; it was sacred to Artemis, the goddess of the hunt and wilderness. This mystical creature possessed golden antlers, representing its divine nature.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695518384/003_nwqrqu.webp",
+                        alt: "Elaborate golden antlers",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -65,7 +85,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695514711/004_dzwj0y.webp",
+                        alt: "Hercules spends a long time in the wilderness",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -86,7 +110,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695514711/005_qx8ynf.webp",
+                        alt: "Hercules pursues the golden hind",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -107,7 +135,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695518384/006_jnfloj.webp",
+                        alt: "After many hours the hind is captured",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -135,7 +167,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695514711/007_qti7wm.webp",
+                        alt: "King Eurystheus recognizes the sacredness of the hind",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -159,11 +195,7 @@ article:
     outro:
       {
         text: "Hercules' third labor had demonstrated not only his physical strength but also his ability to exercise restraint and respect for the divine. Each labor brought him closer to redemption and solidified his place among the greatest heroes of Greek mythology.",
-        next_link:
-          {
-            text: "The Twelve Labors of Hercules IV: The Erymanthian Boar",
-            link: "/posts/twelve-labors-of-hercules-4",
-          },
+        next_link: { text: "Myths", link: "/categories/myths" },
       },
   }
 ---
