@@ -5,7 +5,7 @@ description: this is the description
 author: Andrew Aguirre
 slug: placeholder-article
 date: 2023-07-28
-draft: true
+draft: false
 category: ["Myths"]
 image: { src: "/images/sample.png", alt: "Sample" }
 article:

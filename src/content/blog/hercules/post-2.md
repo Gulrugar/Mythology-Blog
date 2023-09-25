@@ -4,7 +4,7 @@ subtitle: "The Regenerating Serpent"
 description: "The Lernaean Hydra was a monstrous serpent-like creature with multiple heads. It dwelled in the swamps near the ancient town of Lerna in the Argolid region of Greece. The Hydra was a fearsome beast, and what made it even more formidable was its regenerative ability. Whenever one of its heads was cut off, two more would grow in its place."
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-2
-date: 2023-09-08T12:00:02
+date: 2023-09-18
 draft: false
 category: ["Myths"]
 image:

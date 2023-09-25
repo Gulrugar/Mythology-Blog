@@ -3,7 +3,7 @@ title: The Golden Path
 subtitle: Walking a Tight Rope
 description: "Tightrope walking, also known as high-wire walking, is an art form that blends daring danger with graceful balance. Discover the exhilaration of this extraordinary practice, from the heights and dangers to the intense focus required."
 author: Andrew Aguirre
-slug: walking-a-tight-rope
+slug: stories-walking-a-tight-rope
 date: 2023-09-21
 draft: false
 category: ["Stories"]
@@ -237,7 +237,11 @@ article:
     outro:
       {
         text: "Walking a tightrope is an exhilarating journey that encompasses a multitude of elements, from the profound mental focus and balance required to the connection with daredevil traditions and the personal challenges it presents. It's an art form that transcends physical prowess, offering a unique blend of danger, precision, and accomplishment. As we conclude our exploration, we leave you with the understanding that the exhilaration of tightrope walking is not just an act but a captivating fusion of human courage and artistry.",
-        next_link: { text: "Next Article", link: "/" },
+        next_link:
+          {
+            text: "The Twelve Labors of Hercules I: The Nemean Lion",
+            link: "/posts/twelve-labors-of-hercules-1",
+          },
       },
   }
 ---
