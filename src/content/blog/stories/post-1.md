@@ -239,8 +239,8 @@ article:
         text: "Walking a tightrope is an exhilarating journey that encompasses a multitude of elements, from the profound mental focus and balance required to the connection with daredevil traditions and the personal challenges it presents. It's an art form that transcends physical prowess, offering a unique blend of danger, precision, and accomplishment. As we conclude our exploration, we leave you with the understanding that the exhilaration of tightrope walking is not just an act but a captivating fusion of human courage and artistry.",
         next_link:
           {
-            text: "The Twelve Labors of Hercules I: The Nemean Lion",
-            link: "/posts/twelve-labors-of-hercules-1",
+            text: "To Conquer Fear",
+            link: "/posts/stories-knights-and-dragons",
           },
       },
   }
