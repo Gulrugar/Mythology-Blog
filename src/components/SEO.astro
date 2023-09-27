@@ -27,15 +27,15 @@ const settingsImage = settings["site-data"].image;
 
 <meta
   property="og:image"
-  content={import.meta.env.SITE + `${image?.src || settingsImage.src}`}
+  content={image ? image.src : import.meta.env.SITE + settingsImage.src}
 />
 <meta
   property="og:image:url"
-  content={import.meta.env.SITE + `${image?.src || settingsImage.src}`}
+  content={image ? image.src : import.meta.env.SITE + settingsImage.src}
 />
 <meta
   property="og:image:secure_url"
-  content={import.meta.env.SITE + `${image?.src || settingsImage.src}`}
+  content={image ? image.src : import.meta.env.SITE + settingsImage.src}
 />
 
 {
