@@ -10,6 +10,14 @@ class ModalDialog extends HTMLElement {
       "click",
       this.hide.bind(this)
     );
+    this.querySelector('[id^="ModalLeft-"]')!.addEventListener(
+      "click",
+      this.scrollThrough.bind(this, "left")
+    );
+    this.querySelector('[id^="ModalRight-"]')!.addEventListener(
+      "click",
+      this.scrollThrough.bind(this, "right")
+    );
 
     this.imgNumber = this.querySelectorAll("[data-media-id]").length;
 
