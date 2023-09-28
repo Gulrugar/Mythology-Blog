@@ -3,6 +3,7 @@ import { trapFocus, removeTrapFocus } from "./header-drawer";
 class ModalDialog extends HTMLElement {
   moved?: boolean;
   openedBy!: HTMLButtonElement;
+  imgNumber: number;
   constructor() {
     super();
     this.querySelector('[id^="ModalClose-"]')!.addEventListener(
@@ -10,8 +11,22 @@ class ModalDialog extends HTMLElement {
       this.hide.bind(this)
     );
 
+    this.imgNumber = this.querySelectorAll("[data-media-id]").length;
+
     this.addEventListener("keyup", (event) => {
-      if (event.code.toUpperCase() === "ESCAPE") this.hide();
+      switch (event.code) {
+        case "Escape":
+          this.hide();
+          break;
+        case "ArrowLeft":
+          this.scrollThrough("left");
+          break;
+        case "ArrowRight":
+          this.scrollThrough("right");
+          break;
+        default:
+          break;
+      }
     });
 
     // this.addEventListener("pointerup", (event) => {
@@ -37,6 +52,24 @@ class ModalDialog extends HTMLElement {
     this.removeAttribute("open");
     // removeTrapFocus(this.openedBy);
     removeTrapFocus();
+  }
+
+  scrollThrough(direction: "left" | "right") {
+    const activeImage = this.querySelector(".active");
+    const currentId = activeImage?.getAttribute("data-media-id");
+
+    let nextId;
+
+    if (direction === "left") {
+      nextId = Number(currentId) - 1;
+      nextId = nextId < 1 ? this.imgNumber : nextId;
+    } else if (direction === "right") {
+      nextId = Number(currentId) + 1;
+      nextId = nextId > this.imgNumber ? 1 : nextId;
+    }
+
+    activeImage?.classList.remove("active");
+    this.querySelector(`[data-media-id="${nextId}"]`)?.classList.add("active");
   }
 }
 

@@ -4,8 +4,8 @@ subtitle: "Hercules' Hunt in the Mountains"
 description: this is the description
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-4
-date: 2023-09-08T12:00:09
-draft: true
+date: 2023-09-27
+draft: false
 category: ["Myths"]
 image: { src: "/images/sample.png", alt: "sample" }
 article:
@@ -16,22 +16,21 @@ article:
           tag: "Paragraph",
           params:
             {
-              text: "Hercules, the renowned hero of Greek mythology, embarked on a remarkable journey to complete the Twelve Labors as an act of penance for a grave and tragic crime he had committed. Driven by remorse and seeking redemption, Hercules was tasked with these seemingly insurmountable challenges by King Eurystheus.",
+              text: "In the epic saga of Hercules and his Twelve Labors, the hero's fourth task was no less daunting than the ones that preceded it. The Erymanthian Boar, a fearsome and destructive creature, terrorized the slopes of Mount Erymanthos in ancient Arcadia.",
             },
         },
         {
           tag: "Paragraph",
           params:
             {
-              text: "These labors were intended to humble and test the hero's strength, courage, and resolve, as well as to atone for his past actions. Each labor presented a formidable adversary or task, ranging from ferocious beasts to treacherous quests, and together they forged the legend of Hercules, a symbol of resilience and heroism in the face of adversity.",
+              text: "Hercules, driven by a desire to atone for his past sins, embarked on a perilous journey to capture this monstrous boar. The story of Hercules' fourth labor is a testament to his unwavering determination, indomitable strength, and relentless pursuit of redemption.",
             },
         },
-        { tag: "RelatedLink", params: { text: "Related Article", link: "/" } },
       ],
     content:
       [
         {
-          title: "Section Title",
+          title: "The Labor Begins",
           data:
             [
               {
@@ -46,20 +45,20 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Hercules' journey to capture the Erymanthian Boar began as he stood before King Eurystheus, who had imposed these labors upon him. With determination in his eyes, Hercules set off for the snow-covered slopes of Mount Erymanthos in Arcadia, where the fearsome boar was said to dwell.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "The hero knew that this task would be no easy feat, for the Erymanthian Boar was notorious for its wild nature and its propensity to wreak havoc upon the land.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "The Battle with the Beast",
           data:
             [
               {
@@ -74,20 +73,20 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "As Hercules ventured deeper into the unforgiving wilderness of Mount Erymanthos, he tracked the boar's movements through dense forests and treacherous terrain. The confrontation with the Erymanthian Boar was nothing short of epic.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "With the beast charging at him, tusks bared and fury in its eyes, Hercules engaged in a fierce battle that tested every ounce of his strength and skill. It was a clash of titans as the hero grappled with the monstrous boar, determined to subdue the creature and complete his labor.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "Triumph and Restraint",
           data:
             [
               {
@@ -102,20 +101,20 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "After an arduous struggle that seemed to stretch on endlessly, Hercules emerged victorious. The Erymanthian Boar had been defeated, its power no match for the hero's indomitable might.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "With the creature subdued, Hercules meticulously bound its legs, ensuring it could not escape and wreak havoc upon the land ever again. The hero had achieved his goal and now had to transport the fearsome beast back to King Eurystheus.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "Return to Tiryns",
           data:
             [
               {
@@ -130,20 +129,20 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Carrying the monstrous boar over his mighty shoulders, Hercules began his journey back to the court of King Eurystheus in Tiryns. The return trip was a testament to the hero's strength and resilience, as he navigated challenging terrain and faced numerous obstacles on his path.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: " Hercules' arrival in Tiryns with the captured Erymanthian Boar was met with a mix of awe and fear from the king, who had never witnessed such a spectacle.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "The Completion of the Fourth Labor",
           data:
             [
               {
@@ -158,70 +157,21 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "King Eurystheus was both amazed and frightened by the sight of the fearsome creature. He had a specially crafted bronze amphora, or large storage jar, prepared for the boar's containment, as he wanted nothing to do with the creature himself.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "With the Erymanthian Boar safely contained within a the amphora, King Eurystheus marveled at Hercules' accomplishment. The hero had successfully completed his fourth labor, adding yet another triumph to his growing list of legendary deeds.",
                   },
               },
-            ],
-        },
-        {
-          title: "Section Title",
-          data:
-            [
-              {
-                tag: "ImageBlock",
-                params:
-                  {
-                    image: { src: "/images/sample.png", alt: "sample" },
-                    aspectRatio: "square",
-                  },
-              },
-              {
+                            {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-            ],
-        },
-        {
-          title: "Section Title",
-          data:
-            [
-              {
-                tag: "ImageBlock",
-                params:
-                  {
-                    image: { src: "/images/sample.png", alt: "sample" },
-                    aspectRatio: "square",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Despite his successes, Hercules knew that more trials lay ahead in his quest for redemption, as Eurystheus remained resolute in imposing the remaining labors.",
                   },
               },
             ],
@@ -229,9 +179,8 @@ article:
       ],
     outro:
       {
-        text: "Outro text",
-        next_link:
-          { text: "Next Link", link: "/posts/twelve-labors-of-hercules-5" },
+        text: "The tale of Hercules' fourth labor, like the others, highlights the hero's resilience and valor in the face of seemingly insurmountable odds. It reminds us that redemption often requires great sacrifices and unwavering determination. As Hercules moved on to his next labor, the world watched in awe of the hero who sought to cleanse his soul through acts of heroism, one labor at a time.",
+        next_link:{ text: "Guardians", link: "/posts/creatures-fairies" },
       },
   }
 ---
