@@ -7,7 +7,7 @@ slug: twelve-labors-of-hercules-4
 date: 2023-09-27
 draft: false
 category: ["Myths"]
-image: { src: "/images/sample.png", alt: "sample" }
+image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/001_fpqbhr.webp", alt: "A ferocious boar terrorizes Mount Erymanthos" }
 article:
   {
     intro:
@@ -37,7 +37,7 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/002_afd3c4.webp", alt: "A journey up the mountain" },
                     aspectRatio: "square",
                   },
               },
@@ -46,6 +46,14 @@ article:
                 params:
                   {
                     text: "Hercules' journey to capture the Erymanthian Boar began as he stood before King Eurystheus, who had imposed these labors upon him. With determination in his eyes, Hercules set off for the snow-covered slopes of Mount Erymanthos in Arcadia, where the fearsome boar was said to dwell.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/003_et1trt.webp", alt: "Getting a vantage point" },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -65,7 +73,7 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/004_uwy0oj.webp", alt: "The boar appears" },
                     aspectRatio: "square",
                   },
               },
@@ -74,6 +82,14 @@ article:
                 params:
                   {
                     text: "As Hercules ventured deeper into the unforgiving wilderness of Mount Erymanthos, he tracked the boar's movements through dense forests and treacherous terrain. The confrontation with the Erymanthian Boar was nothing short of epic.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/005_cimbvl.webp", alt: "Hercules must capture the boar alive" },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -93,7 +109,7 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/006_i22lcy.webp", alt: "The Erymanthian Boar attacks" },
                     aspectRatio: "square",
                   },
               },
@@ -102,6 +118,14 @@ article:
                 params:
                   {
                     text: "After an arduous struggle that seemed to stretch on endlessly, Hercules emerged victorious. The Erymanthian Boar had been defeated, its power no match for the hero's indomitable might.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/007_efwyi3.webp", alt: "A battle on the slopes" },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -121,7 +145,7 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/008_rtuznt.webp", alt: "Hercules captures the boar" },
                     aspectRatio: "square",
                   },
               },
@@ -149,7 +173,7 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/009_yfghyw.webp", alt: "A special bronze amphora to contain the boar" },
                     aspectRatio: "square",
                   },
               },
@@ -158,6 +182,14 @@ article:
                 params:
                   {
                     text: "King Eurystheus was both amazed and frightened by the sight of the fearsome creature. He had a specially crafted bronze amphora, or large storage jar, prepared for the boar's containment, as he wanted nothing to do with the creature himself.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/010_ghsm1b.webp", alt: "A vessel that contains a rampaging boar" },
+                    aspectRatio: "square",
                   },
               },
               {
