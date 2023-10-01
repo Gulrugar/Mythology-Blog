@@ -7,7 +7,7 @@ import { formatBlogPosts } from "../script/utils";
 const posts = await getCollection("blog");
 const post = formatBlogPosts(posts)[0];
 
-const latestText = `Welcome to <strong>Mythical Art!</strong> View the latest article <strong><i>&quot;${post.data.title}&quot;</i></strong>`;
+const latestText = `Welcome to <strong>Mythical Art!</strong> View the latest story <strong><i>&quot;${post.data.title}&quot;</i></strong>`;
 const latestLink = `/posts/${post.slug}`;
 ---
 

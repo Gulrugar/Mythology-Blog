@@ -4,15 +4,15 @@ import { formatBlogPosts, slugify } from "../../script/utils";
 
 type Props = {
   category: string;
-  postTitles: [string, string, string, string, string];
+  postSlugs: [string, string, string, string, string];
 };
 
-const { category = "Category", postTitles } = Astro.props as Props;
+const { category = "Category", postSlugs } = Astro.props as Props;
 
 const placeHolderArticle = await getEntry("blog", "placeholder-article")!;
 
-const blogPosts = await getCollection("blog", ({ data }) => {
-  return postTitles.includes(data.title);
+const blogPosts = await getCollection("blog", ({ slug }) => {
+  return postSlugs.includes(slug);
 });
 
 const formattedBlogPosts = formatBlogPosts(blogPosts, {

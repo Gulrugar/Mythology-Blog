@@ -1,7 +1,7 @@
 ---
 title: "The Twelve Labors of Hercules IV: The Erymanthian Boar"
 subtitle: "Hercules' Hunt in the Mountains"
-description: this is the description
+description: "In the epic saga of Hercules, the demigod embarks on his fourth labor, a quest that takes him to the distant land of Erymanthia. Here, he faces a fearsome adversary and undertakes a herculean trial that will test not only his physical prowess but also his cunning and determination."
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-4
 date: 2023-09-27

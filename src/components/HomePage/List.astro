@@ -3,15 +3,15 @@ import { getCollection, getEntry } from "astro:content";
 import { formatBlogPosts, formatDate } from "../../script/utils";
 
 type Props = {
-  postTitles: [string, string, string, string];
+  postSlugs: [string, string, string, string];
 };
 
-const { postTitles } = Astro.props as Props;
+const { postSlugs } = Astro.props as Props;
 
 const placeHolderArticle = await getEntry("blog", "placeholder-article")!;
 
-const blogPosts = await getCollection("blog", ({ data }) => {
-  return postTitles.includes(data.title);
+const blogPosts = await getCollection("blog", ({ slug }) => {
+  return postSlugs.includes(slug);
 });
 
 const formattedBlogPosts = formatBlogPosts(blogPosts, {

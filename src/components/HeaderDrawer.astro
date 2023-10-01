@@ -209,6 +209,7 @@ const settings: Settings = settingsData;
   }
 
   /* ::before */
+
   .header__icon--menu[aria-expanded="true"]::before {
     content: "";
     top: 100%;
@@ -220,6 +221,10 @@ const settings: Settings = settingsData;
     display: block;
     position: absolute;
     background: rgba(var(--color-foreground), 0.5);
+  }
+
+  .menu-drawer-container:not([open]) .header__icon--menu > summary::before {
+    display: none;
   }
 
   /* span */
