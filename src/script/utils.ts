@@ -95,3 +95,6 @@ export function getNextId() {
 export function resetIdCounter() {
   idCounter = 2;
 }
+
+export const toggleMobileMenu = `this.setAttribute('aria-expanded', !this.closest('details').hasAttribute('open')); console.log(this.closest('details').hasAttribute('open'))
+`;

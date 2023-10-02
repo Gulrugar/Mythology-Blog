@@ -3,6 +3,7 @@ import Icon from "astro-icon";
 import settingsData from "../data/settings.json";
 import { type Settings } from "../types/settings";
 import "../styles/header-drawer-global.css";
+import { toggleMobileMenu } from "../script/utils";
 
 const settings: Settings = settingsData;
 ---
@@ -11,6 +12,7 @@ const settings: Settings = settingsData;
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
       class="header__icon header__icon--menu header__icon--summary link focus-inset"
+      onclick={toggleMobileMenu}
     >
       <span>
         <Icon
@@ -223,9 +225,9 @@ const settings: Settings = settingsData;
     background: rgba(var(--color-foreground), 0.5);
   }
 
-  .menu-drawer-container:not([open]) .header__icon--menu > summary::before {
+  /* .menu-drawer-container:not([open]) > summary::before {
     display: none;
-  }
+  } */
 
   /* span */
   .header__icon span {

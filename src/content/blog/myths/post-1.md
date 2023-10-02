@@ -393,8 +393,8 @@ article:
         text: "In essence, Thor's use of Mjolnir was not just about defeating enemies. It was about upholding righteousness, protecting the innocent, and ensuring that power was wielded responsibly. Through his actions with Mjolnir, Thor embodied the qualities of a true hero in Norse mythology.",
         next_link:
           {
-            text: "The Twelve Labors of Hercules I: The Nemean Lion",
-            link: "/posts/twelve-labors-of-hercules-1",
+            text: "Like a Kid in a Candy Store",
+            link: "/posts/stories-kid-in-a-candy-store",
           },
       },
   }

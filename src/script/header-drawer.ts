@@ -9,32 +9,34 @@ function getFocusableElements(container: HTMLElement): HTMLElement[] {
 }
 
 // controls the aria-expanded attribute of summary elements including the summary element for mainDetailsToggle
-document
-  .querySelectorAll<HTMLElement>('[id^="Details-"] summary')
-  .forEach((summary) => {
-    summary.setAttribute("role", "button");
+// document
+//   .querySelectorAll<HTMLElement>('[id^="Details-"] summary')
+//   .forEach((summary) => {
+//     summary.setAttribute("role", "button");
 
-    const detailsElementOpen = (
-      summary.parentNode as HTMLDetailsElement
-    ).hasAttribute("open");
-    summary.setAttribute("aria-expanded", `${detailsElementOpen}`);
+//     const detailsElementOpen = (
+//       summary.parentNode as HTMLDetailsElement
+//     ).hasAttribute("open");
+//     summary.setAttribute("aria-expanded", `${detailsElementOpen}`);
 
-    const detailsElementContentId =
-      summary.nextElementSibling?.getAttribute("id");
-    if (detailsElementContentId) {
-      summary.setAttribute("aria-controls", detailsElementContentId);
-    }
+//     const detailsElementContentId =
+//       summary.nextElementSibling?.getAttribute("id");
+//     if (detailsElementContentId) {
+//       summary.setAttribute("aria-controls", detailsElementContentId);
+//     }
 
-    summary.addEventListener("click", (event: MouseEvent) => {
-      const summaryElement = event.currentTarget as HTMLElement;
-      summaryElement.setAttribute(
-        "aria-expanded",
-        `${!summaryElement.closest("details")!.hasAttribute("open")}`
-      );
-    });
+//     console.log("event listener added to summary");
+//     summary.addEventListener("click", (event: MouseEvent) => {
+//       console.log("click");
+//       const summaryElement = event.currentTarget as HTMLElement;
+//       summaryElement.setAttribute(
+//         "aria-expanded",
+//         `${!summaryElement.closest("details")!.hasAttribute("open")}`
+//       );
+//     });
 
-    // if (summary.closest("header-drawer")) return;
-  });
+//     // if (summary.closest("header-drawer")) return;
+//   });
 
 const trapFocusHandlers: {
   focusin?: (event: FocusEvent) => void;
@@ -324,7 +326,6 @@ class HeaderDrawer extends MenuDrawer {
     setTimeout(() => {
       this.mainDetailsToggle.classList.add("menu-opening");
     });
-
     summaryElement.setAttribute("aria-expanded", "true");
     window.addEventListener("resize", this.onResize);
     trapFocus(this.mainDetailsToggle, summaryElement);
