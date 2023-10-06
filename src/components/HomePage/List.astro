@@ -40,7 +40,10 @@ while (formattedBlogPosts.length < 4) {
                   <img
                     src={article.data.image.src}
                     alt={article.data.image.alt}
-                    class="card__img universal-image__image lazyloaded"
+                    class={`card__img universal-image__image lazyloaded ${
+                      article.data.imageAnchor &&
+                      `shift-${article.data.imageAnchor}`
+                    }`}
                   />
                 </div>
               </div>
@@ -71,7 +74,7 @@ while (formattedBlogPosts.length < 4) {
           <img
             src="/images/adslot.png"
             alt="adslot"
-            style="border: 0px; vertical-align: bottom; width: 300px; height: 250px;"
+            style="border: 0px; vertical-align: bottom;"
           />
         </div>
       </div>
@@ -541,5 +544,21 @@ while (formattedBlogPosts.length < 4) {
   }
   .billboard .wrapper::after {
     margin-top: 0.25rem;
+  }
+
+  /* --------------- */
+  /* Custom          */
+  /* --------------- */
+
+  .shift-top {
+    transform: translateY(0);
+  }
+
+  .shift-center {
+    transform: translateY(-16.666%);
+  }
+
+  .shift-bottom {
+    transform: translateY(-33.333%);
   }
 </style>

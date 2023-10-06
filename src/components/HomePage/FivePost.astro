@@ -57,7 +57,10 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
                   <img
                     src={article.data.image.src}
                     alt={article.data.image.alt}
-                    class="card__img universal-image__image lazyloaded"
+                    class={`card__img universal-image__image lazyloaded ${
+                      featuredArticle.data.imageAnchor &&
+                      `shift-${featuredArticle.data.imageAnchor}`
+                    }`}
                   />
                 </div>
               </div>
@@ -310,9 +313,6 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
     height: auto;
     max-width: none;
     display: block;
-  }
-  .card--featured .card__img {
-    transform: translateY(-16.666%);
   }
 
   /* div class="card__content" */
@@ -642,5 +642,21 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
 
     display: block;
     z-index: -1;
+  }
+
+  /* --------------- */
+  /* Custom          */
+  /* --------------- */
+
+  .shift-top {
+    transform: translateY(0);
+  }
+
+  .shift-center {
+    transform: translateY(-16.666%);
+  }
+
+  .shift-bottom {
+    transform: translateY(-33.333%);
   }
 </style>

@@ -3,9 +3,10 @@ import Icon from "astro-icon";
 import settingsData from "../data/settings.json";
 import { type Settings } from "../types/settings";
 import "../styles/header-drawer-global.css";
-import { toggleMobileMenu } from "../script/utils";
 
 const settings: Settings = settingsData;
+const toggleMobileMenu = `this.setAttribute('aria-expanded', !this.closest('details').hasAttribute('open')); console.log(this.closest('details').hasAttribute('open'))
+`;
 ---
 
 <header-drawer data-breakpoint="tablet">
@@ -43,6 +44,7 @@ const settings: Settings = settingsData;
                           class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
                           data-href={navItem.path}
                           data-navLink
+                          onclick={toggleMobileMenu}
                         >
                           {navItem.name}
                           <Icon

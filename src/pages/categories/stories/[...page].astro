@@ -2,46 +2,22 @@
 import MainLayout from "../../../layouts/MainLayout.astro";
 import CategoryHeader from "../../../components/Categories/CategoryHeader.astro";
 import CategoryBody from "../../../components/Categories/CategoryBody.astro";
-import { formatBlogPosts } from "../../../script/utils";
-import { getCollection, type CollectionEntry } from "astro:content";
 import Pagination from "../../../components/Pagination.astro";
-import settings from "../../../data/settings.json";
+import {
+  generateGetStaticPathsAsyncFunction,
+  generateCategoryPageProps,
+} from "../../../script/categories";
 
-export async function getStaticPaths({ paginate }: any) {
-  const blogPosts = await getCollection("blog", ({ data }) => {
-    return data.category.some((category: string) => category === "Stories");
-  });
-  const formattedPosts = formatBlogPosts(blogPosts, {
-    filterOutDrafts: true,
-  });
+export const getStaticPaths = generateGetStaticPathsAsyncFunction("Stories");
 
-  return paginate(formattedPosts, { pageSize: 24 });
-}
-
-interface Props {
-  data: CollectionEntry<"blog">[];
-  start: number;
-  end: number;
-  size: number;
-  total: number;
-  currentPage: number;
-  lastPage: number;
-  url: {
-    current: string;
-    next: string | undefined;
-    prev: string | undefined;
-  };
-}
-
-const { page } = Astro.props as { page?: Props };
 const {
+  page,
   url: { prev, next },
   currentPage,
   lastPage,
-} = page || { url: {} };
-
-const metaData = settings.meta.stories;
-const path = "/categories/stories";
+  metaData,
+  path,
+} = generateCategoryPageProps({ categorySlug: "stories", props: Astro.props });
 ---
 
 <MainLayout title={metaData.title} description={metaData.description}>

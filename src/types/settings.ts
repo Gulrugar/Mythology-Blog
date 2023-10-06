@@ -69,5 +69,8 @@ export type Settings = {
     index: Meta;
     myths: Meta;
     symbols: Meta;
+    stories: Meta;
+    "404": Meta;
+    about: Meta;
   };
 };

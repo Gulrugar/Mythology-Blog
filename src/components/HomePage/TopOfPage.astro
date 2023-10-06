@@ -39,7 +39,10 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
           <img
             src={featuredArticle.data.image.src}
             alt={featuredArticle.data.image.alt}
-            class="card__img universal-image__image lazyloaded"
+            class={`card__img universal-image__image lazyloaded ${
+              featuredArticle.data.imageAnchor &&
+              `shift-${featuredArticle.data.imageAnchor}`
+            }`}
           />
         </div>
       </div>
@@ -229,11 +232,6 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
     width: 100%;
     height: auto;
     display: block;
-  }
-
-  .card--featured .card__img {
-    /* my property to center images in 3:2 containers */
-    transform: translateY(-16.666%);
   }
 
   /* div class="card__content" */
@@ -608,5 +606,21 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
   }
   .card-list .card .card__byline::after {
     color: rgba(0, 0, 0, 0.65);
+  }
+
+  /* --------------- */
+  /* Custom          */
+  /* --------------- */
+
+  .shift-top {
+    transform: translateY(0);
+  }
+
+  .shift-center {
+    transform: translateY(-16.666%);
+  }
+
+  .shift-bottom {
+    transform: translateY(-33.333%);
   }
 </style>
