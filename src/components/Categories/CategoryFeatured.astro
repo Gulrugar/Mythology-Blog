@@ -1,12 +1,14 @@
 ---
 import { getCollection, getEntry } from "astro:content";
 import { formatBlogPosts } from "../../script/utils";
+import { type FormatBlogPostsOptions } from "../../script/utils";
 
 type Props = {
   postSlugs: [string, string, string, string];
+  sort?: FormatBlogPostsOptions["sort"];
 };
 
-const { postSlugs } = Astro.props as Props;
+const { postSlugs, sort } = Astro.props as Props;
 
 const placeHolderArticle = await getEntry("blog", "placeholder-article")!;
 
@@ -16,6 +18,7 @@ const blogPosts = await getCollection("blog", ({ slug }) => {
 
 const formattedBlogPosts = formatBlogPosts(blogPosts, {
   filterOutDrafts: true,
+  sort,
 });
 
 while (formattedBlogPosts.length < 4) {

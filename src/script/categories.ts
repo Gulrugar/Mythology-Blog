@@ -1,9 +1,15 @@
 import { getCollection, type CollectionEntry } from "astro:content";
-import { formatBlogPosts } from "./utils";
+import { formatBlogPosts, type FormatBlogPostsOptions } from "./utils";
 import settings from "../data/settings.json";
-import { categorySlugs } from "../data/constants";
+import { type CategorySlugs } from "../data/constants";
 
-export function generateGetStaticPathsAsyncFunction(categoryName: string) {
+export function generateGetStaticPathsAsyncFunction({
+  categoryName,
+  options,
+}: {
+  categoryName: string;
+  options?: FormatBlogPostsOptions;
+}) {
   const getStaticPaths = async ({ paginate }: any) => {
     const blogPosts = await getCollection("blog", ({ data }) => {
       return data.category.some(
@@ -12,6 +18,7 @@ export function generateGetStaticPathsAsyncFunction(categoryName: string) {
     });
     const formattedPosts = formatBlogPosts(blogPosts, {
       filterOutDrafts: true,
+      ...options,
     });
 
     return paginate(formattedPosts, { pageSize: 24 });
@@ -41,7 +48,7 @@ export function generateCategoryPageProps({
   categorySlug,
   props,
 }: {
-  categorySlug: (typeof categorySlugs)[number];
+  categorySlug: CategorySlugs;
   props: CategoryPageProps;
 }) {
   const { page } = props;

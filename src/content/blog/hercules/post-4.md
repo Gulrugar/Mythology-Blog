@@ -6,7 +6,7 @@ author: Andrew Aguirre
 slug: twelve-labors-of-hercules-4
 date: 2023-09-27
 draft: false
-category: ["Myths"]
+category: ["Myths", "Hercules"]
 image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/001_fpqbhr.webp", alt: "A ferocious boar terrorizes Mount Erymanthos" }
 article:
   {

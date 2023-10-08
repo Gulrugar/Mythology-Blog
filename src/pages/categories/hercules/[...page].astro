@@ -2,6 +2,7 @@
 import MainLayout from "../../../layouts/MainLayout.astro";
 import CategoryHeader from "../../../components/Categories/CategoryHeader.astro";
 import CategoryBody from "../../../components/Categories/CategoryBody.astro";
+import CategoryFeatured from "../../../components/Categories/CategoryFeatured.astro";
 import Pagination from "../../../components/Pagination.astro";
 import {
   generateGetStaticPathsAsyncFunction,
@@ -9,7 +10,16 @@ import {
 } from "../../../script/categories";
 
 export const getStaticPaths = generateGetStaticPathsAsyncFunction({
-  categoryName: "Myths",
+  categoryName: "Hercules",
+  options: {
+    postsToFilterOut: [
+      "twelve-labors-of-hercules-5",
+      "twelve-labors-of-hercules-4",
+      "twelve-labors-of-hercules-3",
+      "twelve-labors-of-hercules-2",
+    ],
+    sort: "new-old",
+  },
 });
 
 const {
@@ -19,15 +29,24 @@ const {
   lastPage,
   metaData,
   path,
-} = generateCategoryPageProps({ categorySlug: "myths", props: Astro.props });
+} = generateCategoryPageProps({ categorySlug: "hercules", props: Astro.props });
 ---
 
 <MainLayout title={metaData.title} description={metaData.description}>
   <section class="comp taxonomysc mntl-taxonomysc">
     <CategoryHeader
       title="Myths"
-      image="/images/myths-banner.webp"
+      image="/images/hercules-banner.webp"
       description={metaData.description}
+    />
+    <CategoryFeatured
+      postSlugs={[
+        "twelve-labors-of-hercules-5",
+        "twelve-labors-of-hercules-4",
+        "twelve-labors-of-hercules-3",
+        "twelve-labors-of-hercules-2",
+      ]}
+      sort="new-old"
     />
     <CategoryBody posts={page?.data} />
     <Pagination {prev} {next} {currentPage} {lastPage} {path} />

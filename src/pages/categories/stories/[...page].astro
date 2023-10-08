@@ -8,7 +8,9 @@ import {
   generateCategoryPageProps,
 } from "../../../script/categories";
 
-export const getStaticPaths = generateGetStaticPathsAsyncFunction("Stories");
+export const getStaticPaths = generateGetStaticPathsAsyncFunction({
+  categoryName: "Stories",
+});
 
 const {
   page,

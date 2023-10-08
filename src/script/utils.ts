@@ -18,12 +18,13 @@ export function formatDate(date: Date): string {
   });
 }
 
-interface FormatBlogPostsOptions {
+export type FormatBlogPostsOptions = {
   filterOutDrafts?: boolean;
   filterOutFuturePosts?: boolean;
-  sortByDate?: boolean;
+  sort?: "new-old" | "old-new" | "random";
   limit?: number;
-}
+  postsToFilterOut?: string[];
+};
 
 export function formatBlogPosts(
   posts: CollectionEntry<"blog">[],
@@ -32,14 +33,19 @@ export function formatBlogPosts(
   const {
     filterOutDrafts = true,
     filterOutFuturePosts = true,
-    sortByDate = true,
+    sort = "new-old",
     limit = undefined,
+    postsToFilterOut = undefined,
   } = options;
 
   const filteredPosts: CollectionEntry<"blog">[] = posts.reduce(
     (acc: CollectionEntry<"blog">[], post) => {
-      const { date, draft } = post.data;
+      const {
+        slug,
+        data: { date, draft },
+      } = post;
 
+      if (postsToFilterOut && postsToFilterOut.includes(slug)) return acc;
       if (filterOutDrafts && draft) return acc;
       if (filterOutFuturePosts && new Date(date) > new Date()) return acc;
       acc.push(post);
@@ -48,16 +54,25 @@ export function formatBlogPosts(
     []
   );
 
-  if (sortByDate) {
+  if (sort === "new-old") {
     filteredPosts.sort(
       (a, b) =>
         new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
     );
   }
+  if (sort === "old-new") {
+    filteredPosts.sort(
+      (a, b) =>
+        new Date(a.data.date).getTime() - new Date(b.data.date).getTime()
+    );
+  }
+  if (sort === "random") {
+    filteredPosts.sort(() => Math.random() - 0.5);
+  }
 
   // Randomize the order of the posts
   // else {
-  //   filteredPosts.sort(() => Math.random() - 0.5);
+  //
   // }
 
   return limit ? filteredPosts.slice(0, limit) : filteredPosts;

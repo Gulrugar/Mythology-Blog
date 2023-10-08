@@ -4,9 +4,9 @@ subtitle: "Hercules' Herculean Task"
 description: this is the description
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-5
-date: 2023-09-08T12:00:08
-draft: true
-category: ["Myths"]
+date: 2023-10-08
+draft: false
+category: ["Myths", "Hercules"]
 image: { src: "/images/sample.png", alt: "sample" }
 article:
   {

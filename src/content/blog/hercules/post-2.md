@@ -6,7 +6,7 @@ author: Andrew Aguirre
 slug: twelve-labors-of-hercules-2
 date: 2023-09-18
 draft: false
-category: ["Myths"]
+category: ["Myths", "Hercules"]
 image:
   {
     src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694996170/001_du0xyx.webp",
