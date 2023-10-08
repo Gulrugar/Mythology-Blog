@@ -1,11 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import settings from "../data/settings.json";
+import { settings } from "../config/settings";
+
+const siteData = settings["site-data"];
 ---
 
 <MainLayout
   title="Contact Information"
-  description={`Contact Information for ${settings["site-data"].title}`}
+  description={`Contact Information for ${siteData.title}`}
 >
   <section>
     <div class="container page-width">
@@ -15,9 +17,8 @@ import settings from "../data/settings.json";
 
           <ul>
             <li>
-              Email: <a
-                href={`mailto:${settings["site-data"]["contact-email"]}`}
-                >{settings["site-data"]["contact-email"]}</a
+              Email: <a href={`mailto:${siteData["contact-email"]}`}
+                >{siteData["contact-email"]}</a
               >
             </li>
             <li>Hours of Operation: [Monday-Friday: 9:00 AM - 5:00 PM PST]</li>

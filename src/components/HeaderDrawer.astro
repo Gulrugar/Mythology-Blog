@@ -1,10 +1,7 @@
 ---
 import Icon from "astro-icon";
-import settingsData from "../data/settings.json";
-import { type Settings } from "../types/settings";
+import { settings } from "../config/settings";
 import "../styles/header-drawer-global.css";
-
-const settings: Settings = settingsData;
 const toggleMobileMenu = `this.setAttribute('aria-expanded', !this.closest('details').hasAttribute('open')); console.log(this.closest('details').hasAttribute('open'))
 `;
 ---

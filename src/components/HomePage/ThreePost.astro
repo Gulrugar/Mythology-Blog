@@ -1,7 +1,7 @@
 ---
 import { getCollection, getEntry } from "astro:content";
 import { formatBlogPosts, slugify } from "../../script/utils";
-import { categories } from "../../data/constants";
+import { categories } from "../../config/constants";
 
 // We create a Category type by using typeof categories[number]. This type represents the union of all the values in the categories array, which are "Myths" and "Symbols" in this case.
 type Category = (typeof categories)[number];

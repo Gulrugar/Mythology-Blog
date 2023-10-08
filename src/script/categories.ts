@@ -1,7 +1,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { formatBlogPosts, type FormatBlogPostsOptions } from "./utils";
-import settings from "../data/settings.json";
-import { type CategorySlugs } from "../data/constants";
+import { settings } from "../config/settings";
+import { type CategorySlugs } from "../config/constants";
 
 export function generateGetStaticPathsAsyncFunction({
   categoryName,

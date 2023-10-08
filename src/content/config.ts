@@ -1,5 +1,5 @@
 import { z, defineCollection } from "astro:content";
-import { categories } from "../data/constants";
+import { categories } from "../config/constants";
 import { paragraph, relatedLink, callout, image } from "./_types.d";
 
 const blog = defineCollection({

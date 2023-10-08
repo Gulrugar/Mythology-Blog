@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import settings from "../data/settings.json";
+import { settings } from "../config/settings";
 
 const websiteTitle = settings["site-data"].title;
 ---
@@ -299,7 +299,8 @@ const websiteTitle = settings["site-data"].title;
             <li>
               By email: <a
                 href={`mailto:${settings["site-data"]["contact-email"]}`}
-                >{settings["site-data"]["contact-email"]}</a>
+                >{settings["site-data"]["contact-email"]}</a
+              >
             </li>
           </ul>
         </div>

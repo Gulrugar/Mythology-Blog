@@ -1,13 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import settings from "../data/settings.json";
+import { settings } from "../config/settings";
 
 const websiteTitle = settings["site-data"].title;
 ---
 
 <MainLayout
   title="Privacy Policy"
-  description={`Privacy Policy for ${settings["site-data"].title}`}
+  description={`Privacy Policy for ${websiteTitle}`}
 >
   <section>
     <div class="container page-width">
@@ -262,9 +262,10 @@ const websiteTitle = settings["site-data"].title;
           <p>
             {websiteTitle} does not knowingly collect any Personal Identifiable Information
             from children under the age of 13. If you think that your child provided
-            this kind of information on our website, we strongly encourage you to
-            <a href="/contact-information">contact us</a> immediately and we will
-            do our best efforts to promptly remove such information from our records.
+            this kind of information on our website, we strongly encourage you to<a
+              href="/contact-information">contact us</a
+            > immediately and we will do our best efforts to promptly remove such
+            information from our records.
           </p>
 
           <h2>Changes to This Privacy Policy</h2>

@@ -5,7 +5,7 @@ import TopOfPage from "../components/HomePage/TopOfPage.astro";
 import FivePost from "../components/HomePage/FivePost.astro";
 import List from "../components/HomePage/List.astro";
 import ThreePost from "../components/HomePage/ThreePost.astro";
-import settings from "../data/settings.json";
+import { settings } from "../config/settings";
 import { getEntryBySlug } from "astro:content";
 
 const metaData = settings.meta.index;

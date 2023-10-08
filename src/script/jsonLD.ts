@@ -1,4 +1,4 @@
-import settings from "../data/settings.json";
+import { settings } from "../config/settings";
 import { type CollectionEntry } from "astro:content";
 
 export default function jsonLDGenerator({
