@@ -1,16 +1,21 @@
 import { getCollection, type CollectionEntry } from "astro:content";
-import { formatBlogPosts, type FormatBlogPostsOptions } from "./utils";
-import { settings } from "../config/settings";
-import { type CategorySlugs } from "../config/constants";
+import { formatBlogPosts, type FormatBlogPostsOptions, slugify } from "./utils";
+import { categories } from "../config/constants";
+import { categorySections } from "../config/settings";
+import type { InferGetStaticPropsType, PaginateFunction } from "astro";
 
 export function generateGetStaticPathsAsyncFunction({
   categoryName,
   options,
 }: {
-  categoryName: string;
+  categoryName: (typeof categories)[number];
   options?: FormatBlogPostsOptions;
 }) {
-  const getStaticPaths = async ({ paginate }: any) => {
+  const getStaticPaths = async ({
+    paginate,
+  }: {
+    paginate: PaginateFunction;
+  }) => {
     const blogPosts = await getCollection("blog", ({ data }) => {
       return data.category.some(
         (category: string) => category === categoryName
@@ -45,10 +50,10 @@ type CategoryPageProps = {
 };
 
 export function generateCategoryPageProps({
-  categorySlug,
+  categoryName,
   props,
 }: {
-  categorySlug: CategorySlugs;
+  categoryName: (typeof categories)[number];
   props: CategoryPageProps;
 }) {
   const { page } = props;
@@ -57,8 +62,11 @@ export function generateCategoryPageProps({
     currentPage,
     lastPage,
   } = page || { url: {} };
-  const metaData = settings.meta[categorySlug];
-  const path = `/categories/${categorySlug}`;
+  const metaData = {
+    title: categorySections[categoryName].title,
+    description: categorySections[categoryName].description,
+  };
+  const path = `/categories/${slugify(categoryName)}`;
 
   return {
     page,
