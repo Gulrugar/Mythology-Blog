@@ -15,7 +15,10 @@ const blog = defineCollection({
       src: z.string(),
       alt: z.string(),
     }),
-    imageAnchor: z.enum(["top", "center", "bottom"]).optional(),
+    imageAnchor: z
+      .enum(["top", "center", "bottom"])
+      .optional()
+      .default("center"),
     article: z.object({
       intro: z.array(z.union([paragraph, relatedLink, callout])),
       content: z.array(

@@ -82,7 +82,10 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
                   <img
                     src={article.data.image.src}
                     alt={article.data.image.alt}
-                    class="card__img universal-image__image lazyloaded"
+                    class={`card__img universal-image__image lazyloaded ${
+                      article.data.imageAnchor &&
+                      `shift-${article.data.imageAnchor}`
+                    }`}
                   />
                 </div>
               </div>
@@ -491,7 +494,8 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
   /* img class="card__img universal-image__image lazyloaded" */
   .card-list .card--square-image-left .card__img {
     width: 9.9375rem;
-    height: 6.625rem;
+    height: 9.9375rem;
+    /* height: 6.625rem; */
     filter: contrast(93%);
     -o-object-fit: cover;
     object-fit: cover;
@@ -499,20 +503,23 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
 
   .top-of-page .sidebar .card-list .card--square-image-left .card__img {
     width: 8rem;
-    height: 5.33rem;
+    height: 8rem;
+    /* height: 5.33rem; */
   }
 
   @media (min-width: 50em) {
     .top-of-page .sidebar .card-list .card--square-image-left .card__img {
       width: 7rem;
-      height: 4.66rem;
+      height: 7rem;
+      /* height: 4.66rem; */
     }
   }
 
   @media (min-width: 64em) {
     .top-of-page .sidebar .card-list .card--square-image-left .card__img {
       width: 7.5rem;
-      height: 5rem;
+      height: 7.5rem;
+      /* height: 5rem; */
     }
   }
 

@@ -8,6 +8,7 @@ date: 2023-10-08
 draft: false
 category: ["Myths", "Hercules"]
 image: { src: "/images/sample.png", alt: "sample" }
+imageAnchor: "center"
 article:
   {
     intro:
