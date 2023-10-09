@@ -1,0 +1,98 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import CategoryHeader from "../../../components/Categories/CategoryHeader.astro";
+import CategoryBody from "../../../components/Categories/CategoryBody.astro";
+import CategoryFeatured from "../../../components/Categories/CategoryFeatured.astro";
+import Pagination from "../../../components/Pagination.astro";
+import { getCollection } from "astro:content";
+import { categorySettings } from "../../../config/categorySettings";
+import { categories } from "../../../config/constants";
+import type { PaginateFunction, InferGetStaticPropsType } from "astro";
+import { formatBlogPosts, slugify } from "../../../script/utils";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const blogPosts = await getCollection("blog", ({ data }) => {
+    return !data.draft;
+  });
+  const returnValues = categories.flatMap((_category) => {
+    const categoryPosts = blogPosts.filter((post) => {
+      return post.data.category.includes(_category);
+    });
+    const formattedPosts = formatBlogPosts(categoryPosts, {
+      filterOutDrafts: true,
+      ...categorySettings[_category].formatOptions,
+    });
+
+    // paginate itself return an array of Paginate objects so we use flatMap above to remove a layer of nesting. We need a single array of Paginate objects to return from this function.
+    return paginate(formattedPosts, {
+      params: { category: slugify(_category) },
+      props: { categoryName: _category },
+      pageSize: 24,
+    });
+  });
+
+  return returnValues;
+}
+
+type CategoryPageProps = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { page, categoryName } = Astro.props as CategoryPageProps;
+const { category } = Astro.params;
+
+const {
+  url: { prev, next },
+  currentPage,
+  lastPage,
+} = page;
+const settings = categorySettings[categoryName];
+const path = `/categories/${category}`;
+---
+
+<MainLayout title={settings.title} description={settings.description}>
+  <section class="comp taxonomysc mntl-taxonomysc">
+    <CategoryHeader
+      title={categoryName}
+      image={settings.banner}
+      description={settings.description}
+    />
+    {
+      settings.formatOptions?.postsToFilterOut && (
+        <CategoryFeatured
+          postSlugs={settings.formatOptions.postsToFilterOut}
+          sort={settings.formatOptions?.sort}
+        />
+      )
+    }
+    <CategoryBody posts={page?.data} />
+    <Pagination {prev} {next} {currentPage} {lastPage} {path} />
+  </section>
+</MainLayout>
+
+<style>
+  /* ------------- */
+  /* General       */
+  /* ------------- */
+  section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+    background: 0 0;
+  }
+
+  /* ------------- */
+  /* component     */
+  /* ------------- */
+  /* section class="comp taxonomysc mntl-taxonomysc" */
+  .taxonomysc {
+    padding: 0;
+
+    background-color: #fbf9f6;
+  }
+</style>

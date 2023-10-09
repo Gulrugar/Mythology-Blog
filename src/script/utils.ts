@@ -23,7 +23,7 @@ export type FormatBlogPostsOptions = {
   filterOutFuturePosts?: boolean;
   sort?: "new-old" | "old-new" | "random";
   limit?: number;
-  postsToFilterOut?: string[];
+  postsToFilterOut?: [string, string, string, string];
 };
 
 export function formatBlogPosts(
