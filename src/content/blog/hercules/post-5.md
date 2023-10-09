@@ -230,8 +230,11 @@ article:
     outro:
       {
         text: "Outro text",
-        next_link:
-          { text: "Next Link", link: "/posts/twelve-labors-of-hercules-5" },
+        links:
+          {
+            previousArticle: { slug: "twelve-labors-of-hercules-4" },
+            nextArticle: { slug: "creatures-fairies" },
+          },
       },
   }
 ---

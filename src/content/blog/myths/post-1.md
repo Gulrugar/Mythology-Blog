@@ -391,10 +391,11 @@ article:
     outro:
       {
         text: "In essence, Thor's use of Mjolnir was not just about defeating enemies. It was about upholding righteousness, protecting the innocent, and ensuring that power was wielded responsibly. Through his actions with Mjolnir, Thor embodied the qualities of a true hero in Norse mythology.",
-        next_link:
+
+        links:
           {
-            text: "Both Beautiful Inside and Outside",
-            link: "/posts/myths-aphrodite-venus",
+            previousArticle: { slug: "stories-knights-and-dragons" },
+            nextArticle: { slug: "myths-aphrodite-venu" },
           },
       },
   }

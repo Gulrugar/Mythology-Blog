@@ -7,7 +7,11 @@ slug: twelve-labors-of-hercules-4
 date: 2023-09-27
 draft: false
 category: ["Myths", "Hercules"]
-image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/001_fpqbhr.webp", alt: "A ferocious boar terrorizes Mount Erymanthos" }
+image:
+  {
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/001_fpqbhr.webp",
+    alt: "A ferocious boar terrorizes Mount Erymanthos",
+  }
 article:
   {
     intro:
@@ -37,7 +41,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/002_afd3c4.webp", alt: "A journey up the mountain" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/002_afd3c4.webp",
+                        alt: "A journey up the mountain",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -52,7 +60,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/003_et1trt.webp", alt: "Getting a vantage point" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/003_et1trt.webp",
+                        alt: "Getting a vantage point",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -73,7 +85,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/004_uwy0oj.webp", alt: "The boar appears" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/004_uwy0oj.webp",
+                        alt: "The boar appears",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -88,7 +104,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/005_cimbvl.webp", alt: "Hercules must capture the boar alive" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/005_cimbvl.webp",
+                        alt: "Hercules must capture the boar alive",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -109,7 +129,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/006_i22lcy.webp", alt: "The Erymanthian Boar attacks" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/006_i22lcy.webp",
+                        alt: "The Erymanthian Boar attacks",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -124,7 +148,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/007_efwyi3.webp", alt: "A battle on the slopes" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/007_efwyi3.webp",
+                        alt: "A battle on the slopes",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -145,7 +173,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/008_rtuznt.webp", alt: "Hercules captures the boar" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/008_rtuznt.webp",
+                        alt: "Hercules captures the boar",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -173,7 +205,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/009_yfghyw.webp", alt: "A special bronze amphora to contain the boar" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/009_yfghyw.webp",
+                        alt: "A special bronze amphora to contain the boar",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -188,7 +224,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/010_ghsm1b.webp", alt: "A vessel that contains a rampaging boar" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695945101/010_ghsm1b.webp",
+                        alt: "A vessel that contains a rampaging boar",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -199,7 +239,7 @@ article:
                     text: "With the Erymanthian Boar safely contained within a the amphora, King Eurystheus marveled at Hercules' accomplishment. The hero had successfully completed his fourth labor, adding yet another triumph to his growing list of legendary deeds.",
                   },
               },
-                            {
+              {
                 tag: "Paragraph",
                 params:
                   {
@@ -212,7 +252,11 @@ article:
     outro:
       {
         text: "The tale of Hercules' fourth labor, like the others, highlights the hero's resilience and valor in the face of seemingly insurmountable odds. It reminds us that redemption often requires great sacrifices and unwavering determination. As Hercules moved on to his next labor, the world watched in awe of the hero who sought to cleanse his soul through acts of heroism, one labor at a time.",
-        next_link:{ text: "Guardians", link: "/posts/creatures-fairies" },
+        links:
+          {
+            previousArticle: { slug: "twelve-labors-of-hercules-3" },
+            nextArticle: { slug: "twelve-labors-of-hercules-5" },
+          },
       },
   }
 ---

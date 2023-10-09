@@ -278,10 +278,10 @@ article:
     outro:
       {
         text: "In conclusion, the Resplendent Quetzal is not just a beautiful bird; it is a creature deeply intertwined with the mythology, history, and cultural identity of Central America. Its symbolism as a messenger between mortals and the divine, its representation of freedom, and its association with cosmic events continue to make it a captivating and revered symbol in the region. Moreover, its conservation status underscores the importance of protecting the natural world and the cultural heritage of the lands where it resides.",
-        next_link:
+        links:
           {
-            text: "The Golden Path",
-            link: "/posts/stories-walking-a-tight-rope",
+            previousArticle: { slug: "creatures-fairies" },
+            nextArticle: { slug: "stories-walking-a-tight-rope" },
           },
       },
   }

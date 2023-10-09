@@ -301,10 +301,10 @@ article:
     outro:
       {
         text: "As we draw the curtain on this exploration, it becomes evident that the entwined destinies of knights and dragons are not merely the stuff of folklore but a reflection of the enduring human spirit. These stories, whether recounting the triumph of chivalry or serving as allegorical mirrors to our inner battles, continue to inspire and remind us of the enduring ideals of bravery and honor that transcend time and place. In the ever-evolving narrative of our world, the knight and the dragon stand as archetypal figures, reminding us that even in the face of our most formidable adversaries, the indomitable spirit of the hero prevails.",
-        next_link:
+        links:
           {
-            text: "The Weight of Responsibility",
-            link: "/posts/stories-mjolnir",
+            previousArticle: { slug: "stories-walking-a-tight-rope" },
+            nextArticle: { slug: "myths-mjolnir" },
           },
       },
   }

@@ -215,10 +215,10 @@ article:
     outro:
       {
         text: "Hercules' second labor, the slaying of the Lernaean Hydra, had showcased not only his physical strength but also his intelligence and resourcefulness. It marked another step in his quest to atone for his past misdeeds and achieve immortality through heroic deeds. Yet, more trials awaited him on his path to redemption, as he continued his journey to complete the Twelve Labors.",
-        next_link:
+        links:
           {
-            text: "The Twelve Labors of Hercules III: Artemis' Golden Hind",
-            link: "/posts/twelve-labors-of-hercules-3",
+            previousArticle: { slug: "twelve-labors-of-hercules-1" },
+            nextArticle: { slug: "twelve-labors-of-hercules-3" },
           },
       },
   }

@@ -230,8 +230,11 @@ article:
     outro:
       {
         text: "Outro text",
-        next_link:
-          { text: "Next Link", link: "/posts/twelve-labors-of-hercules-7" },
+        links:
+          {
+            previousArticle: { slug: "placeholder-article" },
+            nextArticle: { slug: "placeholder-article" },
+          },
       },
   }
 ---

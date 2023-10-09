@@ -195,10 +195,10 @@ article:
     outro:
       {
         text: "Hercules' third labor had demonstrated not only his physical strength but also his ability to exercise restraint and respect for the divine. Each labor brought him closer to redemption and solidified his place among the greatest heroes of Greek mythology.",
-        next_link:
+        links:
           {
-            text: "The Twelve Labors of Hercules IV: The Erymanthian Boar",
-            link: "/posts/twelve-labors-of-hercules-4",
+            previousArticle: { slug: "twelve-labors-of-hercules-2" },
+            nextArticle: { slug: "twelve-labors-of-hercules-4" },
           },
       },
   }

@@ -282,10 +282,11 @@ article:
     outro:
       {
         text: "In the vast libraries of human folklore, fairies have woven a complex narrative of enchantment and wonder. They've donned the roles of nature's protectors, mischievous tricksters, benevolent guides, and magical beings of infinite power. From ethereal courts to mysterious abductions, fairies have blurred the lines between the human and the mystical, imparting both fascination and moral lessons. In their ever-evolving tales, fairies remind us of the enduring enchantment that weaves through the fabric of our culture and storytelling.",
-        next_link:
+
+        links:
           {
-            text: "Spirit of the Wild",
-            link: "/posts/creatures-resplendant-quetzal",
+            previousArticle: { slug: "twelve-labors-of-hercules-5" },
+            nextArticle: { slug: "creatures-resplendant-quetzal" },
           },
       },
   }

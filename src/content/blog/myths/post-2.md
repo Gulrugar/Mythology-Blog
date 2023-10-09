@@ -258,6 +258,11 @@ article:
             text: "The Twelve Labors of Hercules I: The Nemean Lion",
             link: "/posts/twelve-labors-of-hercules-1",
           },
+        links:
+          {
+            previousArticle: { slug: "myths-mjolnir" },
+            nextArticle: { slug: "twelve-labors-of-hercules-1" },
+          },
       },
   }
 ---

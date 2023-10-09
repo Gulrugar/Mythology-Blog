@@ -226,10 +226,10 @@ article:
     outro:
       {
         text: "Hercules would go on to face many more extraordinary challenges in his quest for redemption, but the tale of the Nemean Lion's defeat would forever be etched into the annals of Greek mythology, a testament to the indomitable spirit and valor of the great hero.",
-        next_link:
+        links:
           {
-            text: "The Twelve Labors of Hercules II: The Hydra's Heads",
-            link: "/posts/twelve-labors-of-hercules-2",
+            previousArticle: { slug: "myths-aphrodite-venus" },
+            nextArticle: { slug: "twelve-labors-of-hercules-2" },
           },
       },
   }

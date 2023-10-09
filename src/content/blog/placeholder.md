@@ -228,6 +228,13 @@ article:
         },
       ],
     outro:
-      { text: "Outro text", next_link: { text: "Next Article", link: "/" } },
+      {
+        text: "Outro text",
+        links:
+          {
+            previousArticle: { slug: "placeholder-article" },
+            nextArticle: { slug: "placeholder-article" },
+          },
+      },
   }
 ---

@@ -18,11 +18,11 @@ import Callout from "../../components/Article/Callout.astro";
 import RelatedLink from "../../components/Article/RelatedLink.astro";
 import Section from "../../components/Article/Section.astro";
 import ImageBlock from "../../components/Article/ImageBlock.astro";
-import UpNextLink from "../../components/Article/UpNextLink.astro";
 
 import ModalOpener from "../../components/Modal/ModalOpener.astro";
 import ImageModal from "../../components/Modal/ImageModal.astro";
 import RelatedStories from "../../components/Article/RelatedStories.astro";
+import PreviousNextLinks from "../../components/Article/PreviousNextLinks.astro";
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection("blog", ({ data }) => {
@@ -257,7 +257,7 @@ const allImages = getImages(post.data);
                 <Paragraph text={article.outro.text} />
               )
             }
-            <UpNextLink {...article.outro.next_link} />
+            <PreviousNextLinks {...article.outro.links} />
           </div>
         </div>
       </div>
