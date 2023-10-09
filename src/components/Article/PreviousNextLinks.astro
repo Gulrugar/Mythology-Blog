@@ -9,24 +9,6 @@ const nextArticleData = await getEntryBySlug("blog", nextArticle.slug);
 ---
 
 <aside class="next-previous-nav">
-  <a href={`/posts/${previousArticle.slug}`} class="ltr" rel="prev">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 448 512"
-      height="32"
-      width="32"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"
-        class="astro-thswhh5l"></path>
-    </svg>
-    <div class="copy">
-      <div class="heading">Previous Page</div>
-      <div class="name">{previousArticleData?.data.title || "Previous"}</div>
-    </div>
-  </a>
   <a href={`/posts/${nextArticle.slug}`} class="rtl" rel="next">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -42,10 +24,81 @@ const nextArticleData = await getEntryBySlug("blog", nextArticle.slug);
         class="astro-thswhh5l"></path>
     </svg>
     <div class="copy">
-      <div class="heading">Next Page</div>
+      <div class="heading">Up Next</div>
       <div class="name">{nextArticleData?.data.title || "Next"}</div>
+    </div>
+  </a>
+  <a href={`/posts/${previousArticle.slug}`} class="ltr" rel="prev">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+      height="32"
+      width="32"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"
+        class="astro-thswhh5l"></path>
+    </svg>
+    <div class="copy">
+      <div class="heading">Previous</div>
+      <div class="name">{previousArticleData?.data.title || "Previous"}</div>
     </div>
   </a>
 </aside>
 
-<style></style>
+<style>
+  /* aside class="next-previous-nav" */
+  .next-previous-nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* a class="ltr" */
+  a.ltr,
+  a.rtl {
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+    border: 1px solid rgb(var(--color-base-accent));
+    padding: 1rem 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  a.ltr {
+    text-align: start;
+  }
+  a:active,
+  a:hover {
+    color: rgba(var(--color-base-accent), 0.9);
+  }
+
+  /* svg */
+
+  /* div class="copy" */
+  .copy {
+    flex-grow: 1;
+  }
+
+  /* div class="heading" */
+
+  /* div class="name" */
+  .name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 0.2rem;
+    line-height: 1.2;
+  }
+
+  /* div class="rtl" */
+  a.rtl {
+    text-align: end;
+    flex-direction: row-reverse;
+  }
+</style>
