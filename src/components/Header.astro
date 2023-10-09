@@ -1,6 +1,7 @@
 ---
 import { settings } from "../config/settings";
 import { Icon } from "astro-icon";
+import DropDownMenu from "./DropDownMenu.astro";
 import HeaderDrawer from "./HeaderDrawer.astro";
 ---
 
@@ -21,17 +22,21 @@ import HeaderDrawer from "./HeaderDrawer.astro";
       <nav class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
           {
-            settings["navigation-menu"].links.map((navItem) => (
-              <li>
-                <a
-                  href={navItem.path}
-                  class="header-menu__item list-menu__item link link--text"
-                  data-navLink
-                >
-                  <span>{navItem.name}</span>
-                </a>
-              </li>
-            ))
+            settings["navigation-menu"].links.map((navItem) => {
+              if (navItem.name === "Myths")
+                return <DropDownMenu navItem={navItem} />;
+              return (
+                <li>
+                  <a
+                    href={navItem.path}
+                    class="header-menu__item list-menu__item link link--text"
+                    data-navLink
+                  >
+                    <span>{navItem.name}</span>
+                  </a>
+                </li>
+              );
+            })
           }
         </ul>
       </nav>
@@ -60,6 +65,9 @@ import HeaderDrawer from "./HeaderDrawer.astro";
 </div>
 
 <style>
+  /* --------------- */
+  /* Component       */
+  /* --------------- */
   /* div class="header-wrapper section-header" */
   .header-wrapper {
     display: block;

@@ -10,7 +10,7 @@ category: ["Myths"]
 image:
   {
     src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696620260/001_mvmjzt.webp",
-    alt: "Sample",
+    alt: "The Goddess Aphrodite",
   }
 imageAnchor: "top"
 article:
@@ -38,7 +38,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696620266/002_gimwyn.webp",
-                        alt: "sample",
+                        alt: "Aphrodite is born from seafoam",
                       },
                     aspectRatio: "square",
                   },
@@ -57,7 +57,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696620267/003_pzez1u.webp",
-                        alt: "sample",
+                        alt: "Aphrodite floats on a shell",
                       },
                     aspectRatio: "square",
                   },
@@ -76,7 +76,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696620267/005_pc9uig.webp",
-                        alt: "sample",
+                        alt: "The shores of Cyprus",
                       },
                     aspectRatio: "square",
                   },
@@ -108,7 +108,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696620267/006_p3qxs1.webp",
-                        alt: "sample",
+                        alt: "A walk through the flowers",
                       },
                     aspectRatio: "square",
                   },
@@ -140,7 +140,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696620267/007_yqdotk.webp",
-                        alt: "sample",
+                        alt: "Aphrodite wearing diaphanous clothing",
                       },
                     aspectRatio: "square",
                   },
@@ -159,7 +159,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696620267/008_cirg1w.webp",
-                        alt: "sample",
+                        alt: "The beautiful island of Cyprus",
                       },
                     aspectRatio: "square",
                   },
@@ -184,7 +184,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696620267/009_e8putq.webp",
-                        alt: "sample",
+                        alt: "The Sanctuary of Aphrodite",
                       },
                     aspectRatio: "square",
                   },
@@ -216,7 +216,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696620267/010_qozadk.webp",
-                        alt: "sample",
+                        alt: "Union of sea and sky",
                       },
                     aspectRatio: "square",
                   },
@@ -235,7 +235,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696620267/011_scbj4o.webp",
-                        alt: "sample",
+                        alt: "The birthplace of love",
                       },
                     aspectRatio: "square",
                   },
