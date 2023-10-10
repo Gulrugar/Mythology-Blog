@@ -36,14 +36,18 @@ const { navItem } = Astro.props as Props;
   /* li class="dropdown" */
   .dropdown {
     position: relative;
+    margin-right: 0.25rem;
   }
 
   /* ::after */
-  /* .dropdown:after {
+  .dropdown:after {
     position: absolute;
     right: 0;
-    top: 25%;
-    content: ">";
+    top: 35%;
+    content: "v";
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 0.75rem;
     line-height: 1;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
@@ -57,7 +61,7 @@ const { navItem } = Astro.props as Props;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
-  } */
+  }
   /* a class="header-menu__item list-menu__item link link--text" */
   .header-menu__item {
     padding: 0.75rem;
