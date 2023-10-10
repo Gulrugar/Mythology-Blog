@@ -22,9 +22,13 @@ const { navItem } = Astro.props as Props;
     <span>{navItem.name}</span>
   </a>
   <ul class="dropdown-menu menu-item-wrap menu-item-col-5">
-    <li class="menu-item">
-      <a href="/">Hercules</a>
-    </li>
+    {
+      navItem.links.map((link) => (
+        <li class="menu-item">
+          <a href={link.path}>{link.name}</a>
+        </li>
+      ))
+    }
   </ul>
 </li>
 
@@ -157,13 +161,8 @@ const { navItem } = Astro.props as Props;
   /* li class="menu-item" */
   .menu-item-wrap > li {
     display: inline-block;
-    width: 240px;
     vertical-align: top;
     text-align: left;
-  }
-
-  .menu-item-col-5 > li {
-    width: 19.99%;
   }
 
   /* a */

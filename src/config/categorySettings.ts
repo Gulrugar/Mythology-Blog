@@ -13,7 +13,7 @@ export const categorySettings: CategorySettingsType = {
     title: "Symbols - Category",
     description:
       "A treasure trove of ancient and mystical emblems that have played a significant role in mythological narratives throughout history. Here, we delve into the profound meanings and cultural significance behind these symbols, unlocking the hidden stories and wisdom they carry. From the iconic trident of Poseidon to the enigmatic Eye of Horus, we explore symbols that have shaped cultures, beliefs, and legends across the ages.",
-    banner: "/images/stories-banner.webp",
+    banner: "/images/symbols-banner.webp",
     formatOptions: {},
   },
   Stories: {

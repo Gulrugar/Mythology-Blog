@@ -23,7 +23,7 @@ import HeaderDrawer from "./HeaderDrawer.astro";
         <ul class="list-menu list-menu--inline" role="list">
           {
             settings["navigation-menu"].links.map((navItem) => {
-              if (navItem.name === "Myths")
+              if (navItem.links.length > 0)
                 return <DropDownMenu navItem={navItem} />;
               return (
                 <li>

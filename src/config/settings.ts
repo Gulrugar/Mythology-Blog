@@ -37,7 +37,12 @@ export const settings: Settings = {
       {
         name: "Myths",
         path: "/categories/myths",
-        links: [],
+        links: [
+          {
+            name: "Hercules",
+            path: "/categories/hercules",
+          },
+        ],
       },
       {
         name: "Stories",
