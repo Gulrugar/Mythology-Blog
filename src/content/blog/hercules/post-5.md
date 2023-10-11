@@ -7,8 +7,12 @@ slug: twelve-labors-of-hercules-5
 date: 2023-10-10
 draft: false
 category: ["Myths", "Hercules"]
-image: { src: "/images/sample.png", alt: "sample" }
-imageAnchor: "center"
+image:
+  {
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981830/001_zlkaox.webp",
+    alt: "Water & Stone",
+  }
+imageAnchor: "top"
 article:
   {
     intro:
@@ -38,7 +42,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981830/002_uza74f.webp",
+                        alt: "A meeting with King Augeas",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -66,7 +74,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981830/003_z0ianj.webp",
+                        alt: "The king's offer",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -75,6 +87,18 @@ article:
                 params:
                   {
                     text: "Before Hercules embarked on the colossal task of cleaning the Augean Stables, King Augeas, recognizing the monumental challenge, made a solemn promise to the hero. In a gesture of gratitude and fairness, he pledged that if Hercules could successfully cleanse the stables, he would receive one-tenth of the immense cattle herd as a well-earned reward.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981830/004_bnpura.webp",
+                        alt: "A prize of cattle",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -101,7 +125,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981830/005_vldejq.webp",
+                        alt: "Overlooking the river",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -113,10 +141,53 @@ article:
                   },
               },
               {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981830/006_ydv5es.webp",
+                        alt: "The river flows fiercely",
+                      },
+                    aspectRatio: "square",
+                  },
+              },
+              {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "A brilliant idea took shape in his mind. With unwavering determination, he redirected the course of these rivers, channeling their mighty currents through the stables. The forceful flow of water proved to be the perfect cleansing agent, swiftly sweeping away the years of accumulated filth. In a single day, the stables were transformed from a cesspool of dirt to a pristine haven.",
+                    text: "A brilliant idea took shape in his mind. With unwavering determination, he redirected the course of these rivers, channeling their mighty currents through the stables.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981830/007_xbyw4w.webp",
+                        alt: "A battle with the elements",
+                      },
+                    aspectRatio: "square",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981830/008_qkqeej.webp",
+                        alt: "Diverting the rivers",
+                      },
+                    aspectRatio: "square",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "The forceful flow of water proved to be the perfect cleansing agent, swiftly sweeping away the years of accumulated filth. In a single day, the stables were transformed from a cesspool of dirt to a pristine haven.",
                   },
               },
             ],
@@ -129,7 +200,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981831/009_ggq6go.webp",
+                        alt: "Water flows into the Augean stables",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -138,6 +213,30 @@ article:
                 params:
                   {
                     text: "Witnessing the miraculous transformation, King Augeas stood awestruck before the cleaned stables. The impossible had been achieved, and Hercules had once again demonstrated not only his physical might but also his ability to devise ingenious solutions to seemingly insurmountable problems.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981831/010_gsbiqn.webp",
+                        alt: "The mess is cleaned away",
+                      },
+                    aspectRatio: "square",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981831/011_zmwxxp.webp",
+                        alt: "Gratitude and a promise fulfilled",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -157,7 +256,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981831/012_ceq1rd.webp",
+                        alt: "King Eurystheus discredis the labor",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -169,10 +272,22 @@ article:
                   },
               },
               {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1696981831/013_ew6hbk.webp",
+                        alt: "The conviction of Hercules",
+                      },
+                    aspectRatio: "square",
+                  },
+              },
+              {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "However, Hercules, undeterred by Eurystheus' reluctance, stood firm in his conviction. He had successfully completed the seemingly impossible task and secured his well-deserved reward, showcasing his unwavering resolve and determination in the face of adversity",
+                    text: "However, Hercules, undeterred by Eurystheus' reluctance, stood firm in his conviction. He had successfully completed the seemingly impossible task and secured his well-deserved reward, showcasing his unwavering resolve and determination in the face of adversity.",
                   },
               },
             ],
