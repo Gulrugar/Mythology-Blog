@@ -304,7 +304,7 @@ article:
         links:
           {
             previousArticle: { slug: "stories-walking-a-tight-rope" },
-            nextArticle: { slug: "myths-mjolnir" },
+            nextArticle: { slug: "stories-a-ghost-in-the-ice" },
           },
       },
   }

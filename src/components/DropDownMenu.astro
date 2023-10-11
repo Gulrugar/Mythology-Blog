@@ -42,11 +42,9 @@ const { navItem } = Astro.props as Props;
   /* ::after */
   .dropdown:after {
     position: absolute;
-    right: 0;
+    right: -0.25rem;
     top: 35%;
-    content: "v";
-    font-family: monospace;
-    font-weight: bold;
+    content: "▼";
     font-size: 0.75rem;
     line-height: 1;
     transition: -webkit-transform 0.3s;
@@ -61,6 +59,7 @@ const { navItem } = Astro.props as Props;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
+    opacity: 1;
   }
   /* a class="header-menu__item list-menu__item link link--text" */
   .header-menu__item {

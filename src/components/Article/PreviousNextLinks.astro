@@ -27,7 +27,10 @@ const nextArticleData = await getEntryBySlug("blog", nextSlug);
     </svg>
     <div class="copy">
       <div class="heading">Up Next</div>
-      <div class="name">{nextArticleData?.data.title || "Next"}</div>
+      <div class="name">
+        &quot;{nextArticleData?.data.title || "Next"}&quot;
+      </div>
+      <div class="subtitle">{nextArticleData?.data.subtitle || ""}</div>
     </div>
   </a>
   <a href={`/posts/${previousSlug}`} class="ltr" rel="prev">
@@ -45,7 +48,10 @@ const nextArticleData = await getEntryBySlug("blog", nextSlug);
     </svg>
     <div class="copy">
       <div class="heading">Previous</div>
-      <div class="name">{previousArticleData?.data.title || "Previous"}</div>
+      <div class="name">
+        &quot;{previousArticleData?.data.title || "Previous"}&quot;
+      </div>
+      <div class="subtitle">{previousArticleData?.data.subtitle || ""}</div>
     </div>
   </a>
 </aside>
@@ -83,7 +89,8 @@ const nextArticleData = await getEntryBySlug("blog", nextSlug);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   }
 
-  a:hover .name {
+  a:hover .name,
+  a:hover .subtitle {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
@@ -105,6 +112,15 @@ const nextArticleData = await getEntryBySlug("blog", nextSlug);
   /* div class="name" */
   .name {
     font-size: 1.15rem;
+    font-weight: 400;
+    margin-top: 0.2rem;
+    line-height: 1.2;
+    font-style: italic;
+  }
+
+  /* div class="subtitle" */
+  .subtitle {
+    font-size: 1rem;
     font-weight: 400;
     margin-top: 0.2rem;
     line-height: 1.2;

@@ -1,12 +1,12 @@
 ---
-title: Article Title
+title: Gold Foil and Black Rust
 subtitle: subtitle
 description: this is the description
 author: Andrew Aguirre
-slug: placeholder-article
-date: 2023-07-28T12:00:01
+slug: stories-gold-foil-and-black-rust
+date: 2023-10-12
 draft: false
-category: ["Myths"]
+category: ["Stories"]
 image: { src: "/images/sample.png", alt: "Sample" }
 article:
   {
@@ -232,8 +232,8 @@ article:
         text: "Outro text",
         links:
           {
-            previousArticle: { slug: "placeholder-article" },
-            nextArticle: { slug: "placeholder-article" },
+            previousArticle: { slug: "stories-a-ghost-in-the-ice" },
+            nextArticle: { slug: "myths-mjolnir" },
           },
       },
   }
