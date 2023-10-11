@@ -1,6 +1,6 @@
 ---
 title: "The Fifth Labor: Cleaning the Augean Stables"
-subtitle: "Hercules' Herculean Task"
+subtitle: "A Battle with the Elements"
 description: "Hercules was tasked with cleaning the Augean stables, a seemingly impossible job due to the years of neglect and the vast accumulation of filth. Undeterred, Hercules devised a plan that showcased not only his incredible strength but also his cleverness and resourcefulness."
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-5
