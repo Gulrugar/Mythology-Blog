@@ -317,7 +317,7 @@ article:
         links:
           {
             previousArticle: { slug: "stories-knights-and-dragons" },
-            nextArticle: { slug: "myths-mjolnir" },
+            nextArticle: { slug: "stories-gold-foil-and-iron-rust" },
           },
       },
   }
