@@ -299,7 +299,7 @@ article:
         links:
           {
             previousArticle: { slug: "twelve-labors-of-hercules-4" },
-            nextArticle: { slug: "creatures-fairies" },
+            nextArticle: { slug: "twelve-labors-of-hercules-5" },
           },
       },
   }

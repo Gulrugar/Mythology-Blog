@@ -10,7 +10,7 @@ category: ["Stories"]
 image:
   {
     src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141948/001_duzcw8.webp",
-    alt: "Sample",
+    alt: "Praying for meaning",
   }
 article:
   {
@@ -44,7 +44,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141947/002_razslk.webp",
-                        alt: "sample",
+                        alt: "Pursued by knights",
                       },
                     aspectRatio: "square",
                   },
@@ -63,7 +63,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141947/003_ufalm2.webp",
-                        alt: "sample",
+                        alt: "Slowed down by water",
                       },
                     aspectRatio: "square",
                   },
@@ -88,7 +88,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141948/004_apj5gl.webp",
-                        alt: "sample",
+                        alt: "Forged in a crucible",
                       },
                     aspectRatio: "square",
                   },
@@ -107,7 +107,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141948/005_mixzzs.webp",
-                        alt: "sample",
+                        alt: "Power through suffering",
                       },
                     aspectRatio: "square",
                   },
@@ -132,7 +132,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141947/006_cgorgh.webp",
-                        alt: "sample",
+                        alt: "Beast or man?",
                       },
                     aspectRatio: "square",
                   },
@@ -151,7 +151,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141948/007_t2cksk.webp",
-                        alt: "sample",
+                        alt: "Soldier",
                       },
                     aspectRatio: "square",
                   },
@@ -176,7 +176,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141948/008_rosujt.webp",
-                        alt: "sample",
+                        alt: "Metal plates",
                       },
                     aspectRatio: "square",
                   },
@@ -195,7 +195,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141947/009_a2cbb9.webp",
-                        alt: "sample",
+                        alt: "Armored on the inside",
                       },
                     aspectRatio: "square",
                   },
@@ -220,7 +220,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141947/010_fadewr.webp",
-                        alt: "sample",
+                        alt: "The chains of morality",
                       },
                     aspectRatio: "square",
                   },
@@ -239,7 +239,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141947/011_pnc6mn.webp",
-                        alt: "sample",
+                        alt: "Discipline",
                       },
                     aspectRatio: "square",
                   },
@@ -264,7 +264,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141948/012_axnx92.webp",
-                        alt: "sample",
+                        alt: "Clean and polished",
                       },
                     aspectRatio: "square",
                   },
@@ -283,7 +283,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697141948/013_ovltrc.webp",
-                        alt: "sample",
+                        alt: "Hero",
                       },
                     aspectRatio: "square",
                   },
