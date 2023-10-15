@@ -1,12 +1,12 @@
 ---
-title: Article Title
-subtitle: subtitle
+title: Vampires
+subtitle: We who see man as cattle? The eternals?
 description: this is the description
 author: Andrew Aguirre
-slug: placeholder-article
+slug: placeholder-article-2
 date: 2023-07-28T12:00:01
-draft: false
-category: ["Myths"]
+draft: true
+category: ["Stories"]
 image: { src: "/images/sample.png", alt: "Sample" }
 article:
   {
@@ -43,18 +43,18 @@ article:
                   },
               },
               {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-              {
                 tag: "ImageBlock",
                 params:
                   {
                     image: { src: "/images/sample.png", alt: "sample" },
                     aspectRatio: "square",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
@@ -288,8 +288,8 @@ article:
         text: "Outro text",
         links:
           {
-            previousArticle: { slug: "placeholder-article" },
-            nextArticle: { slug: "placeholder-article" },
+            previousArticle: { slug: "creatures-resplendant-quetzal" },
+            nextArticle: { slug: "stories-walking-a-tight-rope" },
           },
       },
   }

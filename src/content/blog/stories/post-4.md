@@ -304,7 +304,7 @@ article:
         links:
           {
             previousArticle: { slug: "stories-a-ghost-in-the-ice" },
-            nextArticle: { slug: "myths-mjolnir" },
+            nextArticle: { slug: "stories-the-scientist" },
           },
       },
   }

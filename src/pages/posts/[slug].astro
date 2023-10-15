@@ -1,8 +1,8 @@
 ---
 import "../../styles/blog-styles.css";
 import MainLayout from "../../layouts/MainLayout.astro";
-import { type CollectionEntry, getCollection } from "astro:content";
-
+import { getCollection } from "astro:content";
+import type { InferGetStaticPropsType } from "astro";
 import {
   formatDate,
   slugify,
@@ -37,11 +37,9 @@ export async function getStaticPaths() {
   }));
 }
 
-type Props = {
-  post: CollectionEntry<"blog">;
-};
+type PostPageProps = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const { post } = Astro.props as Props;
+const { post } = Astro.props as PostPageProps;
 const { title, subtitle, description, author, category, date, image, article } =
   post.data;
 
