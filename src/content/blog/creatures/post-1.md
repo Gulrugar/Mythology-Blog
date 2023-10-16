@@ -6,7 +6,7 @@ author: Andrew Aguirre
 slug: creatures-fairies
 date: 2023-09-20
 draft: false
-category: ["Stories"]
+category: ["Creatures"]
 image:
   {
     src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695239776/011_wzbfxk.webp",

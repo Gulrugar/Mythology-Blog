@@ -45,6 +45,11 @@ export const settings: Settings = {
         ],
       },
       {
+        name: "Creatures",
+        path: "/categories/creatures",
+        links: [],
+      },
+      {
         name: "Stories",
         path: "/categories/stories",
         links: [],

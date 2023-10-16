@@ -6,7 +6,7 @@ author: Andrew Aguirre
 slug: creatures-resplendant-quetzal
 date: 2023-09-24
 draft: false
-category: ["Stories"]
+category: ["Creatures"]
 image:
   {
     src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1695599873/001_ekem2f.webp",
@@ -281,7 +281,7 @@ article:
         links:
           {
             previousArticle: { slug: "creatures-fairies" },
-            nextArticle: { slug: "stories-walking-a-tight-rope" },
+            nextArticle: { slug: "creatures-vampires" },
           },
       },
   }
