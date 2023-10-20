@@ -66,8 +66,8 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -94,8 +94,8 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -122,8 +122,8 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -150,8 +150,8 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -178,8 +178,8 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -206,8 +206,8 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {

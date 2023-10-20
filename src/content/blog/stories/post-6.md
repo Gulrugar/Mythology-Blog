@@ -1,13 +1,13 @@
 ---
-title: "The Eighth Labor: Diomedes' Man-Eating Mares"
-subtitle: "Hercules' Daring Theft"
+title: Bounty Hunter
+subtitle: subtitle
 description: this is the description
 author: Andrew Aguirre
-slug: twelve-labors-of-hercules-8
-date: 2023-09-08T12:00:05
+slug: stories-bounty-hunter
+date: 2023-10-20T12:00:01
 draft: true
-category: ["Myths", "Hercules"]
-image: { src: "/images/sample.png", alt: "sample" }
+category: ["Stories"]
+image: { src: "/images/sample.png", alt: "Sample" }
 article:
   {
     intro:
@@ -16,17 +16,16 @@ article:
           tag: "Paragraph",
           params:
             {
-              text: "Hercules, the renowned hero of Greek mythology, embarked on a remarkable journey to complete the Twelve Labors as an act of penance for a grave and tragic crime he had committed. Driven by remorse and seeking redemption, Hercules was tasked with these seemingly insurmountable challenges by King Eurystheus.",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             },
         },
         {
           tag: "Paragraph",
           params:
             {
-              text: "These labors were intended to humble and test the hero's strength, courage, and resolve, as well as to atone for his past actions. Each labor presented a formidable adversary or task, ranging from ferocious beasts to treacherous quests, and together they forged the legend of Hercules, a symbol of resilience and heroism in the face of adversity.",
+              text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             },
         },
-        { tag: "RelatedLink", params: { text: "Related Article", link: "/" } },
       ],
     content:
       [
@@ -50,59 +49,11 @@ article:
                   },
               },
               {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-            ],
-        },
-        {
-          title: "Section Title",
-          data:
-            [
-              {
                 tag: "ImageBlock",
                 params:
                   {
                     image: { src: "/images/sample.png", alt: "sample" },
                     aspectRatio: "square",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-            ],
-        },
-        {
-          title: "Section Title",
-          data:
-            [
-              {
-                tag: "ImageBlock",
-                params:
-                  {
-                    image: { src: "/images/sample.png", alt: "sample" },
-                    aspectRatio: "square",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                   },
               },
               {
@@ -134,6 +85,14 @@ article:
                   },
               },
               {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
+                  },
+              },
+              {
                 tag: "Paragraph",
                 params:
                   {
@@ -162,6 +121,14 @@ article:
                   },
               },
               {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
+                  },
+              },
+              {
                 tag: "Paragraph",
                 params:
                   {
@@ -190,6 +157,14 @@ article:
                   },
               },
               {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
+                  },
+              },
+              {
                 tag: "Paragraph",
                 params:
                   {
@@ -215,6 +190,86 @@ article:
                 params:
                   {
                     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+            ],
+        },
+        {
+          title: "Section Title",
+          data:
+            [
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+            ],
+        },
+        {
+          title: "Section Title",
+          data:
+            [
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -232,8 +287,8 @@ article:
         text: "Outro text",
         links:
           {
-            previousArticle: { slug: "placeholder-article" },
-            nextArticle: { slug: "placeholder-article" },
+            previousArticle: { slug: "stories-the-scientist" },
+            nextArticle: { slug: "myths-mjolnir" },
           },
       },
   }

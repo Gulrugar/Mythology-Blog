@@ -1,11 +1,11 @@
 ---
 title: "The Seventh Labor: The Cretan Bull"
 subtitle: "Capturing the Rampaging Beast"
-description: this is the description
+description: "In the ancient lands of Greece, where gods played games with the lives of mortals and heroes arose to face challenges beyond human imagination, Hercules embarked on twelve epic labors. Among these challenges, the capture of the Cretan Bull stands as a testament to his guile, strength, and perseverance. This is the tale of his seventh labor, a venture fraught with danger and a challenge even for a demigod."
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-7
-date: 2023-09-08T12:00:06
-draft: true
+date: 2023-10-18
+draft: false
 category: ["Myths", "Hercules"]
 image: { src: "/images/sample.png", alt: "sample" }
 article:
@@ -16,22 +16,21 @@ article:
           tag: "Paragraph",
           params:
             {
-              text: "Hercules, the renowned hero of Greek mythology, embarked on a remarkable journey to complete the Twelve Labors as an act of penance for a grave and tragic crime he had committed. Driven by remorse and seeking redemption, Hercules was tasked with these seemingly insurmountable challenges by King Eurystheus.",
+              text: "The Twelve Labors of Hercules, a series of tasks assigned to the legendary Greek hero to atone for his past misdeeds, are tales of endurance, wit, and unparalleled strength. By the time Hercules approached his seventh challenge, he had already faced and conquered monstrous beasts, fetched golden prizes, and cleansed vast stables.",
             },
         },
         {
           tag: "Paragraph",
           params:
             {
-              text: "These labors were intended to humble and test the hero's strength, courage, and resolve, as well as to atone for his past actions. Each labor presented a formidable adversary or task, ranging from ferocious beasts to treacherous quests, and together they forged the legend of Hercules, a symbol of resilience and heroism in the face of adversity.",
+              text: "Yet, his journey was far from over. For his seventh labor, Hercules was dispatched to the island of Crete, where a divinely-sent bull was causing chaos. The Cretan Bull was no ordinary beast; it was a creature of heavenly descent with an earthly fury. Hercules' task was to capture it and bring it to King Eurystheus.",
             },
         },
-        { tag: "RelatedLink", params: { text: "Related Article", link: "/" } },
       ],
     content:
       [
         {
-          title: "Section Title",
+          title: "The Divine Decree",
           data:
             [
               {
@@ -46,182 +45,154 @@ article:
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "King Eurystheus, determined to test Hercules' mettle, set forth another challenge for him, this time involving the infamous Cretan Bull. The Bull was terrorizing the island of Crete, having been set loose by Poseidon after a dispute with the Cretan King, Minos.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Eurystheus instructed Hercules to capture this bull alive and bring it back to him. This was no ordinary bull; it was a divine creature with immense strength and a fiery temperament, presenting a challenge even for Hercules.",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Using the information given to him by the locals about the bull's whereabouts, Hercules began his hunt. The land bore marks of the bull's wrath, with upturned fields and broken fences. The sheer magnitude of the destruction made Hercules realize that this task would indeed be a test of his strength, strategy, and patience.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "The Cretan Consultation",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Upon reaching Crete, Hercules first sought the permission of King Minos to capture the bull. Minos, who had long suffered from the bull's destruction, readily agreed, hoping to be rid of the creature's menace. The king, however, warned Hercules of the bull's fierce nature and unpredictable behavior, emphasizing the need for caution.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "Clash by the Coast",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "One morning, while traversing a coastal cliff, Hercules finally spotted the bull, grazing by the shoreline, its massive form dwarfing everything around it. Hercules decided to approach quietly, hoping to take the creature by surprise. However, as he neared, the bull sensed his presence and turned to face him, its eyes blazing and nostrils flaring.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "The confrontation was intense. Every time Hercules tried to approach the bull, it charged with full might, its hooves pounding the ground and its roars echoing across the landscape. Hercules had to use all his agility and strength to dodge the beast's charges, waiting for the opportune moment to subdue it.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "Stratagem in the Grove",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Realizing that a direct confrontation might prove fatal, Hercules devised a plan. He led the bull towards a dense grove of trees, where its movements would be somewhat restricted. Using the trees as shields, he began to wear the beast down, dodging its charges and tiring it out.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "After what seemed like hours, a visibly exhausted bull paused for a moment, its heavy breathing echoing in the stillness. Seizing the moment, Hercules rushed forward, grabbing the bull by its horns. Using all his might, he wrestled the creature to the ground, tying its legs securely to ensure it could not escape.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "The Marathon to Mycenae",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "With the bull securely bound, Hercules began the arduous task of transporting it back to Mycenae. He decided against using a ship, fearing the creature might break free during the voyage. Instead, he chose to walk, leading the bull by a strong rope. The journey was fraught with challenges, as the bull, though subdued, was still a force to be reckoned with.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "However, Hercules' determination and strength saw him through. He skillfully navigated the landscape, avoiding populous areas to prevent any damage or harm. The tales of Hercules leading the monstrous bull on foot became legendary, a testament to his unmatched prowess.",
                   },
               },
             ],
         },
         {
-          title: "Section Title",
+          title: "Triumph and Release",
           data:
             [
               {
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
+                    image: { src: "/images/sample.png", alt: "sample" },
+                    aspectRatio: "square",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Upon reaching Mycenae, Hercules presented the Cretan Bull to King Eurystheus. The king, always wary of Hercules' successes, was taken aback by the feat. However, he had no intention of keeping the dangerous creature. After showing it off as a testament to Hercules' latest accomplishment, Eurystheus ordered the bull to be released.",
                   },
               },
               {
                 tag: "Paragraph",
                 params:
                   {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-            ],
-        },
-        {
-          title: "Section Title",
-          data:
-            [
-              {
-                tag: "ImageBlock",
-                params:
-                  {
-                    image: { src: "/images/sample-2-3.png", alt: "sample" },
-                    aspectRatio: "portrait",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                  },
-              },
-              {
-                tag: "Paragraph",
-                params:
-                  {
-                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: "Hercules had once again succeeded in his labor, proving his worthiness and further cementing his legacy as a hero of unmatched strength and courage. The bull, free from its bonds, eventually found its way to the plains of Marathon, where it continued to live until it was later captured by another hero, Theseus.",
                   },
               },
             ],
@@ -229,11 +200,11 @@ article:
       ],
     outro:
       {
-        text: "Outro text",
+        text: "And so, amidst a pantheon of challenges, Hercules' capture of the Cretan Bull remains an emblem of human tenacity against divine challenges. His journey, both perilous and enlightening, reminds us of the indomitable spirit that lies within, capable of conquering even the mightiest of beasts. In the annals of Greek mythology, this labor is but a chapter, yet it stands as a beacon, illuminating the essence of heroism and endurance.",
         links:
           {
-            previousArticle: { slug: "placeholder-article" },
-            nextArticle: { slug: "placeholder-article" },
+            previousArticle: { slug: "twelve-labors-of-hercules-6" },
+            nextArticle: { slug: "creatures-fairies" },
           },
       },
   }
