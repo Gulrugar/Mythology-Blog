@@ -7,7 +7,11 @@ slug: twelve-labors-of-hercules-7
 date: 2023-10-18
 draft: false
 category: ["Myths", "Hercules"]
-image: { src: "/images/sample.png", alt: "sample" }
+image:
+  {
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834811/001_tvwwrx.webp",
+    alt: "The devine play",
+  }
 article:
   {
     intro:
@@ -37,7 +41,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834818/002_fepic9.webp",
+                        alt: "Adventure",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -49,6 +57,18 @@ article:
                   },
               },
               {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834818/003_j9fwid.webp",
+                        alt: "Land of danger",
+                      },
+                    aspectRatio: "square",
+                  },
+              },
+              {
                 tag: "Paragraph",
                 params:
                   {
@@ -56,10 +76,15 @@ article:
                   },
               },
               {
-                tag: "Paragraph",
+                tag: "ImageBlock",
                 params:
                   {
-                    text: "Using the information given to him by the locals about the bull's whereabouts, Hercules began his hunt. The land bore marks of the bull's wrath, with upturned fields and broken fences. The sheer magnitude of the destruction made Hercules realize that this task would indeed be a test of his strength, strategy, and patience.",
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834818/004_u0ng8n.webp",
+                        alt: "Poseidon, God of the Sea",
+                      },
+                    aspectRatio: "square",
                   },
               },
             ],
@@ -72,7 +97,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834818/005_mbvmk3.webp",
+                        alt: "Hercules and King Minos",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -81,6 +110,25 @@ article:
                 params:
                   {
                     text: "Upon reaching Crete, Hercules first sought the permission of King Minos to capture the bull. Minos, who had long suffered from the bull's destruction, readily agreed, hoping to be rid of the creature's menace. The king, however, warned Hercules of the bull's fierce nature and unpredictable behavior, emphasizing the need for caution.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834818/006_psfi0l.webp",
+                        alt: "Rampaging Bull",
+                      },
+                    aspectRatio: "square",
+                  },
+              },
+              {
+                tag: "Paragraph",
+                params:
+                  {
+                    text: "Using the information given to him by the locals about the bull's whereabouts, Hercules began his hunt. The land bore marks of the bull's wrath, with upturned fields and broken fences. The sheer magnitude of the destruction made Hercules realize that this task would indeed be a test of his strength, strategy, and patience.",
                   },
               },
             ],
@@ -93,7 +141,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834818/007_dy5jgt.webp",
+                        alt: "Searching with caution",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -102,6 +154,18 @@ article:
                 params:
                   {
                     text: "One morning, while traversing a coastal cliff, Hercules finally spotted the bull, grazing by the shoreline, its massive form dwarfing everything around it. Hercules decided to approach quietly, hoping to take the creature by surprise. However, as he neared, the bull sensed his presence and turned to face him, its eyes blazing and nostrils flaring.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834819/008_svmapz.webp",
+                        alt: "Unrelenting charge",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -121,7 +185,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834819/009_gl5guk.webp",
+                        alt: "Blind rage",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -133,10 +201,34 @@ article:
                   },
               },
               {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834819/010_qn3kbk.webp",
+                        alt: "A hero's courage",
+                      },
+                    aspectRatio: "square",
+                  },
+              },
+              {
                 tag: "Paragraph",
                 params:
                   {
                     text: "After what seemed like hours, a visibly exhausted bull paused for a moment, its heavy breathing echoing in the stillness. Seizing the moment, Hercules rushed forward, grabbing the bull by its horns. Using all his might, he wrestled the creature to the ground, tying its legs securely to ensure it could not escape.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834819/011_wazbon.webp",
+                        alt: "Burnt out",
+                      },
+                    aspectRatio: "square",
                   },
               },
             ],
@@ -149,7 +241,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834819/012_bgwxpv.webp",
+                        alt: "A walk back across the sea",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -158,6 +254,18 @@ article:
                 params:
                   {
                     text: "With the bull securely bound, Hercules began the arduous task of transporting it back to Mycenae. He decided against using a ship, fearing the creature might break free during the voyage. Instead, he chose to walk, leading the bull by a strong rope. The journey was fraught with challenges, as the bull, though subdued, was still a force to be reckoned with.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834819/013_ylqnwq.webp",
+                        alt: "Subdued",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {
@@ -177,7 +285,11 @@ article:
                 tag: "ImageBlock",
                 params:
                   {
-                    image: { src: "/images/sample.png", alt: "sample" },
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834819/014_zv0ioz.webp",
+                        alt: "The only thing rage respects",
+                      },
                     aspectRatio: "square",
                   },
               },
@@ -186,6 +298,18 @@ article:
                 params:
                   {
                     text: "Upon reaching Mycenae, Hercules presented the Cretan Bull to King Eurystheus. The king, always wary of Hercules' successes, was taken aback by the feat. However, he had no intention of keeping the dangerous creature. After showing it off as a testament to Hercules' latest accomplishment, Eurystheus ordered the bull to be released.",
+                  },
+              },
+              {
+                tag: "ImageBlock",
+                params:
+                  {
+                    image:
+                      {
+                        src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1697834819/015_c5ky6p.webp",
+                        alt: "Bullying the bully",
+                      },
+                    aspectRatio: "square",
                   },
               },
               {

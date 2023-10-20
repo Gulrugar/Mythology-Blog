@@ -13,7 +13,10 @@
     "@astrojs/mdx": "^0.19.7",
     "@astrojs/partytown": "^1.2.3",
     "@astrojs/sitemap": "^2.0.1",
-    "astro": "^3.0.6",
+    "astro": "^3.3.2",
     "astro-icon": "^0.8.1"
+  },
+  "devDependencies": {
+    "@babel/traverse": "^7.23.2"
   }
 }
