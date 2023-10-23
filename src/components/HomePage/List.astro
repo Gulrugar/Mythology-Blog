@@ -55,9 +55,7 @@ while (formattedBlogPosts.length < 4) {
               </span>
               <div
                 class="card__byline mntl-card__byline"
-                data-byline={`By ${article.data.author} • ${formatDate(
-                  article.data.date
-                )}`}
+                data-byline={article.data.subtitle}
               />
             </div>
           </a>

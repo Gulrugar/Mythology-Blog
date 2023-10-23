@@ -1,6 +1,6 @@
 ---
 title: Bounty Hunter
-subtitle: The Moral Gray Area
+subtitle: Fortune Favors the Bold
 description: "Bounty hunters in the American Old West were crucial figures in maintaining law and order during a time of limited law enforcement. Operating in a legal gray area, they pursued a variety of criminals for financial and personal motivations."
 author: Andrew Aguirre
 slug: stories-bounty-hunter

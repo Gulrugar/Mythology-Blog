@@ -72,7 +72,7 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
               </span>
               <div
                 class="card__byline mntl-card__byline"
-                data-byline={`By ${article.data.author}`}
+                data-byline={article.data.subtitle}
               />
             </div>
           </a>
@@ -107,7 +107,7 @@ const sidebarArticles = formattedBlogPosts.slice(1, 5);
         </span>
         <div
           class="card__byline mntl-card__byline"
-          data-byline={`By ${featuredArticle.data.author}`}
+          data-byline={featuredArticle.data.subtitle}
         >
         </div>
       </div>
