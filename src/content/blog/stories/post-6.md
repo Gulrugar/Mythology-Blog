@@ -10,7 +10,7 @@ category: ["Stories"]
 image:
   {
     src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025562/001_zys5ia.webp",
-    alt: "Sample",
+    alt: "A leather strap and a shot of whiskey",
   }
 article:
   {
@@ -44,7 +44,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025562/002_sa2tgu.webp",
-                        alt: "sample",
+                        alt: "Funny looks",
                       },
                     aspectRatio: "square",
                   },
@@ -63,7 +63,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025562/003_hslace.webp",
-                        alt: "sample",
+                        alt: "One for the road",
                       },
                     aspectRatio: "square",
                   },
@@ -88,7 +88,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025562/004_fu3tuj.webp",
-                        alt: "sample",
+                        alt: "Off the clock",
                       },
                     aspectRatio: "square",
                   },
@@ -107,7 +107,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025562/005_tjohyy.webp",
-                        alt: "sample",
+                        alt: "Consider the danger. Consider the difficulty",
                       },
                     aspectRatio: "square",
                   },
@@ -132,7 +132,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025562/006_x8mswh.webp",
-                        alt: "sample",
+                        alt: "Specialist",
                       },
                     aspectRatio: "square",
                   },
@@ -151,7 +151,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025563/007_n36ooy.webp",
-                        alt: "sample",
+                        alt: "I'm gonna need a bigger gun",
                       },
                     aspectRatio: "square",
                   },
@@ -176,7 +176,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025562/009_wieici.webp",
-                        alt: "sample",
+                        alt: "Hot pursuit",
                       },
                     aspectRatio: "square",
                   },
@@ -195,7 +195,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025562/008_e4f1gf.webp",
-                        alt: "sample",
+                        alt: "Fight or flight",
                       },
                     aspectRatio: "square",
                   },
@@ -220,7 +220,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025563/010_m2k7ns.webp",
-                        alt: "sample",
+                        alt: "Draw!",
                       },
                     aspectRatio: "square",
                   },
@@ -239,7 +239,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025563/011_wqjb7l.webp",
-                        alt: "sample",
+                        alt: "Shining star",
                       },
                     aspectRatio: "square",
                   },
@@ -264,7 +264,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025563/012_rcqzgm.webp",
-                        alt: "sample",
+                        alt: "The lion's share",
                       },
                     aspectRatio: "square",
                   },
@@ -283,7 +283,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025563/013_w0ygva.webp",
-                        alt: "sample",
+                        alt: "Investment in a trade",
                       },
                     aspectRatio: "square",
                   },
@@ -308,7 +308,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025563/014_izrxvg.webp",
-                        alt: "sample",
+                        alt: "Pioneers",
                       },
                     aspectRatio: "square",
                   },
@@ -327,7 +327,7 @@ article:
                     image:
                       {
                         src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698025563/015_ye7afr.webp",
-                        alt: "sample",
+                        alt: "The work never changes",
                       },
                     aspectRatio: "square",
                   },
