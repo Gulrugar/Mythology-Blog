@@ -31,14 +31,16 @@ while (formattedBlogPosts.length < 3) {
 <section class="comp three-post mntl-block">
   <a
     href={`/categories/${slugify(category)}`}
-    class="three-post__title section-title mntl-text-link type--giraffe-link"
+    class="three-post__title section-title mntl-text-link type--giraffe-link animate-arrow"
   >
     <h2 class="comp section-title__heading mntl-text-block">{category}</h2>
-    <svg class="icon icon-arrow_right">
-      <use
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        xlink:href="#icon-arrow_right"></use>
-    </svg>
+    <svg
+      class="icon icon-arrow icon-arrow_right"
+      xmlns="http://www.w3.org/2000/svg"
+      ><path
+        d="m12 2-1.762 1.762 6.975 6.988H2v2.5h15.213l-6.988 6.987L12 22l10.001-10L12 2Z"
+      ></path></svg
+    >
   </a>
   <div
     class="comp three-post__inner card-list mntl-document-card-list mntl-card-list mntl-block"
@@ -156,7 +158,7 @@ while (formattedBlogPosts.length < 3) {
     }
   }
 
-  /* svg class="icon icon-arrow_right" */
+  /* svg class="icon icon-arrow icon-arrow_right" */
   .section-title .icon {
     fill: rgb(var(--color-base-accent));
   }
@@ -169,6 +171,16 @@ while (formattedBlogPosts.length < 3) {
     height: 1.5rem;
     fill: rgb(var(--color-base-accent));
     margin-left: 0.5rem;
+  }
+
+  /* path */
+  .animate-arrow .icon-arrow path {
+    transform: translate(-0.15625rem);
+    transition: transform 0.1s ease;
+  }
+
+  .animate-arrow:hover .icon-arrow path {
+    transform: translate(0.15625rem);
   }
 
   /* div class="comp three-post__inner card-list mntl-document-card-list mntl-card-list mntl-block" */
