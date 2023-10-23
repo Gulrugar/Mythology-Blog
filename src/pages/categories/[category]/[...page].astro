@@ -15,8 +15,8 @@ export async function getStaticPaths({
 }: {
   paginate: PaginateFunction;
 }) {
-  const blogPosts = await getCollection("blog", ({ data }) => {
-    return !data.draft;
+  const blogPosts = await getCollection("blog", ({ slug, data }) => {
+    return !data.draft && slug !== "placeholder-article";
   });
   const returnValues = categories.flatMap((_category) => {
     const categoryPosts = blogPosts.filter((post) => {

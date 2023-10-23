@@ -288,7 +288,7 @@ const allImages = getImages(post.data);
       </div>
     </div>
   </article>
-  <RelatedStories />
+  <RelatedStories currentArticle={post.slug} />
   <ImageModal images={allImages} />
 </MainLayout>
 

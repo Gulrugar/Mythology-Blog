@@ -1,22 +1,38 @@
 ---
-import { getEntryBySlug } from "astro:content";
-import { formatDate } from "../../script/utils";
+import { type CollectionEntry, getCollection } from "astro:content";
+import { formatBlogPosts, formatDate } from "../../script/utils";
 
-const article = await getEntryBySlug("blog", "placeholder-article");
+type Props = {
+  currentArticle: CollectionEntry<"blog">["slug"];
+};
+
+const { currentArticle } = Astro.props as Props;
+
+// later filter by category and remove current article with formatBlogPosts
+const articles = await getCollection("blog", ({ slug }) => {
+  return slug !== currentArticle;
+});
+
+const formattedArticles = formatBlogPosts(articles, {
+  limit: 16,
+  filterOutDrafts: true,
+});
+
+// Array.from({ length: 8 }, (_, i) => i + 1)
 ---
 
 <div class="comp recirc mntl-block">
   <h2 class="comp recirc__heading mntl-text-block">Related Stories</h2>
   <ul class="comp l-container card-list-1 card-list mntl-block">
     {
-      Array.from({ length: 8 }, (_, i) => i + 1).map((item) => (
+      formattedArticles.slice(0, 8).map((item) => (
         <li class="comp card-list__item mntl-block">
-          <a href={`/posts/${article.slug}`} class="comp card">
+          <a href={`/posts/${item.slug}`} class="comp card">
             <div class="card__media">
               <div class="img-placeholder" style="padding-bottom: 100%">
                 <img
-                  src={article.data.image.src}
-                  alt={article.data.image.alt}
+                  src={item.data.image.src}
+                  alt={item.data.image.alt}
                   class="card__image universal-image__image lazyloaded"
                 />
               </div>
@@ -24,12 +40,12 @@ const article = await getEntryBySlug("blog", "placeholder-article");
             <div class="card__content">
               <div
                 class="card__meta"
-                data-category={article.data.category[0]}
-                data-published={formatDate(article.data.date)}
+                data-category={item.data.category[0]}
+                data-published={formatDate(item.data.date)}
               >
                 <span class="card__square-divider" />
               </div>
-              <p class="card__title">{article.data.title}</p>
+              <p class="card__title">{item.data.title}</p>
             </div>
           </a>
         </li>
@@ -38,14 +54,14 @@ const article = await getEntryBySlug("blog", "placeholder-article");
   </ul>
   <ul class="comp l-container card-list-2 card-list mntl-block">
     {
-      Array.from({ length: 8 }, (_, i) => i + 1).map((item) => (
+      formattedArticles.slice(8, 16).map((item) => (
         <li class="comp card-list__item mntl-block">
-          <a href={`/posts/${article.slug}`} class="comp card">
+          <a href={`/posts/${item.slug}`} class="comp card">
             <div class="card__media">
               <div class="img-placeholder" style="padding-bottom: 100%">
                 <img
-                  src={article.data.image.src}
-                  alt={article.data.image.alt}
+                  src={item.data.image.src}
+                  alt={item.data.image.alt}
                   class="card__image universal-image__image lazyloaded"
                 />
               </div>
@@ -53,12 +69,12 @@ const article = await getEntryBySlug("blog", "placeholder-article");
             <div class="card__content">
               <div
                 class="card__meta"
-                data-category={article.data.category[0]}
-                data-published={formatDate(article.data.date)}
+                data-category={item.data.category[0]}
+                data-published={formatDate(item.data.date)}
               >
                 <span class="card__square-divider" />
               </div>
-              <p class="card__title">{article.data.title}</p>
+              <p class="card__title">{item.data.title}</p>
             </div>
           </a>
         </li>
