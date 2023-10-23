@@ -4,8 +4,13 @@ class ModalDialog extends HTMLElement {
   moved?: boolean;
   openedBy!: HTMLButtonElement;
   imgNumber: number;
+  dialog: HTMLElement;
+  content: HTMLElement;
   constructor() {
     super();
+    this.dialog = this.querySelector(".image-media-modal__dialog")!;
+    this.content = this.querySelector(".image-media-modal__content")!;
+
     this.querySelector('[id^="ModalClose-"]')!.addEventListener(
       "click",
       this.hide.bind(this)
@@ -40,27 +45,11 @@ class ModalDialog extends HTMLElement {
     this.addEventListener("click", (event) => {
       const target = event.target;
 
-      if (!(target instanceof Element)) {
-        return;
-      }
+      if (!(target instanceof HTMLElement)) return;
 
-      const isImageClicked = target.tagName === "IMG";
-      const isDialogClicked = target.classList.contains(
-        "image-media-modal__dialog"
-      );
-      const isContentClicked = target.classList.contains(
-        "image-media-modal__content"
-      );
+      if (target.tagName === "IMG") return this.scrollThrough("right");
 
-      if (isImageClicked) {
-        this.scrollThrough("right");
-        return;
-      }
-
-      if (isDialogClicked || isContentClicked) {
-        this.hide();
-        return;
-      }
+      if (target === this.dialog || target === this.content) return this.hide();
     });
 
     // this.addEventListener("pointerup", (event) => {
