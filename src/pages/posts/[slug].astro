@@ -146,6 +146,20 @@ const allImages = getImages(post.data);
               </svg>
             </span>
           </li>
+          <li class="share-item share-item-reddit">
+            <span
+              class="share-link share-link-reddit"
+              tabindex="0"
+              title="Share on Reddit"
+              aria-label="Share on Reddit"
+              role="link"
+              onclick={socialShare.reddit(Astro.url.toString(), title)}
+            >
+              <svg class="icon icon-reddit">
+                <use href="#icon-reddit"></use>
+              </svg>
+            </span>
+          </li>
           <li class="share-item share-item-emailshare">
             <span
               class="share-link share-link-emailshare"
@@ -621,6 +635,11 @@ const allImages = getImages(post.data);
     transform: scale(0.5);
     margin-right: 0.5rem;
   }
+
+  /* svg class="icon icon-reddit" */
+  .social-share .icon.icon-reddit {
+    transform: scale(1);
+  }
   /* span class="share-link share-link-pinterest" tabindex="0" title="Pinterest" aria-label="Pinterest" role="link" */
   .share-link-pinterest::before {
     background: #cb2027;
@@ -643,6 +662,13 @@ const allImages = getImages(post.data);
   }
   .share-link-emailshare:hover::before {
     background: #222;
+  }
+  /* span class="share-link share-link-reddit" tabindex="0" title="Share on Reddit" aria-label="Share on Reddit" role="link" */
+  .share-link-reddit::before {
+    background: #ff5700;
+  }
+  .share-link-reddit:hover::before {
+    background: #cc4600;
   }
 
   /* ------------------ */

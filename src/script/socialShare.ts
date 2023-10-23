@@ -31,6 +31,17 @@ function twitter(url: string, text: string) {
   );`;
 }
 
+function reddit(url: string, title: string) {
+  return `
+    window.open(
+      'https://www.reddit.com/submit?url=${encodeURIComponent(
+        url
+      )}&title=${encodeURIComponent(title)}',
+      'reddit-share-dialog',
+      'width=900,height=650,menubar=no,toolbar=no,resizable=yes,scrollbars=yes'
+    );`;
+}
+
 function email(url: string, title: string, description: string) {
   return `window.location.href='mailto:?subject=${
     "Shared from " +
@@ -44,5 +55,6 @@ export default {
   facebook,
   pinterest,
   twitter,
+  reddit,
   email,
 };
