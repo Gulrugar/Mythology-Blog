@@ -47,9 +47,15 @@ class ModalDialog extends HTMLElement {
 
       if (!(target instanceof HTMLElement)) return;
 
-      if (target.tagName === "IMG") return this.scrollThrough("right");
+      if (target.tagName === "IMG") {
+        this.scrollThrough("right");
+        return;
+      }
 
-      if (target === this.dialog || target === this.content) return this.hide();
+      if (target === this.dialog || target === this.content) {
+        this.hide();
+        return;
+      }
     });
 
     // this.addEventListener("pointerup", (event) => {
