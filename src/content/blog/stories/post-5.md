@@ -368,7 +368,7 @@ article:
         links:
           {
             previousArticle: { slug: "stories-gold-foil-and-iron-rust" },
-            nextArticle: { slug: "myths-mjolnir" },
+            nextArticle: { slug: "stories-bounty-hunter" },
           },
       },
   }

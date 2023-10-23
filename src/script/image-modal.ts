@@ -37,6 +37,32 @@ class ModalDialog extends HTMLElement {
       }
     });
 
+    this.addEventListener("click", (event) => {
+      const target = event.target;
+
+      if (!(target instanceof Element)) {
+        return;
+      }
+
+      const isImageClicked = target.tagName === "IMG";
+      const isDialogClicked = target.classList.contains(
+        "image-media-modal__dialog"
+      );
+      const isContentClicked = target.classList.contains(
+        "image-media-modal__content"
+      );
+
+      if (isImageClicked) {
+        this.scrollThrough("right");
+        return;
+      }
+
+      if (isDialogClicked || isContentClicked) {
+        this.hide();
+        return;
+      }
+    });
+
     // this.addEventListener("pointerup", (event) => {
     //   if (event.pointerType === "mouse") this.hide();
     // });

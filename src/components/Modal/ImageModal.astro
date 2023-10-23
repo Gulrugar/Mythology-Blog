@@ -153,6 +153,10 @@ const { images } = Astro.props as Props;
     overflow: auto;
   }
 
+  .image-media-modal__content:focus-visible {
+    outline: none;
+  }
+
   @media screen and (min-width: 750px) {
     .image-media-modal__content {
       padding: 1.25rem 6.875rem;

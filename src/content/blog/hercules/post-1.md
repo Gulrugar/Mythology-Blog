@@ -234,9 +234,3 @@ article:
       },
   }
 ---
-
-image:
-{
-src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1694307892/001_epma96.webp",
-alt: "Hercules and King Eurystheus",
-}
