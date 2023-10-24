@@ -1,14 +1,14 @@
 ---
-import MainLayout from "../../../layouts/MainLayout.astro";
-import CategoryHeader from "../../../components/Categories/CategoryHeader.astro";
-import CategoryBody from "../../../components/Categories/CategoryBody.astro";
-import CategoryFeatured from "../../../components/Categories/CategoryFeatured.astro";
-import Pagination from "../../../components/Pagination.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+import CategoryHeader from "@components/Categories/CategoryHeader.astro";
+import CategoryBody from "@components/Categories/CategoryBody.astro";
+import CategoryFeatured from "@components/Categories/CategoryFeatured.astro";
+import Pagination from "@components/Pagination.astro";
 import { getCollection } from "astro:content";
-import { categorySettings } from "../../../config/categorySettings";
-import { categories } from "../../../config/constants";
+import { categorySettings } from "@config/categorySettings";
+import { categories } from "@config/constants";
 import type { PaginateFunction, InferGetStaticPropsType } from "astro";
-import { formatBlogPosts, slugify } from "../../../script/utils";
+import { formatBlogPosts, slugify } from "@scripts/utils";
 
 export async function getStaticPaths({
   paginate,

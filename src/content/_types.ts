@@ -1,4 +1,4 @@
-import { z, parse, defineCollection } from "astro:content";
+import { z } from "astro:content";
 
 export const paragraph = z.object({
   tag: z.literal("Paragraph"),

@@ -1,8 +1,8 @@
 ---
-import { settings } from "../config/settings";
+import { settings } from "@config/settings";
 import { Icon } from "astro-icon";
-import DropDownMenu from "./DropDownMenu.astro";
-import HeaderDrawer from "./HeaderDrawer.astro";
+import DropDownMenu from "@components/DropDownMenu.astro";
+import HeaderDrawer from "@components/HeaderDrawer.astro";
 ---
 
 <div class="section-header">
@@ -284,5 +284,5 @@ import HeaderDrawer from "./HeaderDrawer.astro";
 </style>
 
 <script>
-  import "../script/sticky-header.ts";
+  import "@scripts/sticky-header.ts";
 </script>

@@ -1,6 +1,6 @@
 ---
-import { type ImageParamsType } from "../../content/_types";
-import "../../styles/image-modal.css";
+import { type ImageParamsType } from "@content/_types";
+import "@styles/image-modal.css";
 
 type Props = {
   images: ImageParamsType["image"][];
@@ -261,5 +261,5 @@ const { images } = Astro.props as Props;
 </style>
 
 <script>
-  import "../../script/image-modal.ts";
+  import "@scripts/image-modal.ts";
 </script>

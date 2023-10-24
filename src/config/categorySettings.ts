@@ -1,5 +1,5 @@
 import { categories } from "./constants";
-import { type FormatBlogPostsOptions } from "../script/utils";
+import { type FormatBlogPostsOptions } from "../scripts/utils";
 
 export const categorySettings: CategorySettingsType = {
   Myths: {

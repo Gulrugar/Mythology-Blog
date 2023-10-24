@@ -1,6 +1,6 @@
 ---
-import "../../styles/blog-styles.css";
-import MainLayout from "../../layouts/MainLayout.astro";
+import "@styles/blog-styles.css";
+import MainLayout from "@layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 import type { InferGetStaticPropsType } from "astro";
 import {
@@ -9,20 +9,20 @@ import {
   getImages,
   getNextId,
   resetIdCounter,
-} from "../../script/utils";
-import socialShare from "../../script/socialShare";
-import { blurryImageUrl } from "../../config/constants";
+} from "@scripts/utils";
+import socialShare from "@scripts/socialShare";
+import { blurryImageUrl } from "@config/constants";
 
-import Paragraph from "../../components/Article/Paragraph.astro";
-import Callout from "../../components/Article/Callout.astro";
-import RelatedLink from "../../components/Article/RelatedLink.astro";
-import Section from "../../components/Article/Section.astro";
-import ImageBlock from "../../components/Article/ImageBlock.astro";
+import Paragraph from "@components/Article/Paragraph.astro";
+import Callout from "@components/Article/Callout.astro";
+import RelatedLink from "@components/Article/RelatedLink.astro";
+import Section from "@components/Article/Section.astro";
+import ImageBlock from "@components/Article/ImageBlock.astro";
 
-import ModalOpener from "../../components/Modal/ModalOpener.astro";
-import ImageModal from "../../components/Modal/ImageModal.astro";
-import RelatedStories from "../../components/Article/RelatedStories.astro";
-import PreviousNextLinks from "../../components/Article/PreviousNextLinks.astro";
+import ModalOpener from "@components/Modal/ModalOpener.astro";
+import ImageModal from "@components/Modal/ImageModal.astro";
+import RelatedStories from "@components/Article/RelatedStories.astro";
+import PreviousNextLinks from "@components/Article/PreviousNextLinks.astro";
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection("blog", ({ data }) => {

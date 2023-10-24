@@ -1,7 +1,6 @@
 ---
 import { getCollection, getEntry } from "astro:content";
-import { formatBlogPosts } from "../../script/utils";
-import { type FormatBlogPostsOptions } from "../../script/utils";
+import { formatBlogPosts, type FormatBlogPostsOptions } from "@scripts/utils";
 
 type Props = {
   postSlugs: [string, string, string, string];

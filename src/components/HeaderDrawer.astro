@@ -1,7 +1,8 @@
 ---
 import Icon from "astro-icon";
-import { settings } from "../config/settings";
-import "../styles/header-drawer-global.css";
+import { settings } from "@config/settings";
+import "@styles/header-drawer-global.css";
+
 const toggleMobileMenu = `this.setAttribute('aria-expanded', !this.closest('details').hasAttribute('open')); console.log(this.closest('details').hasAttribute('open'))
 `;
 ---
@@ -468,5 +469,5 @@ const toggleMobileMenu = `this.setAttribute('aria-expanded', !this.closest('deta
 
 <script>
   // add class section-header to the header element to complete functionality
-  import "../script/header-drawer.ts";
+  import "@scripts/header-drawer.ts";
 </script>

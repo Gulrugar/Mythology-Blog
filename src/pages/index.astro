@@ -1,11 +1,11 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import HeroBanner from "../components/HomePage/HeroBanner.astro";
-import TopOfPage from "../components/HomePage/TopOfPage.astro";
-import FivePost from "../components/HomePage/FivePost.astro";
-import List from "../components/HomePage/List.astro";
-import ThreePost from "../components/HomePage/ThreePost.astro";
-import { settings } from "../config/settings";
+import MainLayout from "@layouts/MainLayout.astro";
+import HeroBanner from "@components/HomePage/HeroBanner.astro";
+import TopOfPage from "@components/HomePage/TopOfPage.astro";
+import FivePost from "@components/HomePage/FivePost.astro";
+import List from "@components/HomePage/List.astro";
+import ThreePost from "@components/HomePage/ThreePost.astro";
+import { settings } from "@config/settings";
 import { getEntryBySlug } from "astro:content";
 
 const metaData = settings.meta.index;

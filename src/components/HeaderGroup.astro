@@ -1,8 +1,8 @@
 ---
-import AnnouncementBar from "./AnnouncementBar.astro";
-import Header from "./Header.astro";
+import AnnouncementBar from "@components/AnnouncementBar.astro";
+import Header from "@components/Header.astro";
 import { getCollection } from "astro:content";
-import { formatBlogPosts } from "../script/utils";
+import { formatBlogPosts } from "@scripts/utils";
 
 const posts = await getCollection("blog");
 const post = formatBlogPosts(posts)[0];

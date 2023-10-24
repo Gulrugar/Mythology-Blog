@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import { formatBlogPosts, formatDate } from "../../script/utils";
+import { formatBlogPosts, formatDate } from "@scripts/utils";
 
 type Props = {
   currentArticle: CollectionEntry<"blog">["slug"];
