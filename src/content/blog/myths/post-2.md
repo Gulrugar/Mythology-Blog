@@ -253,15 +253,10 @@ article:
     outro:
       {
         text: "Aphrodite's birth, a magnificent convergence of celestial energies and primordial elements, encapsulates the essence of her divine being. As the goddess of love and beauty, her origin story serves as a timeless reminder of the enchanting power of love and the enduring allure of beauty—a legacy that continues to inspire generations and infuse the world with its captivating charm.",
-        next_link:
-          {
-            text: "The Twelve Labors of Hercules I: The Nemean Lion",
-            link: "/posts/twelve-labors-of-hercules-1",
-          },
         links:
           {
             previousArticle: { slug: "myths-mjolnir" },
-            nextArticle: { slug: "twelve-labors-of-hercules-1" },
+            nextArticle: { slug: "stories-walking-a-tight-rope" },
           },
       },
   }

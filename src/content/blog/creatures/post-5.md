@@ -1,13 +1,13 @@
 ---
-title: "The Tenth Labor: Geryon's Cattle"
-subtitle: "Hercules' Triple Challenge"
-description: this is the description
+title: Demon
+subtitle: Kenpachi zaraki vs unohana yachiru
+description: "Warrior dies and is reborn again and again each time becoming more violent and war hungry"
 author: Andrew Aguirre
-slug: twelve-labors-of-hercules-10
-date: 2023-09-08T12:00:03
+slug: creatures-demons
+date: 2023-07-28T12:00:01
 draft: true
-category: ["Myths", "Hercules"]
-image: { src: "/images/sample.png", alt: "sample" }
+category: ["Creatures"]
+image: { src: "/images/sample.png", alt: "Sample" }
 article:
   intro:
     - tag: "Paragraph"
@@ -145,7 +145,7 @@ article:
     text: "Outro text"
     links:
       previousArticle:
-        slug: "placeholder-article"
+        slug: "creatures-indrik"
       nextArticle:
-        slug: "placeholder-article"
+        slug: "stories-walking-a-tight-rope"
 ---

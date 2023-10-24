@@ -394,7 +394,7 @@ article:
 
         links:
           {
-            previousArticle: { slug: "stories-knights-and-dragons" },
+            previousArticle: { slug: "twelve-labors-of-hercules-7" },
             nextArticle: { slug: "myths-aphrodite-venu" },
           },
       },

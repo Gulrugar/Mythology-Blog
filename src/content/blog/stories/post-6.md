@@ -348,7 +348,7 @@ article:
         links:
           {
             previousArticle: { slug: "stories-the-scientist" },
-            nextArticle: { slug: "myths-mjolnir" },
+            nextArticle: { slug: "creatures-fairies" },
           },
       },
   }

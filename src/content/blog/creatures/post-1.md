@@ -285,7 +285,7 @@ article:
 
         links:
           {
-            previousArticle: { slug: "twelve-labors-of-hercules-5" },
+            previousArticle: { slug: "stories-bounty-hunter" },
             nextArticle: { slug: "creatures-resplendant-quetzal" },
           },
       },

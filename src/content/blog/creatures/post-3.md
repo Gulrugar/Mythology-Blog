@@ -350,7 +350,7 @@ article:
         links:
           {
             previousArticle: { slug: "creatures-resplendant-quetzal" },
-            nextArticle: { slug: "stories-walking-a-tight-rope" },
+            nextArticle: { slug: "creatures-indrik" },
           },
       },
   }
