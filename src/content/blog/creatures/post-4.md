@@ -4,10 +4,14 @@ subtitle: Harbingers of Good Fortune
 description: "The Indrik is a mythical creature from Russian and Slavic folklore that stands as a symbol of purity and nobility. Resembling a majestic horse with a magical, spiraling horn, it is credited with the power to purify water and land. The creature frequently appears in folk stories, serving as a wise and noble guide."
 author: Andrew Aguirre
 slug: creatures-indrik
-date: 2023-10-24T12:00:01
+date: 2023-10-25
 draft: false
 category: ["Creatures"]
-image: { src: "/images/sample.png", alt: "Sample" }
+image:
+  {
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259952/001_cajhvb.webp",
+    alt: "A rare sight",
+  }
 article:
   intro:
     - tag: "Paragraph"
@@ -22,8 +26,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259952/002_ytuli3.webp"
+              alt: "Light shines through"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -31,8 +35,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698279577/003_vqrpvp.webp"
+              alt: "King of All Animals"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -42,8 +46,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/004_wrb3zm.webp"
+              alt: "Forest shade"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -51,8 +55,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/005_aup591.webp"
+              alt: "Purifying steps"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -62,8 +66,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/006_rcp188.webp"
+              alt: "Healing properties"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -71,8 +75,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/007_nw4swq.webp"
+              alt: "Regeneration"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -82,8 +86,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/008_ypnwpf.webp"
+              alt: "Prophecy"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -91,8 +95,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/009_mvbggb.webp"
+              alt: "Arcane leap"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -102,8 +106,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/010_typ0lt.webp"
+              alt: "The other world"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -111,8 +115,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/011_rhmlzs.webp"
+              alt: "Essence of all"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -122,8 +126,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/012_aomhsk.webp"
+              alt: "Devine reflection"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -131,8 +135,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/013_lcfgy1.webp"
+              alt: "Healing tears"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -142,8 +146,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/014_pfp3vb.webp"
+              alt: "A refreshing bath"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -151,8 +155,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698259951/015_bzjyvg.webp"
+              alt: "Peace for a time"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
