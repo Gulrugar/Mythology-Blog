@@ -1,13 +1,30 @@
 ---
-import { getCollection, getEntry } from "astro:content";
-import { formatBlogPosts, slugify } from "@scripts/utils";
+import { getCollection, getEntry, type CollectionEntry } from "astro:content";
+import {
+  formatBlogPosts,
+  slugify,
+  type FormatBlogPostsOptions,
+} from "@scripts/utils";
+
+type collectionSlug = CollectionEntry<"blog">["slug"];
 
 type Props = {
   category: string;
-  postSlugs: [string, string, string, string, string];
+  postSlugs: [
+    collectionSlug,
+    collectionSlug,
+    collectionSlug,
+    collectionSlug,
+    collectionSlug
+  ];
+  formatOptions?: FormatBlogPostsOptions;
 };
 
-const { category = "Category", postSlugs } = Astro.props as Props;
+const {
+  category = "Category",
+  postSlugs,
+  formatOptions,
+} = Astro.props as Props;
 
 const placeHolderArticle = await getEntry("blog", "placeholder-article")!;
 
@@ -17,6 +34,7 @@ const blogPosts = await getCollection("blog", ({ slug }) => {
 
 const formattedBlogPosts = formatBlogPosts(blogPosts, {
   filterOutDrafts: true,
+  ...formatOptions,
 });
 
 while (formattedBlogPosts.length < 5) {

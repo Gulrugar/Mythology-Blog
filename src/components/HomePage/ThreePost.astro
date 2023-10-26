@@ -1,17 +1,27 @@
 ---
-import { getCollection, getEntry } from "astro:content";
-import { formatBlogPosts, slugify } from "@scripts/utils";
-import { categories } from "@config/constants";
+import { getCollection, getEntry, type CollectionEntry } from "astro:content";
+import {
+  formatBlogPosts,
+  slugify,
+  type FormatBlogPostsOptions,
+} from "@scripts/utils";
 
 // We create a Category type by using typeof categories[number]. This type represents the union of all the values in the categories array, which are "Myths" and "Symbols" in this case.
-type Category = (typeof categories)[number];
+// type Category = (typeof categories)[number];
+
+type collectionSlug = CollectionEntry<"blog">["slug"];
 
 type Props = {
-  category?: Category;
-  postSlugs: [string, string, string];
+  category: string;
+  postSlugs: [collectionSlug, collectionSlug, collectionSlug];
+  formatOptions?: FormatBlogPostsOptions;
 };
 
-const { category = "Category", postSlugs } = Astro.props as Props;
+const {
+  category = "Category",
+  postSlugs,
+  formatOptions,
+} = Astro.props as Props;
 
 const placeHolderArticle = await getEntry("blog", "placeholder-article")!;
 
@@ -21,6 +31,7 @@ const blogPosts = await getCollection("blog", ({ slug }) => {
 
 const formattedBlogPosts = formatBlogPosts(blogPosts, {
   filterOutDrafts: true,
+  ...formatOptions,
 });
 
 while (formattedBlogPosts.length < 3) {

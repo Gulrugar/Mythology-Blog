@@ -32,34 +32,37 @@ const post = await getEntryBySlug("blog", "twelve-labors-of-hercules-1");
           "creatures-indrik",
           "stories-bounty-hunter",
           "twelve-labors-of-hercules-7",
-          "creatures-vampires",
+          "stories-eternals",
           "stories-the-scientist",
         ]}
       />
       <FivePost
-        category="Myths"
+        category="Hercules"
         postSlugs={[
-          "creatures-indrik",
-          "stories-bounty-hunter",
-          "twelve-labors-of-hercules-7",
-          "creatures-vampires",
-          "stories-the-scientist",
+          "twelve-labors-of-hercules-1",
+          "twelve-labors-of-hercules-2",
+          "twelve-labors-of-hercules-3",
+          "twelve-labors-of-hercules-4",
+          "twelve-labors-of-hercules-5",
         ]}
+        formatOptions={{
+          sort: "old-new",
+        }}
       />
       <List
         postSlugs={[
-          "creatures-indrik",
           "stories-bounty-hunter",
-          "twelve-labors-of-hercules-7",
-          "creatures-vampires",
+          "stories-the-scientist",
+          "stories-gold-foil-and-iron-rust",
+          "stories-a-ghost-in-the-ice",
         ]}
       />
       <ThreePost
-        category="Myths"
+        category="Creatures"
         postSlugs={[
           "creatures-indrik",
-          "stories-bounty-hunter",
-          "twelve-labors-of-hercules-7",
+          "creatures-resplendant-quetzal",
+          "creatures-fairies",
         ]}
       />
     </div>

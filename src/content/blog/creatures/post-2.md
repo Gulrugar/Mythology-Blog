@@ -281,7 +281,7 @@ article:
         links:
           {
             previousArticle: { slug: "creatures-fairies" },
-            nextArticle: { slug: "creatures-vampires" },
+            nextArticle: { slug: "creatures-indrik" },
           },
       },
   }
