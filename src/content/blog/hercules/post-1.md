@@ -228,7 +228,7 @@ article:
         text: "Hercules would go on to face many more extraordinary challenges in his quest for redemption, but the tale of the Nemean Lion's defeat would forever be etched into the annals of Greek mythology, a testament to the indomitable spirit and valor of the great hero.",
         links:
           {
-            previousArticle: { slug: "creatures-demons" },
+            previousArticle: { slug: "creatures-indrik" },
             nextArticle: { slug: "twelve-labors-of-hercules-2" },
           },
       },

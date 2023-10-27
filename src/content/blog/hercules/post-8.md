@@ -1,27 +1,20 @@
 ---
 title: "The Eighth Labor: Diomedes' Man-Eating Mares"
-subtitle: "Hercules' Daring Theft"
-description: this is the description
+subtitle: "Taming the Savage Mares of Diomedes"
+description: "The Eighth Labor of Hercules tasked the Greek hero with a daunting mission: to capture the man-eating mares of Diomedes. These were no ordinary horses. Owned by King Diomedes of the Bistones, these mares were infamous for their bloodthirsty nature, having been fed on human flesh. Their fearsome reputation was known throughout the land, and capturing them was considered a near-impossible feat."
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-8
-date: 2023-09-08T12:00:05
-draft: true
+date: 2023-10-26
+draft: false
 category: ["Myths", "Hercules"]
 image: { src: "/images/sample.png", alt: "sample" }
 article:
   intro:
     - tag: "Paragraph"
       params:
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    - tag: "Paragraph"
-      params:
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    - tag: "RelatedLink"
-      params:
-        text: "More"
-        link: "/"
+        text: "The tale of Hercules and the Eighth Labor is a gripping narrative filled with danger, strategy, and the hero's undying determination. In this labor, Hercules was charged with capturing the man-eating mares owned by the brutal King Diomedes of Thrace. These weren't ordinary horses but savage beasts with a voracious appetite for human flesh, a grim testament to the malevolence of their master, Diomedes."
   content:
-    - title: "Section Title"
+    - title: "The Trek to Thrace"
       data:
         - tag: "ImageBlock"
           params:
@@ -31,7 +24,7 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            text: "Hercules began his journey to Thrace, the land where King Diomedes and his dreaded mares resided. The whispers of the mares' reputation preceded them, casting an ominous shadow over Hercules' quest. Every step towards Thrace was a reminder of the peril that lay ahead."
         - tag: "ImageBlock"
           params:
             image:
@@ -40,8 +33,8 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    - title: "Section Title"
+            text: "The local inhabitants, staunchly loyal to their king, watched Hercules with suspicion, adding to the palpable tension in the air."
+    - title: "Confronting the Beasts"
       data:
         - tag: "ImageBlock"
           params:
@@ -51,7 +44,7 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            text: "Upon reaching the stables, Hercules was met with the unsettling sight of the mares. Their eyes, filled with malice, and their restless demeanor showcased their savage nature. The tales of their brutality weren't mere myths; they were all too real."
         - tag: "ImageBlock"
           params:
             image:
@@ -60,8 +53,8 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    - title: "Section Title"
+            text: "Each snarl, each restless movement by the mares was a testament to the challenge Hercules faced. Their power and ferocity were unmatched, demanding respect and caution."
+    - title: "Trapping the Mares"
       data:
         - tag: "ImageBlock"
           params:
@@ -71,7 +64,7 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            text: "Recognizing the danger of a direct confrontation, Hercules concocted a plan. Drawing the mares out of their enclosure, he led them to a nearby peninsula."
         - tag: "ImageBlock"
           params:
             image:
@@ -80,8 +73,8 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    - title: "Section Title"
+            text: "With haste and precision, he dug deep trenches around it, essentially converting the peninsula into an island. The mares, for all their wildness, were now trapped, their menace contained."
+    - title: "Duel with Diomedes"
       data:
         - tag: "ImageBlock"
           params:
@@ -91,7 +84,7 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            text: "The capture of the mares did not go unnoticed. Enraged by the audacity of Hercules' actions, King Diomedes confronted him. A fierce battle ensued between the two titans. Hercules, drawing upon his strength and skill, managed to overpower Diomedes."
         - tag: "ImageBlock"
           params:
             image:
@@ -100,8 +93,8 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    - title: "Section Title"
+            text: "In a fitting twist of fate, the cruel king met his end at the jaws of his own mares, a poetic justice that Hercules deemed appropriate."
+    - title: "Subduing the Mares"
       data:
         - tag: "ImageBlock"
           params:
@@ -111,7 +104,7 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            text: "With Diomedes defeated, Hercules' attention returned to the mares. The challenge was not just to capture but to tame these wild beasts."
         - tag: "ImageBlock"
           params:
             image:
@@ -120,8 +113,8 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    - title: "Section Title"
+            text: "Over time, with patience and his indomitable spirit, Hercules managed to subdue the mares. The creatures, once symbols of terror, began to show signs of calmness, their violent past slowly fading away."
+    - title: "Return to Eurystheus"
       data:
         - tag: "ImageBlock"
           params:
@@ -131,7 +124,7 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            text: "With the mares tamed, Hercules embarked on the journey back to Mycenae. His return was triumphant, showcasing not just his physical prowess but his ability to strategize and adapt."
         - tag: "ImageBlock"
           params:
             image:
@@ -140,12 +133,12 @@ article:
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            text: "As he presented the mares to King Eurystheus, there was a begrudging acknowledgment of Hercules' achievement. The mares, their legacy both terrifying and awe-inspiring, were a testament to Hercules' enduring legend."
   outro:
-    text: "Outro text"
+    text: "The Eighth Labor of Hercules, capturing the man-eating mares of Diomedes, stands as a testament to the hero's resilience, intelligence, and indomitable spirit. Overcoming odds and facing challenges that would deter lesser beings, Hercules emerged victorious, further cementing his place in the pantheon of Greek heroes. The tale serves as a reminder of the hero's journey, filled with trials, but ultimately leading to triumph."
     links:
       previousArticle:
-        slug: "placeholder-article"
+        slug: "twelve-labors-of-hercules-7"
       nextArticle:
-        slug: "placeholder-article"
+        slug: "myths-mjolnir"
 ---
