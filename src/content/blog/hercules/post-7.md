@@ -328,7 +328,7 @@ article:
         links:
           {
             previousArticle: { slug: "twelve-labors-of-hercules-6" },
-            nextArticle: { slug: "myths-mjolnir" },
+            nextArticle: { slug: "twelve-labors-of-hercules-8" },
           },
       },
   }
