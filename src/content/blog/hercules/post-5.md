@@ -299,7 +299,7 @@ article:
         links:
           {
             previousArticle: { slug: "twelve-labors-of-hercules-4" },
-            nextArticle: { slug: "twelve-labors-of-hercules-5" },
+            nextArticle: { slug: "twelve-labors-of-hercules-6" },
           },
       },
   }

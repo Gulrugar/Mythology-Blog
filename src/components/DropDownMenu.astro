@@ -21,7 +21,9 @@ const { navItem } = Astro.props as Props;
   >
     <span>{navItem.name}</span>
   </a>
-  <ul class="dropdown-menu menu-item-wrap menu-item-col-5">
+  <ul
+    class=`dropdown-menu menu-item-wrap menu-item-col-5 ${navItem.name === "Stories" && "move-right"}`
+  >
     {
       navItem.links.map((link) => (
         <li class="menu-item">
@@ -144,7 +146,11 @@ const { navItem } = Astro.props as Props;
 
   /* note: was an inline style */
   .dropdown-menu {
-    left: -50%;
+    left: calc(-100% - 0.75rem);
+  }
+
+  .dropdown-menu.move-right {
+    left: 0.75rem;
   }
 
   /* .menu-item-wrap.menu-item-col-5 {

@@ -39,8 +39,26 @@ export const settings: Settings = {
         path: "/categories/myths",
         links: [
           {
+            name: "All",
+            path: "/categories/myths",
+          },
+          {
             name: "Hercules",
             path: "/categories/hercules",
+          },
+        ],
+      },
+      {
+        name: "Stories",
+        path: "/categories/stories",
+        links: [
+          {
+            name: "All",
+            path: "/categories/stories",
+          },
+          {
+            name: "Traditions",
+            path: "/categories/traditions",
           },
         ],
       },
@@ -49,11 +67,7 @@ export const settings: Settings = {
         path: "/categories/creatures",
         links: [],
       },
-      {
-        name: "Stories",
-        path: "/categories/stories",
-        links: [],
-      },
+
       {
         name: "Categories",
         path: "/categories",

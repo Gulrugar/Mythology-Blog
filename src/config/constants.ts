@@ -7,6 +7,7 @@ export const categories = [
   "Stories",
   "Hercules",
   "Creatures",
+  "Traditions",
 ] as const;
 
 type Category = (typeof categories)[number];

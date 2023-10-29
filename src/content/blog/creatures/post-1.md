@@ -285,7 +285,7 @@ article:
 
         links:
           {
-            previousArticle: { slug: "stories-bounty-hunter" },
+            previousArticle: { slug: "traditions-day-of-the-dead" },
             nextArticle: { slug: "creatures-resplendant-quetzal" },
           },
       },

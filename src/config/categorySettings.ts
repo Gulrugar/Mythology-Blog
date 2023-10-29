@@ -31,10 +31,10 @@ export const categorySettings: CategorySettingsType = {
     formatOptions: {
       sort: "new-old",
       postsToFilterOut: [
+        "twelve-labors-of-hercules-8",
         "twelve-labors-of-hercules-7",
         "twelve-labors-of-hercules-6",
         "twelve-labors-of-hercules-5",
-        "twelve-labors-of-hercules-4",
       ],
     },
   },
@@ -43,6 +43,13 @@ export const categorySettings: CategorySettingsType = {
     description:
       "Where legends come to life and imagination takes flight! Step into a world where dragons breathe fire, unicorns roam enchanted forests, and mermaids sing their haunting melodies. Here, ancient myths meet modern fascination as we explore the captivating tales and symbolism behind these extraordinary beings. Join us on a journey that transcends time and culture, diving into the heart of folklore and uncovering the influence of mythical creatures on art, literature, and popular culture.",
     banner: "/images/banners/creatures-banner.webp",
+    formatOptions: {},
+  },
+  Traditions: {
+    title: "Traditions - Category",
+    description:
+      "From time-honored rituals and festive celebrations to culinary practices and cultural ceremonies, we delve deep into the heart of what brings communities together. Discover the meaning, history, and evolution of traditions that span across cultures and generations. Let's celebrate the beauty of our shared humanity through the customs that define us.",
+    banner: "/images/banners/traditions-banner.webp",
     formatOptions: {},
   },
 };
