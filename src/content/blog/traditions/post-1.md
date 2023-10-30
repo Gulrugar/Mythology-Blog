@@ -7,7 +7,11 @@ slug: traditions-day-of-the-dead
 date: 2023-10-29
 draft: false
 category: ["Traditions"]
-image: { src: "/images/sample.png", alt: "Sample" }
+image:
+  {
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/001_i61ous.webp",
+    alt: "The graves yawn",
+  }
 article:
   intro:
     - tag: "Paragraph"
@@ -19,8 +23,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/002_namubp.webp"
+              alt: "Somber morning"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -28,8 +32,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/003_cdxiny.webp"
+              alt: "A path of lights"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -39,8 +43,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/004_tfb0nl.webp"
+              alt: "A light in heaven"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -48,8 +52,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/005_muesny.webp"
+              alt: "Remembrance"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -59,19 +63,28 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/006_tuiogl.webp"
+              alt: "Grief... in many ways"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
-            text: "Central to the Day of the Dead is the 'ofrenda,' or altar, which families create in their homes or at cemeteries. The ofrenda is laden with candles, photographs, and mementos of the deceased, as well as their favorite foods and drinks. The idea is to guide the spirits back to the world of the living and offer them sustenance for their journey back to the afterlife."
+            text: "Central to the Day of the Dead is the 'ofrenda,' or altar, which families create in their homes or at cemeteries."
+        - tag: "ImageBlock"
+          params:
+            image:
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/007_shuebh.webp"
+              alt: "Ones we have lost..."
+            aspectRatio: "square"
+        - tag: "Paragraph"
+          params:
+            text: "The ofrenda is laden with candles, photographs, and mementos of the deceased, as well as their favorite foods and drinks. The idea is to guide the spirits back to the world of the living and offer them sustenance for their journey back to the afterlife."
     - title: "Traditional Symbols and Items"
       data:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/008_ga7kib.webp"
+              alt: "...still live"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -79,8 +92,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622069/009_nfik5b.webp"
+              alt: "One night"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -90,8 +103,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622069/010_ue2fm5.webp"
+              alt: "Fire of life"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -99,8 +112,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622069/011_ftphoz.webp"
+              alt: "Dance the dance of life and death"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -110,8 +123,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622069/012_hod3ld.webp"
+              alt: "Spirit wave"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -119,8 +132,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/013_qi0fpt.webp"
+              alt: "Life is real and not a fairy tale"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -128,8 +141,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/014_g302um.webp"
+              alt: "Cosmic resonance"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -139,8 +152,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/015_rqswbr.webp"
+              alt: "Still alive"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -148,8 +161,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698622068/016_inecfh.webp"
+              alt: "A new day"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
