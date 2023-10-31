@@ -69,8 +69,8 @@ export const settings: Settings = {
       },
 
       {
-        name: "Categories",
-        path: "/categories",
+        name: "Symbols",
+        path: "/categories/symbols",
         links: [],
       },
     ],
