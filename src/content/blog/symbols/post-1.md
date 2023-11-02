@@ -1,13 +1,17 @@
 ---
 title: Ouroboros
-subtitle: subtitle
+subtitle: Live. Die. Repeat.
 description: "The ouroboros is an emblematic symbol of a serpent consuming its tail, representing cyclical patterns, renewal, and infinity. With roots in ancient Egypt, it has been interpreted across cultures as signifying life's eternal cycle, transformation, and introspective growth. This timeless motif resonates from ancient philosophies to modern interpretations, underscoring the universality of life's perpetual cycles."
 author: Andrew Aguirre
 slug: symbols-ouroboros
-date: 2023-10-31
+date: 2023-11-01
 draft: false
 category: ["Symbols"]
-image: { src: "/images/sample.png", alt: "Sample" }
+image:
+  {
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884986/001_s0nn1f.webp",
+    alt: "The eye of the tiger?",
+  }
 article:
   intro:
     - tag: "Paragraph"
@@ -22,8 +26,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884987/002_avujob.webp"
+              alt: "Entropy"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -31,8 +35,14 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884987/003_aobmr3.webp"
+              alt: "We can't see the bottom"
+            aspectRatio: "square"
+        - tag: "ImageBlock"
+          params:
+            image:
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884986/004_fybhtw.webp"
+              alt: "Essential for life"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -42,8 +52,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884987/005_mfnfyg.webp"
+              alt: "Learn to build"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -51,19 +61,25 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884987/006_wh5w3w.webp"
+              alt: "Work with your hands"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
             text: "Plato, in his dialogue 'Timaeus,' describes a self-eating, circular being as the first living creature in the universe, an immortal, mythically constructed entity. The ouroboros thus became a symbol of eternal cyclical renewal or a cycle of life, death, and rebirth."
+        - tag: "ImageBlock"
+          params:
+            image:
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884987/007_ahurqw.webp"
+              alt: "A hero to brave the unknown"
+            aspectRatio: "square"
     - title: "Alchemical Significance"
       data:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884987/008_sy8mu2.webp"
+              alt: "Why reach into the maw?"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -71,8 +87,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884987/009_ek9vnc.webp"
+              alt: "Golden flakes"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -82,8 +98,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884988/010_bpvvt1.webp"
+              alt: "A guide"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -91,19 +107,25 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884988/011_jedf3x.webp"
+              alt: "The place where no one has been"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
             text: "But as with all endings in cyclical beliefs, a new world would emerge from the waters, making Jörmungandr not just a harbinger of destruction but also of rebirth."
+        - tag: "ImageBlock"
+          params:
+            image:
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884988/012_kd93ww.webp"
+              alt: "Into the heart"
+            aspectRatio: "square"
     - title: "Eastern Interpretations"
       data:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884988/013_bjr5da.webp"
+              alt: "The right place"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -111,19 +133,25 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884988/014_gabgy7.webp"
+              alt: "Don't blink"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
             text: "Moreover, in Hindu mysticism, the kundalini energy, visualized as a coiled serpent at the base of the spine, represents dormant potential. When awakened through spiritual practices, this energy rises, leading to enlightenment, mirroring the ouroboros' themes of renewal and rebirth."
+        - tag: "ImageBlock"
+          params:
+            image:
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884987/015_iryqhz.webp"
+              alt: "The light at the end"
+            aspectRatio: "square"
     - title: "Modern Pop Culture"
       data:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884986/016_etdps2.webp"
+              alt: "An egg? ...of course"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -131,8 +159,8 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884986/017_igwaki.webp"
+              alt: "The cycle begins again"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
@@ -142,18 +170,12 @@ article:
         - tag: "ImageBlock"
           params:
             image:
-              src: "/images/sample.png"
-              alt: "sample"
+              src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1698884986/018_kunggi.webp"
+              alt: "New dawn"
             aspectRatio: "square"
         - tag: "Paragraph"
           params:
             text: "Carl Jung, a pioneer of analytical psychology, introduced the concept of the collective unconscious, a set of shared memories and ideas present in the subconscious of all humans. Within this framework, he identified archetypes, universal symbols and themes that recur across cultures and ages."
-        - tag: "ImageBlock"
-          params:
-            image:
-              src: "/images/sample.png"
-              alt: "sample"
-            aspectRatio: "square"
         - tag: "Paragraph"
           params:
             text: "The ouroboros, for Jung, was one such archetype. He saw it as a representation of the human psyche's quest for integration and wholeness. The act of the serpent eating its tail symbolized the challenging process of introspection and self-reflection, leading to personal growth and self-realization."
