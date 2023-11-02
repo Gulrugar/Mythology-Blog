@@ -348,7 +348,7 @@ article:
         links:
           {
             previousArticle: { slug: "stories-eternals" },
-            nextArticle: { slug: "traditions-day-of-the-dead" },
+            nextArticle: { slug: "symbols-ouroboros" },
           },
       },
   }
