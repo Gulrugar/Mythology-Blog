@@ -1,5 +1,5 @@
 ---
-title: "The Seventh Labor: The Cretan Bull"
+title: "The Twelve Labors of Hercules VII: The Cretan Bull"
 subtitle: "Capturing the Rampaging Beast"
 description: "In the ancient lands of Greece, where gods played games with the lives of mortals and heroes arose to face challenges beyond human imagination, Hercules embarked on twelve epic labors. Among these challenges, the capture of the Cretan Bull stands as a testament to his guile, strength, and perseverance. This is the tale of his seventh labor, a venture fraught with danger and a challenge even for a demigod."
 author: Andrew Aguirre

@@ -1,5 +1,5 @@
 ---
-title: "The Tenth Labor: Geryon's Cattle"
+title: "The Twelve Labors of Hercules X: Geryon's Cattle"
 subtitle: "Hercules' Triple Challenge"
 description: this is the description
 author: Andrew Aguirre

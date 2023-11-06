@@ -1,5 +1,5 @@
 ---
-title: "The Eleventh Labor: The Apples of the Hesperides"
+title: "The Twelve Labors of Hercules XI: The Apples of the Hesperides"
 subtitle: "Hercules' Fruitful Adventure"
 description: this is the description
 author: Andrew Aguirre

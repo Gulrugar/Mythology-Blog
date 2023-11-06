@@ -1,5 +1,5 @@
 ---
-title: "The Sixth Labor: The Stymphalian Birds"
+title: "The Twelve Labors of Hercules VI: The Stymphalian Birds"
 subtitle: "Hercules' Feathery Foe"
 description: "In the annals of Greek mythology, the name Hercules resonates with tales of unparalleled strength and heroic feats. His penance for past misdeeds led him on a daunting quest to complete ten labors, each more arduous than the last. The sixth labor, often regarded as one of his most challenging trials, involved combating the Stymphalian Birds, ferocious creatures that plagued the marshes near Lake Stymphalia."
 author: Andrew Aguirre

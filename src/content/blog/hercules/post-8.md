@@ -1,5 +1,5 @@
 ---
-title: "The Eighth Labor: Diomedes' Man-Eating Mares"
+title: "The Twelve Labors of Hercules VIII: Diomedes' Man-Eating Mares"
 subtitle: "Taming the Savage Mares of Diomedes"
 description: "The Eighth Labor of Hercules tasked the Greek hero with a daunting mission: to capture the man-eating mares of Diomedes. These were no ordinary horses. Owned by King Diomedes of the Bistones, these mares were infamous for their bloodthirsty nature, having been fed on human flesh. Their fearsome reputation was known throughout the land, and capturing them was considered a near-impossible feat."
 author: Andrew Aguirre
@@ -150,5 +150,5 @@ article:
       previousArticle:
         slug: "twelve-labors-of-hercules-7"
       nextArticle:
-        slug: "myths-mjolnir"
+        slug: "twelve-labors-of-hercules-9"
 ---
