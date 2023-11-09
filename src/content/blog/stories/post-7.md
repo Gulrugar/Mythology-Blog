@@ -348,7 +348,7 @@ article:
         links:
           {
             previousArticle: { slug: "stories-eternals" },
-            nextArticle: { slug: "symbols-ouroboros" },
+            nextArticle: { slug: "stories-daywalker" },
           },
       },
   }

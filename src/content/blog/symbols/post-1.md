@@ -183,7 +183,7 @@ article:
     text: "The ouroboros, with its rich history and multifaceted interpretations, remains a symbol of profound significance. It serves as a constant reminder of the cyclical nature of existence, the balance of life and death, and the eternal dance of renewal. Regardless of its cultural or historical context, the ouroboros continues to inspire and resonate, emphasizing that in every ending lies a new beginning."
     links:
       previousArticle:
-        slug: "stories-bounty-hunter"
+        slug: "stories-daywalker"
       nextArticle:
         slug: "traditions-day-of-the-dead"
 ---
