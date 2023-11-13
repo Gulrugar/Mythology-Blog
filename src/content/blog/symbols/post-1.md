@@ -185,5 +185,5 @@ article:
       previousArticle:
         slug: "stories-daywalker"
       nextArticle:
-        slug: "traditions-day-of-the-dead"
+        slug: "symbols-the-fool"
 ---
