@@ -256,7 +256,7 @@ article:
         links:
           {
             previousArticle: { slug: "myths-mjolnir" },
-            nextArticle: { slug: "stories-walking-a-tight-rope" },
+            nextArticle: { slug: "myths-odin" },
           },
       },
   }
