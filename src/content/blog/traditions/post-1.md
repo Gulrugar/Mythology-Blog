@@ -171,7 +171,7 @@ article:
     text: "The Day of the Dead serves as a vivid and heartfelt celebration that bridges the gap between life and death. Rather than a day of sorrow, it's a festival filled with joy, remembrance, and the acknowledgment that our departed loved ones are still a meaningful part of our lives. It stands as a beautiful testament to the resilience and richness of cultural traditions that honor the eternal cycle of life and death."
     links:
       previousArticle:
-        slug: "symbols-the-fool"
+        slug: "symbols-walled-garden"
       nextArticle:
         slug: "creatures-fairies"
 ---

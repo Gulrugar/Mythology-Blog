@@ -167,5 +167,5 @@ article:
       previousArticle:
         slug: "symbols-ouroboros"
       nextArticle:
-        slug: "traditions-day-of-the-dead"
+        slug: "symbols-walled-garden"
 ---

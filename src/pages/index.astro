@@ -29,11 +29,11 @@ const post = await getEntryBySlug("blog", "twelve-labors-of-hercules-1");
       />
       <TopOfPage
         postSlugs={[
+          "symbols-walled-garden",
           "myths-odin",
           "twelve-labors-of-hercules-10",
           "symbols-the-fool",
           "stories-daywalker",
-          "twelve-labors-of-hercules-9",
         ]}
       />
       <FivePost
@@ -48,6 +48,14 @@ const post = await getEntryBySlug("blog", "twelve-labors-of-hercules-1");
         formatOptions={{
           sort: "old-new",
         }}
+      />
+      <ThreePost
+        category="Symbols"
+        postSlugs={[
+          "symbols-walled-garden",
+          "symbols-the-fool",
+          "symbols-ouroboros",
+        ]}
       />
       <List
         postSlugs={[
