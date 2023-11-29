@@ -1,6 +1,6 @@
 ---
 title: "The Twelve Labors of Hercules XII: Cerberus' Capture"
-subtitle: "Hercules' Descent to the Underworld **or A Battle with Hell itself"
+subtitle: "The Battle with Hell itself"
 description: this is the description
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-12
