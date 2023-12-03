@@ -167,5 +167,5 @@ article:
       previousArticle:
         slug: "symbols-the-fool"
       nextArticle:
-        slug: "traditions-day-of-the-dead"
+        slug: "symbols-puzzle-box"
 ---

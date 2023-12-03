@@ -4,7 +4,7 @@ subtitle: "The Forbidden Realm of the Gods"
 description: "In the Eleventh Labor of Hercules, the legendary hero is challenged to retrieve the fabled Golden Apples of the Hesperides. These apples, renowned for their divine properties and guarded in a distant, mystical garden, symbolize a quest that transcends mere physical prowess. Hercules' journey to acquire these celestial fruits, steeped in enchantment and allure, represents a trial of wit and resourcefulness."
 author: Andrew Aguirre
 slug: twelve-labors-of-hercules-11
-date: 2023-11-27
+date: 2023-11-29
 draft: false
 
 category: ["Myths", "Hercules"]
