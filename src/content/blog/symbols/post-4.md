@@ -4,7 +4,7 @@ subtitle: "No Solution Is A Perfect One"
 description: "Puzzle boxes, intricate and artistic containers with a rich history, offer a blend of mechanical complexity and aesthetic beauty. Originating from ancient civilizations and evolving through various cultures, they serve as both intriguing brain teasers and symbolic artifacts. Modern puzzle boxes continue this legacy, integrating new technologies and materials, appealing to collectors, enthusiasts, and those seeking cognitive challenges."
 author: Andrew Aguirre
 slug: symbols-puzzle-box
-date: 2023-12-02
+date: 2023-12-03
 draft: false
 category: ["Symbols"]
 image:
@@ -170,5 +170,5 @@ article:
       previousArticle:
         slug: "symbols-walled-garden"
       nextArticle:
-        slug: "traditions-day-of-the-dead"
+        slug: "symbols-the-stranger"
 ---
