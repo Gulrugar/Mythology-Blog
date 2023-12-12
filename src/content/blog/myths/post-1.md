@@ -394,7 +394,7 @@ article:
 
         links:
           {
-            previousArticle: { slug: "twelve-labors-of-hercules-11" },
+            previousArticle: { slug: "twelve-labors-of-hercules-12" },
             nextArticle: { slug: "myths-aphrodite-venus" },
           },
       },

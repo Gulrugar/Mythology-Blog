@@ -5,7 +5,7 @@ description: "'The Stranger' is a concept that transcends various fields of stud
 author: Andrew Aguirre
 slug: symbols-the-stranger
 imageAnchor: "top"
-date: 2023-12-05
+date: 2023-12-07
 draft: false
 category: ["Symbols"]
 image:

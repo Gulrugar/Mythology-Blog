@@ -31,10 +31,10 @@ export const categorySettings: CategorySettingsType = {
     formatOptions: {
       sort: "new-old",
       postsToFilterOut: [
+        "twelve-labors-of-hercules-12",
         "twelve-labors-of-hercules-11",
         "twelve-labors-of-hercules-10",
         "twelve-labors-of-hercules-9",
-        "twelve-labors-of-hercules-8",
       ],
     },
   },

@@ -169,5 +169,5 @@ article:
       previousArticle:
         slug: "twelve-labors-of-hercules-10"
       nextArticle:
-        slug: "myths-mjolnir"
+        slug: "twelve-labors-of-hercules-12"
 ---
