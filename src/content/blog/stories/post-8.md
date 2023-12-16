@@ -157,5 +157,5 @@ article:
       previousArticle:
         slug: "stories-bounty-hunter"
       nextArticle:
-        slug: "symbols-ouroboros"
+        slug: "stories-multifaceted-gem"
 ---
