@@ -4,7 +4,7 @@ subtitle: A Turn of the Kaleidoscope
 description: "Gem cutting is an intricate art that transforms rough stones into stunning gemstones. It involves careful evaluation, precise cutting, and meticulous polishing, enhancing the natural beauty and value of each stone. This process, from initial assessment to the final polish, turns simple minerals into treasured symbols of elegance and worth."
 author: Andrew Aguirre
 slug: stories-multifaceted-gem
-date: 2023-12-13
+date: 2023-12-15
 draft: false
 category: ["Stories"]
 image:
@@ -179,5 +179,5 @@ article:
       previousArticle:
         slug: "stories-daywalker"
       nextArticle:
-        slug: "symbols-ouroboros"
+        slug: "stories-the-power-of-music"
 ---
