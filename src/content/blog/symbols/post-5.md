@@ -168,5 +168,5 @@ article:
       previousArticle:
         slug: "symbols-puzzle-box"
       nextArticle:
-        slug: "traditions-day-of-the-dead"
+        slug: "symbols-the-carpenter"
 ---

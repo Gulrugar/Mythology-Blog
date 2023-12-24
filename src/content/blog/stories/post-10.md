@@ -4,7 +4,7 @@ subtitle: Language of the Gods
 description: "Music, transcending mere sound, holds a transformative power that resonates through various aspects of human life. It's not just an auditory experience but a universal language that speaks to emotions, memories, and the human spirit."
 author: Andrew Aguirre
 slug: stories-the-power-of-music
-date: 2023-12-17
+date: 2023-12-19
 draft: false
 category: ["Myths"]
 image:
