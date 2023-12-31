@@ -29,12 +29,12 @@ export const categorySettings: CategorySettingsType = {
       "Embark on an epic journey through Greek mythology as we delve into the mesmerizing tale of Hercules and his Twelve Labors. In this captivating category of our blog, we explore the Herculean trials that have captured the imagination of generations. From battling mythical beasts to retrieving legendary treasures, each labor symbolizes strength, courage, and wit.",
     banner: "/images/banners/hercules-banner.webp",
     formatOptions: {
-      sort: "new-old",
+      sort: "old-new",
       postsToFilterOut: [
-        "twelve-labors-of-hercules-12",
-        "twelve-labors-of-hercules-11",
-        "twelve-labors-of-hercules-10",
-        "twelve-labors-of-hercules-9",
+        "twelve-labors-of-hercules-1",
+        "twelve-labors-of-hercules-2",
+        "twelve-labors-of-hercules-3",
+        "twelve-labors-of-hercules-4",
       ],
     },
   },

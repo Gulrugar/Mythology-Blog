@@ -285,7 +285,7 @@ article:
 
         links:
           {
-            previousArticle: { slug: "traditions-day-of-the-dead" },
+            previousArticle: { slug: "traditions-new-years" },
             nextArticle: { slug: "creatures-resplendant-quetzal" },
           },
       },

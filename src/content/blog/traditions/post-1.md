@@ -173,5 +173,5 @@ article:
       previousArticle:
         slug: "symbols-the-carpenter"
       nextArticle:
-        slug: "creatures-fairies"
+        slug: "traditions-new-years"
 ---
