@@ -4,7 +4,7 @@ subtitle: Herald's of a New Age
 description: "New Year's traditions across the globe offer a fascinating glimpse into the rich diversity of human culture, blending ancient customs with contemporary festivities. From the Babylonian Akitu festival to the iconic Times Square ball drop, these varied practices reflect deep-rooted historical and cultural influences, all unified by a common theme of renewal, hope, and the celebration of new beginnings."
 author: Andrew Aguirre
 slug: traditions-new-years
-date: 2023-12-28
+date: 2023-12-31
 draft: false
 category: ["Traditions"]
 image:

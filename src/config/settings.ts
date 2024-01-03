@@ -46,6 +46,10 @@ export const settings: Settings = {
             name: "Hercules",
             path: "/categories/hercules",
           },
+          {
+            name: "Olympus",
+            path: "/categories/olympus",
+          },
         ],
       },
       {

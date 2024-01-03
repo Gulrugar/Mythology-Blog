@@ -10,30 +10,30 @@ import { getEntryBySlug } from "astro:content";
 
 const metaData = settings.meta.index;
 
-const post = await getEntryBySlug("blog", "twelve-labors-of-hercules-1");
+const post = await getEntryBySlug("blog", "olympus-birth-of-the-gods");
 ---
 
 <MainLayout title={metaData.title} description={metaData.description}>
   <article class="article--one-col-tax mntl-article">
     <div class="loc article-content">
       <HeroBanner
-        title="The Twelve Labors of Hercules"
+        title="The Gods of Olympus"
         author={post.data.author}
-        description="Hercules' transformation from a flawed mortal into a revered demigod, a timeless tale of heroism and resilience."
+        description="Dive into the lives of Olympus' gods, exploring their divine complexities, power struggles, and immortal tales, each a testament to the enduring legacy of Greek mythology."
         category={post.data.category[0]}
-        link={"/categories/hercules"}
+        link={"/categories/olympus"}
         banner={{
           src: "/images/banners/homepage-banner.webp",
-          alt: "The Twelve Labors of Hercules",
+          alt: "The Gods of Olympus",
         }}
       />
       <TopOfPage
         postSlugs={[
+          "olympus-birth-of-the-gods",
           "traditions-new-years",
           "symbols-the-carpenter",
           "stories-the-power-of-music",
           "stories-multifaceted-gem",
-          "twelve-labors-of-hercules-12",
         ]}
       />
       <FivePost

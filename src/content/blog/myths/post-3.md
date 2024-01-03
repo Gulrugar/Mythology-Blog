@@ -194,5 +194,5 @@ article:
       previousArticle:
         slug: "myths-aphrodite-venus"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-birth-of-the-gods"
 ---
