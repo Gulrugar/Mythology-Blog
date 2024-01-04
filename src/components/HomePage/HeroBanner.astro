@@ -5,14 +5,22 @@ type Props = {
   description: string;
   category: string;
   link: string;
+  useCustomPlacement?: boolean;
   banner: {
     src: string;
     alt: string;
   };
 };
 
-const { title, author, description, category, link, banner } =
-  Astro.props as Props;
+const {
+  title,
+  author,
+  description,
+  category,
+  link,
+  banner,
+  useCustomPlacement = false,
+} = Astro.props as Props;
 ---
 
 <section class="comp top-onepost one-post-hero mntl-block">
@@ -28,7 +36,9 @@ const { title, author, description, category, link, banner } =
           <img
             src={banner.src}
             alt={banner.alt}
-            class="card__img universal-image__image lazyloaded"
+            class={`card__img ${
+              useCustomPlacement ? "card__img--custom-placement" : ""
+            } universal-image__image lazyloaded`}
           />
         </div>
       </div>
@@ -149,7 +159,8 @@ const { title, author, description, category, link, banner } =
 
   /* div class="img-placeholder" */
   .img-placeholder {
-    background-color: #c7c7c7;
+    /* background-color: #c7c7c7; */
+    background-color: rgb(var(--color-base-accent));
     height: 0;
     overflow: hidden;
   }
@@ -165,6 +176,22 @@ const { title, author, description, category, link, banner } =
     height: auto;
     max-width: none;
     display: block;
+  }
+
+  .card__img--custom-placement {
+    transform: translateX(0%);
+  }
+
+  @media (min-width: 50em) and (max-width: 75em) {
+    .card__img--custom-placement {
+      transform: translateX(calc(100vw - 80%));
+    }
+  }
+
+  @media (min-width: 75.1em) {
+    .card__img--custom-placement {
+      transform: translateX(10%);
+    }
   }
 
   /* div class="card__content" */
