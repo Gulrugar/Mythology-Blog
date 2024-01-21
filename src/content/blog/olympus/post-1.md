@@ -217,5 +217,5 @@ article:
       previousArticle:
         slug: "myths-odin"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-hestia-dionysus"
 ---
