@@ -186,5 +186,5 @@ article:
       previousArticle:
         slug: "olympus-birth-of-the-gods"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-hermes"
 ---

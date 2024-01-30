@@ -24,4 +24,4 @@ pnpm-debug.log*
 .astro
 
 #todo list
-todo.txt
+*.txt
