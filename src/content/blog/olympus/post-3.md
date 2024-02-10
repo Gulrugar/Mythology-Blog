@@ -216,5 +216,5 @@ article:
       previousArticle:
         slug: "olympus-hestia-dionysus"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-demeter"
 ---

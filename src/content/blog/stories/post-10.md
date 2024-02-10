@@ -6,7 +6,7 @@ author: Andrew Aguirre
 slug: stories-the-power-of-music
 date: 2023-12-19
 draft: false
-category: ["Myths"]
+category: ["Stories"]
 image:
   {
     src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1702949002/001_rzljui.webp",
