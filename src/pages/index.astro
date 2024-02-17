@@ -30,11 +30,11 @@ const post = await getEntryBySlug("blog", "olympus-birth-of-the-gods");
       />
       <TopOfPage
         postSlugs={[
+          "olympus-ares",
           "olympus-demeter",
           "olympus-hermes",
           "olympus-hestia-dionysus",
           "olympus-birth-of-the-gods",
-          "traditions-new-years",
         ]}
       />
       <FivePost
@@ -65,6 +65,19 @@ const post = await getEntryBySlug("blog", "olympus-birth-of-the-gods");
           "stories-daywalker",
           "stories-bounty-hunter",
         ]}
+      />
+      <ThreePost
+        category="Myths"
+        postSlugs={["myths-odin", "myths-aphrodite-venus", "myths-mjolnir"]}
+      />
+      <List
+        postSlugs={[
+          "stories-eternals",
+          "stories-the-scientist",
+          "stories-gold-foil-and-iron-rust",
+          "stories-a-ghost-in-the-ice",
+        ]}
+        reverse={true}
       />
       <ThreePost
         category="Creatures"

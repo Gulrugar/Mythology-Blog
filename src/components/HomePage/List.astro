@@ -7,9 +7,10 @@ type collectionSlug = CollectionEntry<"blog">["slug"];
 type Props = {
   postSlugs: [collectionSlug, collectionSlug, collectionSlug, collectionSlug];
   formatOptions?: FormatBlogPostsOptions;
+  reverse?: boolean;
 };
 
-const { postSlugs, formatOptions } = Astro.props as Props;
+const { postSlugs, formatOptions, reverse = false } = Astro.props as Props;
 
 const placeHolderArticle = await getEntry("blog", "placeholder-article")!;
 
@@ -27,7 +28,9 @@ while (formattedBlogPosts.length < 4) {
 }
 ---
 
-<section class="comp vertical-list mntl-block">
+<section
+  class={`comp vertical-list mntl-block ${reverse && "vertical-list--reverse"}`}
+>
   <div class="comp vertical-list__content-wrapper mntl-block">
     <div
       class="comp vertical-list__card-list-1 card-list mntl-document-card-list mntl-card-list mntl-block"
@@ -111,7 +114,7 @@ while (formattedBlogPosts.length < 4) {
   /* --------------- */
   /* Component       */
   /* --------------- */
-  /* section class="comp vertical-list mntl-block" */
+  /* section class="comp vertical-list mntl-block vertical-list--reverse" */
   .vertical-list {
     display: flex;
     -moz-column-gap: 2rem;
@@ -119,6 +122,10 @@ while (formattedBlogPosts.length < 4) {
     flex-wrap: wrap;
 
     margin-bottom: 4rem;
+  }
+
+  .vertical-list--reverse {
+    flex-direction: row-reverse;
   }
 
   /* @media (min-width: 50em) {
@@ -211,6 +218,10 @@ while (formattedBlogPosts.length < 4) {
     border: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     padding: 2rem 0;
+  }
+
+  .vertical-list--reverse .card.card--image-left {
+    flex-direction: row-reverse;
   }
 
   @media (min-width: 50em) {

@@ -175,5 +175,5 @@ article:
       previousArticle:
         slug: "olympus-hermes"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-ares"
 ---
