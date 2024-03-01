@@ -57,7 +57,15 @@ export const categorySettings: CategorySettingsType = {
     description:
       "Embark on a mythical journey to the summit of Mount Olympus, where the ancient Greek pantheon reigns supreme. Our section dedicated to the Olympian gods introduces you to the twelve divine entities who shaped the world of Greek mythology. From the thunderous Zeus, ruler of the gods, to the wise Athena, goddess of wisdom; from the sea-commanding Poseidon to the hearth-keeping Hestia, each deity embodies unique powers and captivating stories.",
     banner: "/images/banners/olympus-banner.webp",
-    formatOptions: {},
+    formatOptions: {
+      sort: "new-old",
+      postsToFilterOut: [
+        "olympus-aphrodite",
+        "olympus-ares",
+        "olympus-demeter",
+        "olympus-hermes",
+      ],
+    },
   },
 };
 

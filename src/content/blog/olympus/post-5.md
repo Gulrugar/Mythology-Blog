@@ -192,5 +192,5 @@ article:
       previousArticle:
         slug: "olympus-demeter"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-aphrodite"
 ---
