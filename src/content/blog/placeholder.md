@@ -4,6 +4,7 @@ subtitle: subtitle
 description: this is the description
 author: Andrew Aguirre
 slug: placeholder-article
+imageAnchor: center
 date: 2023-07-28T12:00:01
 draft: false
 category: ["Myths"]

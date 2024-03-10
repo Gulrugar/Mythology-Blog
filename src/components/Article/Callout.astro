@@ -64,8 +64,18 @@ const { title, text } = Astro.props as Props;
     left: 0;
     border-width: 1px 0 0;
     border-style: solid;
-    -o-border-image: linear-gradient(to right, #da2525 97%, transparent 3%) 1;
-    border-image: linear-gradient(to right, #da2525 97%, transparent 3%) 1;
+    -o-border-image: linear-gradient(
+        to right,
+        rgb(var(--color-base-accent)) ; 97%,
+        transparent 3%
+      )
+      1;
+    border-image: linear-gradient(
+        to right,
+        rgb(var(--color-base-accent)) ; 97%,
+        transparent 3%
+      )
+      1;
   }
 
   .theme-meetourexpert.mntl-sc-block-callout::after {
@@ -73,8 +83,18 @@ const { title, text } = Astro.props as Props;
     right: 0;
     border-width: 0 0 1px;
     border-style: solid;
-    -o-border-image: linear-gradient(to left, #da2525 97%, transparent 3%) 1;
-    border-image: linear-gradient(to left, #da2525 97%, transparent 3%) 1;
+    -o-border-image: linear-gradient(
+        to left,
+        rgb(var(--color-base-accent)) ; 97%,
+        transparent 3%
+      )
+      1;
+    border-image: linear-gradient(
+        to left,
+        rgb(var(--color-base-accent)) ; 97%,
+        transparent 3%
+      )
+      1;
   }
 
   /* p class="comp mntl-sc-block-callout-heading mtnl-text-block" */
@@ -102,7 +122,7 @@ const { title, text } = Astro.props as Props;
     content: "";
     width: 1px;
     height: 32px;
-    border-left: 1px solid #da2525;
+    border-left: 1px solid rgb(var(--color-base-accent));
     position: absolute;
   }
 
