@@ -4,7 +4,7 @@ subtitle: The Fire Inside
 description: "In the tapestry of Greek mythology, Hephaestus, the god of fire, craftsmanship, and metallurgy, holds a distinctive place. Revered as the master blacksmith of the gods, his story is woven with themes of resilience, ingenuity, and the transformative power of creativity."
 author: Andrew Aguirre
 slug: olympus-hephaestus
-date: 2024-03-02
+date: 2024-03-10
 draft: false
 category: ["Olympus", "Myths"]
 image:
@@ -213,5 +213,5 @@ article:
       previousArticle:
         slug: "olympus-aphrodite"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-artemis"
 ---
