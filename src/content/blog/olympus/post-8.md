@@ -190,5 +190,5 @@ article:
       previousArticle:
         slug: "olympus-hephaestus"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-apollo"
 ---
