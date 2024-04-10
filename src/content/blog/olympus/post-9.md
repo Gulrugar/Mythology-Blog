@@ -191,5 +191,5 @@ article:
       previousArticle:
         slug: "olympus-artemis"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-athena"
 ---
