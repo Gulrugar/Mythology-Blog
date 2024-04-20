@@ -8,7 +8,11 @@ imageAnchor: center
 date: 2024-04-10
 draft: false
 category: ["Olympus", "Myths"]
-image: { src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1712622853/001_h0rxzv.webp", alt: "Is power all that exists?" }
+image:
+  {
+    src: "https://res.cloudinary.com/dhl7aimx7/image/upload/v1712622853/001_h0rxzv.webp",
+    alt: "Is power all that exists?",
+  }
 article:
   intro:
     - tag: "Paragraph"
@@ -224,5 +228,5 @@ article:
       previousArticle:
         slug: "olympus-apollo"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-poseidon"
 ---
