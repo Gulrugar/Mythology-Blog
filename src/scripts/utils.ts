@@ -90,8 +90,8 @@ export function getImages(post: CollectionEntry<"blog">["data"]) {
 
   images.push(post.image);
 
-  post.article.content.forEach((section) => {
-    section.data.forEach((block) => {
+  post.article.content.forEach((section: any) => {
+    section.data.forEach((block: any) => {
       if (block.tag === "ImageBlock") {
         images.push(block.params.image);
       }

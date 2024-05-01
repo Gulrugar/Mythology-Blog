@@ -60,10 +60,10 @@ export const categorySettings: CategorySettingsType = {
     formatOptions: {
       sort: "new-old",
       postsToFilterOut: [
+        "olympus-hera",
         "olympus-poseidon",
         "olympus-athena",
         "olympus-apollo",
-        "olympus-artemis",
       ],
     },
   },

@@ -213,5 +213,5 @@ article:
       previousArticle:
         slug: "olympus-athena"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-hera"
 ---
