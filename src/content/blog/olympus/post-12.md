@@ -231,5 +231,5 @@ article:
       previousArticle:
         slug: "olympus-poseidon"
       nextArticle:
-        slug: "stories-walking-a-tight-rope"
+        slug: "olympus-zeus"
 ---
